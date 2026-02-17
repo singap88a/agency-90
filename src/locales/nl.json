@@ -1,0 +1,25 @@
+{
+  "nav": {
+    "services": "Diensten",
+    "about": "Over ons",
+    "portfolio": "Portfolio",
+    "investment": "Investering",
+    "contact": "Contact"
+  },
+  "hero": {
+    "tag": "Digitale Excellence",
+    "title": "De digitale toekomst van uw merk creëren",
+    "subtext": "Ideeën omzetten in verbluffende filmische realiteit door marketing- en designoplossingen.",
+    "cta": "Start nu",
+    "projects": "Projecten bekijken"
+  },
+  "about": {
+    "tag": "Visie & Missie",
+    "title": "Kwaliteit boven verwachting",
+    "description": "Onze missie is om klanten te versterken door innovatieve strategieën en creatieve oplossingen.",
+    "mission": "Missie",
+    "vision": "Visie",
+    "mission_desc": "Hoogwaardige marketingoplossingen en artistieke ontwerpen die de verwachtingen overtreffen.",
+    "vision_desc": "De digitale transformatie leiden met een creatieve touch."
+  }
+}

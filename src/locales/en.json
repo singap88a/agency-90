@@ -1,0 +1,42 @@
+{
+  "nav": {
+    "services": "Services",
+    "about": "About",
+    "portfolio": "Portfolio",
+    "investment": "Investment",
+    "contact": "Contact"
+  },
+  "hero": {
+    "tag": "Bold Digital Excellence",
+    "title": "Crafting the Digital Future of Your Brand",
+    "subtext": "Transforming ideas into stunning cinematic reality through marketing and design solutions that cross boundaries.",
+    "cta": "Launch Now",
+    "projects": "View Projects"
+  },
+  "about": {
+    "tag": "Vision & Mission",
+    "title": "Quality Beyond Expectations",
+    "description": "Our mission is to empower clients to achieve strong market impact through innovative strategies and integrated creative solutions.",
+    "mission": "Mission",
+    "vision": "Vision",
+    "mission_desc": "Delivering high-quality marketing solutions and artistic designs that exceed our clients' expectations.",
+    "vision_desc": "Leading digital transformation with a creative touch that makes your brand unique and unforgettable."
+  },
+  "services": {
+    "title": "Expertise Delivered",
+    "subtitle": "We blend artistic vision with technical precision to deliver results that transcend the ordinary.",
+    "design": "Creative Design",
+    "marketing": "Marketing",
+    "management": "Social Management",
+    "photography": "Media Production",
+    "items_design": ["Brand Identity", "Graphic Design", "Exhibitions"],
+    "items_marketing": ["Content Design", "Ads Management", "Google & TikTok"],
+    "items_management": ["Account Management", "Data Analysis", "Stats Reports"],
+    "items_photography": ["Pro Photography", "Video Production", "Editing"]
+  },
+  "footer": {
+    "developed_by": "Developed by",
+    "developer": "Ahmed Sinjab",
+    "rights": "All rights reserved"
+  }
+}

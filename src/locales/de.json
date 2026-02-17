@@ -1,0 +1,25 @@
+{
+  "nav": {
+    "services": "Leistungen",
+    "about": "Über uns",
+    "portfolio": "Portfolio",
+    "investment": "Investition",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "tag": "Digitale Exzellenz",
+    "title": "Die digitale Zukunft Ihrer Marke gestalten",
+    "subtext": "Wir verwandeln Ideen in atemberaubende filmische Realität durch Marketing- und Designlösungen.",
+    "cta": "Jetzt starten",
+    "projects": "Projekte ansehen"
+  },
+  "about": {
+    "tag": "Vision & Mission",
+    "title": "Qualität über Erwartungen",
+    "description": "Unsere Mission ist es, Kunden durch innovative Strategien und kreative Lösungen zu stärken.",
+    "mission": "Mission",
+    "vision": "Vision",
+    "mission_desc": "Hochwertige Marketinglösungen und künstlerische Designs, die Erwartungen übertreffen.",
+    "vision_desc": "Die digitale Transformation mit einer kreativen Note anführen."
+  }
+}
