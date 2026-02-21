@@ -34,7 +34,7 @@ const Footer = () => {
 
           {/* 2. Credits (Center) */}
           <div className="flex flex-col items-center justify-center text-center">
-            <p className="text-slate-400 text-[10px] md:text-xs font-medium uppercase tracking-[0.2em] mb-3 opacity-60">
+            <p className="text-slate-400 text-[10px] md:text-xs font-semibold tracking-widest mb-3 opacity-60">
               © {new Date().getFullYear()} BrandUp Agency
             </p>
             <div className={`flex items-center gap-2 text-sm md:text-base font-bold text-slate-700 ${isRtl ? 'flex-row' : 'flex-row'}`}>

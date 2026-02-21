@@ -46,7 +46,7 @@ const AboutTeam = () => {
                         className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white border border-brand-primary/20 shadow-sm mb-8"
                     >
                         <Sparkles className="w-4 h-4 text-brand-primary animate-pulse" />
-                        <span className="text-sm font-bold tracking-widest uppercase text-brand-primary">
+                        <span className="text-sm font-bold tracking-widest text-brand-primary">
                             {t('about.team.title')}
                         </span>
                     </motion.div>
@@ -56,7 +56,7 @@ const AboutTeam = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="text-4xl md:text-6xl font-black text-gray-900 mb-8 tracking-tighter leading-tight"
+                        className="text-4xl md:text-6xl font-bold text-gray-900 mb-8 tracking-tighter leading-tight"
                     >
                         {isRtl ? (
                             <>
@@ -102,8 +102,8 @@ const AboutTeam = () => {
                                 <div className="absolute inset-x-8 bottom-12 flex flex-col items-center text-center h-full justify-end pb-0">
                                     {/* Initial Content: Name and Role */}
                                     <div className="transition-all duration-700 transform group-hover:-translate-y-72">
-                                        <h3 className="text-white text-2xl lg:text-3xl font-black mb-2 tracking-tighter">{member.name}</h3>
-                                        <p className="text-brand-accent font-black text-[10px] uppercase tracking-[0.3em]">{member.role}</p>
+                                        <h3 className="text-white text-2xl lg:text-3xl font-bold mb-2 tracking-tighter">{member.name}</h3>
+                                        <p className="text-brand-accent font-bold text-[10px] tracking-widest">{member.role}</p>
                                     </div>
 
                                     {/* Hover Detailed Content: Description and Socials */}

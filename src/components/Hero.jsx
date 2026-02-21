@@ -24,7 +24,7 @@ const Hero = () => {
         className="absolute inset-0 z-0"
       >
         <img
-          src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80"
+          src={i18n.language === 'ar' ? '/hero_ar.png' : '/hero_en.png'}
           alt="Professional Background"
           className="w-full h-full object-cover opacity-90"
         />
@@ -72,7 +72,7 @@ const Hero = () => {
       <div className="container mx-auto px-6 lg:px-24 relative z-10 py-32">
         <div
           className={cn(
-            "max-w-4xl flex flex-col gap-10 w-full relative",
+            "max-w-3xl flex flex-col gap-10 w-full relative",
             isRtl ? "items-start text-right ml-auto" : "items-start text-left mr-auto"
           )}
         >
@@ -81,19 +81,19 @@ const Hero = () => {
             initial={{ opacity: 0, x: isRtl ? 30 : -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
-            className="inline-flex items-center gap-3 px-5 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-xl text-brand-accent text-[11px] font-black tracking-[0.3em] uppercase shadow-2xl ring-1 ring-white/10"
+            className="inline-flex items-center gap-3 px-5 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-xl text-brand-accent text-xs font-bold tracking-widest shadow-2xl ring-1 ring-white/10"
           >
             <Sparkles className="w-4 h-4" />
-            <span>{t('hero.tag')}</span>
+            <span>BrandUp — {isRtl ? 'وكالة إبداعية' : 'Creative Agency'}</span>
           </motion.div>
  
-          {/* Title - Professional Scale & Multi-colored */}
+          {/* Title */}
           <motion.h1
             initial={{ opacity: 0, x: isRtl ? 50 : -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
             className={cn(
-              "text-5xl md:text-7xl lg:text-8xl font-black leading-[1.05] tracking-tight text-white",
+              "text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.1] tracking-tight text-white",
               isRtl ? "text-right" : "text-left"
             )}
           >
@@ -111,60 +111,49 @@ const Hero = () => {
             })}
           </motion.h1>
  
-          {/* Subtext - Upscaled & More Professional */}
+          {/* Subtext */}
           <motion.p
             initial={{ opacity: 0, x: isRtl ? 30 : -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.4 }}
             className={cn(
-              "text-lg md:text-xl text-white/50 max-w-2xl leading-relaxed font-light",
+              "text-base md:text-lg text-white/55 max-w-xl leading-relaxed font-light",
               isRtl ? "text-right" : "text-left"
             )}
           >
             {t('hero.subtext')}
           </motion.p>
  
-          {/* Buttons - Symmetrical & Professional UX */}
-          <div
+          {/* Buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
             className={cn(
-              "flex flex-col sm:flex-row gap-6 mt-10 w-full sm:w-auto",
+              "flex flex-col sm:flex-row gap-4 mt-4",
               isRtl ? "items-start" : "items-start"
             )}
           >
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="w-full sm:w-auto"
-            >
-              <button className="relative group w-full sm:w-64 h-16 rounded-xl bg-brand-accent text-white font-black text-lg overflow-hidden transition-all duration-500 hover:shadow-[0_20px_40px_rgba(245,176,2,0.3)] hover:scale-[1.02] flex items-center justify-center gap-4">
-                <span className="relative z-10 flex items-center gap-4">
-                  {t('hero.cta')}
-                  <motion.div
-                    animate={{ x: isRtl ? [0, -5, 0] : [0, 5, 0] }}
-                    transition={{ duration: 1.5, repeat: Infinity }}
-                  >
-                    {isRtl ? <ArrowLeft className="w-6 h-6" /> : <ArrowRight className="w-6 h-6" />}
-                  </motion.div>
-                </span>
-                <div className="absolute inset-0 bg-gradient-to-tr from-white to-transparent opacity-0 group-hover:opacity-20 transition-opacity duration-500" />
-              </button>
-            </motion.div>
+            <button className="relative group w-full sm:w-64 h-14 rounded-2xl bg-brand-accent text-white font-bold text-base overflow-hidden transition-all duration-500 hover:shadow-[0_20px_40px_rgba(245,176,2,0.35)] hover:scale-[1.02] flex items-center justify-center gap-3">
+              <span className="relative z-10 flex items-center gap-3">
+                {t('hero.cta')}
+                <motion.div
+                  animate={{ x: isRtl ? [0, -5, 0] : [0, 5, 0] }}
+                  transition={{ duration: 1.5, repeat: Infinity }}
+                >
+                  {isRtl ? <ArrowLeft className="w-5 h-5" /> : <ArrowRight className="w-5 h-5" />}
+                </motion.div>
+              </span>
+              <div className="absolute inset-0 bg-gradient-to-tr from-white to-transparent opacity-0 group-hover:opacity-20 transition-opacity duration-500" />
+            </button>
  
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.7 }}
-              className="w-full sm:w-auto"
-            >
-              <button className="group relative w-full sm:w-64 h-16 flex items-center justify-center gap-4 rounded-xl bg-white/5 backdrop-blur-3xl border border-white/10 text-white font-bold text-lg hover:bg-white/10 hover:border-white/20 transition-all duration-300">
-                <div className="w-10 h-10 rounded-lg bg-brand-accent/20 flex items-center justify-center text-brand-accent shadow-sm group-hover:scale-110 group-hover:rotate-[10deg] transition-all duration-500">
-                  <Play className="w-4 h-4 fill-current" />
-                </div>
-                <span>{t('hero.projects')}</span>
-              </button>
-            </motion.div>
-          </div>
+            <button className="group relative w-full sm:w-64 h-14 flex items-center justify-center gap-3 rounded-2xl bg-white/8 backdrop-blur-3xl border border-white/15 text-white font-semibold text-base hover:bg-white/15 hover:border-white/25 transition-all duration-300">
+              <div className="w-9 h-9 rounded-lg bg-brand-accent/20 flex items-center justify-center text-brand-accent shadow-sm group-hover:scale-110 group-hover:rotate-[10deg] transition-all duration-500">
+                <Play className="w-4 h-4 fill-current" />
+              </div>
+              <span>{t('hero.projects')}</span>
+            </button>
+          </motion.div>
         </div>
       </div>
       {/* Professional Symmetrical Sine-Wave Divider */}

@@ -16,8 +16,9 @@ export default {
         }
       },
       fontFamily: {
-        heading: ["Cairo", "sans-serif"],
-        body: ["Inter", "sans-serif"],
+        heading: ["Noto Naskh Arabic", "Alexandria", "Outfit", "sans-serif"],
+        body: ["Noto Naskh Arabic", "Plus Jakarta Sans", "sans-serif"],
+        latin: ["Outfit", "Plus Jakarta Sans", "sans-serif"],
       },
       animation: {
         "glow-pulse": "glow-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",

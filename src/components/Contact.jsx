@@ -85,7 +85,7 @@ const Contact = ({ isPage = false }) => {
               viewport={{ once: true }}
               className="flex flex-col items-center text-center mb-16"
             >
-              <span className="font-medium tracking-[0.3em] uppercase text-xs mb-4" style={{ color: primaryColor }}>
+              <span className="font-semibold tracking-widest text-xs mb-4" style={{ color: primaryColor }}>
                 {t('contact.subtitle', 'تواصل معنا')}
               </span>
               <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[#2D2D2D]">
@@ -141,8 +141,8 @@ const Contact = ({ isPage = false }) => {
                     <info.icon className="w-6 h-6" />
                   </div>
                   <div>
-                    <div className="text-xs font-medium mb-1" style={{ color: `${primaryColor}` }}>{info.label}</div>
-                    <div className="text-lg font-bold text-[#2D2D2D]">{info.value}</div>
+                    <div className="text-[10px] font-bold mb-1 tracking-wide" style={{ color: `${primaryColor}` }}>{info.label}</div>
+                    <div className="text-base font-bold text-[#2D2D2D]">{info.value}</div>
                   </div>
                 </motion.a>
               ))}
@@ -184,7 +184,7 @@ const Contact = ({ isPage = false }) => {
                   <div className="grid md:grid-cols-2 gap-6">
                     {/* Name Field */}
                     <div className="space-y-2">
-                      <label className="text-sm font-bold text-[#2D2D2D] uppercase tracking-wider">
+                      <label className="text-xs font-bold text-[#2D2D2D] tracking-wide">
                         {t('contact.name', 'الاسم الكامل')}
                       </label>
                       <div className="relative group">
@@ -220,7 +220,7 @@ const Contact = ({ isPage = false }) => {
 
                     {/* Email Field */}
                     <div className="space-y-2">
-                      <label className="text-sm font-bold text-[#2D2D2D] uppercase tracking-wider">
+                      <label className="text-xs font-bold text-[#2D2D2D] tracking-wide">
                         {t('contact.emailLabel', 'البريد الإلكتروني')}
                       </label>
                       <div className="relative group">
@@ -257,7 +257,7 @@ const Contact = ({ isPage = false }) => {
 
                   {/* Service Field */}
                   <div className="space-y-2">
-                    <label className="text-sm font-bold text-[#2D2D2D] uppercase tracking-wider">
+                    <label className="text-xs font-bold text-[#2D2D2D] tracking-wide">
                       {t('contact.service', 'الخدمة المطلوبة')}
                     </label>
                     <div className="relative group">
@@ -304,7 +304,7 @@ const Contact = ({ isPage = false }) => {
 
                   {/* Message Field */}
                   <div className="space-y-2">
-                    <label className="text-sm font-bold text-[#2D2D2D] uppercase tracking-wider">
+                    <label className="text-xs font-bold text-[#2D2D2D] tracking-wide">
                       {t('contact.message', 'الرسالة')}
                     </label>
                     <div className="relative group">

@@ -19,10 +19,10 @@ const AboutWhoWeAre = () => {
                         className={cn("flex flex-col gap-10", isRtl ? "lg:order-1" : "lg:order-2")}
                     >
                         <div className="flex flex-col gap-4">
-                            <span className="text-brand-accent font-black tracking-[0.4em] uppercase text-xs">
+                            <span className="text-brand-accent font-bold tracking-widest text-xs">
                                 {t('about.who.title')}
                             </span>
-                            <h2 className="text-5xl lg:text-7xl font-black text-brand-dark tracking-tighter leading-[1.1] max-w-xl">
+                            <h2 className="text-5xl lg:text-7xl font-bold text-brand-dark tracking-tighter leading-[1.1] max-w-xl">
                                 {i18n.language === 'ar' ? (
                                     <>رحلة من <span className="text-brand-primary">الإبداع والابتكار</span></>
                                 ) : (
@@ -71,12 +71,12 @@ const AboutWhoWeAre = () => {
                             
                             <div className="absolute bottom-10 right-10 ltr:right-auto ltr:left-10 bg-white/95 backdrop-blur-xl p-6 rounded-3xl shadow-2xl border border-white/50 z-20">
                                 <div className="flex items-center gap-4">
-                                    <div className="w-12 h-12 bg-brand-accent rounded-2xl flex items-center justify-center text-white font-black text-xl">
+                                    <div className="w-12 h-12 bg-brand-accent rounded-2xl flex items-center justify-center text-white font-bold text-xl">
                                         B
                                     </div>
                                     <div className="flex flex-col">
-                                        <span className="text-sm font-black text-brand-dark">BrandUp Agency</span>
-                                        <span className="text-[10px] font-bold text-brand-dark/40 uppercase tracking-widest italic">Since 2014</span>
+                                        <span className="text-sm font-bold text-brand-dark">BrandUp Agency</span>
+                                        <span className="text-[10px] font-bold tracking-wider italic text-brand-dark/40">Since 2014</span>
                                     </div>
                                 </div>
                             </div>

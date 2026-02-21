@@ -12,19 +12,40 @@ const AboutTestimonials = () => {
 
     const testimonials = t('about.testimonials.items', { returnObjects: true }) || [];
 
-    // Custom CSS for Swiper bars pagination
+    // Custom CSS for Swiper bars pagination — dynamic 4 bullets max
     const swiperStyles = `
+        .testimonial-swiper .swiper-pagination {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
         .testimonial-swiper .swiper-pagination-bullet {
             width: 30px !important;
             height: 4px !important;
             border-radius: 2px !important;
-            background: #fbbf24 !important; /* brand-primary */
+            background: #fbbf24 !important;
             opacity: 0.2 !important;
             transition: all 0.3s ease !important;
+            margin: 0 !important;
         }
         .testimonial-swiper .swiper-pagination-bullet-active {
             opacity: 1 !important;
             width: 50px !important;
+        }
+        .testimonial-swiper .swiper-pagination-bullet-active-main {
+            opacity: 1 !important;
+            width: 50px !important;
+        }
+        .testimonial-swiper .swiper-pagination-bullet-active-prev,
+        .testimonial-swiper .swiper-pagination-bullet-active-next {
+            opacity: 0.5 !important;
+            width: 35px !important;
+        }
+        .testimonial-swiper .swiper-pagination-bullet-active-prev-prev,
+        .testimonial-swiper .swiper-pagination-bullet-active-next-next {
+            opacity: 0.2 !important;
+            width: 20px !important;
         }
     `;
 
@@ -42,7 +63,7 @@ const AboutTestimonials = () => {
                         className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white border border-brand-primary/20 shadow-sm mb-10"
                     >
                         <Sparkles className="w-4 h-4 text-brand-primary animate-pulse" />
-                        <span className="text-sm font-bold tracking-widest uppercase text-brand-primary">
+                        <span className="text-sm font-bold tracking-widest text-brand-primary">
                             {t('about.testimonials.subtitle')}
                         </span>
                     </motion.div>
@@ -52,7 +73,7 @@ const AboutTestimonials = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.7, delay: 0.2 }}
-                        className="text-4xl md:text-6xl font-black text-gray-900 mb-8 tracking-tighter"
+                        className="text-4xl md:text-6xl font-bold text-gray-900 mb-8 tracking-tighter"
                     >
                         {isRtl ? (
                             <>
@@ -80,7 +101,7 @@ const AboutTestimonials = () => {
                     <Swiper
                         modules={[Autoplay, Pagination]}
                         autoplay={{ delay: 5000 }}
-                        pagination={{ clickable: true }}
+                        pagination={{ clickable: true, dynamicBullets: true, dynamicMainBullets: 3 }}
                         loop={true}
                         spaceBetween={30}
                         slidesPerView={1}
@@ -102,15 +123,15 @@ const AboutTestimonials = () => {
                                     {/* Top Section: Identity & Rating */}
                                     <div className="flex items-center gap-5 mb-8 relative z-10">
                                         <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-brand-primary/20 to-brand-primary/5 flex items-center justify-center shrink-0 border border-brand-primary/10 shadow-sm transition-transform duration-500 group-hover:scale-110">
-                                            <span className="text-brand-primary font-black text-2xl">
+                                            <span className="text-brand-primary font-bold text-2xl">
                                                 {item.name?.charAt(0)}
                                             </span>
                                         </div>
                                         <div className="flex flex-col">
-                                            <h4 className="text-xl font-black text-gray-900 tracking-tighter mb-1">
+                                            <h4 className="text-xl font-bold text-gray-900 tracking-tighter mb-1">
                                                 {item.name}
                                             </h4>
-                                            <p className="text-brand-primary font-bold uppercase tracking-[0.2em] text-[10px]">
+                                            <p className="text-brand-primary font-bold tracking-wider text-[10px]">
                                                 {item.role}
                                             </p>
                                             

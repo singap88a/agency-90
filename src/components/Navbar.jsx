@@ -67,7 +67,7 @@ const Navbar = () => {
         >
           <Link to="/" className="flex items-center gap-4">
             <img src="/logo.jpeg" alt="BrandUp" className="h-10 w-10 rounded-xl border border-black/5" />
-            <span className="text-xl font-heading font-black tracking-tighter text-brand-dark">
+            <span className="text-xl font-heading font-bold tracking-tighter text-brand-dark">
               Brand<span className="text-brand-accent">Up</span>
             </span>
           </Link>
@@ -85,7 +85,7 @@ const Navbar = () => {
               {link.href.startsWith('/') ? (
                 <Link
                   to={link.href}
-                  className="px-5 py-2 rounded-full text-[11px] font-bold tracking-wider uppercase transition-all duration-300 flex items-center gap-2 hover:bg-white text-brand-dark/70 hover:text-brand-dark hover:shadow-sm"
+                  className="px-5 py-2 rounded-full text-xs font-semibold tracking-wide transition-all duration-300 flex items-center gap-2 hover:bg-white text-brand-dark/70 hover:text-brand-dark hover:shadow-sm"
                 >
                   <link.icon className="w-3.5 h-3.5 group-hover:text-brand-accent transition-colors" />
                   {t(`nav.${link.key}`)}
@@ -93,7 +93,7 @@ const Navbar = () => {
               ) : (
                 <a
                   href={isHomePage ? link.href : `/${link.href}`}
-                  className="px-5 py-2 rounded-full text-[11px] font-bold tracking-wider uppercase transition-all duration-300 flex items-center gap-2 hover:bg-white text-brand-dark/70 hover:text-brand-dark hover:shadow-sm"
+                  className="px-5 py-2 rounded-full text-xs font-semibold tracking-wide transition-all duration-300 flex items-center gap-2 hover:bg-white text-brand-dark/70 hover:text-brand-dark hover:shadow-sm"
                 >
                   <link.icon className="w-3.5 h-3.5 group-hover:text-brand-accent transition-colors" />
                   {t(`nav.${link.key}`)}
@@ -109,7 +109,7 @@ const Navbar = () => {
           <div className="relative hidden md:block" ref={langRef}>
             <button
               onClick={() => setIsLangOpen(!isLangOpen)}
-              className="h-10 px-4 rounded-xl bg-black/5 border border-black/5 flex items-center gap-2.5 hover:bg-black/10 transition-all text-[11px] font-black uppercase tracking-widest text-brand-dark group"
+              className="h-10 px-4 rounded-xl bg-black/5 border border-black/5 flex items-center gap-2.5 hover:bg-black/10 transition-all text-xs font-bold tracking-wide text-brand-dark group"
             >
               <Globe className="w-4 h-4 text-brand-accent group-hover:rotate-12 transition-transform" />
               <span>{currentLang.label}</span>
@@ -128,7 +128,7 @@ const Navbar = () => {
                       key={l.code}
                       onClick={() => changeLanguage(l.code)}
                       className={cn(
-                        "w-full px-4 py-2.5 rounded-xl text-right text-[11px] font-bold transition-all flex items-center justify-between group",
+                        "w-full px-4 py-2.5 rounded-xl text-right text-xs font-semibold transition-all flex items-center justify-between group",
                         i18n.language === l.code 
                           ? "bg-brand-accent/10 text-brand-dark" 
                           : "text-brand-dark/60 hover:bg-black/5 hover:text-brand-dark"
@@ -145,7 +145,7 @@ const Navbar = () => {
 
           <Link 
             to="/contact"
-            className="hidden lg:flex btn-premium !h-10 !px-6 !rounded-xl items-center gap-2 text-[11px] group relative overflow-hidden"
+            className="hidden lg:flex btn-premium !h-10 !px-6 !rounded-xl items-center gap-2 text-xs font-bold group relative overflow-hidden"
           >
             <span className="relative z-10 flex items-center gap-2">
               <MessageCircle className="w-4 h-4 group-hover:scale-110 transition-transform" />
@@ -180,7 +180,7 @@ const Navbar = () => {
                     key={link.key} 
                     to={link.href} 
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="text-2xl font-heading font-black flex items-center gap-4 text-brand-dark hover:text-brand-accent transition-colors"
+                    className="text-2xl font-heading font-bold flex items-center gap-4 text-brand-dark hover:text-brand-accent transition-colors"
                   >
                     <link.icon className="w-7 h-7 text-brand-accent" />
                     {t(`nav.${link.key}`)}
@@ -190,7 +190,7 @@ const Navbar = () => {
                     key={link.key} 
                     href={isHomePage ? link.href : `/${link.href}`} 
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="text-2xl font-heading font-black flex items-center gap-4 text-brand-dark hover:text-brand-accent transition-colors"
+                    className="text-2xl font-heading font-bold flex items-center gap-4 text-brand-dark hover:text-brand-accent transition-colors"
                   >
                     <link.icon className="w-7 h-7 text-brand-accent" />
                     {t(`nav.${link.key}`)}

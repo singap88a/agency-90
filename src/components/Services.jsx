@@ -26,12 +26,12 @@ const Services = () => {
           >
             <div className="flex items-center gap-6">
               <span className="h-[3px] w-16 bg-brand-accent rounded-full" />
-              <span className="text-brand-accent font-black tracking-[0.5em] uppercase text-xs lg:text-sm block">
+              <span className="text-brand-accent font-bold tracking-widest block text-xs lg:text-sm">
                 {t('services.tag')}
               </span>
             </div>
             
-            <h2 className="text-4xl lg:text-6xl font-black tracking-tighter text-brand-dark leading-none">
+            <h2 className="text-4xl lg:text-6xl font-bold tracking-tighter text-brand-dark leading-none">
               {i18n.language === 'ar' ? (
                 <>حلول رقمية <span className="text-brand-accent">مبتكرة</span></>
               ) : (
@@ -67,7 +67,7 @@ const Services = () => {
                   <div className="absolute -inset-4 bg-brand-accent/20 blur-2xl rounded-full" />
                 </div>
 
-                <h3 className="text-2xl lg:text-2xl font-black mb-10 tracking-tighter leading-tight whitespace-nowrap overflow-hidden text-ellipsis text-brand-dark group-hover:text-brand-accent transition-colors duration-500">
+                <h3 className="text-2xl lg:text-2xl font-bold mb-10 tracking-tighter leading-tight whitespace-nowrap overflow-hidden text-ellipsis text-brand-dark group-hover:text-brand-accent transition-colors duration-500">
                   {t(`services.${service.key}`)}
                 </h3>
 
@@ -76,7 +76,7 @@ const Services = () => {
                     t(`services.items_${service.key}`, { returnObjects: true }).map((item, i) => (
                     <li key={i} className="flex items-center gap-4 text-brand-dark/70 group-hover:text-brand-dark transition-colors duration-500">
                       <span className="w-2 h-2 rounded-full bg-brand-accent" />
-                      <span className="text-xs lg:text-sm font-black uppercase tracking-[0.25em]">
+                      <span className="text-xs lg:text-sm font-bold tracking-wide">
                         {item}
                       </span>
                     </li>

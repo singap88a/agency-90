@@ -54,7 +54,7 @@ const AboutVision = () => {
                         className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white border border-brand-primary/20 shadow-sm mb-10"
                     >
                         <Sparkles className="w-4 h-4 text-brand-primary animate-pulse" />
-                        <span className="text-sm font-bold tracking-widest uppercase text-brand-primary">
+                        <span className="text-sm font-bold tracking-widest text-brand-primary">
                             {t('about.vision_section.subtitle')}
                         </span>
                     </motion.div>
@@ -64,7 +64,7 @@ const AboutVision = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="text-4xl md:text-6xl font-black text-gray-900 mb-8 tracking-tighter"
+                        className="text-4xl md:text-6xl font-bold text-gray-900 mb-8 tracking-tighter"
                     >
                         <span className="bg-gradient-to-r from-brand-primary to-brand-primary/60 bg-clip-text text-transparent">
                             {t('about.vision_section.title')}
@@ -95,7 +95,7 @@ const AboutVision = () => {
                         >
                             <div className="relative h-full bg-white/70 backdrop-blur-md border border-gray-100 rounded-[2.5rem] p-8 hover:shadow-2xl transition-all duration-500 hover:border-brand-primary/20 flex flex-col overflow-hidden">
                                 {/* Watermark Number */}
-                                <span className={`absolute top-4 ${isRtl ? 'left-6' : 'right-6'} text-8xl font-black text-black/[0.03] group-hover:text-black/[0.05] transition-colors duration-500 pointer-events-none italic`}>
+                                <span className={`absolute top-4 ${isRtl ? 'left-6' : 'right-6'} text-8xl font-bold text-black/[0.03] group-hover:text-black/[0.05] transition-colors duration-500 pointer-events-none italic`}>
                                     {item.number}
                                 </span>
 
@@ -105,7 +105,7 @@ const AboutVision = () => {
                                         <div className={`w-14 h-14 rounded-2xl bg-brand-primary/10 flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500 shadow-sm shrink-0`}>
                                             <item.icon className="w-7 h-7 text-brand-primary" strokeWidth={1.5} />
                                         </div>
-                                        <h3 className="text-2xl font-black text-gray-900 tracking-tighter group-hover:text-brand-primary transition-colors">
+                                        <h3 className="text-2xl font-bold text-gray-900 tracking-tighter group-hover:text-brand-primary transition-colors">
                                             {item.title}
                                         </h3>
                                     </div>

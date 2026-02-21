@@ -189,8 +189,23 @@ export const translations = {
       title_start: "تميز علامتكم يبدأ من",
       title_highlight: "إبداعنا",
       title_end: "",
-      subtitle: "نحن هنا لنكون شركائكم في رحلة النجاح، حيث ندمج الإبداع بالتكنولوجيا لنحول طموحاتكم إلى حلول رقمية مبتكرة وتصاميم استثنائية تضع علامتكم التجارية في المقدمة دائماً.",
+      subtitle: "نحن هنا لنكون شركائكم في رحلة النجاح، حيث ندمج الإبداع بالتكنولوجيا لنحول طموحاتكم إلى حلول رقمية مبتكرة.",
       button: "ابدأ مشروعك الآن"
+    },
+    faq: {
+      badge: "الأسئلة الشائعة",
+      support: "دعم على مدار الساعة",
+      title_line1: "أسئلة",
+      title_line2: "متكررة",
+      description: "كل ما تحتاج لمعرفته عن خدماتنا وكيف نساعدك في تحقيق رؤيتك",
+      items: [
+        { q: "ما هي الخدمات الرئيسية التي تقدمها براند أب؟", a: "نقدم حلولاً متكاملة تشمل التسويق الرقمي الاستراتيجي، الإنتاج السينمائي، تصميم الهوية النخبوية، وتطوير الأنظمة الرقمية المتقدمة." },
+        { q: "كيف تضمنون جودة النتائج؟", a: "نعتمد على منهجية دقيقة تجمع بين تحليل البيانات والروح الإبداعية. نتابع كل تفاصيل المشروع بدقة." },
+        { q: "هل تعملون مع عملاء دوليين؟", a: "بكل تأكيد، نحن نخدم قاعدة عملاء عالمية ونفهم تماماً متطلبات الأسواق الدولية." },
+        { q: "ما الذي يميزكم عن باقي الوكالات؟", a: "نحن نمزج الفن بالذكاء التقني، مع التركيز على خلق تجربة بصرية وسينمائية فريدة وتأثير لا يُنسى." },
+        { q: "كيف يتم تحديد تكلفة المشروع؟", a: "كل مشروع فريد بطبيعته، لذلك نقدم عروضاً مخصصة بناءً على متطلباتك وميزانيتك. نؤمن بالشفافية الكاملة." },
+        { q: "هل تقدمون دعماً بعد التسليم؟", a: "نعم، نقدم دعماً فنياً مستمراً لمدة 6 أشهر بعد التسليم مع إمكانية التمديد." },
+      ]
     }
   },
   en: {
@@ -216,7 +231,7 @@ export const translations = {
     },
     hero: {
       title: "Crafting Your Digital Future",
-      subtext: "At Brand Up, we don't just build websites; we craft comprehensive digital ecosystems and technical masterpieces that propel your brand to the forefront of global competition. Our expert team blends breathtaking cinematic vision with cutting-edge programming and AI to create unforgettable user experiences, transforming your ambitions into tangible, exceptional successes that exceed all expectations.",
+      subtext: "At Brand Up, we don't just build websites; we craft comprehensive digital ecosystems and technical masterpieces that propel your brand to the forefront of global competition.",
       cta: "Start Your Success Journey",
       projects: "Explore Our Creative Works",
       stats: [
@@ -229,7 +244,7 @@ export const translations = {
     about: {
         tag: "Vision & Mission",
         title: "Your Bridge to Digital Success",
-        description: "At BrandUp, we believe every brand has a unique story that deserves to be told with the highest standards of creativity and professionalism. Our mission begins with understanding the core of your business and transforming it into a reality that achieves exceptional results.",
+        description: "At BrandUp, we believe every brand has a unique story that deserves to be told with the highest standards of creativity and professionalism.",
         banner: {
           title: "About Us",
           subtitle: "Crafting the extraordinary into digital reality"
@@ -238,22 +253,22 @@ export const translations = {
           title: "Who We Are?",
           subtitle: "A journey of creativity and innovation fueled by passion",
           desc1: "We are a full-service creative agency specializing in digital transformation and brand identity. Our team combines deep expertise with an innovative spirit.",
-          desc2: "Since our inception, we've had one goal: to be the primary engine for our clients' growth in the digital space through technical and artistic solutions that never compromise on quality."
+          desc2: "Since our inception, we've had one goal: to be the primary engine for our clients' growth in the digital space through solutions that never compromise on quality."
         },
         vision_section: {
           title: "Our Vision & Values",
           subtitle: "What drives us towards excellence",
           v: {
             title: "Vision",
-            desc: "To be the global leader and creative beacon in digital solutions, blending cutting-edge technology with artistic spirit to create a new reality for brands that transcends boundaries and makes a sustainable impact on global markets."
+            desc: "To be the global leader and creative beacon in digital solutions, blending cutting-edge technology with artistic spirit to create a new reality for brands."
           },
           m: {
             title: "Mission",
-            desc: "Empowering companies and brands to reach their full potential by delivering exceptional digital and cinematic experiences. We are committed to continuous innovation and transforming technical challenges into tangible success opportunities that foster our clients' growth."
+            desc: "Empowering companies and brands to reach their full potential by delivering exceptional digital and cinematic experiences."
           },
           values: {
             title: "Values",
-            desc: "Integrity, limitless innovation, and excellence in detail. We believe true success lies in long-term partnerships with our clients and an absolute commitment to delivering quality that exceeds expectations in every pixel and every line of code."
+            desc: "Integrity, limitless innovation, and excellence in detail. We believe true success lies in long-term partnerships with our clients."
           }
         },
         team: {
@@ -272,37 +287,17 @@ export const translations = {
           subtitle: "Voices of Success",
           description: "We are proud of our partnerships with elite organizations that trust our creativity. Their success drives our continuous innovation.",
           items: [
-            {
-              name: "Omar Zayed",
-              role: "CEO of Zayed Tech",
-              text: "Working with BrandUp was a turning point for our business. High professionalism, impressive results, and exceptional customer service that exceeded all expectations.",
-              rating: 5
-            },
-            {
-              name: "Laila Mansour",
-              role: "Creative Hub Director",
-              text: "The best creative agency I've ever dealt with. Their designs are beyond expectations and deeply touch the essence of the brand.",
-              rating: 5
-            },
-            {
-              name: "John Miller",
-              role: "Founder of Miller Co",
-              text: "Exceptional service and world-class vision. They completely transformed our brand and helped us reach global markets successfully.",
-              rating: 5
-            },
-            {
-              name: "Yassine Bakri",
-              role: "Bakri Logistics Director",
-              text: "Very professional team, full commitment to deadlines, and creativity in execution that goes beyond description by all technical standards.",
-              rating: 5
-            }
+            { name: "Omar Zayed", role: "CEO of Zayed Tech", text: "Working with BrandUp was a turning point for our business. High professionalism, impressive results, and exceptional customer service.", rating: 5 },
+            { name: "Laila Mansour", role: "Creative Hub Director", text: "The best creative agency I've ever dealt with. Their designs are beyond expectations and deeply touch the essence of the brand.", rating: 5 },
+            { name: "John Miller", role: "Founder of Miller Co", text: "Exceptional service and world-class vision. They completely transformed our brand and helped us reach global markets.", rating: 5 },
+            { name: "Yassine Bakri", role: "Bakri Logistics Director", text: "Very professional team, full commitment to deadlines, and creativity in execution that goes beyond description.", rating: 5 }
           ]
         }
     },
     services: {
-      tag: "EXCEPTIONAL EXPERTISE",
+      tag: "Exceptional Expertise",
       title: "Innovative Digital Solutions",
-      subtitle: "We craft integrated digital solutions that blend artistic creativity with technical precision to elevate your brand's presence and market dominance.",
+      subtitle: "We craft integrated digital solutions that blend artistic creativity with technical precision to elevate your brand's presence.",
       design: "Creative Design",
       marketing: "Marketing Growth",
       management: "Social Management",
@@ -314,43 +309,28 @@ export const translations = {
       items_photography: ["Photography", "Cinematography", "Post-Production"]
     },
     pricing: {
-      strategic: {
-        title: "Growth Strategy",
-        desc: "Integrated marketing plans based on deep data analysis to ensure your brand expands into target markets with high efficiency."
-      },
-      growth: {
-        title: "Cinematic Production",
-        desc: "We transform your ideas into moving works of art through world-class visual content production that wows your audience and leaves an unforgettable impact."
-      },
-      premium: {
-        title: "Elite Identity",
-        desc: "We design a visual identity that reflects the luxury and strength of your brand, giving you a professional appearance that distinguishes you from competitors at first sight."
-      },
-      data: {
-        title: "Data Analysis",
-        desc: "We monitor and analyze every movement and interaction to provide accurate reports that help you make the right decisions and continuously improve performance."
-      },
+      strategic: { title: "Growth Strategy", desc: "Integrated marketing plans based on deep data analysis to ensure your brand expands into target markets." },
+      growth: { title: "Cinematic Production", desc: "We transform your ideas into moving works of art through world-class visual content production." },
+      premium: { title: "Elite Identity", desc: "We design a visual identity that reflects the luxury and strength of your brand." },
+      data: { title: "Data Analysis", desc: "We monitor and analyze every movement and interaction to provide accurate reports." },
       most_popular: "Most Popular",
       bespoke_title: "Bespoke Solutions",
       bespoke_desc: "Every project is crafted from scratch to fit your unique needs. We focus on peak quality and tangible results.",
       request_consultation: "Request Consultation",
       learn_more: "Learn More",
-      metrics: {
-        roi: "Average ROI",
-        projects: "Successful Projects"
-      }
+      metrics: { roi: "Average ROI", projects: "Successful Projects" }
     },
     legal: {
       privacyContent: [
-        { title: "Data Collection", text: "We collect information you provide directly to us when requesting a service or contacting us, including name, email, and phone number." },
-        { title: "Use of Information", text: "We use data to improve our services, communicate with you about your projects, and ensure a personalized experience." },
-        { title: "Data Protection", text: "We apply strict security measures to protect your information from unauthorized access or disclosure." },
+        { title: "Data Collection", text: "We collect information you provide directly to us when requesting a service or contacting us." },
+        { title: "Use of Information", text: "We use data to improve our services and ensure a personalized experience." },
+        { title: "Data Protection", text: "We apply strict security measures to protect your information." },
         { title: "Cookies", text: "We use cookies to analyze site traffic and improve the user experience." }
       ],
       termsContent: [
-        { title: "Services", text: "We are committed to providing agreed services with the highest standards of quality, professionalism, and within set deadlines." },
-        { title: "Intellectual Property", text: "All designs and produced content remain the property of the client after full payment, unless otherwise agreed." },
-        { title: "Payment", text: "Payment terms are subject to the signed agreement for each project separately." },
+        { title: "Services", text: "We are committed to providing agreed services with the highest standards of quality and professionalism." },
+        { title: "Intellectual Property", text: "All designs and produced content remain the property of the client after full payment." },
+        { title: "Payment", text: "Payment terms are subject to the signed agreement for each project." },
         { title: "Liability", text: "BrandUp is not responsible for any indirect losses resulting from using the services outside the agreed scope." }
       ]
     },
@@ -383,8 +363,23 @@ export const translations = {
       title_start: "Your Brand's Excellence Starts with Our",
       title_highlight: "Creativity",
       title_end: "",
-      subtitle: "We are here to be your partners in success, blending creativity with technology to transform your ambitions into innovative digital solutions and exceptional designs that always put your brand at the forefront.",
+      subtitle: "We are here to be your partners in success, blending creativity with technology to transform your ambitions into innovative digital solutions.",
       button: "Start Your Project"
+    },
+    faq: {
+      badge: "FAQ",
+      support: "24/7 Support",
+      title_line1: "Frequently",
+      title_line2: "Asked Questions",
+      description: "Everything you need to know about our services and how we can help bring your vision to life.",
+      items: [
+        { q: "What services does BrandUp provide?", a: "We offer integrated solutions including strategic digital marketing, cinematic production, elite visual identity, and advanced digital systems." },
+        { q: "How do you ensure quality?", a: "We employ a precise methodology blending data analysis with creative spirit. Every project detail is carefully monitored." },
+        { q: "Do you work with international clients?", a: "Absolutely. We serve a global clientele and deeply understand international market requirements." },
+        { q: "What makes BrandUp different?", a: "We merge artistic vision with technical intelligence, focusing on creating unique visual and cinematic experiences." },
+        { q: "How is project cost determined?", a: "Each project is unique, so we provide customized quotes based on your requirements and budget." },
+        { q: "Do you offer post-delivery support?", a: "Yes, we provide ongoing technical support for 6 months after delivery, with the option to extend." },
+      ]
     }
   },
   de: {
@@ -397,6 +392,99 @@ export const translations = {
       contact: "Kontakt",
       privacy: "Datenschutzerklärung",
       terms: "Nutzungsbedingungen",
+      stay_connected: "In Kontakt bleiben",
+      description: "Kreativagentur für digitale Lösungen – Kunst trifft Technologie.",
+      developed_by: "Entwickelt von",
+      developer_name: "Ahmed Singap",
+    },
+    common: { showMore: "Mehr anzeigen", showLess: "Weniger anzeigen", taxNumber: "Steuernummer" },
+    hero: {
+      title: "Gestalten Sie Ihre digitale Zukunft",
+      subtext: "Bei BrandUp bauen wir nicht nur Webseiten – wir schaffen umfassende digitale Ökosysteme, die Ihre Marke an die Spitze des globalen Wettbewerbs bringen.",
+      cta: "Jetzt starten",
+      projects: "Unsere Arbeiten entdecken",
+      stats: [
+        { label: "Abgeschlossene Projekte", value: "150+" },
+        { label: "Zufriedene Kunden", value: "85+" },
+        { label: "Jahre Erfahrung", value: "10+" },
+        { label: "Zufriedenheitsrate", value: "99%" }
+      ]
+    },
+    about: {
+      tag: "Vision & Mission",
+      title: "Ihre Brücke zum digitalen Erfolg",
+      description: "Wir glauben, dass jede Marke eine einzigartige Geschichte hat, die mit höchsten Standards erzählt werden sollte.",
+      banner: { title: "Über uns", subtitle: "Wir machen das Außergewöhnliche zur digitalen Realität" },
+      who: {
+        title: "Wer sind wir?",
+        subtitle: "Eine Reise der Kreativität und Innovation",
+        desc1: "Wir sind eine Full-Service-Kreativagentur, spezialisiert auf digitale Transformation und Markenidentität.",
+        desc2: "Seit unserer Gründung verfolgen wir ein Ziel: das Wachstum unserer Kunden im digitalen Raum zu fördern."
+      },
+      vision_section: {
+        title: "Unsere Vision & Werte",
+        subtitle: "Was uns antreibt",
+        v: { title: "Vision", desc: "Globaler Marktführer in digitalen Lösungen zu sein, der Technologie mit Kunst verbindet." },
+        m: { title: "Mission", desc: "Unternehmen befähigen, ihr volles Potenzial durch außergewöhnliche digitale Erlebnisse zu entfalten." },
+        values: { title: "Werte", desc: "Integrität, grenzenlose Innovation und Liebe zum Detail." }
+      },
+      team: {
+        title: "Kreativ-Team",
+        subtitle: "Expertise, die liefert",
+        description: "Eine Gruppe von Elite-Kreativen und Experten, die künstlerische Vision mit technischer Präzision verbinden.",
+        roles: { ceo: "Gründer & CEO", creative: "Kreativdirektor", tech: "CTO", marketing: "Marketingleiter" }
+      },
+      testimonials: {
+        title: "Kundenstimmen",
+        subtitle: "Stimmen des Erfolgs",
+        description: "Wir sind stolz auf unsere Partnerschaften mit führenden Organisationen, die unserer Kreativität vertrauen.",
+        items: [
+          { name: "Omar Zayed", role: "CEO von Zayed Tech", text: "Die Zusammenarbeit mit BrandUp war ein Wendepunkt für unser Unternehmen. Hohe Professionalität und beeindruckende Ergebnisse.", rating: 5 },
+          { name: "Laila Mansour", role: "Creative Hub Direktorin", text: "Die beste Kreativagentur, mit der ich je zusammengearbeitet habe. Ihre Designs übertreffen alle Erwartungen.", rating: 5 },
+          { name: "John Miller", role: "Gründer von Miller Co", text: "Außergewöhnlicher Service und weltklasse Vision. Sie haben unsere Marke komplett transformiert.", rating: 5 },
+          { name: "Yassine Bakri", role: "Bakri Logistics Direktor", text: "Sehr professionelles Team, absolute Termintreue und Kreativität bei der Umsetzung.", rating: 5 }
+        ]
+      }
+    },
+    services: {
+      tag: "Außergewöhnliche Expertise",
+      title: "Innovative digitale Lösungen",
+      subtitle: "Wir entwickeln digitale Lösungen, die kreative Kunst mit technischer Präzision verbinden.",
+      design: "Kreativdesign",
+      marketing: "Marketing-Wachstum",
+      management: "Social Management",
+      photography: "Medienproduktion",
+      videos: "Videos",
+      items_design: ["Markenidentität", "Grafikdesign", "Messedesign"],
+      items_marketing: ["Content-Strategie", "Wachstumskampagnen", "Digitales Marketing"],
+      items_management: ["Kontoverwaltung", "Datenanalyse", "Leistungsmetriken"],
+      items_photography: ["Fotografie", "Cinematografie", "Postproduktion"]
+    },
+    pricing: {
+      strategic: { title: "Wachstumsstrategie", desc: "Integrierte Marketingpläne basierend auf tiefer Datenanalyse." },
+      growth: { title: "Kinematografische Produktion", desc: "Wir verwandeln Ihre Ideen in bewegte Kunstwerke durch weltklasse visuelle Inhaltsproduktion." },
+      premium: { title: "Elite-Identität", desc: "Wir entwerfen eine visuelle Identität, die den Luxus und die Stärke Ihrer Marke widerspiegelt." },
+      data: { title: "Datenanalyse", desc: "Wir überwachen und analysieren jede Bewegung, um genaue Berichte bereitzustellen." },
+      most_popular: "Am beliebtesten",
+      bespoke_title: "Maßgeschneiderte Lösungen",
+      bespoke_desc: "Jedes Projekt wird von Grund auf neu erstellt, um Ihren individuellen Bedürfnissen gerecht zu werden.",
+      request_consultation: "Beratung anfragen",
+      learn_more: "Mehr erfahren",
+      metrics: { roi: "Durchschnittlicher ROI", projects: "Erfolgreiche Projekte" }
+    },
+    legal: {
+      privacyContent: [
+        { title: "Datenerhebung", text: "Wir erfassen Informationen, die Sie uns direkt mitteilen." },
+        { title: "Informationsnutzung", text: "Wir verwenden Daten zur Verbesserung unserer Dienstleistungen." },
+        { title: "Datenschutz", text: "Wir wenden strenge Sicherheitsmaßnahmen zum Schutz Ihrer Daten an." },
+        { title: "Cookies", text: "Wir verwenden Cookies zur Analyse des Website-Traffics." }
+      ],
+      termsContent: [
+        { title: "Dienstleistungen", text: "Wir verpflichten uns zur Erbringung vereinbarter Dienstleistungen." },
+        { title: "Geistiges Eigentum", text: "Alle Designs bleiben nach vollständiger Bezahlung Eigentum des Kunden." },
+        { title: "Zahlung", text: "Zahlungsbedingungen unterliegen der unterzeichneten Vereinbarung." },
+        { title: "Haftung", text: "BrandUp haftet nicht für indirekte Verluste." }
+      ]
     },
     contact: {
       title: "Kontakt",
@@ -416,19 +504,35 @@ export const translations = {
       sendMessage: "Schicken Sie uns eine Nachricht",
       name: "Vollständiger Name",
       namePlaceholder: "Geben Sie Ihren Namen ein",
-      service: "Erforderlicher Service",
+      service: "Gewünschter Service",
       selectService: "Service auswählen",
       message: "Nachricht",
       messagePlaceholder: "Schreiben Sie Ihre Nachricht hier...",
-      privacy: "Wir respektieren Ihre Privatsphäre und werden Ihre Daten nicht an Dritte weitergeben",
+      privacy: "Wir respektieren Ihre Privatsphäre und geben Ihre Daten nicht weiter",
     },
-    hero: {
-      title: "Gestalten Sie Ihre digitale Zukunft",
-      subtext: "Marketinglösungen, die Sie voranbringen.",
-      cta: "Projekt starten",
+    cta: {
+      tag: "BrandUp Agentur",
+      title_start: "Die Exzellenz Ihrer Marke beginnt mit unserer",
+      title_highlight: "Kreativität",
+      title_end: "",
+      subtitle: "Wir sind Ihre Partner auf dem Weg zum Erfolg – Kreativität trifft Technologie.",
+      button: "Projekt starten"
     },
-    // ... Added later if needed, starting with 2 for now to keep it concise, adding DE/NL placeholders
-    about: { tag: "Vision & Mission", title: "Brücke zum Erfolg", description: "Unsere Mission ist es...", vision: { title: "Vision", desc: "..." }, mission: { title: "Mission", desc: "..." } },
+    faq: {
+      badge: "FAQ",
+      support: "24/7 Support",
+      title_line1: "Häufig",
+      title_line2: "gestellte Fragen",
+      description: "Alles, was Sie über unsere Dienstleistungen wissen müssen.",
+      items: [
+        { q: "Welche Dienstleistungen bietet BrandUp an?", a: "Wir bieten integrierte Lösungen an, darunter strategisches digitales Marketing, Filmproduktion, Elite-Markenidentität und digitale Systeme." },
+        { q: "Wie stellen Sie Qualität sicher?", a: "Wir nutzen eine präzise Methodik, die Datenanalyse mit kreativem Geist verbindet. Jedes Projektdetail wird sorgfältig überwacht." },
+        { q: "Arbeiten Sie mit internationalen Kunden?", a: "Absolut. Wir betreuen globale Kunden und verstehen internationale Marktanforderungen." },
+        { q: "Was unterscheidet BrandUp von anderen Agenturen?", a: "Wir verbinden künstlerische Vision mit technischer Intelligenz und schaffen einzigartige visuelle Erlebnisse." },
+        { q: "Wie werden die Projektkosten bestimmt?", a: "Jedes Projekt ist einzigartig, daher erstellen wir individuelle Angebote basierend auf Ihren Anforderungen." },
+        { q: "Bieten Sie Support nach der Lieferung an?", a: "Ja, wir bieten 6 Monate technischen Support nach der Lieferung an." },
+      ]
+    }
   },
   nl: {
     nav: {
@@ -440,6 +544,99 @@ export const translations = {
       contact: "Contact",
       privacy: "Privacybeleid",
       terms: "Algemene Voorwaarden",
+      stay_connected: "Blijf verbonden",
+      description: "Creatief bureau gespecialiseerd in digitale oplossingen – kunst ontmoet technologie.",
+      developed_by: "Ontwikkeld door",
+      developer_name: "Ahmed Singap",
+    },
+    common: { showMore: "Meer weergeven", showLess: "Minder weergeven", taxNumber: "Btw-nummer" },
+    hero: {
+      title: "Creëer uw digitale toekomst",
+      subtext: "Bij BrandUp bouwen we niet alleen websites – we creëren uitgebreide digitale ecosystemen die uw merk naar de top van de wereldwijde concurrentie brengen.",
+      cta: "Begin nu",
+      projects: "Bekijk ons werk",
+      stats: [
+        { label: "Voltooide projecten", value: "150+" },
+        { label: "Tevreden klanten", value: "85+" },
+        { label: "Jaar ervaring", value: "10+" },
+        { label: "Tevredenheidsscore", value: "99%" }
+      ]
+    },
+    about: {
+      tag: "Visie & Missie",
+      title: "Uw brug naar digitaal succes",
+      description: "We geloven dat elk merk een uniek verhaal heeft dat met de hoogste creatieve standaarden verteld moet worden.",
+      banner: { title: "Over ons", subtitle: "Het buitengewone omzetten in digitale realiteit" },
+      who: {
+        title: "Wie zijn wij?",
+        subtitle: "Een reis van creativiteit en innovatie",
+        desc1: "Wij zijn een full-service creatief bureau gespecialiseerd in digitale transformatie en merkidentiteit.",
+        desc2: "Sinds onze oprichting hebben we één doel: de groei van onze klanten in de digitale ruimte stimuleren."
+      },
+      vision_section: {
+        title: "Onze Visie & Waarden",
+        subtitle: "Wat ons drijft naar uitmuntendheid",
+        v: { title: "Visie", desc: "De wereldwijde leider zijn in digitale oplossingen door technologie met kunst te verbinden." },
+        m: { title: "Missie", desc: "Bedrijven in staat stellen hun volledige potentieel te bereiken door buitengewone digitale ervaringen." },
+        values: { title: "Waarden", desc: "Integriteit, grenzeloze innovatie en uitmuntendheid in detail." }
+      },
+      team: {
+        title: "Creatief Team",
+        subtitle: "Expertise die levert",
+        description: "Een groep elite creatieven en experts die artistieke visie combineren met technische precisie.",
+        roles: { ceo: "Oprichter & CEO", creative: "Creatief Directeur", tech: "CTO", marketing: "Marketing Manager" }
+      },
+      testimonials: {
+        title: "Klantgetuigenissen",
+        subtitle: "Stemmen van succes",
+        description: "We zijn trots op onze partnerschappen met elite-organisaties die ons vertrouwen.",
+        items: [
+          { name: "Omar Zayed", role: "CEO van Zayed Tech", text: "Werken met BrandUp was een keerpunt voor ons bedrijf. Hoge professionaliteit en indrukwekkende resultaten.", rating: 5 },
+          { name: "Laila Mansour", role: "Creative Hub Directeur", text: "Het beste creatieve bureau waarmee ik ooit heb samengewerkt. Hun ontwerpen overtreffen alle verwachtingen.", rating: 5 },
+          { name: "John Miller", role: "Oprichter van Miller Co", text: "Uitzonderlijke service en wereldklasse visie. Ze hebben ons merk volledig getransformeerd.", rating: 5 },
+          { name: "Yassine Bakri", role: "Bakri Logistics Directeur", text: "Zeer professioneel team, volledige toewijding aan deadlines en creativiteit in uitvoering.", rating: 5 }
+        ]
+      }
+    },
+    services: {
+      tag: "Uitzonderlijke Expertise",
+      title: "Innovatieve digitale oplossingen",
+      subtitle: "We creëren geïntegreerde digitale oplossingen die creatieve kunst combineren met technische precisie.",
+      design: "Creatief Design",
+      marketing: "Marketing Groei",
+      management: "Social Management",
+      photography: "Mediaproductie",
+      videos: "Video's",
+      items_design: ["Merkidentiteit", "Grafisch Ontwerp", "Tentoonstellingsontwerp"],
+      items_marketing: ["Contentstrategie", "Groeicampagnes", "Digitale Marketing"],
+      items_management: ["Accountbeheer", "Data-analyse", "Prestatiemetrics"],
+      items_photography: ["Fotografie", "Cinematografie", "Postproductie"]
+    },
+    pricing: {
+      strategic: { title: "Groeistrategie", desc: "Geïntegreerde marketingplannen op basis van diepgaande data-analyse." },
+      growth: { title: "Cinematografische Productie", desc: "We transformeren uw ideeën in bewegende kunstwerken door wereldklasse visuele content." },
+      premium: { title: "Elite Identiteit", desc: "We ontwerpen een visuele identiteit die de luxe en kracht van uw merk weerspiegelt." },
+      data: { title: "Data-analyse", desc: "We monitoren en analyseren elke beweging voor nauwkeurige rapportage." },
+      most_popular: "Meest populair",
+      bespoke_title: "Maatwerk Oplossingen",
+      bespoke_desc: "Elk project wordt van de grond af op maat gemaakt voor uw unieke behoeften.",
+      request_consultation: "Consultatie aanvragen",
+      learn_more: "Meer informatie",
+      metrics: { roi: "Gemiddeld ROI", projects: "Succesvolle projecten" }
+    },
+    legal: {
+      privacyContent: [
+        { title: "Gegevensverzameling", text: "We verzamelen informatie die u ons rechtstreeks verstrekt." },
+        { title: "Gebruik van informatie", text: "We gebruiken gegevens om onze diensten te verbeteren." },
+        { title: "Gegevensbescherming", text: "We passen strikte beveiligingsmaatregelen toe." },
+        { title: "Cookies", text: "We gebruiken cookies om websiteverkeer te analyseren." }
+      ],
+      termsContent: [
+        { title: "Diensten", text: "We zijn verplicht tot het leveren van overeengekomen diensten." },
+        { title: "Intellectueel Eigendom", text: "Alle ontwerpen blijven eigendom van de klant na volledige betaling." },
+        { title: "Betaling", text: "Betalingsvoorwaarden zijn onderworpen aan de getekende overeenkomst." },
+        { title: "Aansprakelijkheid", text: "BrandUp is niet aansprakelijk voor indirecte verliezen." }
+      ]
     },
     contact: {
       title: "Contact",
@@ -465,11 +662,29 @@ export const translations = {
       messagePlaceholder: "Schrijf hier uw bericht...",
       privacy: "Wij respecteren uw privacy en zullen uw gegevens niet met derden delen",
     },
-    hero: {
-      title: "Creëer uw digitale toekomst",
-      subtext: "Marketingoplossingen die u vooruit helpen.",
-      cta: "Begin nu",
+    cta: {
+      tag: "BrandUp Agency",
+      title_start: "De uitmuntendheid van uw merk begint met onze",
+      title_highlight: "Creativiteit",
+      title_end: "",
+      subtitle: "We zijn uw partners op weg naar succes – creativiteit ontmoet technologie om uw ambities te transformeren.",
+      button: "Start uw project"
     },
-    about: { tag: "Visie & Missie", title: "Uw brug naar succes", description: "Onze missie is...", vision: { title: "Visie", desc: "..." }, mission: { title: "Missie", desc: "..." } },
+    faq: {
+      badge: "FAQ",
+      support: "24/7 Ondersteuning",
+      title_line1: "Veelgestelde",
+      title_line2: "Vragen",
+      description: "Alles wat u moet weten over onze diensten en hoe we u kunnen helpen.",
+      items: [
+        { q: "Welke diensten biedt BrandUp aan?", a: "We bieden geïntegreerde oplossingen inclusief strategische digitale marketing, filmproductie, elite merkidentiteit en digitale systemen." },
+        { q: "Hoe waarborgt u de kwaliteit?", a: "We hanteren een nauwkeurige methodologie die data-analyse combineert met creatieve geest." },
+        { q: "Werkt u met internationale klanten?", a: "Absoluut. We bedienen een wereldwijde klantenkring en begrijpen internationale marktvereisten diepgaand." },
+        { q: "Wat onderscheidt BrandUp van anderen?", a: "We combineren artistieke visie met technische intelligentie, gericht op unieke visuele ervaringen." },
+        { q: "Hoe worden projectkosten bepaald?", a: "Elk project is uniek, dus we bieden maatwerkaanbiedingen op basis van uw vereisten en budget." },
+        { q: "Biedt u ondersteuning na oplevering?", a: "Ja, we bieden 6 maanden technische ondersteuning na oplevering, met de mogelijkheid tot verlenging." },
+      ]
+    }
   }
 };
+

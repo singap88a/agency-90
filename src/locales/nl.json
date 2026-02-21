@@ -1,38 +1,126 @@
 {
   "nav": {
+    "home": "Home",
     "services": "Diensten",
     "about": "Over ons",
     "portfolio": "Portfolio",
-    "investment": "Investering",
-    "contact": "Contact"
+    "pricing": "Prijzen",
+    "contact": "Contact",
+    "stay_connected": "Blijf verbonden",
+    "privacy": "Privacybeleid",
+    "terms": "Algemene Voorwaarden",
+    "description": "Creatief bureau gespecialiseerd in digitale oplossingen – kunst ontmoet technologie.",
+    "developed_by": "Ontwikkeld door",
+    "developer_name": "Ahmed Singap"
+  },
+  "common": {
+    "showMore": "Meer weergeven",
+    "showLess": "Minder weergeven",
+    "taxNumber": "Btw-nummer"
   },
   "hero": {
-    "tag": "Digitale Excellence",
-    "title": "De digitale toekomst van uw merk creëren",
-    "subtext": "Ideeën omzetten in verbluffende filmische realiteit door marketing- en designoplossingen.",
-    "cta": "Start nu",
-    "projects": "Projecten bekijken"
+    "title": "Creëer uw digitale toekomst",
+    "subtext": "Bij BrandUp bouwen we niet alleen websites – we creëren uitgebreide digitale ecosystemen die uw merk naar de top van de wereldwijde concurrentie brengen.",
+    "cta": "Begin nu",
+    "projects": "Bekijk ons werk",
+    "stats": [
+      { "label": "Voltooide projecten", "value": "150+" },
+      { "label": "Tevreden klanten", "value": "85+" },
+      { "label": "Jaar ervaring", "value": "10+" },
+      { "label": "Tevredenheidsscore", "value": "99%" }
+    ]
   },
   "about": {
     "tag": "Visie & Missie",
-    "title": "Kwaliteit boven verwachting",
-    "description": "Onze missie is om klanten te versterken door innovatieve strategieën en creatieve oplossingen.",
-    "mission": "Missie",
-    "vision": "Visie",
-    "mission_desc": "Hoogwaardige marketingoplossingen en artistieke ontwerpen die de verwachtingen overtreffen.",
-    "vision_desc": "De digitale transformatie leiden met een creative touch."
+    "title": "Uw brug naar digitaal succes",
+    "description": "We geloven dat elk merk een uniek verhaal heeft dat met de hoogste creatieve standaarden verteld moet worden.",
+    "banner": { "title": "Over ons", "subtitle": "Het buitengewone omzetten in digitale realiteit" },
+    "who": {
+      "title": "Wie zijn wij?",
+      "subtitle": "Een reis van creativiteit en innovatie",
+      "desc1": "Wij zijn een full-service creatief bureau gespecialiseerd in digitale transformatie en merkidentiteit.",
+      "desc2": "Sinds onze oprichting hebben we één doel: de groei van onze klanten in de digitale ruimte stimuleren."
+    },
+    "vision_section": {
+      "title": "Onze Visie & Waarden",
+      "subtitle": "Wat ons drijft naar uitmuntendheid",
+      "v": { "title": "Visie", "desc": "De wereldwijde leider zijn in digitale oplossingen door technologie met kunst te verbinden." },
+      "m": { "title": "Missie", "desc": "Bedrijven in staat stellen hun volledige potentieel te bereiken door buitengewone digitale ervaringen." },
+      "values": { "title": "Waarden", "desc": "Integriteit, grenzeloze innovatie en uitmuntendheid in detail." }
+    },
+    "team": {
+      "title": "Creatief Team",
+      "subtitle": "Expertise die levert",
+      "description": "Een groep elite creatieven en experts die artistieke visie combineren met technische precisie.",
+      "roles": { "ceo": "Oprichter & CEO", "creative": "Creatief Directeur", "tech": "CTO", "marketing": "Marketing Manager" }
+    },
+    "testimonials": {
+      "title": "Klantgetuigenissen",
+      "subtitle": "Stemmen van succes",
+      "description": "We zijn trots op onze partnerschappen met elite-organisaties die ons vertrouwen.",
+      "items": [
+        { "name": "Omar Zayed", "role": "CEO van Zayed Tech", "text": "Werken met BrandUp was een keerpunt voor ons bedrijf. Hoge professionaliteit en indrukwekkende resultaten.", "rating": 5 },
+        { "name": "Laila Mansour", "role": "Creative Hub Directeur", "text": "Het beste creatieve bureau waarmee ik ooit heb samengewerkt. Hun ontwerpen overtreffen alle verwachtingen.", "rating": 5 },
+        { "name": "John Miller", "role": "Oprichter van Miller Co", "text": "Uitzonderlijke service en wereldklasse visie. Ze hebben ons merk volledig getransformeerd.", "rating": 5 },
+        { "name": "Yassine Bakri", "role": "Bakri Logistics Directeur", "text": "Zeer professioneel team, volledige toewijding aan deadlines en creativiteit in uitvoering.", "rating": 5 }
+      ]
+    }
+  },
+  "services": {
+    "tag": "Uitzonderlijke Expertise",
+    "title": "Innovatieve digitale oplossingen",
+    "subtitle": "We creëren geïntegreerde digitale oplossingen die creatieve kunst combineren met technische precisie.",
+    "design": "Creatief Design",
+    "marketing": "Marketing Groei",
+    "management": "Social Management",
+    "photography": "Mediaproductie",
+    "videos": "Video's",
+    "items_design": ["Merkidentiteit", "Grafisch Ontwerp", "Tentoonstellingsontwerp"],
+    "items_marketing": ["Contentstrategie", "Groeicampagnes", "Digitale Marketing"],
+    "items_management": ["Accountbeheer", "Data-analyse", "Prestatiemetrics"],
+    "items_photography": ["Fotografie", "Cinematografie", "Postproductie"]
+  },
+  "pricing": {
+    "strategic": { "title": "Groeistrategie", "desc": "Geïntegreerde marketingplannen op basis van diepgaande data-analyse." },
+    "growth": { "title": "Cinematografische Productie", "desc": "We transformeren uw ideeën in bewegende kunstwerken door wereldklasse visuele content." },
+    "premium": { "title": "Elite Identiteit", "desc": "We ontwerpen een visuele identiteit die de luxe en kracht van uw merk weerspiegelt." },
+    "data": { "title": "Data-analyse", "desc": "We monitoren en analyseren elke beweging voor nauwkeurige rapportage." },
+    "most_popular": "Meest populair",
+    "bespoke_title": "Maatwerk Oplossingen",
+    "bespoke_desc": "Elk project wordt van de grond af op maat gemaakt voor uw unieke behoeften.",
+    "request_consultation": "Consultatie aanvragen",
+    "learn_more": "Meer informatie",
+    "metrics": { "roi": "Gemiddeld ROI", "projects": "Succesvolle projecten" }
+  },
+  "legal": {
+    "privacyContent": [
+      { "title": "Gegevensverzameling", "text": "We verzamelen informatie die u ons rechtstreeks verstrekt." },
+      { "title": "Gebruik van informatie", "text": "We gebruiken gegevens om onze diensten te verbeteren." },
+      { "title": "Gegevensbescherming", "text": "We passen strikte beveiligingsmaatregelen toe." },
+      { "title": "Cookies", "text": "We gebruiken cookies om websiteverkeer te analyseren." }
+    ],
+    "termsContent": [
+      { "title": "Diensten", "text": "We zijn verplicht tot het leveren van overeengekomen diensten." },
+      { "title": "Intellectueel Eigendom", "text": "Alle ontwerpen blijven eigendom van de klant na volledige betaling." },
+      { "title": "Betaling", "text": "Betalingsvoorwaarden zijn onderworpen aan de getekende overeenkomst." },
+      { "title": "Aansprakelijkheid", "text": "BrandUp is niet aansprakelijk voor indirecte verliezen." }
+    ]
   },
   "contact": {
-    "subtitle": "Neem contact op",
     "title": "Contact",
+    "subtitle": "Neem contact op",
     "getInTouch": "Neem contact op",
     "description": "We zijn er om uw vragen te beantwoorden en u te helpen uw visie te realiseren.",
-    "phoneLabel": "Telefoonnummer",
-    "instagram": "Instagram",
-    "emailLabel": "E-mailadres",
-    "taxNumber": "Btw-nummer",
     "address": "Waterkers 55, 1689PJ, Zwaag Hoorn",
+    "phone": "Telefoonnummer",
+    "phoneValue": "+31 6 42786606",
+    "email": "E-mailadres",
+    "emailLabel": "E-mailadres",
+    "emailValue": "Saeedsinan180@gmail.com",
+    "taxNumber": "Btw-nummer",
+    "taxValue": "12786594",
     "hours": "Zaterdag tot Vrijdag 9:00 - 17:00",
+    "send": "Bericht verzenden",
     "sendMessage": "Stuur ons een bericht",
     "name": "Volledige naam",
     "namePlaceholder": "Voer uw naam in",
@@ -40,10 +128,26 @@
     "selectService": "Selecteer dienst",
     "message": "Bericht",
     "messagePlaceholder": "Schrijf hier uw bericht...",
-    "send": "Bericht verzenden",
-    "privacy": "Wij respecteren uw privacy en zullen uw gegevens niet met derden delen",
-    "phoneValue": "+31 6 42786606",
-    "emailValue": "Saeedsinan180@gmail.com",
-    "taxValue": "12786594"
+    "privacy": "Wij respecteren uw privacy en zullen uw gegevens niet met derden delen"
+  },
+  "cta": {
+    "tag": "BrandUp Agency",
+    "title_start": "De uitmuntendheid van uw merk begint met onze",
+    "title_highlight": "Creativiteit",
+    "title_end": "",
+    "subtitle": "We zijn uw partners op weg naar succes – creativiteit ontmoet technologie om uw ambities te transformeren.",
+    "button": "Start uw project"
+  },
+  "faq": {
+    "badge": "FAQ",
+    "description": "Alles wat u moet weten over onze diensten en hoe we u kunnen helpen.",
+    "items": [
+      { "q": "Welke diensten biedt BrandUp aan?", "a": "We bieden geïntegreerde oplossingen inclusief strategische digitale marketing, filmproductie, elite merkidentiteit en digitale systemen." },
+      { "q": "Hoe waarborgt u de kwaliteit?", "a": "We hanteren een nauwkeurige methodologie die data-analyse combineert met creatieve geest." },
+      { "q": "Werkt u met internationale klanten?", "a": "Absoluut. We bedienen een wereldwijde klantenkring en begrijpen internationale marktvereisten diepgaand." },
+      { "q": "Wat onderscheidt BrandUp van anderen?", "a": "We combineren artistieke visie met technische intelligentie, gericht op unieke visuele ervaringen." },
+      { "q": "Hoe worden projectkosten bepaald?", "a": "Elk project is uniek, dus we bieden maatwerkaanbiedingen op basis van uw vereisten en budget." },
+      { "q": "Biedt u ondersteuning na oplevering?", "a": "Ja, we bieden 6 maanden technische ondersteuning na oplevering, met de mogelijkheid tot verlenging." }
+    ]
   }
 }

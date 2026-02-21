@@ -1,49 +1,153 @@
 {
   "nav": {
-    "services": "Leistungen",
+    "home": "Startseite",
+    "services": "Dienstleistungen",
     "about": "Über uns",
     "portfolio": "Portfolio",
-    "investment": "Investition",
-    "contact": "Kontakt"
+    "pricing": "Preise",
+    "contact": "Kontakt",
+    "stay_connected": "In Kontakt bleiben",
+    "privacy": "Datenschutzerklärung",
+    "terms": "Nutzungsbedingungen",
+    "description": "Kreativagentur für digitale Lösungen – Kunst trifft Technologie.",
+    "developed_by": "Entwickelt von",
+    "developer_name": "Ahmed Singap"
+  },
+  "common": {
+    "showMore": "Mehr anzeigen",
+    "showLess": "Weniger anzeigen",
+    "taxNumber": "Steuernummer"
   },
   "hero": {
-    "tag": "Digitale Exzellenz",
-    "title": "Die digitale Zukunft Ihrer Marke gestalten",
-    "subtext": "Wir verwandeln Ideen in atemberaubende filmische Realität durch Marketing- und Designlösungen.",
+    "title": "Gestalten Sie Ihre digitale Zukunft",
+    "subtext": "Bei BrandUp bauen wir nicht nur Webseiten – wir schaffen umfassende digitale Ökosysteme, die Ihre Marke an die Spitze des globalen Wettbewerbs bringen.",
     "cta": "Jetzt starten",
-    "projects": "Projekte ansehen"
+    "projects": "Unsere Arbeiten entdecken",
+    "stats": [
+      { "label": "Abgeschlossene Projekte", "value": "150+" },
+      { "label": "Zufriedene Kunden", "value": "85+" },
+      { "label": "Jahre Erfahrung", "value": "10+" },
+      { "label": "Zufriedenheitsrate", "value": "99%" }
+    ]
   },
   "about": {
     "tag": "Vision & Mission",
-    "title": "Qualität über Erwartungen",
-    "description": "Unsere Mission ist es, Kunden durch innovative Strategien und kreative Lösungen zu stärken.",
-    "mission": "Mission",
-    "vision": "Vision",
-    "mission_desc": "Hochwertige Marketinglösungen und künstlerische Designs, die Erwartungen übertreffen.",
-    "vision_desc": "Die digitale Transformation mit einer kreativen Note anführen."
+    "title": "Ihre Brücke zum digitalen Erfolg",
+    "description": "Wir glauben, dass jede Marke eine einzigartige Geschichte hat, die mit höchsten Standards erzählt werden sollte.",
+    "banner": { "title": "Über uns", "subtitle": "Wir machen das Außergewöhnliche zur digitalen Realität" },
+    "who": {
+      "title": "Wer sind wir?",
+      "subtitle": "Eine Reise der Kreativität und Innovation",
+      "desc1": "Wir sind eine Full-Service-Kreativagentur, spezialisiert auf digitale Transformation und Markenidentität.",
+      "desc2": "Seit unserer Gründung verfolgen wir ein Ziel: das Wachstum unserer Kunden im digitalen Raum zu fördern."
+    },
+    "vision_section": {
+      "title": "Unsere Vision & Werte",
+      "subtitle": "Was uns antreibt",
+      "v": { "title": "Vision", "desc": "Globaler Marktführer in digitalen Lösungen zu sein, der Technologie mit Kunst verbindet." },
+      "m": { "title": "Mission", "desc": "Unternehmen befähigen, ihr volles Potenzial durch außergewöhnliche digitale Erlebnisse zu entfalten." },
+      "values": { "title": "Werte", "desc": "Integrität, grenzenlose Innovation und Liebe zum Detail." }
+    },
+    "team": {
+      "title": "Kreativ-Team",
+      "subtitle": "Expertise, die liefert",
+      "description": "Eine Gruppe von Elite-Kreativen und Experten, die künstlerische Vision mit technischer Präzision verbinden.",
+      "roles": { "ceo": "Gründer & CEO", "creative": "Kreativdirektor", "tech": "CTO", "marketing": "Marketingleiter" }
+    },
+    "testimonials": {
+      "title": "Kundenstimmen",
+      "subtitle": "Stimmen des Erfolgs",
+      "description": "Wir sind stolz auf unsere Partnerschaften mit führenden Organisationen, die unserer Kreativität vertrauen.",
+      "items": [
+        { "name": "Omar Zayed", "role": "CEO von Zayed Tech", "text": "Die Zusammenarbeit mit BrandUp war ein Wendepunkt für unser Unternehmen. Hohe Professionalität und beeindruckende Ergebnisse.", "rating": 5 },
+        { "name": "Laila Mansour", "role": "Creative Hub Direktorin", "text": "Die beste Kreativagentur, mit der ich je zusammengearbeitet habe. Ihre Designs übertreffen alle Erwartungen.", "rating": 5 },
+        { "name": "John Miller", "role": "Gründer von Miller Co", "text": "Außergewöhnlicher Service und weltklasse Vision. Sie haben unsere Marke komplett transformiert.", "rating": 5 },
+        { "name": "Yassine Bakri", "role": "Bakri Logistics Direktor", "text": "Sehr professionelles Team, absolute Termintreue und Kreativität bei der Umsetzung.", "rating": 5 }
+      ]
+    }
+  },
+  "services": {
+    "tag": "Außergewöhnliche Expertise",
+    "title": "Innovative digitale Lösungen",
+    "subtitle": "Wir entwickeln digitale Lösungen, die kreative Kunst mit technischer Präzision verbinden.",
+    "design": "Kreativdesign",
+    "marketing": "Marketing-Wachstum",
+    "management": "Social Management",
+    "photography": "Medienproduktion",
+    "videos": "Videos",
+    "items_design": ["Markenidentität", "Grafikdesign", "Messedesign"],
+    "items_marketing": ["Content-Strategie", "Wachstumskampagnen", "Digitales Marketing"],
+    "items_management": ["Kontoverwaltung", "Datenanalyse", "Leistungsmetriken"],
+    "items_photography": ["Fotografie", "Cinematografie", "Postproduktion"]
+  },
+  "pricing": {
+    "strategic": { "title": "Wachstumsstrategie", "desc": "Integrierte Marketingpläne basierend auf tiefer Datenanalyse." },
+    "growth": { "title": "Kinematografische Produktion", "desc": "Wir verwandeln Ihre Ideen in bewegte Kunstwerke durch weltklasse visuelle Inhaltsproduktion." },
+    "premium": { "title": "Elite-Identität", "desc": "Wir entwerfen eine visuelle Identität, die den Luxus und die Stärke Ihrer Marke widerspiegelt." },
+    "data": { "title": "Datenanalyse", "desc": "Wir überwachen und analysieren jede Bewegung, um genaue Berichte bereitzustellen." },
+    "most_popular": "Am beliebtesten",
+    "bespoke_title": "Maßgeschneiderte Lösungen",
+    "bespoke_desc": "Jedes Projekt wird von Grund auf neu erstellt, um Ihren individuellen Bedürfnissen gerecht zu werden.",
+    "request_consultation": "Beratung anfragen",
+    "learn_more": "Mehr erfahren",
+    "metrics": { "roi": "Durchschnittlicher ROI", "projects": "Erfolgreiche Projekte" }
+  },
+  "legal": {
+    "privacyContent": [
+      { "title": "Datenerhebung", "text": "Wir erfassen Informationen, die Sie uns direkt mitteilen." },
+      { "title": "Informationsnutzung", "text": "Wir verwenden Daten zur Verbesserung unserer Dienstleistungen." },
+      { "title": "Datenschutz", "text": "Wir wenden strenge Sicherheitsmaßnahmen zum Schutz Ihrer Daten an." },
+      { "title": "Cookies", "text": "Wir verwenden Cookies zur Analyse des Website-Traffics." }
+    ],
+    "termsContent": [
+      { "title": "Dienstleistungen", "text": "Wir verpflichten uns zur Erbringung vereinbarter Dienstleistungen." },
+      { "title": "Geistiges Eigentum", "text": "Alle Designs bleiben nach vollständiger Bezahlung Eigentum des Kunden." },
+      { "title": "Zahlung", "text": "Zahlungsbedingungen unterliegen der unterzeichneten Vereinbarung." },
+      { "title": "Haftung", "text": "BrandUp haftet nicht für indirekte Verluste." }
+    ]
   },
   "contact": {
-    "subtitle": "Kontaktieren Sie uns",
     "title": "Kontakt",
+    "subtitle": "Kontaktieren Sie uns",
     "getInTouch": "Kontaktieren Sie uns",
     "description": "Wir sind hier, um Ihre Fragen zu beantworten und Ihnen bei der Verwirklichung Ihrer Vision zu helfen.",
-    "phoneLabel": "Telefonnummer",
-    "instagram": "Instagram",
-    "emailLabel": "E-Mail-Adresse",
-    "taxNumber": "Steuernummer",
     "address": "Waterkers 55, 1689PJ, Zwaag Hoorn",
+    "phone": "Telefonnummer",
+    "phoneValue": "+31 6 42786606",
+    "email": "E-Mail-Adresse",
+    "emailLabel": "E-Mail-Adresse",
+    "emailValue": "Saeedsinan180@gmail.com",
+    "taxNumber": "Steuernummer",
+    "taxValue": "12786594",
     "hours": "Samstag bis Freitag 9:00 - 17:00",
+    "send": "Nachricht senden",
     "sendMessage": "Schicken Sie uns eine Nachricht",
     "name": "Vollständiger Name",
     "namePlaceholder": "Geben Sie Ihren Namen ein",
-    "service": "Erforderlicher Service",
+    "service": "Gewünschter Service",
     "selectService": "Service auswählen",
     "message": "Nachricht",
     "messagePlaceholder": "Schreiben Sie Ihre Nachricht hier...",
-    "send": "Nachricht senden",
-    "privacy": "Wir respektieren Ihre Privatsphäre und werden Ihre Daten nicht an Dritte weitergeben",
-    "phoneValue": "+31 6 42786606",
-    "emailValue": "Saeedsinan180@gmail.com",
-    "taxValue": "12786594"
+    "privacy": "Wir respektieren Ihre Privatsphäre und geben Ihre Daten nicht weiter"
+  },
+  "cta": {
+    "tag": "BrandUp Agentur",
+    "title_start": "Die Exzellenz Ihrer Marke beginnt mit unserer",
+    "title_highlight": "Kreativität",
+    "title_end": "",
+    "subtitle": "Wir sind Ihre Partner auf dem Weg zum Erfolg – Kreativität trifft Technologie.",
+    "button": "Projekt starten"
+  },
+  "faq": {
+    "badge": "FAQ",
+    "description": "Alles, was Sie über unsere Dienstleistungen wissen müssen.",
+    "items": [
+      { "q": "Welche Dienstleistungen bietet BrandUp an?", "a": "Wir bieten integrierte Lösungen an, darunter strategisches digitales Marketing, Filmproduktion, Elite-Markenidentität und digitale Systeme." },
+      { "q": "Wie stellen Sie Qualität sicher?", "a": "Wir nutzen eine präzise Methodik, die Datenanalyse mit kreativem Geist verbindet." },
+      { "q": "Arbeiten Sie mit internationalen Kunden?", "a": "Absolut. Wir betreuen globale Kunden und verstehen internationale Marktanforderungen." },
+      { "q": "Was unterscheidet BrandUp von anderen Agenturen?", "a": "Wir verbinden künstlerische Vision mit technischer Intelligenz und schaffen einzigartige visuelle Erlebnisse." },
+      { "q": "Wie werden die Projektkosten bestimmt?", "a": "Jedes Projekt ist einzigartig, daher erstellen wir individuelle Angebote basierend auf Ihren Anforderungen." },
+      { "q": "Bieten Sie Support nach der Lieferung an?", "a": "Ja, wir bieten 6 Monate technischen Support nach der Lieferung an." }
+    ]
   }
 }

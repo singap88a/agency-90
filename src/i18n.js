@@ -2,13 +2,16 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
-import { translations } from './translations';
+import ar from './locales/ar.json';
+import en from './locales/en.json';
+import de from './locales/de.json';
+import nl from './locales/nl.json';
 
 const resources = {
-  ar: { translation: translations.ar },
-  en: { translation: translations.en },
-  de: { translation: translations.de },
-  nl: { translation: translations.nl }
+  ar: { translation: ar },
+  en: { translation: en },
+  de: { translation: de },
+  nl: { translation: nl },
 };
 
 i18n

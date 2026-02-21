@@ -44,14 +44,14 @@ const ProjectsPage = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-brand-accent font-black tracking-[0.5em] uppercase text-xs mb-6"
+            className="text-brand-accent font-bold tracking-widest text-xs mb-6"
           >
             Showcase
           </motion.div>
           <motion.h1 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-6xl md:text-8xl font-black mb-12 tracking-tighter text-brand-dark uppercase"
+            className="text-6xl md:text-8xl font-bold mb-12 tracking-tighter text-brand-dark"
           >
             {t('nav.portfolio')}
           </motion.h1>
@@ -62,7 +62,7 @@ const ProjectsPage = () => {
               <button
                 key={cat.id}
                 onClick={() => setFilter(cat.id)}
-                className={`px-6 md:px-8 py-3 md:py-4 rounded-2xl transition-all text-[10px] md:text-xs font-black tracking-[0.1em] uppercase flex items-center gap-3
+                className={`px-6 md:px-8 py-3 md:py-4 rounded-2xl transition-all text-[10px] md:text-xs font-bold tracking-widest flex items-center gap-3
                   ${filter === cat.id ? 'bg-brand-accent text-white shadow-[0_10px_30px_rgba(217,119,6,0.2)] scale-105' : 'text-brand-dark/40 hover:text-brand-dark hover:bg-black/5'}`}
               >
                 <cat.icon className="w-4 h-4" />
@@ -97,7 +97,7 @@ const ProjectsPage = () => {
                   />
                   
                   <div className="absolute inset-0 z-20 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
-                    <div className="px-8 py-4 rounded-2xl bg-brand-accent text-white font-black text-xs uppercase tracking-widest shadow-2xl flex items-center gap-3">
+                    <div className="px-8 py-4 rounded-2xl bg-brand-accent text-white font-bold text-xs tracking-widest shadow-2xl flex items-center gap-3">
                       {project.type === 'video' ? <Play className="w-4 h-4 fill-current" /> : <ImageIcon className="w-4 h-4" />}
                       {project.type === 'video' ? (isRtl ? 'تشغيل الفيديو' : 'Watch Video') : (isRtl ? 'عرض المشـروع' : 'View Project')}
                     </div>

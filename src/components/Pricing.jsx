@@ -86,7 +86,7 @@ const Pricing = () => {
             className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white border border-brand-accent/20 shadow-sm mb-10"
           >
             <Sparkles className="w-4 h-4 text-brand-accent animate-pulse" />
-            <span className="text-sm font-bold tracking-widest uppercase text-brand-accent">
+            <span className="text-sm font-bold tracking-widest text-brand-accent">
               {isRtl ? 'استثمار ذكي نخبوي' : 'Elite Smart Investment'}
             </span>
           </motion.div>
@@ -134,7 +134,7 @@ const Pricing = () => {
             
             <div className="relative h-full bg-white rounded-[2.5rem] border border-gray-100 p-10 md:p-14 shadow-2xl shadow-gray-200/50 flex flex-col justify-between overflow-hidden">
               <div className="relative z-10">
-                <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 text-white rounded-xl text-xs font-bold uppercase tracking-widest mb-10 shadow-lg shadow-gray-900/10">
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 text-white rounded-xl text-xs font-bold tracking-widest mb-10 shadow-lg shadow-gray-900/10">
                   <Crown className="w-3.5 h-3.5" />
                   {t('pricing.most_popular')}
                 </div>
@@ -181,7 +181,7 @@ const Pricing = () => {
               </motion.button>
 
               {/* Decorative faint background text */}
-              <div className="absolute -bottom-10 -right-10 text-[120px] font-black text-gray-50/50 select-none pointer-events-none leading-none -rotate-12">
+              <div className="absolute -bottom-10 -right-10 text-[120px] font-bold text-gray-50/50 select-none pointer-events-none leading-none -rotate-12">
                 EXPERT
               </div>
             </div>
@@ -218,7 +218,7 @@ const Pricing = () => {
 
                     <div className="space-y-3 mb-8">
                       {m.features.map((f, i) => (
-                        <div key={i} className="flex items-center gap-3 text-xs text-gray-400 font-bold uppercase tracking-wider">
+                        <div key={i} className="flex items-center gap-3 text-xs text-gray-400 font-bold tracking-wide">
                           <span className="w-1.5 h-1.5 rounded-full bg-brand-accent/40" />
                           <span>{f}</span>
                         </div>
@@ -226,7 +226,7 @@ const Pricing = () => {
                     </div>
                   </div>
 
-                  <button className="text-sm font-bold text-gray-900 hover:text-brand-accent transition-colors flex items-center gap-2 group/link uppercase tracking-widest mt-auto">
+                  <button className="text-sm font-bold text-gray-900 hover:text-brand-accent transition-colors flex items-center gap-2 group/link tracking-widest mt-auto">
                     <span>{t('pricing.learn_more')}</span>
                     <ArrowIcon className={`w-4 h-4 ${isRtl ? 'group-hover/link:-translate-x-1' : 'group-hover/link:translate-x-1'} transition-transform`} />
                   </button>

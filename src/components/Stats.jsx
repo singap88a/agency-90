@@ -38,10 +38,10 @@ const Stats = () => {
 
                 {/* Text Content */}
                 <div className="flex flex-col">
-                  <div className="text-3xl lg:text-5xl font-black text-brand-accent tracking-tighter transition-transform group-hover:scale-105 duration-500">
+                  <div className="text-3xl lg:text-5xl font-bold text-brand-accent tracking-tighter transition-transform group-hover:scale-105 duration-500">
                     {stat.value}
                   </div>
-                  <div className="text-xs lg:text-sm font-black uppercase tracking-[0.25em] text-brand-dark/60 group-hover:text-brand-dark transition-colors duration-500">
+                  <div className="text-xs lg:text-sm font-semibold tracking-wide text-brand-dark/60 group-hover:text-brand-dark transition-colors duration-500">
                     {stat.label}
                   </div>
                 </div>

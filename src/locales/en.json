@@ -1,61 +1,135 @@
 {
   "nav": {
+    "home": "Home",
     "services": "Services",
-    "about": "About",
+    "about": "About Us",
     "portfolio": "Portfolio",
+    "pricing": "Pricing",
     "investment": "Investment",
-    "contact": "Contact"
+    "contact": "Contact",
+    "stay_connected": "Stay Connected",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "description": "A creative agency specialized in digital solutions, blending art and technology to craft an exceptional future.",
+    "developed_by": "Developed by",
+    "developer_name": "Ahmed Singap"
+  },
+  "common": {
+    "showMore": "Show More",
+    "showLess": "Show Less",
+    "taxNumber": "Tax Number"
   },
   "hero": {
-    "tag": "Bold Digital Excellence",
-    "title": "Crafting the Digital Future of Your Brand",
-    "subtext": "At Brand Up, we don't just build websites; we craft comprehensive digital ecosystems and technical masterpieces that propel your brand to the forefront of global competition. Our expert team blends breathtaking cinematic vision with cutting-edge programming and AI to create unforgettable user experiences, transforming your ambitions into tangible, exceptional successes that exceed all expectations.",
-    "cta": "Start Your Success Journey Now",
+    "title": "Crafting Your Digital Future",
+    "subtext": "At Brand Up, we don't just build websites; we craft comprehensive digital ecosystems and technical masterpieces that propel your brand to the forefront of global competition.",
+    "cta": "Start Your Success Journey",
     "projects": "Explore Our Creative Works",
-    "stats": {
-      "projects": "Projects Completed",
-      "clients": "Happy Clients",
-      "experience": "Years of Excellence",
-      "satisfaction": "Satisfaction Rate"
-    }
+    "stats": [
+      { "label": "Projects Completed", "value": "150+" },
+      { "label": "Happy Clients", "value": "85+" },
+      { "label": "Years of Experience", "value": "10+" },
+      { "label": "Satisfaction Rate", "value": "99%" }
+    ]
   },
   "about": {
     "tag": "Vision & Mission",
-    "title": "Quality Beyond Expectations",
-    "description": "Our mission is to empower clients to achieve strong market impact through innovative strategies and integrated creative solutions.",
-    "mission": "Mission",
-    "vision": "Vision",
-    "mission_desc": "Delivering high-quality marketing solutions and artistic designs that exceed our clients' expectations.",
-    "vision_desc": "Leading digital transformation with a creative touch that makes your brand unique and unforgettable."
+    "title": "Your Bridge to Digital Success",
+    "description": "At BrandUp, we believe every brand has a unique story that deserves to be told with the highest standards of creativity and professionalism.",
+    "banner": {
+      "title": "About Us",
+      "subtitle": "Crafting the extraordinary into digital reality"
+    },
+    "who": {
+      "title": "Who We Are?",
+      "subtitle": "A journey of creativity and innovation fueled by passion",
+      "desc1": "We are a full-service creative agency specializing in digital transformation and brand identity.",
+      "desc2": "Since our inception, we've had one goal: to be the primary engine for our clients' growth in the digital space."
+    },
+    "vision_section": {
+      "title": "Our Vision & Values",
+      "subtitle": "What drives us towards excellence",
+      "v": { "title": "Vision", "desc": "To be the global leader and creative beacon in digital solutions, blending cutting-edge technology with artistic spirit." },
+      "m": { "title": "Mission", "desc": "Empowering companies and brands to reach their full potential by delivering exceptional digital and cinematic experiences." },
+      "values": { "title": "Values", "desc": "Integrity, limitless innovation, and excellence in detail. We believe true success lies in long-term partnerships with our clients." }
+    },
+    "team": {
+      "title": "Creative Team",
+      "subtitle": "Expertise That Delivers",
+      "description": "A group of elite creators and experts combining artistic vision with technical precision to turn your ideas into reality.",
+      "roles": {
+        "ceo": "Founder & CEO",
+        "creative": "Creative Director",
+        "tech": "CTO",
+        "marketing": "Marketing Manager"
+      }
+    },
+    "testimonials": {
+      "title": "Client Testimonials",
+      "subtitle": "Voices of Success",
+      "description": "We are proud of our partnerships with elite organizations that trust our creativity. Their success drives our continuous innovation.",
+      "items": [
+        { "name": "Omar Zayed", "role": "CEO of Zayed Tech", "text": "Working with BrandUp was a turning point for our business. High professionalism, impressive results, and exceptional customer service.", "rating": 5 },
+        { "name": "Laila Mansour", "role": "Creative Hub Director", "text": "The best creative agency I've ever dealt with. Their designs are beyond expectations and deeply touch the essence of the brand.", "rating": 5 },
+        { "name": "John Miller", "role": "Founder of Miller Co", "text": "Exceptional service and world-class vision. They completely transformed our brand and helped us reach global markets.", "rating": 5 },
+        { "name": "Yassine Bakri", "role": "Bakri Logistics Director", "text": "Very professional team, full commitment to deadlines, and creativity in execution that goes beyond description.", "rating": 5 }
+      ]
+    }
   },
   "services": {
-    "title": "Expertise Delivered",
-    "subtitle": "We blend artistic vision with technical precision to deliver results that transcend the ordinary.",
+    "tag": "Exceptional Expertise",
+    "title": "Innovative Digital Solutions",
+    "subtitle": "We craft integrated digital solutions that blend artistic creativity with technical precision to elevate your brand's presence.",
     "design": "Creative Design",
-    "marketing": "Marketing",
+    "marketing": "Marketing Growth",
     "management": "Social Management",
     "photography": "Media Production",
-    "items_design": ["Brand Identity", "Graphic Design", "Exhibitions"],
-    "items_marketing": ["Content Design", "Ads Management", "Google & TikTok"],
-    "items_management": ["Account Management", "Data Analysis", "Stats Reports"],
-    "items_photography": ["Pro Photography", "Video Production", "Editing"]
+    "videos": "Videos",
+    "items_design": ["Brand Identity", "Graphic Design", "Exhibitions Design"],
+    "items_marketing": ["Content Strategy", "Growth Campaigns", "Digital Marketing"],
+    "items_management": ["Account Management", "Data Analytics", "Performance Metrics"],
+    "items_photography": ["Photography", "Cinematography", "Post-Production"]
   },
-  "footer": {
-    "developed_by": "Developed by",
-    "developer": "Ahmed Sinjab",
-    "rights": "All rights reserved"
+  "pricing": {
+    "strategic": { "title": "Growth Strategy", "desc": "Integrated marketing plans based on deep data analysis to ensure your brand expands into target markets." },
+    "growth": { "title": "Cinematic Production", "desc": "We transform your ideas into moving works of art through world-class visual content production." },
+    "premium": { "title": "Elite Identity", "desc": "We design a visual identity that reflects the luxury and strength of your brand." },
+    "data": { "title": "Data Analysis", "desc": "We monitor and analyze every movement and interaction to provide accurate reports." },
+    "most_popular": "Most Popular",
+    "bespoke_title": "Bespoke Solutions",
+    "bespoke_desc": "Every project is crafted from scratch to fit your unique needs. We focus on peak quality and tangible results.",
+    "request_consultation": "Request Consultation",
+    "learn_more": "Learn More",
+    "metrics": { "roi": "Average ROI", "projects": "Successful Projects" }
+  },
+  "legal": {
+    "privacyContent": [
+      { "title": "Data Collection", "text": "We collect information you provide directly to us when requesting a service or contacting us." },
+      { "title": "Use of Information", "text": "We use data to improve our services and ensure a personalized experience." },
+      { "title": "Data Protection", "text": "We apply strict security measures to protect your information." },
+      { "title": "Cookies", "text": "We use cookies to analyze site traffic and improve the user experience." }
+    ],
+    "termsContent": [
+      { "title": "Services", "text": "We are committed to providing agreed services with the highest standards of quality and professionalism." },
+      { "title": "Intellectual Property", "text": "All designs and produced content remain the property of the client after full payment." },
+      { "title": "Payment", "text": "Payment terms are subject to the signed agreement for each project." },
+      { "title": "Liability", "text": "BrandUp is not responsible for any indirect losses resulting from using the services outside the agreed scope." }
+    ]
   },
   "contact": {
-    "subtitle": "Contact Us",
     "title": "Get in Touch",
+    "subtitle": "Contact Us",
     "getInTouch": "Get in Touch",
     "description": "We are here to answer your inquiries and help you achieve your vision.",
-    "phoneLabel": "Phone Number",
-    "instagram": "Instagram",
-    "emailLabel": "Email Address",
-    "taxNumber": "Tax Number",
     "address": "Waterkers 55, 1689PJ, Zwaag Hoorn",
+    "phone": "Phone Number",
+    "phoneValue": "+31 6 42786606",
+    "email": "Email Address",
+    "emailLabel": "Email Address",
+    "emailValue": "Saeedsinan180@gmail.com",
+    "taxNumber": "Tax Number",
+    "taxValue": "12786594",
     "hours": "Saturday to Friday 9:00 AM - 5:00 PM",
+    "send": "Send Message",
     "sendMessage": "Send us a message",
     "name": "Full Name",
     "namePlaceholder": "Enter your name",
@@ -63,10 +137,26 @@
     "selectService": "Select Service",
     "message": "Message",
     "messagePlaceholder": "Write your message here...",
-    "send": "Send Message",
-    "privacy": "We respect your privacy and will not share your data with any third party",
-    "phoneValue": "+31 6 42786606",
-    "emailValue": "Saeedsinan180@gmail.com",
-    "taxValue": "12786594"
+    "privacy": "We respect your privacy and will not share your data with any third party"
+  },
+  "cta": {
+    "tag": "BrandUp Agency",
+    "title_start": "Your Brand's Excellence Starts with Our",
+    "title_highlight": "Creativity",
+    "title_end": "",
+    "subtitle": "We are here to be your partners in success, blending creativity with technology to transform your ambitions into innovative digital solutions.",
+    "button": "Start Your Project"
+  },
+  "faq": {
+    "badge": "FAQ",
+    "description": "Everything you need to know about our services and how we can help bring your vision to life.",
+    "items": [
+      { "q": "What services does BrandUp provide?", "a": "We offer integrated solutions including strategic digital marketing, cinematic production, elite visual identity, and advanced digital systems." },
+      { "q": "How do you ensure quality?", "a": "We employ a precise methodology blending data analysis with creative spirit. Every project detail is carefully monitored." },
+      { "q": "Do you work with international clients?", "a": "Absolutely. We serve a global clientele and deeply understand international market requirements." },
+      { "q": "What makes BrandUp different?", "a": "We merge artistic vision with technical intelligence, focusing on creating unique visual and cinematic experiences." },
+      { "q": "How is project cost determined?", "a": "Each project is unique, so we provide customized quotes based on your requirements and budget." },
+      { "q": "Do you offer post-delivery support?", "a": "Yes, we provide ongoing technical support for 6 months after delivery, with the option to extend." }
+    ]
   }
 }

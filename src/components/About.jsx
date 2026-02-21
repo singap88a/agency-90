@@ -55,8 +55,8 @@ const About = () => {
                 <Zap className="w-5 h-5" />
               </div>
               <div className="flex flex-col">
-                <span className="text-sm font-black text-brand-dark uppercase tracking-wider">Elite</span>
-                <span className="text-[8px] font-black opacity-30 uppercase tracking-[0.2em]">Excellence</span>
+                <span className="text-sm font-bold text-brand-dark tracking-wide">Elite</span>
+                <span className="text-[8px] font-bold opacity-30 tracking-widest">Excellence</span>
               </div>
             </motion.div>
 
@@ -69,8 +69,8 @@ const About = () => {
                 <ShieldCheck className="w-5 h-5" />
               </div>
               <div className="flex flex-col">
-                <span className="text-sm font-black text-brand-dark uppercase tracking-wider">World</span>
-                <span className="text-[8px] font-black opacity-30 uppercase tracking-[0.2em]">Standards</span>
+                <span className="text-sm font-bold text-brand-dark tracking-wide">World</span>
+                <span className="text-[8px] font-bold opacity-30 tracking-widest">Standards</span>
               </div>
             </motion.div>
 
@@ -86,11 +86,11 @@ const About = () => {
               viewport={{ once: true }}
               className="flex flex-col mb-16"
             >
-              <span className="text-brand-accent font-black tracking-[0.5em] uppercase text-sm mb-6">
+              <span className="text-brand-accent font-bold tracking-widest text-sm mb-6">
                 {t('about.tag')}
               </span>
               {/* Extra Spaced, Two-Line High-Impact Title */}
-              <h2 className="text-4xl lg:text-6xl font-black tracking-tighter mb-8 text-brand-dark leading-[1.3] whitespace-pre-line">
+              <h2 className="text-4xl lg:text-6xl font-bold tracking-tighter mb-8 text-brand-dark leading-[1.3] whitespace-pre-line">
                 {i18n.language === 'ar' ? (
                   <>نبني مستقبلك بأعلى معايير<br /><span className="bg-gradient-to-r from-brand-accent to-brand-primary bg-clip-text text-transparent">الإبداع والاحترافية</span></>
                 ) : (
@@ -115,23 +115,23 @@ const About = () => {
                 <div className="flex flex-col gap-3 group">
                   <div className="flex items-center gap-3">
                     <div className="w-1.5 h-6 bg-brand-accent rounded-full transition-transform group-hover:scale-y-125" />
-                    <span className="text-4xl font-black text-brand-accent tracking-tighter">98%</span>
+                    <span className="text-4xl font-bold text-brand-accent tracking-tighter">98%</span>
                   </div>
-                  <span className="text-[10px] uppercase tracking-widest font-black text-brand-dark/30 group-hover:text-brand-accent transition-colors">Success</span>
+                  <span className="text-[10px] tracking-widest font-bold text-brand-dark/30 group-hover:text-brand-accent transition-colors">Success</span>
                 </div>
                 <div className="flex flex-col gap-3 group">
                   <div className="flex items-center gap-3">
                     <div className="w-1.5 h-6 bg-brand-accent rounded-full transition-transform group-hover:scale-y-125" />
-                    <span className="text-4xl font-black text-brand-accent tracking-tighter">150+</span>
+                    <span className="text-4xl font-bold text-brand-accent tracking-tighter">150+</span>
                   </div>
-                  <span className="text-[10px] uppercase tracking-widest font-black text-brand-dark/30 group-hover:text-brand-accent transition-colors">Partners</span>
+                  <span className="text-[10px] tracking-widest font-bold text-brand-dark/30 group-hover:text-brand-accent transition-colors">Partners</span>
                 </div>
                 <div className="flex flex-col gap-3 group">
                   <div className="flex items-center gap-3">
                     <div className="w-1.5 h-6 bg-brand-accent rounded-full transition-transform group-hover:scale-y-125" />
-                    <span className="text-4xl font-black text-brand-accent tracking-tighter">10Y</span>
+                    <span className="text-4xl font-bold text-brand-accent tracking-tighter">10Y</span>
                   </div>
-                  <span className="text-[10px] uppercase tracking-widest font-black text-brand-dark/30 group-hover:text-brand-accent transition-colors">Experience</span>
+                  <span className="text-[10px] tracking-widest font-bold text-brand-dark/30 group-hover:text-brand-accent transition-colors">Experience</span>
                 </div>
               </div>
             </motion.div>
