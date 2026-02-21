@@ -44,8 +44,8 @@ const Pricing = () => {
     {
       icon: TrendingUp,
       key: 'data',
-      color: 'from-emerald-600/20 to-teal-400/20',
-      iconColor: 'text-emerald-600',
+      color: 'from-amber-400/20 to-yellow-300/20',
+      iconColor: 'text-amber-600',
       features: ['Real-time Reports', 'ROI Tracking']
     }
   ];

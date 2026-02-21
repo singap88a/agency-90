@@ -1,10 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { Github, Linkedin, Twitter } from 'lucide-react';
+import { Github, Linkedin, Twitter, Sparkles } from 'lucide-react';
 
 const AboutTeam = () => {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
+    const isRtl = i18n.dir() === 'rtl';
 
     const team = [
         {
@@ -34,18 +35,52 @@ const AboutTeam = () => {
     ];
 
     return (
-        <section className="py-32 bg-brand-secondary relative overflow-hidden">
-            <div className="container mx-auto px-6 lg:px-24 text-center">
-                <div className="mb-20 max-w-2xl mx-auto">
-                    <span className="text-brand-accent font-black tracking-[0.4em] uppercase text-xs mb-4 block">
-                        {t('about.team.title')}
-                    </span>
-                    <h2 className="text-4xl lg:text-6xl font-black text-brand-dark tracking-tighter leading-tight">
-                        {t('about.team.subtitle')}
-                    </h2>
+        <section className="py-16 md:py-24 bg-brand-secondary relative overflow-hidden">
+            <div className="container mx-auto px-6 lg:px-24">
+                {/* Elite Side-Aligned Header */}
+                <div className={`mb-16 md:mb-20 max-w-4xl ${isRtl ? 'text-right' : 'text-left'}`}>
+                    <motion.div
+                        initial={{ opacity: 0, x: isRtl ? 20 : -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white border border-brand-primary/20 shadow-sm mb-8"
+                    >
+                        <Sparkles className="w-4 h-4 text-brand-primary animate-pulse" />
+                        <span className="text-sm font-bold tracking-widest uppercase text-brand-primary">
+                            {t('about.team.title')}
+                        </span>
+                    </motion.div>
+
+                    <motion.h2
+                        initial={{ opacity: 0, x: isRtl ? 30 : -30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.1 }}
+                        className="text-4xl md:text-6xl font-black text-gray-900 mb-8 tracking-tighter leading-tight"
+                    >
+                        {isRtl ? (
+                            <>
+                                {t('about.team.subtitle').split(' ').slice(0, 1).join(' ')} <span className="bg-gradient-to-r from-brand-primary to-brand-primary/60 bg-clip-text text-transparent">{t('about.team.subtitle').split(' ').slice(1).join(' ')}</span>
+                            </>
+                        ) : (
+                            <>
+                                {t('about.team.subtitle').split(' ').slice(0, 1).join(' ')} <span className="bg-gradient-to-r from-brand-primary to-brand-primary/60 bg-clip-text text-transparent">{t('about.team.subtitle').split(' ').slice(1).join(' ')}</span>
+                            </>
+                        )}
+                    </motion.h2>
+
+                    <motion.p
+                        initial={{ opacity: 0, x: isRtl ? 20 : -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.2 }}
+                        className="text-lg md:text-xl text-gray-500 max-w-2xl leading-relaxed font-medium"
+                    >
+                        {t('about.team.description')}
+                    </motion.p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 text-center">
                     {team.map((member, index) => (
                         <motion.div
                             key={index}
@@ -66,7 +101,7 @@ const AboutTeam = () => {
                                 {/* Content Area */}
                                 <div className="absolute inset-x-8 bottom-12 flex flex-col items-center text-center h-full justify-end pb-0">
                                     {/* Initial Content: Name and Role */}
-                                    <div className="transition-all duration-700 transform group-hover:-translate-y-48">
+                                    <div className="transition-all duration-700 transform group-hover:-translate-y-72">
                                         <h3 className="text-white text-2xl lg:text-3xl font-black mb-2 tracking-tighter">{member.name}</h3>
                                         <p className="text-brand-accent font-black text-[10px] uppercase tracking-[0.3em]">{member.role}</p>
                                     </div>

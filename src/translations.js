@@ -11,6 +11,9 @@ export const translations = {
       stay_connected: "كن على اتصال",
       privacy: "سياسة الخصوصية",
       terms: "الشروط والأحكام",
+      description: "وكالة إبداعية متخصصة في الحلول الرقمية، نجمع بين الفن والتقنية لنصنع مستقبلاً استثنائياً لعلامتك التجارية.",
+      developed_by: "تم التطوير بواسطة",
+      developer_name: "أحمد سنجاب",
     },
     common: {
       showMore: "عرض المزيد",
@@ -48,20 +51,21 @@ export const translations = {
         subtitle: "ما يدفعنا دائماً نحو التميز",
         v: {
           title: "رؤيتنا",
-          desc: "أن نكون القائد العالمي في حلول التسويق الرقمي والإبداع الفني."
+          desc: "أن نكون القائد العالمي والمنارة الإبداعية في عالم الحلول الرقمية، حيث نمزج التكنولوجيا المتطورة بالروح الفنية لخلق واقع جديد للعلامات التجارية يتجاوز الحدود ويصنع تأثيراً مستداماً في الأسواق العالمية."
         },
         m: {
           title: "رسالتنا",
-          desc: "تمكين العلامات التجارية من الوصول لأقصى إمكاناتها من خلال التكنولوجيا والفن."
+          desc: "تمكين الشركات والعلامات التجارية من تحقيق أقصى إمكاناتها من خلال تقديم تجارب رقمية وسينمائية استثنائية. نحن نلتزم بالابتكار المستمر وتحويل التحديات التقنية إلى فرص نجاح ملموسة تعزز نمو عملائنا."
         },
         values: {
           title: "قيمنا",
-          desc: "الاحترافية، الابتكار، والالتزام المطلق بالنتائج الاستثنائية لعملائنا."
+          desc: "النزاهة، الابتكار بلا حدود، والتميز في التفاصيل. نحن نؤمن بأن النجاح الحقيقي يكمن في الشراكة طويلة الأمد مع عملائنا والالتزام المطلق بتقديم جودة تفوق التوقعات في كل بكسل وكل سطر برمج."
         }
       },
       team: {
-        title: "فريق المبدعين",
-        subtitle: "الأسماء التي تقف وراء كل قصة نجاح",
+        title: "فريق الإبداع",
+        subtitle: "خبرات تصنع المستحيل",
+        description: "نخبة من المبدعين والخبراء الذين يجمعون بين الرؤية الفنية والدقة التقنية لتحويل أفكاركم إلى واقع ملموس.",
         roles: {
           ceo: "المؤسس والمدير التنفيذي",
           creative: "المدير الإبداعي",
@@ -71,7 +75,34 @@ export const translations = {
       },
       testimonials: {
         title: "قالوا عنا",
-        subtitle: "أراء شركاء النجاح الذين وضعوا ثقتهم بنا"
+        subtitle: "آراء شركاء النجاح",
+        description: "نفخر بشراكتنا مع نخبة من المؤسسات والشركات التي وضعت ثقتها في إبداعنا. نجاحهم هو دافعنا الدائم نحو الابتكار والتميز العالمي.",
+        items: [
+          {
+            name: "عمر زايد",
+            role: "المدير التنفيذي لـ Zayed Tech",
+            text: "التعامل مع براند أب كان نقلة نوعية في عملنا. احترافية عالية ونتائج مبهرة وخدمة عملاء استثنائية فاقت كل التوقعات.",
+            rating: 5
+          },
+          {
+            name: "ليلى منصور",
+            role: "مديرة Creative Hub",
+            text: "أفضل وكالة إبداعية تعاملت معها على الإطلاق. تصاميمهم خارج التوقعات وتلمس روح العلامة التجارية بعمق مذهل.",
+            rating: 5
+          },
+          {
+            name: "جون ميلر",
+            role: "مؤسس Miller Co",
+            text: "خدمة استثنائية ورؤية عالمية المستوى. لقد حولوا علامتنا التجارية بالكامل وساعدونا في الوصول للأسواق العالمية بنجاح.",
+            rating: 5
+          },
+          {
+            name: "ياسين بكري",
+            role: "مدير Bakri Logistics",
+            text: "فريق عمل محترف جداً، التزام تام بالمواعيد وإبداع في التنفيذ يفوق الوصف بكل المعايير التقنية والجمالية.",
+            rating: 5
+          }
+        ]
       }
     },
     services: {
@@ -158,6 +189,9 @@ export const translations = {
       stay_connected: "Stay Connected",
       privacy: "Privacy Policy",
       terms: "Terms of Service",
+      description: "A creative agency specialized in digital solutions, blending art and technology to craft an exceptional future.",
+      developed_by: "Developed by",
+      developer_name: "Ahmed Singap",
     },
     common: {
       showMore: "Show More",
@@ -195,20 +229,21 @@ export const translations = {
           subtitle: "What drives us towards excellence",
           v: {
             title: "Vision",
-            desc: "To be the global leader in digital marketing solutions and artistic creativity."
+            desc: "To be the global leader and creative beacon in digital solutions, blending cutting-edge technology with artistic spirit to create a new reality for brands that transcends boundaries and makes a sustainable impact on global markets."
           },
           m: {
             title: "Mission",
-            desc: "Empowering brands to reach their full potential through technology and art."
+            desc: "Empowering companies and brands to reach their full potential by delivering exceptional digital and cinematic experiences. We are committed to continuous innovation and transforming technical challenges into tangible success opportunities that foster our clients' growth."
           },
           values: {
             title: "Values",
-            desc: "Professionalism, innovation, and absolute commitment to exceptional results for our clients."
+            desc: "Integrity, limitless innovation, and excellence in detail. We believe true success lies in long-term partnerships with our clients and an absolute commitment to delivering quality that exceeds expectations in every pixel and every line of code."
           }
         },
         team: {
-          title: "The Creative Team",
-          subtitle: "The names behind every success story",
+          title: "Creative Team",
+          subtitle: "Expertise That Delivers",
+          description: "A group of elite creators and experts combining artistic vision with technical precision to turn your ideas into reality.",
           roles: {
             ceo: "Founder & CEO",
             creative: "Creative Director",
@@ -217,8 +252,35 @@ export const translations = {
           }
         },
         testimonials: {
-          title: "What They Say",
-          subtitle: "Voices of success partners who put their trust in us"
+          title: "Client Testimonials",
+          subtitle: "Voices of Success",
+          description: "We are proud of our partnerships with elite organizations that trust our creativity. Their success drives our continuous innovation.",
+          items: [
+            {
+              name: "Omar Zayed",
+              role: "CEO of Zayed Tech",
+              text: "Working with BrandUp was a turning point for our business. High professionalism, impressive results, and exceptional customer service that exceeded all expectations.",
+              rating: 5
+            },
+            {
+              name: "Laila Mansour",
+              role: "Creative Hub Director",
+              text: "The best creative agency I've ever dealt with. Their designs are beyond expectations and deeply touch the essence of the brand.",
+              rating: 5
+            },
+            {
+              name: "John Miller",
+              role: "Founder of Miller Co",
+              text: "Exceptional service and world-class vision. They completely transformed our brand and helped us reach global markets successfully.",
+              rating: 5
+            },
+            {
+              name: "Yassine Bakri",
+              role: "Bakri Logistics Director",
+              text: "Very professional team, full commitment to deadlines, and creativity in execution that goes beyond description by all technical standards.",
+              rating: 5
+            }
+          ]
         }
     },
     services: {

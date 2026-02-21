@@ -40,7 +40,7 @@ const AboutWhoWeAre = () => {
                             </p>
                         </div>
 
-                        <div className="flex flex-wrap gap-8 pt-6 border-t border-black/5">
+                        {/* <div className="flex flex-wrap gap-8 pt-6 border-t border-black/5">
                             <div className="flex flex-col">
                                 <span className="text-4xl font-black text-brand-dark tracking-tighter">150+</span>
                                 <span className="text-[10px] font-black text-brand-dark/30 uppercase tracking-widest mt-1">Partners</span>
@@ -49,7 +49,7 @@ const AboutWhoWeAre = () => {
                                 <span className="text-4xl font-black text-brand-dark tracking-tighter">10Y</span>
                                 <span className="text-[10px] font-black text-brand-dark/30 uppercase tracking-widest mt-1">Experience</span>
                             </div>
-                        </div>
+                        </div> */}
                     </motion.div>
 
                     <motion.div 

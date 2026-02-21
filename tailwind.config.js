@@ -9,10 +9,10 @@ export default {
       colors: {
         brand: {
           dark: "#0f172a",      // Slate 900 for text
-          primary: "#059669",   // Emerald 600 for primary
+          primary: "#fbbf24",   // Amber 400 for primary (Yellow)
           secondary: "#ffffff", // Pure white for background
           accent: "#f5b002",    // Golden Amber accent
-          glow: "#34d399",      // Emerald 400 for glows
+          glow: "#fef08a",      // Yellow 200 for glows
         }
       },
       fontFamily: {
