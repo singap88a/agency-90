@@ -11,64 +11,23 @@ import 'swiper/css/pagination';
 import VideoModal from './VideoModal';
 import GalleryModal from './GalleryModal';
 
+import { projectsData } from '../data/projectsData';
+
 const Portfolio = () => {
   const { t, i18n } = useTranslation();
   const [selectedGallery, setSelectedGallery] = useState(null);
+  const [selectedVideo, setSelectedVideo] = useState(null);
   const isRtl = i18n.dir() === 'rtl';
 
-  const projects = [
-    { 
-      id: 1, 
-      category: 'design', 
-      title: 'Luxury Identity', 
-      images: [
-        'https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80',
-        'https://images.unsplash.com/photo-1572044162444-ad60f128bde3?auto=format&fit=crop&w=800&q=80',
-        'https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&w=800&q=80'
-      ]
-    },
-    { 
-      id: 2, 
-      category: 'marketing', 
-      title: 'Digital Growth', 
-      images: [
-        'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80',
-        'https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?auto=format&fit=crop&w=800&q=80',
-        'https://images.unsplash.com/photo-1454165833767-131438959539?auto=format&fit=crop&w=800&q=80'
-      ]
-    },
-    { 
-      id: 3, 
-      category: 'design', 
-      title: 'Minimalist Vision', 
-      images: [
-        'https://images.unsplash.com/photo-1572044162444-ad60f128bde3?auto=format&fit=crop&w=800&q=80',
-        'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80',
-        'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80'
-      ]
-    },
-    { 
-      id: 4, 
-      category: 'marketing', 
-      title: 'Viral Strategy', 
-      images: [
-        'https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?auto=format&fit=crop&w=800&q=80',
-        'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80'
-      ] 
-    },
-    { 
-      id: 5, 
-      category: 'design', 
-      title: 'Brand Elevation', 
-      images: [
-        'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80',
-        'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80'
-      ] 
-    }
-  ];
+  // Show only featured projects (e.g., first 6)
+  const featuredProjects = projectsData.slice(0, 8);
 
   const handleProjectClick = (project) => {
-    setSelectedGallery(project.images);
+    if (project.type === 'video') {
+      setSelectedVideo(project.videoUrl);
+    } else {
+      setSelectedGallery(project.images);
+    }
   };
 
   return (
@@ -120,11 +79,11 @@ const Portfolio = () => {
               768: { slidesPerView: 2 },
               1024: { slidesPerView: 3 },
             }}
-            loop={projects.length > 3}
+            loop={featuredProjects.length > 3}
             autoplay={{ delay: 5000, disableOnInteraction: false }}
             className="w-full"
           >
-            {projects.map((project, idx) => (
+            {featuredProjects.map((project, idx) => (
               <SwiperSlide key={project.id}>
                 <motion.div 
                   initial={{ opacity: 0, scale: 0.95 }}
@@ -132,22 +91,30 @@ const Portfolio = () => {
                   viewport={{ once: true }}
                   transition={{ delay: idx * 0.1, duration: 0.8 }}
                   className="group cursor-pointer" 
-                   onClick={() => handleProjectClick(project)}
+                  onClick={() => handleProjectClick(project)}
                 >
-                  <div className="relative aspect-[3/4] rounded-2xl overflow-hidden border border-black/5 bg-black/[0.02] shadow-xl">
+                  <div className={`relative aspect-[3/4] rounded-2xl overflow-hidden border-2 ${project.type === 'video' ? 'border-brand-accent shadow-[0_0_20px_rgba(245,176,2,0.1)]' : 'border-brand-primary/20 hover:border-brand-primary'} shadow-xl transition-all duration-500 group-hover:shadow-2xl`}>
                     <img 
-                      src={project.images[0]} 
-                      alt={project.title} 
+                      src={project.type === 'video' ? project.thumbnail : project.images[0]} 
+                      alt={i18n.language === 'ar' ? project.title_ar : project.title_en} 
                       className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
+                      loading="lazy"
                     />
 
                     {/* Minimalist Hover Overlay */}
                     <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center backdrop-blur-[2px] z-30">
                       <div className="px-8 py-4 rounded-full bg-white text-brand-dark font-black text-[10px] uppercase tracking-widest shadow-2xl flex items-center gap-3 hover:bg-brand-accent transition-colors">
-                        <ImageIcon className="w-4 h-4" />
-                        {isRtl ? 'عرض المزيد' : 'Show More'}
+                        {project.type === 'video' ? <Play className="w-4 h-4 fill-current" /> : <ImageIcon className="w-4 h-4" />}
+                        {isRtl ? (project.type === 'video' ? 'تشغيل الفيديو' : 'عرض المزيد') : (project.type === 'video' ? 'Play Video' : 'Show More')}
                       </div>
                     </div>
+
+                    {/* Video Indicator */}
+                    {project.type === 'video' && (
+                      <div className="absolute top-4 right-4 z-20 w-10 h-10 rounded-xl bg-brand-accent text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                        <Play className="w-5 h-5 fill-current" />
+                      </div>
+                    )}
                   </div>
                 </motion.div>
               </SwiperSlide>
@@ -155,6 +122,12 @@ const Portfolio = () => {
           </Swiper>
         </div>
       </div>
+
+      <VideoModal
+        isOpen={!!selectedVideo}
+        onClose={() => setSelectedVideo(null)}
+        videoUrl={selectedVideo}
+      />
 
       <GalleryModal
         isOpen={!!selectedGallery}

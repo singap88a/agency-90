@@ -121,7 +121,7 @@ const Contact = ({ isPage = false }) => {
               <div className="mt-8 pt-8" style={{ borderTop: '1px solid #E8E8E8' }}>
                 <div className="flex items-start gap-4 text-base font-medium text-[#4A4A4A]">
                   <MapPin className="w-5 h-5 mt-0.5" style={{ color: primaryColor }} />
-                  <span>{t('contact.address', 'عمان - الأردن')}</span>
+                  <span>{t('contact.address', 'Waterkers 55, 1689PJ, Zwaag Hoorn')}</span>
                 </div>
                 <div className="flex items-start gap-4 mt-4 text-base font-medium text-[#4A4A4A]">
                   <Clock className="w-5 h-5 mt-0.5" style={{ color: primaryColor }} />

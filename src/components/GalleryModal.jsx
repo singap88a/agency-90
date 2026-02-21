@@ -19,23 +19,22 @@ const GalleryModal = ({ isOpen, onClose, images, initialSlide = 0 }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-[9999] flex items-center justify-center bg-white/95 backdrop-blur-3xl px-4 md:px-20 py-20"
+          className="fixed inset-0 z-[80] flex items-center justify-center bg-white/95 backdrop-blur-3xl px-4 md:px-10 py-24"
         >
-          {/* Close Button */}
-          <button
-            onClick={onClose}
-            className="absolute top-6 right-6 z-[10000] w-12 h-12 rounded-full bg-black/10 border border-black/5 flex items-center justify-center text-brand-dark hover:bg-brand-accent hover:text-white transition-all shadow-sm"
-          >
-            <X className="w-6 h-6" />
-          </button>
-
           {/* Main Slider */}
           <motion.div
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.9, opacity: 0 }}
-            className="w-full h-full max-w-5xl max-h-[80vh] relative flex items-center justify-center"
+            className="w-full h-full max-w-7xl max-h-[90vh] relative flex flex-col items-center justify-center"
           >
+            {/* Close Button - Positioned Outside Card Content */}
+            <button
+              onClick={onClose}
+              className="absolute top-5 -right-4 md:-right-12 z-[100] w-12 h-12 rounded-2xl bg-brand-accent border border-white/20 flex items-center justify-center text-white hover:bg-brand-dark hover:scale-110 transition-all shadow-xl shadow-brand-accent/20"
+            >
+              <X className="w-6 h-6" />
+            </button>
             <Swiper
               modules={[Navigation, Pagination, Zoom]}
               navigation={{
@@ -44,7 +43,12 @@ const GalleryModal = ({ isOpen, onClose, images, initialSlide = 0 }) => {
               }}
               pagination={{ 
                 type: 'fraction',
-                className: '!text-brand-dark/40 !font-black !tracking-[0.5em] !text-xs !bottom-[-40px]' 
+                renderFraction: (currentClass, totalClass) => {
+                  return `<span class="px-6 py-2 rounded-full bg-brand-accent text-white font-black text-xs tracking-[0.2em] shadow-lg inline-flex items-center gap-2">
+                    <span class="${currentClass}"></span> / <span class="${totalClass}"></span>
+                  </span>`;
+                },
+                className: '!relative !mt-12 !bottom-0 !flex !justify-center !w-auto' 
               }}
               zoom={true}
               initialSlide={initialSlide}
@@ -56,7 +60,7 @@ const GalleryModal = ({ isOpen, onClose, images, initialSlide = 0 }) => {
                     <img
                       src={img}
                       alt={`Gallery view ${index + 1}`}
-                      className="max-w-full max-h-full object-contain rounded-[2rem] shadow-2xl"
+                      className="max-w-full max-h-[80vh] object-contain rounded-2xl shadow-2xl border border-black/5"
                     />
                   </div>
                 </SwiperSlide>
@@ -66,10 +70,10 @@ const GalleryModal = ({ isOpen, onClose, images, initialSlide = 0 }) => {
             {/* Custom Navigation */}
             {images.length > 1 && (
               <>
-                <button className="gallery-prev absolute left-0 top-1/2 -translate-y-1/2 -translate-x-full md:-translate-x-20 z-[10000] w-16 h-16 rounded-2xl bg-black/5 border border-black/10 flex items-center justify-center text-brand-dark hover:bg-brand-accent hover:text-white transition-all group hidden md:flex">
+                <button className="gallery-prev absolute left-0 top-1/2 -translate-y-1/2 -translate-x-full md:-translate-x-12 z-[100] w-14 h-14 rounded-2xl bg-black/5 border border-black/10 flex items-center justify-center text-brand-dark hover:bg-brand-accent hover:text-white transition-all group hidden md:flex backdrop-blur-md">
                   <ChevronLeft className="w-8 h-8 group-hover:-translate-x-1 transition-transform" />
                 </button>
-                <button className="gallery-next absolute right-0 top-1/2 -translate-y-1/2 translate-x-full md:translate-x-20 z-[10000] w-16 h-16 rounded-2xl bg-black/5 border border-black/10 flex items-center justify-center text-brand-dark hover:bg-brand-accent hover:text-white transition-all group hidden md:flex">
+                <button className="gallery-next absolute right-0 top-1/2 -translate-y-1/2 translate-x-full md:translate-x-12 z-[100] w-14 h-14 rounded-2xl bg-black/5 border border-black/10 flex items-center justify-center text-brand-dark hover:bg-brand-accent hover:text-white transition-all group hidden md:flex backdrop-blur-md">
                   <ChevronRight className="w-8 h-8 group-hover:translate-x-1 transition-transform" />
                 </button>
               </>

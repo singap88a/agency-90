@@ -163,7 +163,7 @@ export const translations = {
     contact: {
       title: "تواصل معنا",
       subtitle: "لأي استفسارات تواصل معنا الآن",
-      address: "جاردينز - شارع وصفي التل - مجمع البنك الإسلامي",
+      address: "Waterkers 55, 1689PJ, Zwaag Hoorn",
       phone: "اتصل بنا",
       email: "البريد الإلكتروني",
       send: "إرسال الرسالة",
@@ -341,7 +341,7 @@ export const translations = {
     contact: {
       title: "Contact Us",
       subtitle: "For any inquiries, reach out now",
-      address: "Gardens - Wasfi Al-Tal St - Islamic Bank Complex",
+      address: "Waterkers 55, 1689PJ, Zwaag Hoorn",
       phone: "Call Us",
       email: "Email",
       send: "Send Message",
