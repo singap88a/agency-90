@@ -20,6 +20,30 @@
     "mission": "Missie",
     "vision": "Visie",
     "mission_desc": "Hoogwaardige marketingoplossingen en artistieke ontwerpen die de verwachtingen overtreffen.",
-    "vision_desc": "De digitale transformatie leiden met een creatieve touch."
+    "vision_desc": "De digitale transformatie leiden met een creative touch."
+  },
+  "contact": {
+    "subtitle": "Neem contact op",
+    "title": "Contact",
+    "getInTouch": "Neem contact op",
+    "description": "We zijn er om uw vragen te beantwoorden en u te helpen uw visie te realiseren.",
+    "phoneLabel": "Telefoonnummer",
+    "instagram": "Instagram",
+    "emailLabel": "E-mailadres",
+    "taxNumber": "Btw-nummer",
+    "address": "Waterkers 55, 1689PJ, Zwaag Hoorn",
+    "hours": "Zaterdag tot Vrijdag 9:00 - 17:00",
+    "sendMessage": "Stuur ons een bericht",
+    "name": "Volledige naam",
+    "namePlaceholder": "Voer uw naam in",
+    "service": "Gewenste dienst",
+    "selectService": "Selecteer dienst",
+    "message": "Bericht",
+    "messagePlaceholder": "Schrijf hier uw bericht...",
+    "send": "Bericht verzenden",
+    "privacy": "Wij respecteren uw privacy en zullen uw gegevens niet met derden delen",
+    "phoneValue": "+31 6 42786606",
+    "emailValue": "Saeedsinan180@gmail.com",
+    "taxValue": "12786594"
   }
 }

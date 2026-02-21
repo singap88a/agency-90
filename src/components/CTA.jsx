@@ -11,7 +11,7 @@ const CTA = () => {
   return (
     <section
       dir={isRtl ? 'rtl' : 'ltr'}
-      className="relative py-16 px-6 lg:px-24 bg-white overflow-hidden"
+      className="relative py-16 px-6 lg:px-24 overflow-hidden"
     >
       <div className="max-w-6xl mx-auto">
 

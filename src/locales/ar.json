@@ -44,5 +44,29 @@
     "developed_by": "تم تطوير هذا الموقع بواسطة",
     "developer": "أحمد سنجاب",
     "rights": "جميع الحقوق محفوظة"
+  },
+  "contact": {
+    "subtitle": "تواصل معنا",
+    "title": "اتصل بنا",
+    "getInTouch": "تواصل معنا",
+    "description": "نحن هنا للإجابة على استفساراتك ومساعدتك في تحقيق رؤيتك",
+    "phone": "رقم الهاتف",
+    "instagram": "انستغرام",
+    "emailLabel": "البريد الإلكتروني",
+    "taxNumber": "الرقم الضريبي",
+    "address": "Waterkers 55, 1689PJ, Zwaag Hoorn",
+    "hours": "السبت الى الجمعة من 9:00 الى 5:00",
+    "sendMessage": "أرسل لنا رسالة",
+    "name": "الاسم الكامل",
+    "namePlaceholder": "أدخل اسمك",
+    "service": "الخدمة المطلوبة",
+    "selectService": "اختر الخدمة",
+    "message": "الرسالة",
+    "messagePlaceholder": "اكتب رسالتك هنا...",
+    "send": "إرسال الرسالة",
+    "privacy": "نحن نحترم خصوصيتك ولن نشارك بياناتك مع أي طرف ثالث",
+    "phoneValue": "+31 6 42786606",
+    "emailValue": "Saeedsinan180@gmail.com",
+    "taxValue": "12786594"
   }
 }

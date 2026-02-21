@@ -44,5 +44,29 @@
     "developed_by": "Developed by",
     "developer": "Ahmed Sinjab",
     "rights": "All rights reserved"
+  },
+  "contact": {
+    "subtitle": "Contact Us",
+    "title": "Get in Touch",
+    "getInTouch": "Get in Touch",
+    "description": "We are here to answer your inquiries and help you achieve your vision.",
+    "phoneLabel": "Phone Number",
+    "instagram": "Instagram",
+    "emailLabel": "Email Address",
+    "taxNumber": "Tax Number",
+    "address": "Waterkers 55, 1689PJ, Zwaag Hoorn",
+    "hours": "Saturday to Friday 9:00 AM - 5:00 PM",
+    "sendMessage": "Send us a message",
+    "name": "Full Name",
+    "namePlaceholder": "Enter your name",
+    "service": "Required Service",
+    "selectService": "Select Service",
+    "message": "Message",
+    "messagePlaceholder": "Write your message here...",
+    "send": "Send Message",
+    "privacy": "We respect your privacy and will not share your data with any third party",
+    "phoneValue": "+31 6 42786606",
+    "emailValue": "Saeedsinan180@gmail.com",
+    "taxValue": "12786594"
   }
 }

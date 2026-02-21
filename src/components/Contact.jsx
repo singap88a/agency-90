@@ -15,14 +15,14 @@ const Contact = ({ isPage = false }) => {
     message: ''
   });
 
-  // اللون الأساسي (الأصفر/الذهبي) - Brand Primary
-  const primaryColor = '#B88A5E';
+  // اللون الأساسي (الأصفر من البراند) - Brand Primary
+  const primaryColor = '#fbbf24';
   
   const contactInfo = [
-    { icon: Phone, label: t('contact.phone', 'رقم الهاتف'), value: "0788 040 051", link: "tel:0788040051" },
-    { icon: Instagram, label: t('contact.instagram', 'انستغرام'), value: "@botyads_jo", link: "https://instagram.com/botyads_jo" },
-    { icon: Mail, label: t('contact.email', 'البريد الإلكتروني'), value: "info@brandup.jo", link: "mailto:info@brandup.jo" },
-    { icon: Briefcase, label: t('contact.taxNumber', 'الرقم الضريبي'), value: "12786594", link: "#" }
+    { icon: Phone, label: t('contact.phone', 'رقم الهاتف'), value: t('contact.phoneValue', "+31 6 42786606"), link: `tel:${t('contact.phoneValue', "+31 6 42786606").replace(/\s/g, '')}` },
+    { icon: Instagram, label: t('contact.instagram', 'انستغرام'), value: "@brandup.agency", link: "https://instagram.com/brandup.agency" },
+    { icon: Mail, label: t('contact.emailLabel', 'البريد الإلكتروني'), value: t('contact.emailValue', "Saeedsinan180@gmail.com"), link: `mailto:${t('contact.emailValue', "Saeedsinan180@gmail.com")}` },
+    { icon: Briefcase, label: t('contact.taxNumber', 'الرقم الضريبي'), value: t('contact.taxValue', "12786594"), link: "#" }
   ];
 
   const services = [
@@ -41,7 +41,37 @@ const Contact = ({ isPage = false }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    
+    // الحصول على اسم الخدمة بشكل مقروء
+    const selectedService = services.find(s => s.value === formData.service)?.label || formData.service;
+    const timestamp = new Date().toLocaleString('en-GB', { 
+      day: '2-digit', month: '2-digit', year: 'numeric', 
+      hour: '2-digit', minute: '2-digit' 
+    });
+    
+    // إرسال للوتساب - تنسيق فائق الاحترافية (تقرير عميل)
+    const whatsappNumber = "201001351667"; // صاحب الموقع
+    const message = 
+      `◈═════════════════════◈\n` +
+      `🏆 *تقرير عميل جديد | LEAD REPORT* \n` +
+      `◈═════════════════════◈\n\n` +
+      `📅 *التاريخ:* ${timestamp}\n` +
+      `📍 *المصدر:* BrandUp Elite Platform\n\n` +
+      `👤 *بـيـانـات الـعـمـيـل:*\n` +
+      `┃ ◈ *الاسم:* ${formData.name}\n` +
+      `┃ ◈ *البريد:* ${formData.email}\n\n` +
+      `🎯 *الخدمة المحددة:*\n` +
+      `┃ ◈ ${selectedService}\n\n` +
+      `� *نص الرسالة:*\n` +
+      `┃ ${formData.message}\n\n` +
+      `━━━━━━━━━━━━━━━━━━━━━━\n` +
+      `🔗 *تـم الإرسـال عـبـر:* https://brandup.agency\n` +
+      `✨ *BrandUp | Quality Above Expectations*`;
+    
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+    
+    window.open(whatsappUrl, '_blank');
   };
 
   return (
@@ -59,7 +89,7 @@ const Contact = ({ isPage = false }) => {
                 {t('contact.subtitle', 'تواصل معنا')}
               </span>
               <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[#2D2D2D]">
-                {t('nav.contact', 'اتصل بنا')}
+                {t('contact.title', 'اتصل بنا')}
               </h2>
               <div className="w-16 h-0.5" style={{ backgroundColor: `${primaryColor}30` }} />
             </motion.div>
@@ -125,9 +155,10 @@ const Contact = ({ isPage = false }) => {
                 </div>
                 <div className="flex items-start gap-4 mt-4 text-base font-medium text-[#4A4A4A]">
                   <Clock className="w-5 h-5 mt-0.5" style={{ color: primaryColor }} />
-                  <span>{t('contact.hours', 'السبت - الخميس: ٩ ص - ٦ م')}</span>
+                  <span>{t('contact.hours', 'السبت الى الجمعة من 9:00 الى 5:00')}</span>
                 </div>
               </div>
+
             </motion.div>
 
             {/* Contact Form - Right Side - تصميم فاخر جداً */}
@@ -190,7 +221,7 @@ const Contact = ({ isPage = false }) => {
                     {/* Email Field */}
                     <div className="space-y-2">
                       <label className="text-sm font-bold text-[#2D2D2D] uppercase tracking-wider">
-                        {t('contact.email', 'البريد الإلكتروني')}
+                        {t('contact.emailLabel', 'البريد الإلكتروني')}
                       </label>
                       <div className="relative group">
                         <AtSign 
@@ -255,7 +286,7 @@ const Contact = ({ isPage = false }) => {
                         }}
                         required
                       >
-                        <option value="" disabled selected className="font-medium">
+                        <option value="" disabled className="font-medium">
                           {t('contact.selectService', 'اختر الخدمة')}
                         </option>
                         {services.map(service => (
@@ -317,7 +348,7 @@ const Contact = ({ isPage = false }) => {
                       boxShadow: `0 10px 20px -8px ${primaryColor}80`
                     }}
                     onMouseEnter={(e) => {
-                      e.target.style.backgroundColor = '#A67A52'; // Darker shade
+                      e.target.style.backgroundColor = '#d97706'; // Darker yellow/amber
                       e.target.style.transform = 'translateY(-2px)';
                       e.target.style.boxShadow = `0 15px 25px -10px ${primaryColor}`;
                     }}
@@ -334,6 +365,7 @@ const Contact = ({ isPage = false }) => {
                   <p className="text-sm text-[#9A9A9A] text-center mt-6 font-medium">
                     {t('contact.privacy', 'نحن نحترم خصوصيتك ولن نشارك بياناتك مع أي طرف ثالث')}
                   </p>
+
                 </form>
               </div>
             </motion.div>

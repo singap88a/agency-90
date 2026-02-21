@@ -9,10 +9,10 @@ const About = () => {
   const isRtl = i18n.dir() === 'rtl';
 
   return (
-    <section id="about" className="section-padding relative overflow-hidden bg-white">
+    <section id="about" className="section-padding relative overflow-hidden">
       {/* Enhanced Background Decorative Graphics */}
-      <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-[0.04] overflow-hidden">
-        <svg className="absolute -left-20 top-20 w-[45%] h-[45%] text-brand-accent fill-current" viewBox="0 0 200 200">
+      <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-[0.03] overflow-hidden">
+        <svg className="absolute -left-20 top-20 w-[45%] h-[45%] text-brand-primary fill-current" viewBox="0 0 200 200">
           <path d="M40,-50.7C53.3,-46.5,66.5,-38.3,73.5,-26.2C80.5,-14,81.4,2.1,76.4,15.6C71.3,29.1,60.4,39.9,48,48.2C35.7,56.4,21.8,62.2,7.3,64.4C-7.2,66.6,-22.3,65.2,-36.5,59C-50.7,52.8,-63.9,41.7,-69.1,28.2C-74.4,14.7,-71.7,-1.2,-65.7,-14.8C-59.7,-28.4,-50.4,-39.7,-39.3,-44.6C-28.1,-49.5,-15.1,-48,0.3,-48.3C15.7,-48.7,40.7,-50.7,40,-50.7Z" transform="translate(100 100)" />
         </svg>
         <div className="absolute right-[-10%] top-[-10%] w-[60%] h-[60%] bg-[radial-gradient(circle,rgba(0,0,0,0.05)_0%,transparent_70%)] blur-[120px]" />

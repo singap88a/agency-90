@@ -134,10 +134,10 @@ const FAQ = () => {
   };
 
   return (
-    <section className="relative py-24 md:py-32 bg-gradient-to-b from-white via-gray-50/30 to-white overflow-hidden">
+    <section className="relative py-24 md:py-32 overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-brand-accent/5 rounded-full blur-3xl" />
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-brand-primary/5 rounded-full blur-3xl" />
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-brand-accent/5 rounded-full blur-3xl" />
         
         {/* Animated dots pattern */}

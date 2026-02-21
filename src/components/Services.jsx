@@ -14,7 +14,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="section-padding relative overflow-hidden bg-white">
+    <section id="services" className="section-padding relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4">
         {/* Elite Header */}
         <div className="max-w-4xl mb-12">
@@ -54,7 +54,7 @@ const Services = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-              className="group relative bg-[#FCFCFC] rounded-[3.5rem] p-10 border-[2px] border-brand-accent/30 transition-all duration-700 hover:-translate-y-4 hover:border-brand-accent  "
+              className="group relative bg-white/60 backdrop-blur-xl rounded-[3.5rem] p-10 border border-brand-accent/20 transition-all duration-700 hover:-translate-y-4 hover:border-brand-accent/50 hover:bg-white/80 transition-all"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-brand-accent/[0.02] to-transparent rounded-[3.5rem]" />
               

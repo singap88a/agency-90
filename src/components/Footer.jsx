@@ -7,7 +7,7 @@ const Footer = () => {
   const isRtl = i18n.dir() === 'rtl';
 
   return (
-    <footer className="relative z-20 py-16 px-6 lg:px-24 bg-white border-t border-slate-100 overflow-hidden">
+    <footer className="relative z-20 py-16 px-6 lg:px-24 border-t border-slate-100 overflow-hidden">
       {/* Background Decor */}
       <div className="absolute inset-0 pointer-events-none opacity-40">
         <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-brand-accent/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
