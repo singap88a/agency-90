@@ -1,69 +1,93 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { Palette, Share2, Layout, Camera } from 'lucide-react';
+import { Figma, Megaphone, BarChart3, Video } from 'lucide-react';
 
 const Services = () => {
   const { t, i18n } = useTranslation();
   
   const services = [
-    { key: 'design', icon: Palette, color: 'text-[#D4AF37]', bg: 'bg-[#D4AF37]/5' },
-    { key: 'marketing', icon: Share2, color: 'text-[#00f5d4]', bg: 'bg-[#00f5d4]/5' },
-    { key: 'management', icon: Layout, color: 'text-white', bg: 'bg-white/5' },
-    { key: 'photography', icon: Camera, color: 'text-[#D4AF37]', bg: 'bg-[#D4AF37]/5' },
+    { key: 'design', icon: Figma },
+    { key: 'marketing', icon: Megaphone },
+    { key: 'management', icon: BarChart3 },
+    { key: 'photography', icon: Video },
   ];
 
   return (
-    <section id="services" className="section-padding relative">
-      <div className="container mx-auto">
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-24 gap-12">
+    <section id="services" className="section-padding relative overflow-hidden bg-white">
+      <div className="max-w-7xl mx-auto px-4">
+        {/* Elite Header */}
+        <div className="max-w-4xl mb-12">
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="max-w-3xl"
+            className="flex flex-col gap-6"
           >
-            <div className="text-[#00f5d4] font-black tracking-[0.4em] uppercase text-sm mb-6">Expertise Focus</div>
-            <h2 className="text-6xl md:text-8xl font-black leading-[0.9] tracking-tighter">{t('services.title')}</h2>
+            <div className="flex items-center gap-6">
+              <span className="h-[3px] w-16 bg-brand-accent rounded-full" />
+              <span className="text-brand-accent font-black tracking-[0.5em] uppercase text-xs lg:text-sm block">
+                {t('services.tag')}
+              </span>
+            </div>
+            
+            <h2 className="text-4xl lg:text-6xl font-black tracking-tighter text-brand-dark leading-none">
+              {i18n.language === 'ar' ? (
+                <>حلول رقمية <span className="text-brand-accent">مبتكرة</span></>
+              ) : (
+                <>Innovative <span className="text-brand-accent">Digital</span> Solutions</>
+              )}
+            </h2>
+            
+            <p className="text-lg lg:text-xl text-brand-dark/40 max-w-3xl font-medium leading-relaxed">
+              {t('services.subtitle')}
+            </p>
           </motion.div>
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="text-2xl text-[#F2F0E4]/40 max-w-sm font-medium italic"
-          >
-            {t('services.subtitle')}
-          </motion.p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* Elite Service Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {services.map((service, idx) => (
             <motion.div
               key={service.key}
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: idx * 0.1, duration: 0.8 }}
-              className="relative p-10 rounded-[2.5rem] border border-white/5 bg-white/[0.02] backdrop-blur-sm group hover:border-[#D4AF37]/30 transition-all duration-500 overflow-hidden"
+              transition={{ delay: idx * 0.1, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+              className="group relative bg-[#FCFCFC] rounded-[3.5rem] p-10 border-[2px] border-brand-accent/30 transition-all duration-700 hover:-translate-y-4 hover:border-brand-accent  "
             >
+              <div className="absolute inset-0 bg-gradient-to-br from-brand-accent/[0.02] to-transparent rounded-[3.5rem]" />
+              
               <div className="relative z-10">
-                <div className="mb-10 inline-flex p-5 rounded-2xl bg-white/5 border border-white/10 group-hover:border-[#D4AF37]/40 transition-colors">
-                  <service.icon className={`w-10 h-10 ${service.color} group-hover:scale-110 transition-transform duration-500`} />
+                {/* Icon Container - Permanent Yellow State with Lighter Shadow */}
+                <div className="mb-10 relative flex">
+                  <div className="w-16 h-16 rounded-3xl bg-brand-accent shadow-[0_15px_40px_rgba(245,176,2,0.35)] flex items-center justify-center text-white transition-all duration-500 group-hover:scale-110 group-hover:rotate-6">
+                    <service.icon className="w-9 h-9" />
+                  </div>
+                  <div className="absolute -inset-4 bg-brand-accent/20 blur-2xl rounded-full" />
                 </div>
-                
-                <h3 className="text-2xl font-black mb-10 tracking-tight text-white group-hover:text-[#D4AF37] transition-all">
+
+                <h3 className="text-2xl lg:text-2xl font-black mb-10 tracking-tighter leading-tight whitespace-nowrap overflow-hidden text-ellipsis text-brand-dark group-hover:text-brand-accent transition-colors duration-500">
                   {t(`services.${service.key}`)}
                 </h3>
-                
-                <ul className="space-y-4">
-                  {t(`services.items_${service.key}`, { returnObjects: true }).map((item, i) => (
-                    <li key={i} className="flex items-center gap-3 text-lg font-medium text-[#F2F0E4]/30 group-hover:text-[#F2F0E4]/60 transition-colors">
-                      <div className="w-1.5 h-1.5 rounded-full bg-current opacity-20" />
-                      {item}
+
+                <ul className="space-y-6">
+                  {Array.isArray(t(`services.items_${service.key}`, { returnObjects: true })) && 
+                    t(`services.items_${service.key}`, { returnObjects: true }).map((item, i) => (
+                    <li key={i} className="flex items-center gap-4 text-brand-dark/70 group-hover:text-brand-dark transition-colors duration-500">
+                      <span className="w-2 h-2 rounded-full bg-brand-accent" />
+                      <span className="text-xs lg:text-sm font-black uppercase tracking-[0.25em]">
+                        {item}
+                      </span>
                     </li>
                   ))}
                 </ul>
               </div>
+
+              {/* Decorative Number */}
+              <span className="absolute top-12 left-3 text-7xl font-black text-brand-accent/[0.08] pointer-events-none">
+                0{idx + 1}
+              </span>
             </motion.div>
           ))}
         </div>

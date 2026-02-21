@@ -8,11 +8,11 @@ export default {
     extend: {
       colors: {
         brand: {
-          dark: "#011614",      // Deepest background
-          primary: "#002B26",   // Logo background green
-          secondary: "#F2F0E4", // Cream text
-          accent: "#D4AF37",    // Gold/Brass accent
-          glow: "#00f5d4",      // Neon teal glow
+          dark: "#0f172a",      // Slate 900 for text
+          primary: "#059669",   // Emerald 600 for primary
+          secondary: "#ffffff", // Pure white for background
+          accent: "#f5b002",    // Golden Amber accent
+          glow: "#34d399",      // Emerald 400 for glows
         }
       },
       fontFamily: {

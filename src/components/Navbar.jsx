@@ -37,8 +37,9 @@ const Navbar = () => {
   const navLinks = [
     { key: 'home', icon: Home, href: '/' },
     { key: 'services', icon: Briefcase, href: '#services' },
-    { key: 'about', icon: Info, href: '#about' },
+    { key: 'about', icon: Info, href: '/about' },
     { key: 'portfolio', icon: LayoutGrid, href: '/projects' },
+    { key: 'contact', icon: MessageCircle, href: '/contact' },
   ];
 
   const languages = [
@@ -55,8 +56,7 @@ const Navbar = () => {
 
   return (
     <nav className={cn(
-      "fixed top-0 left-0 right-0 z-[100] transition-all duration-500 px-6 lg:px-24",
-      isScrolled ? "py-4 glass-nav" : "py-10 bg-transparent"
+      "fixed top-0 left-0 right-0 z-[100] transition-all duration-500 px-6 lg:px-24 py-5 glass-nav border-b border-black/5"
     )}>
       <div className="max-w-7xl mx-auto flex items-center justify-between relative">
         {/* Logo */}
@@ -66,15 +66,15 @@ const Navbar = () => {
           className="flex items-center gap-4 z-10"
         >
           <Link to="/" className="flex items-center gap-4">
-            <img src="/logo.jpeg" alt="BrandUp" className="h-12 w-12 rounded-xl border border-white/10" />
-            <span className="text-2xl font-heading font-black tracking-tighter text-white">
-              Brand<span className="text-[#D4AF37]">Up</span>
+            <img src="/logo.jpeg" alt="BrandUp" className="h-10 w-10 rounded-xl border border-black/5" />
+            <span className="text-xl font-heading font-black tracking-tighter text-brand-dark">
+              Brand<span className="text-brand-accent">Up</span>
             </span>
           </Link>
         </motion.div>
 
         {/* Desktop Nav - Centered Glass Dock */}
-        <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center gap-1 bg-[#011614]/80 backdrop-blur-xl border border-white/10 rounded-full p-2 shadow-2xl ring-1 ring-white/5 mx-auto">
+        <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center gap-1 bg-black/5 backdrop-blur-md border border-black/5 rounded-full p-1.5 shadow-sm mx-auto">
           {navLinks.map((link, index) => (
             <motion.div
               key={link.key}
@@ -85,24 +85,18 @@ const Navbar = () => {
               {link.href.startsWith('/') ? (
                 <Link
                   to={link.href}
-                  className="px-5 py-2.5 rounded-full text-xs font-bold tracking-wider uppercase transition-all duration-300 flex items-center gap-2 hover:bg-white/10 text-white/70 hover:text-white group relative overflow-hidden"
+                  className="px-5 py-2 rounded-full text-[11px] font-bold tracking-wider uppercase transition-all duration-300 flex items-center gap-2 hover:bg-white text-brand-dark/70 hover:text-brand-dark hover:shadow-sm"
                 >
-                  <span className="relative z-10 flex items-center gap-2">
-                    <link.icon className="w-4 h-4 group-hover:text-[#D4AF37] transition-colors" />
-                    {t(`nav.${link.key}`)}
-                  </span>
-                  <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <link.icon className="w-3.5 h-3.5 group-hover:text-brand-accent transition-colors" />
+                  {t(`nav.${link.key}`)}
                 </Link>
               ) : (
                 <a
                   href={isHomePage ? link.href : `/${link.href}`}
-                  className="px-5 py-2.5 rounded-full text-xs font-bold tracking-wider uppercase transition-all duration-300 flex items-center gap-2 hover:bg-white/10 text-white/70 hover:text-white group relative overflow-hidden"
+                  className="px-5 py-2 rounded-full text-[11px] font-bold tracking-wider uppercase transition-all duration-300 flex items-center gap-2 hover:bg-white text-brand-dark/70 hover:text-brand-dark hover:shadow-sm"
                 >
-                  <span className="relative z-10 flex items-center gap-2">
-                    <link.icon className="w-4 h-4 group-hover:text-[#D4AF37] transition-colors" />
-                    {t(`nav.${link.key}`)}
-                  </span>
-                  <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <link.icon className="w-3.5 h-3.5 group-hover:text-brand-accent transition-colors" />
+                  {t(`nav.${link.key}`)}
                 </a>
               )}
             </motion.div>
@@ -111,15 +105,15 @@ const Navbar = () => {
 
         {/* Right Side Tools */}
         <div className="flex items-center gap-4 z-10">
-          {/* Language Selector (Refined Custom Dropdown) */}
+          {/* Language Selector (Professional Toggle) */}
           <div className="relative hidden md:block" ref={langRef}>
             <button
               onClick={() => setIsLangOpen(!isLangOpen)}
-              className="px-4 py-2 rounded-xl bg-white/5 border border-white/10 flex items-center gap-3 hover:bg-white/10 transition-all text-xs font-black uppercase tracking-tighter"
+              className="h-10 px-4 rounded-xl bg-black/5 border border-black/5 flex items-center gap-2.5 hover:bg-black/10 transition-all text-[11px] font-black uppercase tracking-widest text-brand-dark group"
             >
-              <Globe className="w-4 h-4 text-[#D4AF37]" />
-              {currentLang.code.toUpperCase()}
-              <ChevronDown className={cn("w-4 h-4 transition-transform duration-300", isLangOpen && "rotate-180")} />
+              <Globe className="w-4 h-4 text-brand-accent group-hover:rotate-12 transition-transform" />
+              <span>{currentLang.label}</span>
+              <ChevronDown className={cn("w-3.5 h-3.5 opacity-50 transition-transform duration-300", isLangOpen && "rotate-180")} />
             </button>
             <AnimatePresence>
               {isLangOpen && (
@@ -127,17 +121,20 @@ const Navbar = () => {
                   initial={{ opacity: 0, y: 10, scale: 0.95 }}
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                  className="absolute top-full mt-2 right-0 w-48 glass-nav rounded-2xl border border-white/10 overflow-hidden shadow-2xl py-2"
+                  className="absolute top-full mt-2 right-0 w-44 bg-white/95 backdrop-blur-2xl rounded-2xl border border-black/5 shadow-2xl overflow-hidden p-1.5"
                 >
                   {languages.map((l) => (
                     <button
                       key={l.code}
                       onClick={() => changeLanguage(l.code)}
                       className={cn(
-                        "w-full px-6 py-3 text-right text-xs font-bold transition-all hover:bg-white/5",
-                        i18n.language === l.code ? "text-[#D4AF37] bg-white/5" : "text-white/60 hover:text-white"
+                        "w-full px-4 py-2.5 rounded-xl text-right text-[11px] font-bold transition-all flex items-center justify-between group",
+                        i18n.language === l.code 
+                          ? "bg-brand-accent/10 text-brand-dark" 
+                          : "text-brand-dark/60 hover:bg-black/5 hover:text-brand-dark"
                       )}
                     >
+                      <span className={cn("w-1.5 h-1.5 rounded-full bg-brand-accent opacity-0 transition-opacity", i18n.language === l.code && "opacity-100")} />
                       {l.label}
                     </button>
                   ))}
@@ -146,19 +143,23 @@ const Navbar = () => {
             </AnimatePresence>
           </div>
 
-          <a 
-            href="#contact"
-            className="hidden lg:block btn-premium !py-3 !px-8 text-xs transform hover:rotate-1"
+          <Link 
+            to="/contact"
+            className="hidden lg:flex btn-premium !h-10 !px-6 !rounded-xl items-center gap-2 text-[11px] group relative overflow-hidden"
           >
-            {t('nav.contact')}
-          </a>
+            <span className="relative z-10 flex items-center gap-2">
+              <MessageCircle className="w-4 h-4 group-hover:scale-110 transition-transform" />
+              {t('nav.contact')}
+            </span>
+            <div className="absolute inset-x-0 bottom-0 h-1 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-center" />
+          </Link>
 
           {/* Mobile Toggle */}
           <button 
-            className="lg:hidden w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 text-white"
+            className="lg:hidden w-10 h-10 rounded-xl bg-black/5 flex items-center justify-center border border-black/5 text-brand-dark"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
       </div>
@@ -170,7 +171,7 @@ const Navbar = () => {
             initial={{ opacity: 0, scale: 0.95, y: -20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: -20 }}
-            className="lg:hidden glass-nav fixed inset-x-6 top-24 rounded-3xl border border-white/10 overflow-hidden shadow-2xl p-8"
+            className="lg:hidden glass-nav fixed inset-x-6 top-24 rounded-3xl border border-black/5 overflow-hidden shadow-xl p-8"
           >
             <div className="flex flex-col gap-6">
               {navLinks.map((link) => (
@@ -179,9 +180,9 @@ const Navbar = () => {
                     key={link.key} 
                     to={link.href} 
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="text-2xl font-heading font-black flex items-center gap-4 hover:text-[#D4AF37] transition-colors"
+                    className="text-2xl font-heading font-black flex items-center gap-4 text-brand-dark hover:text-brand-accent transition-colors"
                   >
-                    <link.icon className="w-7 h-7 text-[#D4AF37]" />
+                    <link.icon className="w-7 h-7 text-brand-accent" />
                     {t(`nav.${link.key}`)}
                   </Link>
                 ) : (
@@ -189,23 +190,23 @@ const Navbar = () => {
                     key={link.key} 
                     href={isHomePage ? link.href : `/${link.href}`} 
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="text-2xl font-heading font-black flex items-center gap-4 hover:text-[#D4AF37] transition-colors"
+                    className="text-2xl font-heading font-black flex items-center gap-4 text-brand-dark hover:text-brand-accent transition-colors"
                   >
-                    <link.icon className="w-7 h-7 text-[#D4AF37]" />
+                    <link.icon className="w-7 h-7 text-brand-accent" />
                     {t(`nav.${link.key}`)}
                   </a>
                 )
               ))}
               
-              <div className="pt-6 border-t border-white/10">
+              <div className="pt-6 border-t border-black/5">
                  <div className="grid grid-cols-2 gap-3">
                    {languages.map((l) => (
                     <button
                       key={l.code}
                       onClick={() => changeLanguage(l.code)}
                       className={cn(
-                        "py-4 rounded-2xl border border-white/10 text-sm font-black",
-                        i18n.language === l.code ? "bg-[#D4AF37] text-[#011614] shadow-lg" : "bg-white/5 text-white/40"
+                        "py-4 rounded-2xl border border-black/5 text-sm font-black transition-all",
+                        i18n.language === l.code ? "bg-brand-primary text-white shadow-lg" : "bg-black/5 text-brand-dark/40 hover:bg-black/10"
                       )}
                     >
                       {l.label}

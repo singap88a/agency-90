@@ -1,9 +1,9 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { Phone, Instagram, Mail, Send, User, AtSign, Briefcase, MessageSquareText } from 'lucide-react';
+import { Phone, Instagram, Mail, Send, User, AtSign, Briefcase, MessageSquareText, ChevronDown } from 'lucide-react';
 
-const Contact = () => {
+const Contact = ({ isPage = false }) => {
   const { t, i18n } = useTranslation();
   const isRtl = i18n.dir() === 'rtl';
 
@@ -15,94 +15,107 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="section-padding relative overflow-hidden">
-      <div className="container mx-auto">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-5 gap-16 items-start">
+    <section id="contact" className={`${isPage ? 'py-12' : 'section-padding'} relative overflow-hidden`}>
+      <div className="container mx-auto px-6">
+        <div className="max-w-7xl mx-auto">
+          {!isPage && (
+            <div className="flex flex-col items-center text-center mb-20">
+              <span className="text-brand-accent font-black tracking-[0.4em] uppercase text-xs mb-4 block">
+                Connect & Inquire
+              </span>
+              <h2 className="text-5xl lg:text-6xl font-black tracking-tighter mb-6 text-brand-dark">
+                {t('nav.contact')}
+              </h2>
+              <div className="w-20 h-1 bg-brand-accent rounded-full opacity-20" />
+            </div>
+          )}
+
+          <div className="grid lg:grid-cols-12 gap-12 items-start">
             
             {/* Contact Details */}
+            <motion.div
+              initial={{ opacity: 0, x: isRtl ? 30 : -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="lg:col-span-4 space-y-4"
+            >
+              {contactInfo.map((info, idx) => (
+                <a 
+                  key={idx} 
+                  href={info.link}
+                  className="flex items-center gap-6 p-6 rounded-3xl bg-white border border-black/5 hover:border-brand-accent/20 hover:shadow-xl hover:shadow-brand-accent/5 transition-all group"
+                >
+                  <div className="w-14 h-14 rounded-2xl bg-brand-dark flex items-center justify-center text-white group-hover:bg-brand-accent transition-colors duration-500">
+                    <info.icon className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <div className="text-[10px] uppercase tracking-[0.2em] font-black text-brand-dark/30 mb-0.5">{info.label}</div>
+                    <div className="text-xl font-bold tracking-tight text-brand-dark">{info.value}</div>
+                  </div>
+                </a>
+              ))}
+            </motion.div>
+
+            {/* Contact Form - Elite Redesign */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="lg:col-span-2"
-            >
-              <div className="text-[#D4AF37] font-black tracking-[0.4em] uppercase text-[10px] mb-6 flex items-center gap-4">
-                 <div className="w-10 h-px bg-[#D4AF37]" />
-                 Connect
-              </div>
-              <h2 className="text-5xl lg:text-7xl font-black mb-10 tracking-tighter leading-tight">{t('nav.contact')}</h2>
-              
-              <div className="space-y-6">
-                {contactInfo.map((info, idx) => (
-                  <a 
-                    key={idx} 
-                    href={info.link}
-                    className="flex items-center gap-6 p-7 rounded-[2rem] glass-card hover:bg-white/5 transition-all group border-white/5 shadow-xl"
-                  >
-                    <div className="w-16 h-16 rounded-2xl bg-[#D4AF37]/10 flex items-center justify-center group-hover:bg-[#D4AF37] group-hover:text-[#011614] group-hover:rotate-12 transition-all duration-500">
-                      <info.icon className="w-7 h-7" />
-                    </div>
-                    <div>
-                      <div className="text-[10px] uppercase tracking-[0.2em] font-black opacity-30 mb-1">{info.label}</div>
-                      <div className="text-2xl font-black tracking-tight">{info.value}</div>
-                    </div>
-                  </a>
-                ))}
-              </div>
-            </motion.div>
-
-            {/* Contact Form - Refined with Icons */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="lg:col-span-3 glass-card p-12 lg:p-16 border-white/10 rounded-[3rem] shadow-2xl relative overflow-hidden"
+              className="lg:col-span-8 bg-white border border-black/5 p-10 lg:p-14 rounded-[2.5rem] shadow-2xl relative overflow-hidden"
             >
-              <div className="absolute top-0 right-0 w-32 h-32 bg-[#D4AF37]/5 rounded-full blur-3xl" />
+              <div className="absolute top-0 right-0 w-64 h-64 bg-brand-accent/5 rounded-full blur-[100px] -mr-32 -mt-32" />
               
-              <form className="grid gap-12 relative z-10">
-                <div className="grid md:grid-cols-2 gap-10">
-                  <div className="space-y-4">
-                    <label className="flex items-center gap-3 text-[11px] font-black uppercase tracking-widest text-[#D4AF37]">
-                      <User className="w-4 h-4" />
-                      {isRtl ? 'الاسم بالكامل' : 'Full Identity'}
+              <form className="relative z-10 space-y-10">
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div className="space-y-3">
+                    <label className="text-[10px] font-black uppercase tracking-widest text-brand-dark/40 px-2">
+                       {isRtl ? 'الاسم بالكامل' : 'Full Identity'}
                     </label>
-                    <input type="text" className="w-full bg-white/5 border border-white/10 rounded-2xl px-8 py-5 focus:outline-none focus:border-[#D4AF37] transition-all font-bold text-lg placeholder:opacity-20" placeholder="John Doe" />
+                    <div className="relative group">
+                      <User className="absolute left-6 top-1/2 -translate-y-1/2 w-5 h-5 text-brand-dark/20 group-focus-within:text-brand-accent transition-colors" />
+                      <input type="text" className="w-full bg-brand-secondary/50 border border-black/5 rounded-2xl pl-14 pr-8 py-5 focus:outline-none focus:border-brand-accent/50 focus:bg-white transition-all font-bold text-lg placeholder:text-brand-dark/10" placeholder="John Doe" />
+                    </div>
                   </div>
-                  <div className="space-y-4">
-                    <label className="flex items-center gap-3 text-[11px] font-black uppercase tracking-widest text-[#D4AF37]">
-                      <AtSign className="w-4 h-4" />
-                      {isRtl ? 'الإيميل' : 'Digital Mail'}
+                  <div className="space-y-3">
+                    <label className="text-[10px] font-black uppercase tracking-widest text-brand-dark/40 px-2">
+                      {isRtl ? 'الإيميل الرقمي' : 'Digital Mail'}
                     </label>
-                    <input type="email" className="w-full bg-white/5 border border-white/10 rounded-2xl px-8 py-5 focus:outline-none focus:border-[#D4AF37] transition-all font-bold text-lg placeholder:opacity-20" placeholder="contact@example.com" />
+                    <div className="relative group">
+                      <AtSign className="absolute left-6 top-1/2 -translate-y-1/2 w-5 h-5 text-brand-dark/20 group-focus-within:text-brand-accent transition-colors" />
+                      <input type="email" className="w-full bg-brand-secondary/50 border border-black/5 rounded-2xl pl-14 pr-8 py-5 focus:outline-none focus:border-brand-accent/50 focus:bg-white transition-all font-bold text-lg placeholder:text-brand-dark/10" placeholder="contact@example.com" />
+                    </div>
                   </div>
                 </div>
 
-                <div className="space-y-4">
-                  <label className="flex items-center gap-3 text-[11px] font-black uppercase tracking-widest text-[#D4AF37]">
-                    <Briefcase className="w-4 h-4" />
-                    {isRtl ? 'الخدمة المطلوبة' : 'Strategic Area'}
+                <div className="space-y-3">
+                  <label className="text-[10px] font-black uppercase tracking-widest text-brand-dark/40 px-2">
+                    {isRtl ? 'القطاع الاستراتيجي' : 'Strategic Area'}
                   </label>
-                  <select className="w-full bg-white/5 border border-white/10 rounded-2xl px-8 py-5 focus:outline-none focus:border-[#D4AF37] transition-all font-bold text-lg appearance-none cursor-pointer">
-                    <option className="bg-[#011614]">Brand Identity Design</option>
-                    <option className="bg-[#011614]">Strategic Content</option>
-                    <option className="bg-[#011614]">Elite Social Ads</option>
-                    <option className="bg-[#011614]">Cinematic Production</option>
-                  </select>
+                  <div className="relative group">
+                    <Briefcase className="absolute left-6 top-1/2 -translate-y-1/2 w-5 h-5 text-brand-dark/20 group-focus-within:text-brand-accent transition-colors" />
+                    <select className="w-full bg-brand-secondary/50 border border-black/5 rounded-2xl pl-14 pr-12 py-5 focus:outline-none focus:border-brand-accent/50 focus:bg-white transition-all font-bold text-lg appearance-none cursor-pointer">
+                      <option className="bg-white">Brand Identity Design</option>
+                      <option className="bg-white">Strategic Content</option>
+                      <option className="bg-white">Elite Social Ads</option>
+                      <option className="bg-white">Cinematic Production</option>
+                    </select>
+                    <ChevronDown className="absolute right-6 top-1/2 -translate-y-1/2 w-5 h-5 text-brand-dark/20 pointer-events-none" />
+                  </div>
                 </div>
 
-                <div className="space-y-4">
-                  <label className="flex items-center gap-3 text-[11px] font-black uppercase tracking-widest text-[#D4AF37]">
-                    <MessageSquareText className="w-4 h-4" />
-                    {isRtl ? 'رسالتك' : 'Objective Details'}
+                <div className="space-y-3">
+                  <label className="text-[10px] font-black uppercase tracking-widest text-brand-dark/40 px-2">
+                    {isRtl ? 'تفاصيل الرؤية' : 'Objective Details'}
                   </label>
-                  <textarea rows="4" className="w-full bg-white/5 border border-white/10 rounded-2xl px-8 py-5 focus:outline-none focus:border-[#D4AF37] transition-all font-bold text-lg resize-none placeholder:opacity-20" placeholder="Describe your vision..."></textarea>
+                  <div className="relative group">
+                    <MessageSquareText className="absolute left-6 top-8 w-5 h-5 text-brand-dark/20 group-focus-within:text-brand-accent transition-colors" />
+                    <textarea rows="4" className="w-full bg-brand-secondary/50 border border-black/5 rounded-2xl pl-14 pr-8 py-5 focus:outline-none focus:border-brand-accent/50 focus:bg-white transition-all font-bold text-lg resize-none placeholder:text-brand-dark/10" placeholder="Describe your vision..."></textarea>
+                  </div>
                 </div>
 
-                <button type="submit" className="btn-premium group flex items-center justify-center gap-5 py-6 text-xl shadow-[0_20px_50px_rgba(212,175,55,0.3)] hover:scale-[1.02]">
-                  {isRtl ? 'إرسال المعلومات' : 'ENCRYPT & INITIALIZE'}
+                <button type="submit" className="w-full bg-brand-dark text-white rounded-2xl py-6 text-lg font-black tracking-widest uppercase flex items-center justify-center gap-4 hover:bg-brand-primary transition-all duration-500 shadow-2xl shadow-brand-dark/20 group">
+                  {isRtl ? 'إرسال واستدعاء' : 'Initalize Transmission'}
                   <Send className={`w-6 h-6 group-hover:translate-x-3 transition-transform ${isRtl ? 'rotate-180' : ''}`} />
                 </button>
               </form>

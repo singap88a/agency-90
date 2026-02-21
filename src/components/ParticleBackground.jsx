@@ -9,34 +9,50 @@ const ParticleBackground = () => {
   const y2 = useTransform(scrollY, [0, 2000], [0, -300]);
 
   return (
-    <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden bg-[#011614]">
-      {/* 3D Immersive Gradients */}
+    <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden bg-white">
+      {/* Dynamic RGB Fluid Blobs */}
       <motion.div 
-        style={{ y: y1 }}
-        className="absolute -top-[10%] -left-[10%] w-[70%] h-[70%] bg-[radial-gradient(circle_at_50%_50%,rgba(212,175,55,0.1)_0%,transparent_60%)] blur-[120px]" 
+        animate={{
+          x: [0, 50, 0],
+          y: [0, 30, 0],
+          scale: [1, 1.1, 1],
+        }}
+        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+        className="absolute -top-[20%] -left-[10%] w-[80%] h-[80%] bg-[radial-gradient(circle,rgba(5,150,105,0.08)_0%,transparent_70%)] blur-[160px]" 
       />
       <motion.div 
-        style={{ y: y2 }}
-        className="absolute top-[20%] right-[0%] w-[60%] h-[60%] bg-[radial-gradient(circle_at_50%_50%,rgba(0,245,212,0.08)_0%,transparent_60%)] blur-[100px]" 
+        animate={{
+          x: [0, -40, 0],
+          y: [0, 60, 0],
+          scale: [1, 1.2, 1],
+        }}
+        transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+        className="absolute top-[10%] -right-[10%] w-[70%] h-[70%] bg-[radial-gradient(circle,rgba(217,119,6,0.06)_0%,transparent_70%)] blur-[140px]" 
       />
-      <div className="absolute bottom-[-10%] left-[20%] w-[50%] h-[50%] bg-[radial-gradient(circle_at_50%_50%,rgba(212,175,55,0.05)_0%,transparent_60%)] blur-[120px]" />
+      <motion.div 
+        animate={{
+          x: [0, 30, 0],
+          y: [0, -50, 0],
+        }}
+        transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
+        className="absolute bottom-[-20%] left-[10%] w-[60%] h-[60%] bg-[radial-gradient(circle,rgba(67,56,202,0.05)_0%,transparent_70%)] blur-[160px]" 
+      />
 
-      {/* Textured Layers */}
-      <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/pinstriped-suit.png')] opacity-[0.03] mix-blend-overlay" />
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_at_center,black,transparent_90%)]" />
+      {/* Subtle Noise Texture instead of patterns */}
+      <div className="absolute inset-0 opacity-[0.015] bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] pointer-events-none" />
 
-      {/* Floating Particles */}
-      {[...Array(30)].map((_, i) => (
+      {/* Floating Particles (Refined) */}
+      {[...Array(20)].map((_, i) => (
         <motion.div
           key={i}
-          className="absolute w-[1px] h-[1px] bg-[#D4AF37]/20 rounded-full blur-[0.5px]"
+          className="absolute w-[2px] h-[2px] bg-brand-accent/30 rounded-full"
           animate={{
-            y: [0, -100, 0],
-            opacity: [0, 0.4, 0],
-            scale: [1, 2, 1]
+            y: [0, -120, 0],
+            x: [0, Math.random() * 40 - 20, 0],
+            opacity: [0, 0.5, 0],
           }}
           transition={{
-            duration: Math.random() * 10 + 10,
+            duration: Math.random() * 8 + 12,
             repeat: Infinity,
             delay: Math.random() * 5,
             ease: "easeInOut"

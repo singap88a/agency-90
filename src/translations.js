@@ -8,6 +8,7 @@ export const translations = {
       pricing: "الأسعار",
       investment: "الاستثمار",
       contact: "تواصل معنا",
+      stay_connected: "كن على اتصال",
       privacy: "سياسة الخصوصية",
       terms: "الشروط والأحكام",
     },
@@ -18,34 +19,74 @@ export const translations = {
     },
     hero: {
       title: "نصنع مستقبلك الرقمي بإبداع",
-      subtext: "حلول تسويقية تضعك في المقدمة.",
-      cta: "ابدأ مشروعك الآن",
-      projects: "مشاهدة الأعمال",
+      subtext: "في براند أب، نحن لا نبني مجرد مواقع إلكترونية، بل نبتكر أنظمة رقمية متكاملة وتحفاً فنية تقنية تضع علامتكم التجارية في طليعة المنافسة العالمية. فريقنا من الخبراء يجمع بين الرؤية السينمائية المذهلة وأحدث تقنيات البرمجة والذكاء الاصطناعي لخلق تجارب مستخدم لا تُنسى، محولين طموحاتكم إلى نجاحات ملموسة واستثنائية تفوق التوقعات.",
+      cta: "ابدأ رحلة النجاح الآن",
+      projects: "استكشف أعمالنا الإبداعية",
+      stats: [
+        { label: "مشروع مكتمل", value: "150+" },
+        { label: "عميل سعيد", value: "85+" },
+        { label: "سنوات خبرة", value: "10+" },
+        { label: "نسبة الرضا", value: "99%" }
+      ]
     },
     about: {
       tag: "الرؤية والرسالة",
       title: "نحن جسركم نحو النجاح الرقمي",
       description: "نحن في BrandUp نؤمن بأن كل علامة تجارية لها قصة فريدة تستحق أن تُروى بأعلى معايير الإبداع والاحترافية. مهمتنا تبدأ من فهم جوهر عملكم وتحويله إلى واقع ملموس يحقق نتائج استثنائية.",
-      vision: {
-        title: "رؤيتنا",
-        desc: "نطمح لأن نكون الشريك الإبداعي الأول عالمياً للعلامات التجارية الطموحة، من خلال إعادة تعريف معايير التسويق الرقمي وتقديم تجارب بصرية وتفاعلية تتجاوز حدود الخيال، مما يضمن لعملائنا صدارة دائمة في أسواق متغيرة باستمرار."
+      banner: {
+        title: "من نحن",
+        subtitle: "نصنع المستحيل ونحوله إلى واقع رقمي مبهر"
       },
-      mission: {
-        title: "رسالتنا",
-        desc: "نلتزم بتقديم حلول تسويقية متكاملة تجمع بين الفن والتكنولوجيا، نسعى لتمكين الشركات من خلال استراتيجيات مدروسة، تصاميم مبتكرة، وإنتاج محتوى سينمائي يعزز الروابط بين العلامة التجارية وجمهورها، محققين بذلك نمواً مستداماً ونجاحاً باهراً."
+      who: {
+        title: "من نحن؟",
+        subtitle: "رحلة من الإبداع والابتكار بدأت بشغف",
+        desc1: "نحن وكالة إبداعية متكاملة متخصصة في التحول الرقمي وصناعة الهوية التجارية. فريقنا يجمع بين الخبرة العميقة والروح الشبابية المبتكرة.",
+        desc2: "منذ انطلاقنا، وضعنا نصب أعيننا هدفاً واحداً: أن نكون المحرك الأساسي لنمو عملائنا في الفضاء الرقمي من خلال حلول تقنية وفنية لا تقبل المساومة على الجودة."
+      },
+      vision_section: {
+        title: "رؤيتنا وقيمنا",
+        subtitle: "ما يدفعنا دائماً نحو التميز",
+        v: {
+          title: "رؤيتنا",
+          desc: "أن نكون القائد العالمي في حلول التسويق الرقمي والإبداع الفني."
+        },
+        m: {
+          title: "رسالتنا",
+          desc: "تمكين العلامات التجارية من الوصول لأقصى إمكاناتها من خلال التكنولوجيا والفن."
+        },
+        values: {
+          title: "قيمنا",
+          desc: "الاحترافية، الابتكار، والالتزام المطلق بالنتائج الاستثنائية لعملائنا."
+        }
+      },
+      team: {
+        title: "فريق المبدعين",
+        subtitle: "الأسماء التي تقف وراء كل قصة نجاح",
+        roles: {
+          ceo: "المؤسس والمدير التنفيذي",
+          creative: "المدير الإبداعي",
+          tech: "مدير التقنية",
+          marketing: "مدير التسويق"
+        }
+      },
+      testimonials: {
+        title: "قالوا عنا",
+        subtitle: "أراء شركاء النجاح الذين وضعوا ثقتهم بنا"
       }
     },
     services: {
-      title: "الخدمات المقدمة",
+      tag: "الخبرات الاستثنائية",
+      title: "حلول رقمية مبتكرة",
+      subtitle: "نبتكر حلولاً رقمية متكاملة تجمع بين الإبداع الفني والدقة التقنية لتعزيز حضور علامتكم التجارية ووضعها في صدارة المنافسة.",
       design: "التصاميم الإبداعية",
       marketing: "خدمات التسويق",
       management: "إدارة الصفحات",
       photography: "الميديا والإنتاج",
       videos: "الفيديوهات",
-      items_design: ["الهوية التجارية", "الجرافيك", "تصميم الفعاليات"],
-      items_marketing: ["تصميم محتوى تسويقي", "إدارة الحملات الممولة", "Google & Meta & TikTok"],
-      items_management: ["إدارة حسابات التواصل", "تحليل البيانات", "تقارير الأداء"],
-      items_photography: ["تصوير احترافي", "إنتاج الفيديو", "المونتاج والتحرير"]
+      items_design: ["الـهوية الـتجارية", "الـتصميم الـجرافيكي", "تـصميم الـفعاليات"],
+      items_marketing: ["إنتاج المـحتوى", "الحملات الإعلانية", "النمو الرقمي"],
+      items_management: ["إدارة التـواصل", "تحليل الـبيانات", "تطوير الأداء"],
+      items_photography: ["تصوير فوتوغرافي", "إنـتاج الـفيديو", "صناعة الأصالة"]
     },
     pricing: {
       strategic: {
@@ -63,6 +104,15 @@ export const translations = {
       data: {
         title: "تحليل بيانات",
         desc: "نراقب ونحلل كل حركة وتفاعل لتقديم تقارير دقيقة تساعدكم في اتخاذ القرارات الصحيحة وتحسين الأداء بشكل مستمر."
+      },
+      most_popular: "الأكثر طلباً",
+      bespoke_title: "حلول مخصصة",
+      bespoke_desc: "تم تصميم كل مشروع من الصفر ليناسب احتياجاتك الفريدة. نحن نركز على الجودة العالية والنتائج الملموسة.",
+      request_consultation: "اطلب استشارة خاصة",
+      learn_more: "اعرف المزيد",
+      metrics: {
+        roi: "متوسط عائد الاستثمار",
+        projects: "مشروع ناجح"
       }
     },
     legal: {
@@ -86,6 +136,14 @@ export const translations = {
       phone: "اتصل بنا",
       email: "البريد الإلكتروني",
       send: "إرسال الرسالة",
+    },
+    cta: {
+      tag: "مؤسسة براند أب",
+      title_start: "تميز علامتكم يبدأ من",
+      title_highlight: "إبداعنا",
+      title_end: "",
+      subtitle: "نحن هنا لنكون شركائكم في رحلة النجاح، حيث ندمج الإبداع بالتكنولوجيا لنحول طموحاتكم إلى حلول رقمية مبتكرة وتصاميم استثنائية تضع علامتكم التجارية في المقدمة دائماً.",
+      button: "ابدأ مشروعك الآن"
     }
   },
   en: {
@@ -97,6 +155,7 @@ export const translations = {
       pricing: "Pricing",
       investment: "Investment",
       contact: "Contact",
+      stay_connected: "Stay Connected",
       privacy: "Privacy Policy",
       terms: "Terms of Service",
     },
@@ -107,34 +166,74 @@ export const translations = {
     },
     hero: {
       title: "Crafting Your Digital Future",
-      subtext: "Marketing solutions that put you ahead.",
-      cta: "Start Your Project",
-      projects: "View Projects",
+      subtext: "At Brand Up, we don't just build websites; we craft comprehensive digital ecosystems and technical masterpieces that propel your brand to the forefront of global competition. Our expert team blends breathtaking cinematic vision with cutting-edge programming and AI to create unforgettable user experiences, transforming your ambitions into tangible, exceptional successes that exceed all expectations.",
+      cta: "Start Your Success Journey",
+      projects: "Explore Our Creative Works",
+      stats: [
+        { label: "Projects Completed", value: "150+" },
+        { label: "Happy Clients", value: "85+" },
+        { label: "Years of Experience", value: "10+" },
+        { label: "Satisfaction Rate", value: "99%" }
+      ]
     },
     about: {
         tag: "Vision & Mission",
         title: "Your Bridge to Digital Success",
         description: "At BrandUp, we believe every brand has a unique story that deserves to be told with the highest standards of creativity and professionalism. Our mission begins with understanding the core of your business and transforming it into a reality that achieves exceptional results.",
-        vision: {
-          title: "Our Vision",
-          desc: "We aspire to be the world's leading creative partner for ambitious brands, by redefining digital marketing standards and delivering visual and interactive experiences that exceed the limits of imagination, ensuring our clients a permanent lead in constantly changing markets."
+        banner: {
+          title: "About Us",
+          subtitle: "Crafting the extraordinary into digital reality"
         },
-        mission: {
-          title: "Our Mission",
-          desc: "We are committed to providing integrated marketing solutions that combine art and technology. We strive to empower companies through well-thought-out strategies, innovative designs, and cinematic content production that strengthens the links between the brand and its audience, achieving sustainable growth and brilliant success."
+        who: {
+          title: "Who We Are?",
+          subtitle: "A journey of creativity and innovation fueled by passion",
+          desc1: "We are a full-service creative agency specializing in digital transformation and brand identity. Our team combines deep expertise with an innovative spirit.",
+          desc2: "Since our inception, we've had one goal: to be the primary engine for our clients' growth in the digital space through technical and artistic solutions that never compromise on quality."
+        },
+        vision_section: {
+          title: "Our Vision & Values",
+          subtitle: "What drives us towards excellence",
+          v: {
+            title: "Vision",
+            desc: "To be the global leader in digital marketing solutions and artistic creativity."
+          },
+          m: {
+            title: "Mission",
+            desc: "Empowering brands to reach their full potential through technology and art."
+          },
+          values: {
+            title: "Values",
+            desc: "Professionalism, innovation, and absolute commitment to exceptional results for our clients."
+          }
+        },
+        team: {
+          title: "The Creative Team",
+          subtitle: "The names behind every success story",
+          roles: {
+            ceo: "Founder & CEO",
+            creative: "Creative Director",
+            tech: "CTO",
+            marketing: "Marketing Manager"
+          }
+        },
+        testimonials: {
+          title: "What They Say",
+          subtitle: "Voices of success partners who put their trust in us"
         }
     },
     services: {
-      title: "Our Services",
+      tag: "EXCEPTIONAL EXPERTISE",
+      title: "Innovative Digital Solutions",
+      subtitle: "We craft integrated digital solutions that blend artistic creativity with technical precision to elevate your brand's presence and market dominance.",
       design: "Creative Design",
-      marketing: "Marketing Services",
+      marketing: "Marketing Growth",
       management: "Social Management",
       photography: "Media Production",
       videos: "Videos",
       items_design: ["Brand Identity", "Graphic Design", "Exhibitions Design"],
-      items_marketing: ["Content Creation", "Paid Advertising", "Google & Meta & TikTok"],
-      items_management: ["Account Management", "Data Analysis", "Performance Reports"],
-      items_photography: ["Professional Photography", "Video Production", "Editing & Montage"]
+      items_marketing: ["Content Strategy", "Growth Campaigns", "Digital Marketing"],
+      items_management: ["Account Management", "Data Analytics", "Performance Metrics"],
+      items_photography: ["Photography", "Cinematography", "Post-Production"]
     },
     pricing: {
       strategic: {
@@ -152,6 +251,15 @@ export const translations = {
       data: {
         title: "Data Analysis",
         desc: "We monitor and analyze every movement and interaction to provide accurate reports that help you make the right decisions and continuously improve performance."
+      },
+      most_popular: "Most Popular",
+      bespoke_title: "Bespoke Solutions",
+      bespoke_desc: "Every project is crafted from scratch to fit your unique needs. We focus on peak quality and tangible results.",
+      request_consultation: "Request Consultation",
+      learn_more: "Learn More",
+      metrics: {
+        roi: "Average ROI",
+        projects: "Successful Projects"
       }
     },
     legal: {
@@ -175,6 +283,14 @@ export const translations = {
       phone: "Call Us",
       email: "Email",
       send: "Send Message",
+    },
+    cta: {
+      tag: "BrandUp Agency",
+      title_start: "Your Brand's Excellence Starts with Our",
+      title_highlight: "Creativity",
+      title_end: "",
+      subtitle: "We are here to be your partners in success, blending creativity with technology to transform your ambitions into innovative digital solutions and exceptional designs that always put your brand at the forefront.",
+      button: "Start Your Project"
     }
   },
   de: {

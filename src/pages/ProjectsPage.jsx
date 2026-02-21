@@ -89,26 +89,26 @@ const ProjectsPage = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-[#D4AF37] font-black tracking-[0.5em] uppercase text-xs mb-6"
+            className="text-brand-accent font-black tracking-[0.5em] uppercase text-xs mb-6"
           >
             Showcase
           </motion.div>
           <motion.h1 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-6xl md:text-8xl font-black mb-12 tracking-tighter"
+            className="text-6xl md:text-8xl font-black mb-12 tracking-tighter text-brand-dark"
           >
             {t('nav.portfolio')}
           </motion.h1>
           
           {/* Enhanced Filter Visibility */}
-          <div className="flex flex-wrap justify-center gap-4 bg-[#011614]/80 backdrop-blur-xl p-3 rounded-[2rem] border border-white/10 max-w-2xl mx-auto shadow-2xl sticky top-24 z-50">
+          <div className="flex flex-wrap justify-center gap-4 bg-white/70 backdrop-blur-xl p-3 rounded-[2rem] border border-black/5 max-w-2xl mx-auto shadow-xl sticky top-24 z-50">
             {categories.map((cat) => (
               <button
                 key={cat.id}
                 onClick={() => setFilter(cat.id)}
                 className={`px-8 py-4 rounded-2xl transition-all text-xs font-black tracking-[0.1em] uppercase flex items-center gap-3
-                  ${filter === cat.id ? 'bg-[#D4AF37] text-[#011614] shadow-[0_10px_30px_rgba(212,175,55,0.3)] scale-105' : 'text-white/40 hover:text-white hover:bg-white/5'}`}
+                  ${filter === cat.id ? 'bg-brand-accent text-white shadow-[0_10px_30px_rgba(217,119,6,0.2)] scale-105' : 'text-brand-dark/40 hover:text-brand-dark hover:bg-black/5'}`}
               >
                 <cat.icon className="w-4 h-4" />
                 {cat.label}
@@ -153,15 +153,15 @@ const ProjectsPage = () => {
                   )}
                   
                   {/* Minimalist Show More Button on Hover */}
-                  <div className="absolute inset-0 z-20 bg-[#011614]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
-                    <div className="px-8 py-4 rounded-2xl bg-[#D4AF37] text-[#011614] font-black text-xs uppercase tracking-widest shadow-2xl flex items-center gap-3">
+                  <div className="absolute inset-0 z-20 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
+                    <div className="px-8 py-4 rounded-2xl bg-brand-accent text-white font-black text-xs uppercase tracking-widest shadow-2xl flex items-center gap-3">
                       {project.type === 'video' ? <Play className="w-4 h-4 fill-current" /> : <ImageIcon className="w-4 h-4" />}
                       {project.type === 'video' ? (isRtl ? 'مشاهدة الفيديو' : 'Watch Video') : (isRtl ? 'عرض المزيد' : 'Show More')}
                     </div>
                   </div>
 
                   {project.type === 'video' && (
-                    <div className="absolute top-6 right-6 z-20 w-12 h-12 rounded-xl bg-white/10 backdrop-blur-xl border border-white/10 flex items-center justify-center text-white group-hover:opacity-0 transition-opacity">
+                    <div className="absolute top-6 right-6 z-20 w-12 h-12 rounded-xl bg-black/10 backdrop-blur-xl border border-black/5 flex items-center justify-center text-white group-hover:opacity-0 transition-opacity">
                       <Play className="w-5 h-5 fill-current" />
                     </div>
                   )}
@@ -169,7 +169,7 @@ const ProjectsPage = () => {
                 
                 {/* Info Below Image */}
                 <div className="px-2 pb-2 text-center md:text-start">
-                   <h3 className="text-2xl font-black text-white tracking-tight group-hover:text-[#D4AF37] transition-colors uppercase">
+                   <h3 className="text-2xl font-black text-brand-dark tracking-tight group-hover:text-brand-accent transition-colors uppercase">
                       {project.title}
                    </h3>
                 </div>

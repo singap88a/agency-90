@@ -76,36 +76,38 @@ const Portfolio = () => {
       <div className="max-w-7xl mx-auto px-6">
         {/* Header Section */}
         <div className="flex flex-col md:flex-row items-end justify-between mb-20 gap-12">
-           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="max-w-3xl"
-           >
-              <div className="text-[#D4AF37] font-black tracking-[0.4em] uppercase text-[10px] mb-6 flex items-center gap-4">
-                <div className="w-10 h-px bg-[#D4AF37]" />
-                {isRtl ? 'الأعمال المتميزة' : 'Selected Projects'}
-              </div>
-              <h2 className="text-3xl md:text-5xl font-black tracking-tight text-white mb-6 uppercase">
-                {isRtl ? 'رؤية فنية ' : 'Artistic '}
-                <span className="text-[#D4AF37]">{isRtl ? 'متميزة' : 'Excellence'}</span>
-              </h2>
-              <p className="text-white/40 text-base md:text-lg font-medium leading-relaxed max-w-xl">
-                {isRtl 
-                  ? 'نبتكر حلولاً بصرية متكاملة تعكس قوة علامتك التجارية في كل تفصيل.' 
-                  : 'Crafting elite visual solutions that reflect your brand\'s power in every single detail.'}
-              </p>
-           </motion.div>
+            <motion.div
+             initial={{ opacity: 0, y: 30 }}
+             whileInView={{ opacity: 1, y: 0 }}
+             viewport={{ once: true }}
+             className="max-w-3xl"
+            >
+               <div className="flex flex-col mb-10">
+                 <span className="text-brand-accent font-black tracking-[0.4em] uppercase text-xs mb-4">
+                   {isRtl ? 'الأعمال المتميزة' : 'Selected Projects'}
+                 </span>
+                 <h2 className="text-4xl lg:text-6xl font-black tracking-tighter text-brand-dark uppercase leading-none">
+                   {isRtl ? 'رؤية فنية متميزة' : 'Artistic Excellence'}
+                 </h2>
+               </div>
+               <p className="text-lg lg:text-xl text-brand-dark/50 font-medium leading-relaxed max-w-xl">
+                 {isRtl 
+                   ? 'نبتكر حلولاً بصرية متكاملة تعكس قوة علامتك التجارية في كل تفصيل.' 
+                   : 'Crafting elite visual solutions that reflect your brand\'s power in every single detail.'}
+               </p>
+            </motion.div>
 
-           <Link 
-            to="/projects"
-            className="group flex items-center gap-4 px-8 py-5 bg-white/5 border border-white/10 rounded-2xl hover:border-[#D4AF37] transition-all duration-500 shadow-2xl mb-4"
-           >
-              <span className="text-white font-black text-sm uppercase tracking-widest">
-                {isRtl ? 'عرض كل المشاريع' : 'View all projects'}
-              </span>
-              <ArrowUpRight className="w-5 h-5 text-white group-hover:text-[#D4AF37] transition-colors" />
-           </Link>
+            <Link 
+             to="/projects"
+             className="group flex items-center gap-6 px-10 py-5 bg-brand-accent rounded-2xl hover:scale-[1.05] hover:shadow-[0_20px_40px_rgba(245,176,2,0.3)] transition-all duration-500 mb-4"
+            >
+               <span className="text-white font-black text-sm uppercase tracking-widest">
+                 {isRtl ? 'عرض كل المشاريع' : 'View all projects'}
+               </span>
+               <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-white group-hover:rotate-45 transition-transform duration-500">
+                 <ArrowUpRight className="w-5 h-5" />
+               </div>
+            </Link>
         </div>
 
         {/* Portfolio Slider */}
@@ -130,9 +132,9 @@ const Portfolio = () => {
                   viewport={{ once: true }}
                   transition={{ delay: idx * 0.1, duration: 0.8 }}
                   className="group cursor-pointer" 
-                  onClick={() => handleProjectClick(project)}
+                   onClick={() => handleProjectClick(project)}
                 >
-                  <div className="relative aspect-[3/4] rounded-2xl overflow-hidden border border-white/5 bg-white/[0.02] shadow-2xl">
+                  <div className="relative aspect-[3/4] rounded-2xl overflow-hidden border border-black/5 bg-black/[0.02] shadow-xl">
                     <img 
                       src={project.images[0]} 
                       alt={project.title} 
@@ -141,7 +143,7 @@ const Portfolio = () => {
 
                     {/* Minimalist Hover Overlay */}
                     <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center backdrop-blur-[2px] z-30">
-                      <div className="px-8 py-4 rounded-full bg-white text-[#011614] font-black text-[10px] uppercase tracking-widest shadow-2xl flex items-center gap-3 hover:bg-[#D4AF37] transition-colors">
+                      <div className="px-8 py-4 rounded-full bg-white text-brand-dark font-black text-[10px] uppercase tracking-widest shadow-2xl flex items-center gap-3 hover:bg-brand-accent transition-colors">
                         <ImageIcon className="w-4 h-4" />
                         {isRtl ? 'عرض المزيد' : 'Show More'}
                       </div>

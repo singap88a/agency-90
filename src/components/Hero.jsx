@@ -1,7 +1,8 @@
 import React, { useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { ArrowLeft, ArrowRight, Play, Sparkles, Box, Compass } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Play, Sparkles } from 'lucide-react';
+import { cn } from '../lib/utils';
 
 const Hero = () => {
   const { t, i18n } = useTranslation();
@@ -9,114 +10,172 @@ const Hero = () => {
   const isRtl = i18n.dir() === 'rtl';
 
   const { scrollY } = useScroll();
-  const y1 = useTransform(scrollY, [0, 500], [0, 150]);
-  const y2 = useTransform(scrollY, [0, 500], [0, -100]);
-  const rotateHero = useTransform(scrollY, [0, 500], [0, 5]);
+  const yHero = useTransform(scrollY, [0, 500], [0, 150]);
 
   return (
-    <section ref={containerRef} className="relative min-h-screen flex items-center justify-center overflow-hidden py-32 perspective-1000">
-      {/* Hero Specific Decorative Elements */}
-      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        {/* Animated 3D Objects */}
-        <motion.div 
-          animate={{ rotate: 360, y: [0, 50, 0] }}
-          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-          className="absolute top-[20%] left-[10%] opacity-20 hidden lg:block"
-        >
-          <Box className="w-24 h-24 text-[#D4AF37]" strokeWidth={0.5} />
-        </motion.div>
-
-        <motion.div 
-          animate={{ rotate: -360, x: [0, 30, 0] }}
-          transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-          className="absolute bottom-[20%] right-[15%] opacity-15 hidden lg:block"
-        >
-          <Compass className="w-32 h-32 text-[#00f5d4]" strokeWidth={0.5} />
-        </motion.div>
-      </div>
-
-      <motion.div 
-        style={{ rotateX: rotateHero }}
-        className="container mx-auto px-6 relative z-10 pt-10"
+    <section
+      ref={containerRef}
+      dir={isRtl ? "rtl" : "ltr"}
+      className="relative min-h-screen flex items-center overflow-hidden bg-white"
+    >
+      {/* Background Image */}
+      <motion.div
+        style={{ y: yHero }}
+        className="absolute inset-0 z-0"
       >
-        <div className="max-w-5xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8, rotateY: 30 }}
-            animate={{ opacity: 1, scale: 1, rotateY: 0 }}
-            transition={{ duration: 1 }}
-            className="inline-flex items-center gap-3 px-6 py-2 rounded-xl border border-white/10 bg-white/5 text-[#D4AF37] text-[11px] font-black tracking-[0.5em] uppercase mb-12 shadow-2xl backdrop-blur-md"
-          >
-            <Sparkles className="w-4 h-4 text-[#D4AF37] animate-pulse" />
-            {t('hero.tag')}
-          </motion.div>
-
-          <motion.h1
-            initial={{ opacity: 0, z: -100, rotateX: 20 }}
-            animate={{ opacity: 1, z: 0, rotateX: 0 }}
-            transition={{ duration: 1.2, delay: 0.2 }}
-            className="text-6xl   lg:text-[90px] font-heading font-black mb-8 leading-[1.2] tracking-[ -0.05em] text-white"
-          >
-            {t('hero.title').split(' ').map((word, i) => (
-              <span key={i} className={i % 3 === 2 ? "text-[#D4AF37] drop-shadow-[0_0_30px_rgba(212,175,55,0.3)]" : ""}>
-                {word}{' '}
-              </span>
-            ))}
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.4 }}
-            className="text-xl md:text-2xl text-[#F2F0E4]/60 mb-12 max-w-3xl mx-auto leading-relaxed font-medium"
-          >
-            {t('hero.subtext')}
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.6 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-8"
-          >
-            <button className="btn-premium !py-5 !px-14 text-xl group flex items-center gap-4 transition-all hover:shadow-[0_0_50px_rgba(212,175,55,0.4)]">
-              {t('hero.cta')}
-              {isRtl ? <ArrowLeft className="w-6 h-6 group-hover:-translate-x-3 transition-transform" /> : <ArrowRight className="w-6 h-6 group-hover:translate-x-3 transition-transform" />}
-            </button>
-            
-            <button className="flex items-center gap-5 text-lg font-black tracking-[0.2em] uppercase text-white/40 hover:text-[#D4AF37] transition-all group">
-              <div className="w-16 h-16 rounded-2xl border border-white/10 flex items-center justify-center group-hover:bg-[#D4AF37]/10 group-hover:border-[#D4AF37] transition-all">
-                <Play className="w-6 h-6 fill-transparent group-hover:fill-[#D4AF37]" />
-              </div>
-              {t('hero.projects')}
-            </button>
-          </motion.div>
-        </div>
+        <img
+          src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80"
+          alt="Professional Background"
+          className="w-full h-full object-cover opacity-90"
+        />
       </motion.div>
 
-      {/* 3D Floating Particles */}
-      <div className="absolute inset-0 pointer-events-none">
-        {[...Array(5)].map((_, i) => (
+      {/* Floating Decorative Elements */}
+      <div className="absolute inset-0 z-[1] pointer-events-none">
+        {[...Array(6)].map((_, i) => (
           <motion.div
             key={i}
-            initial={{ opacity: 0 }}
+            initial={{ opacity: 0, scale: 0.5 }}
             animate={{ 
-              opacity: [0, 0.5, 0],
-              y: [-20, 20],
-              x: [-20, 20],
-              scale: [1, 1.5, 1]
+              opacity: [0.1, 0.3, 0.1],
+              scale: [1, 1.2, 1],
+              y: [0, -20, 0],
+              x: [0, 10, 0]
             }}
             transition={{ 
-              duration: Math.random() * 5 + 5,
+              duration: 8 + i * 2,
               repeat: Infinity,
-              delay: Math.random() * 5
+              ease: "easeInOut",
+              delay: i * 1.5
             }}
-            className="absolute w-1 h-1 bg-[#D4AF37] rounded-full blur-[1px]"
-            style={{ 
-              top: `${Math.random() * 100}%`, 
-              left: `${Math.random() * 100}%` 
+            className="absolute rounded-3xl bg-white/5 backdrop-blur-3xl border border-white/10"
+            style={{
+              width: `${100 + i * 50}px`,
+              height: `${100 + i * 50}px`,
+              left: `${15 + i * 15}%`,
+              top: `${20 + (i % 3) * 25}%`,
+              rotate: `${15 + i * 15}deg`
             }}
           />
         ))}
+      </div>
+
+      {/* Sophisticated Dark Overlay */}
+      <div className={cn(
+        "absolute inset-0 z-[1] pointer-events-none transition-all duration-1000",
+        isRtl 
+          ? "bg-gradient-to-l from-brand-dark via-brand-dark/60 to-transparent" 
+          : "bg-gradient-to-r from-brand-dark via-brand-dark/60 to-transparent"
+      )} />
+
+      {/* Content */}
+      <div className="container mx-auto px-6 lg:px-24 relative z-10 py-32">
+        <div
+          className={cn(
+            "max-w-4xl flex flex-col gap-10 w-full relative",
+            isRtl ? "items-start text-right ml-auto" : "items-start text-left mr-auto"
+          )}
+        >
+          {/* Tag */}
+          <motion.div
+            initial={{ opacity: 0, x: isRtl ? 30 : -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+            className="inline-flex items-center gap-3 px-5 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-xl text-brand-accent text-[11px] font-black tracking-[0.3em] uppercase shadow-2xl ring-1 ring-white/10"
+          >
+            <Sparkles className="w-4 h-4" />
+            <span>{t('hero.tag')}</span>
+          </motion.div>
+ 
+          {/* Title - Professional Scale & Multi-colored */}
+          <motion.h1
+            initial={{ opacity: 0, x: isRtl ? 50 : -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, delay: 0.2 }}
+            className={cn(
+              "text-5xl md:text-7xl lg:text-8xl font-black leading-[1.05] tracking-tight text-white",
+              isRtl ? "text-right" : "text-left"
+            )}
+          >
+            {t('hero.title').split(' ').map((word, i) => {
+              const highlights = isRtl ? [2, 3] : [2, 3];
+              const isHighlight = highlights.includes(i % 5);
+              return (
+                <span key={i} className={cn(
+                  "inline-block",
+                  isHighlight ? "text-brand-accent italic drop-shadow-[0_10px_30px_rgba(245,176,2,0.4)]" : ""
+                )}>
+                  {word}{' '}
+                </span>
+              )
+            })}
+          </motion.h1>
+ 
+          {/* Subtext - Upscaled & More Professional */}
+          <motion.p
+            initial={{ opacity: 0, x: isRtl ? 30 : -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, delay: 0.4 }}
+            className={cn(
+              "text-lg md:text-xl text-white/50 max-w-2xl leading-relaxed font-light",
+              isRtl ? "text-right" : "text-left"
+            )}
+          >
+            {t('hero.subtext')}
+          </motion.p>
+ 
+          {/* Buttons - Symmetrical & Professional UX */}
+          <div
+            className={cn(
+              "flex flex-col sm:flex-row gap-6 mt-10 w-full sm:w-auto",
+              isRtl ? "items-start" : "items-start"
+            )}
+          >
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="w-full sm:w-auto"
+            >
+              <button className="relative group w-full sm:w-64 h-16 rounded-xl bg-brand-accent text-white font-black text-lg overflow-hidden transition-all duration-500 hover:shadow-[0_20px_40px_rgba(245,176,2,0.3)] hover:scale-[1.02] flex items-center justify-center gap-4">
+                <span className="relative z-10 flex items-center gap-4">
+                  {t('hero.cta')}
+                  <motion.div
+                    animate={{ x: isRtl ? [0, -5, 0] : [0, 5, 0] }}
+                    transition={{ duration: 1.5, repeat: Infinity }}
+                  >
+                    {isRtl ? <ArrowLeft className="w-6 h-6" /> : <ArrowRight className="w-6 h-6" />}
+                  </motion.div>
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-tr from-white to-transparent opacity-0 group-hover:opacity-20 transition-opacity duration-500" />
+              </button>
+            </motion.div>
+ 
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.7 }}
+              className="w-full sm:w-auto"
+            >
+              <button className="group relative w-full sm:w-64 h-16 flex items-center justify-center gap-4 rounded-xl bg-white/5 backdrop-blur-3xl border border-white/10 text-white font-bold text-lg hover:bg-white/10 hover:border-white/20 transition-all duration-300">
+                <div className="w-10 h-10 rounded-lg bg-brand-accent/20 flex items-center justify-center text-brand-accent shadow-sm group-hover:scale-110 group-hover:rotate-[10deg] transition-all duration-500">
+                  <Play className="w-4 h-4 fill-current" />
+                </div>
+                <span>{t('hero.projects')}</span>
+              </button>
+            </motion.div>
+          </div>
+        </div>
+      </div>
+      {/* Professional Symmetrical Sine-Wave Divider */}
+      <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-20 pointer-events-none translate-y-[1px]">
+        <svg 
+          viewBox="0 0 1200 120" 
+          preserveAspectRatio="none" 
+          className="relative block w-full h-[60px] md:h-[120px] fill-white"
+        >
+          <path d="M0,0 C150,90 400,90 600,60 C800,30 1050,30 1200,120 V120 H0 Z"></path>
+        </svg>
       </div>
     </section>
   );

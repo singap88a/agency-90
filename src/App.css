@@ -1,9 +1,9 @@
 :root {
-  --brand-dark: #011614;
-  --brand-primary: #002B26;
-  --brand-secondary: #F2F0E4;
-  --brand-accent: #D4AF37;
-  --brand-glow: #00f5d4;
+  --brand-dark: #0f172a;
+  --brand-primary: #059669;
+  --brand-secondary: #ffffff;
+  --brand-accent: #f5b002;
+  --brand-glow: #34d399;
 }
 
 html {
@@ -13,13 +13,13 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--brand-dark);
+  background-color: var(--brand-secondary);
   background-image: 
-    radial-gradient(at 0% 0%, rgba(0, 43, 38, 0.4) 0px, transparent 50%),
-    radial-gradient(at 100% 0%, rgba(212, 175, 55, 0.05) 0px, transparent 50%),
-    radial-gradient(at 100% 100%, rgba(0, 245, 212, 0.05) 0px, transparent 50%),
-    radial-gradient(at 0% 100%, rgba(0, 43, 38, 0.4) 0px, transparent 50%);
-  color: var(--brand-secondary);
+    radial-gradient(at 0% 0%, rgba(5, 150, 105, 0.05) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(217, 119, 6, 0.05) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(52, 211, 153, 0.05) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(5, 150, 105, 0.05) 0px, transparent 50%);
+  color: var(--brand-dark);
   overflow-x: hidden;
   font-family: 'Inter', sans-serif;
 }
@@ -35,13 +35,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--brand-dark);
+  background: var(--brand-secondary);
 }
 
 ::-webkit-scrollbar-thumb {
   background: var(--brand-primary);
   border-radius: 9999px;
-  border: 2px solid var(--brand-dark);
+  border: 2px solid var(--brand-secondary);
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -50,16 +50,17 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Custom Utilities (Moved from @apply to standard CSS) */
 .glass-card {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.05);
   border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .glass-nav {
-  background: rgba(1, 22, 20, 0.8);
+  background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .btn-premium {
@@ -70,12 +71,14 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   transition: all 0.3s ease;
   background: var(--brand-accent);
-  color: var(--brand-dark);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 20px rgba(245, 176, 2, 0.15);
 }
 
 .btn-premium:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+  transform: scale(1.02);
+  box-shadow: 0 20px 40px rgba(5, 150, 105, 0.2);
 }
 
 .btn-premium:active {

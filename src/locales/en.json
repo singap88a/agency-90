@@ -9,9 +9,15 @@
   "hero": {
     "tag": "Bold Digital Excellence",
     "title": "Crafting the Digital Future of Your Brand",
-    "subtext": "Transforming ideas into stunning cinematic reality through marketing and design solutions that cross boundaries.",
-    "cta": "Launch Now",
-    "projects": "View Projects"
+    "subtext": "At Brand Up, we don't just build websites; we craft comprehensive digital ecosystems and technical masterpieces that propel your brand to the forefront of global competition. Our expert team blends breathtaking cinematic vision with cutting-edge programming and AI to create unforgettable user experiences, transforming your ambitions into tangible, exceptional successes that exceed all expectations.",
+    "cta": "Start Your Success Journey Now",
+    "projects": "Explore Our Creative Works",
+    "stats": {
+      "projects": "Projects Completed",
+      "clients": "Happy Clients",
+      "experience": "Years of Excellence",
+      "satisfaction": "Satisfaction Rate"
+    }
   },
   "about": {
     "tag": "Vision & Mission",
