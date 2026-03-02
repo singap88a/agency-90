@@ -1,3 +1,15 @@
+:root {
+  --brand-primary: #7652A4;
+  --brand-accent: #F09238;
+  --brand-dark: #0f172a;
+  --brand-glow: #bda7d3;
+  --brand-primary-rgb: 118, 82, 164;
+  --brand-accent-rgb: 240, 146, 56;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+

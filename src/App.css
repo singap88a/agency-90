@@ -1,9 +1,4 @@
-:root {
-  --brand-primary: #fbbf24;
-  --brand-secondary: #ffffff;
-  --brand-accent: #f5b002;
-  --brand-glow: #fef08a;
-}
+ 
 
 html {
   scroll-behavior: smooth;
@@ -14,10 +9,10 @@ body {
   padding: 0;
   background-color: var(--brand-secondary);
   background-image: 
-    radial-gradient(at 0% 0%, rgba(251, 191, 36, 0.05) 0px, transparent 50%),
-    radial-gradient(at 100% 0%, rgba(217, 119, 6, 0.05) 0px, transparent 50%),
-    radial-gradient(at 100% 100%, rgba(254, 240, 138, 0.05) 0px, transparent 50%),
-    radial-gradient(at 0% 100%, rgba(251, 191, 36, 0.05) 0px, transparent 50%);
+    radial-gradient(at 0% 0%, rgba(118, 82, 164, 0.05) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(240, 146, 56, 0.05) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(189, 167, 211, 0.05) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(118, 82, 164, 0.05) 0px, transparent 50%);
   color: var(--brand-dark);
   overflow-x: hidden;
   font-family: 'Inter', sans-serif;
@@ -72,12 +67,12 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--brand-accent);
   color: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 10px 20px rgba(245, 176, 2, 0.15);
+  box-shadow: 0 10px 20px rgba(240, 146, 56, 0.15);
 }
 
 .btn-premium:hover {
   transform: scale(1.02);
-  box-shadow: 0 20px 40px rgba(251, 191, 36, 0.2);
+  box-shadow: 0 20px 40px rgba(240, 146, 56, 0.2);
 }
 
 .btn-premium:active {

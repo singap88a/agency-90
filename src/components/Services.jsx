@@ -61,7 +61,7 @@ const Services = () => {
               <div className="relative z-10">
                 {/* Icon Container - Permanent Yellow State with Lighter Shadow */}
                 <div className="mb-10 relative flex">
-                  <div className="w-16 h-16 rounded-3xl bg-brand-accent shadow-[0_15px_40px_rgba(245,176,2,0.35)] flex items-center justify-center text-white transition-all duration-500 group-hover:scale-110 group-hover:rotate-6">
+                  <div className="w-16 h-16 rounded-3xl bg-brand-accent shadow-[0_15px_40px_rgba(var(--brand-accent-rgb),0.35)] flex items-center justify-center text-white transition-all duration-500 group-hover:scale-110 group-hover:rotate-6">
                     <service.icon className="w-9 h-9" />
                   </div>
                   <div className="absolute -inset-4 bg-brand-accent/20 blur-2xl rounded-full" />

@@ -20,7 +20,7 @@
   },
   "hero": {
     "title": "Gestalten Sie Ihre digitale Zukunft",
-    "subtext": "Bei BrandUp bauen wir nicht nur Webseiten – wir schaffen umfassende digitale Ökosysteme, die Ihre Marke an die Spitze des globalen Wettbewerbs bringen.",
+    "subtext": "Bei agency 90 bauen wir nicht nur Webseiten – wir schaffen umfassende digitale Ökosysteme, die Ihre Marke an die Spitze des globalen Wettbewerbs bringen.",
     "cta": "Jetzt starten",
     "projects": "Unsere Arbeiten entdecken",
     "stats": [
@@ -59,7 +59,7 @@
       "subtitle": "Stimmen des Erfolgs",
       "description": "Wir sind stolz auf unsere Partnerschaften mit führenden Organisationen, die unserer Kreativität vertrauen.",
       "items": [
-        { "name": "Omar Zayed", "role": "CEO von Zayed Tech", "text": "Die Zusammenarbeit mit BrandUp war ein Wendepunkt für unser Unternehmen. Hohe Professionalität und beeindruckende Ergebnisse.", "rating": 5 },
+        { "name": "Omar Zayed", "role": "CEO von Zayed Tech", "text": "Die Zusammenarbeit mit agency 90 war ein Wendepunkt für unser Unternehmen. Hohe Professionalität und beeindruckende Ergebnisse.", "rating": 5 },
         { "name": "Laila Mansour", "role": "Creative Hub Direktorin", "text": "Die beste Kreativagentur, mit der ich je zusammengearbeitet habe. Ihre Designs übertreffen alle Erwartungen.", "rating": 5 },
         { "name": "John Miller", "role": "Gründer von Miller Co", "text": "Außergewöhnlicher Service und weltklasse Vision. Sie haben unsere Marke komplett transformiert.", "rating": 5 },
         { "name": "Yassine Bakri", "role": "Bakri Logistics Direktor", "text": "Sehr professionelles Team, absolute Termintreue und Kreativität bei der Umsetzung.", "rating": 5 }
@@ -103,7 +103,7 @@
       { "title": "Dienstleistungen", "text": "Wir verpflichten uns zur Erbringung vereinbarter Dienstleistungen." },
       { "title": "Geistiges Eigentum", "text": "Alle Designs bleiben nach vollständiger Bezahlung Eigentum des Kunden." },
       { "title": "Zahlung", "text": "Zahlungsbedingungen unterliegen der unterzeichneten Vereinbarung." },
-      { "title": "Haftung", "text": "BrandUp haftet nicht für indirekte Verluste." }
+      { "title": "Haftung", "text": "agency 90 haftet nicht für indirekte Verluste." }
     ]
   },
   "contact": {
@@ -131,7 +131,7 @@
     "privacy": "Wir respektieren Ihre Privatsphäre und geben Ihre Daten nicht weiter"
   },
   "cta": {
-    "tag": "BrandUp Agentur",
+    "tag": "agency 90",
     "title_start": "Die Exzellenz Ihrer Marke beginnt mit unserer",
     "title_highlight": "Kreativität",
     "title_end": "",
@@ -142,10 +142,10 @@
     "badge": "FAQ",
     "description": "Alles, was Sie über unsere Dienstleistungen wissen müssen.",
     "items": [
-      { "q": "Welche Dienstleistungen bietet BrandUp an?", "a": "Wir bieten integrierte Lösungen an, darunter strategisches digitales Marketing, Filmproduktion, Elite-Markenidentität und digitale Systeme." },
+      { "q": "Welche Dienstleistungen bietet agency 90 an?", "a": "Wir bieten integrierte Lösungen an, darunter strategisches digitales Marketing, Filmproduktion, Elite-Markenidentität und digitale Systeme." },
       { "q": "Wie stellen Sie Qualität sicher?", "a": "Wir nutzen eine präzise Methodik, die Datenanalyse mit kreativem Geist verbindet." },
       { "q": "Arbeiten Sie mit internationalen Kunden?", "a": "Absolut. Wir betreuen globale Kunden und verstehen internationale Marktanforderungen." },
-      { "q": "Was unterscheidet BrandUp von anderen Agenturen?", "a": "Wir verbinden künstlerische Vision mit technischer Intelligenz und schaffen einzigartige visuelle Erlebnisse." },
+      { "q": "Was unterscheidet agency 90 von anderen Agenturen?", "a": "Wir verbinden künstlerische Vision mit technischer Intelligenz und schaffen einzigartige visuelle Erlebnisse." },
       { "q": "Wie werden die Projektkosten bestimmt?", "a": "Jedes Projekt ist einzigartig, daher erstellen wir individuelle Angebote basierend auf Ihren Anforderungen." },
       { "q": "Bieten Sie Support nach der Lieferung an?", "a": "Ja, wir bieten 6 Monate technischen Support nach der Lieferung an." }
     ]

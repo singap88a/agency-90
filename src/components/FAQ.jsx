@@ -19,10 +19,10 @@ const FAQ = () => {
     { q: "كيف يتم تحديد تكلفة المشروع؟", a: "كل مشروع فريد بطبيعته، لذلك نقدم عروضاً مخصصة بناءً على متطلباتك وميزانيتك." },
     { q: "هل تقدمون دعماً بعد التسليم؟", a: "نعم، نقدم دعماً فنياً مستمراً لمدة 6 أشهر بعد التسليم مع إمكانية التمديد." },
   ] : [
-    { q: "What services does BrandUp provide?", a: "We offer integrated solutions including strategic digital marketing, cinematic production, elite visual identity, and advanced digital systems." },
+    { q: "What services does agency 90 provide?", a: "We offer integrated solutions including strategic digital marketing, cinematic production, elite visual identity, and advanced digital systems." },
     { q: "How do you ensure quality?", a: "We employ a precise methodology blending data analysis with creative spirit. Every project detail is carefully monitored." },
     { q: "Do you work with international clients?", a: "Absolutely. We serve a global clientele and deeply understand international market requirements." },
-    { q: "What makes BrandUp different?", a: "We merge artistic vision with technical intelligence, focusing on creating unique visual and cinematic experiences." },
+    { q: "What makes agency 90 different?", a: "We merge artistic vision with technical intelligence, focusing on creating unique visual and cinematic experiences." },
     { q: "How is project cost determined?", a: "Each project is unique, so we provide customized quotes based on your requirements and budget." },
     { q: "Do you offer post-delivery support?", a: "Yes, we provide ongoing technical support for 6 months after delivery." },
   ]);

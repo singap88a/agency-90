@@ -56,7 +56,10 @@ const Navbar = () => {
 
   return (
     <nav className={cn(
-      "fixed top-0 left-0 right-0 z-[100] transition-all duration-500 px-6 lg:px-24 py-5 glass-nav border-b border-black/5"
+      "fixed top-0 left-0 right-0 z-[100] transition-all duration-500 px-6 lg:px-24 py-5",
+      isHomePage && !isScrolled 
+        ? "bg-transparent border-transparent" 
+        : "glass-nav border-b border-black/5 shadow-sm"
     )}>
       <div className="max-w-7xl mx-auto flex items-center justify-between relative">
         {/* Logo */}
@@ -66,10 +69,7 @@ const Navbar = () => {
           className="flex items-center gap-4 z-10"
         >
           <Link to="/" className="flex items-center gap-4">
-            <img src="/logo.jpeg" alt="BrandUp" className="h-10 w-10 rounded-xl border border-black/5" />
-            <span className="text-xl font-heading font-bold tracking-tighter text-brand-dark">
-              Brand<span className="text-brand-accent">Up</span>
-            </span>
+            <img src="/logo.png" alt="agency 90" className="h-10 w-auto object-contain" />
           </Link>
         </motion.div>
 
@@ -85,7 +85,10 @@ const Navbar = () => {
               {link.href.startsWith('/') ? (
                 <Link
                   to={link.href}
-                  className="px-5 py-2 rounded-full text-xs font-semibold tracking-wide transition-all duration-300 flex items-center gap-2 hover:bg-white text-brand-dark/70 hover:text-brand-dark hover:shadow-sm"
+                  className={cn(
+                    "px-5 py-2 rounded-full text-xs font-semibold tracking-wide transition-all duration-300 flex items-center gap-2 hover:bg-white/10",
+                    isHomePage && !isScrolled ? "text-white" : "text-brand-dark/70 hover:text-brand-dark hover:bg-white hover:shadow-sm"
+                  )}
                 >
                   <link.icon className="w-3.5 h-3.5 group-hover:text-brand-accent transition-colors" />
                   {t(`nav.${link.key}`)}
@@ -93,7 +96,10 @@ const Navbar = () => {
               ) : (
                 <a
                   href={isHomePage ? link.href : `/${link.href}`}
-                  className="px-5 py-2 rounded-full text-xs font-semibold tracking-wide transition-all duration-300 flex items-center gap-2 hover:bg-white text-brand-dark/70 hover:text-brand-dark hover:shadow-sm"
+                  className={cn(
+                    "px-5 py-2 rounded-full text-xs font-semibold tracking-wide transition-all duration-300 flex items-center gap-2 hover:bg-white/10",
+                    isHomePage && !isScrolled ? "text-white" : "text-brand-dark/70 hover:text-brand-dark hover:bg-white hover:shadow-sm"
+                  )}
                 >
                   <link.icon className="w-3.5 h-3.5 group-hover:text-brand-accent transition-colors" />
                   {t(`nav.${link.key}`)}
@@ -109,9 +115,14 @@ const Navbar = () => {
           <div className="relative hidden md:block" ref={langRef}>
             <button
               onClick={() => setIsLangOpen(!isLangOpen)}
-              className="h-10 px-4 rounded-xl bg-black/5 border border-black/5 flex items-center gap-2.5 hover:bg-black/10 transition-all text-xs font-bold tracking-wide text-brand-dark group"
+              className={cn(
+                "h-10 px-4 rounded-xl flex items-center gap-2.5 transition-all text-xs font-bold tracking-wide group border",
+                isHomePage && !isScrolled 
+                  ? "bg-white/10 border-white/20 text-white hover:bg-white/20" 
+                  : "bg-black/5 border-black/5 text-brand-dark hover:bg-black/10"
+              )}
             >
-              <Globe className="w-4 h-4 text-brand-accent group-hover:rotate-12 transition-transform" />
+              <Globe className={cn("w-4 h-4 transition-transform group-hover:rotate-12", isHomePage && !isScrolled ? "text-white" : "text-brand-accent")} />
               <span>{currentLang.label}</span>
               <ChevronDown className={cn("w-3.5 h-3.5 opacity-50 transition-transform duration-300", isLangOpen && "rotate-180")} />
             </button>
@@ -156,7 +167,12 @@ const Navbar = () => {
 
           {/* Mobile Toggle */}
           <button 
-            className="lg:hidden w-10 h-10 rounded-xl bg-black/5 flex items-center justify-center border border-black/5 text-brand-dark"
+            className={cn(
+              "lg:hidden w-10 h-10 rounded-xl flex items-center justify-center border transition-all",
+              isHomePage && !isScrolled 
+                ? "bg-white/10 border-white/20 text-white" 
+                : "bg-black/5 border-black/5 text-brand-dark"
+            )}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}

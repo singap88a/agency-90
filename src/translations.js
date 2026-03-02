@@ -22,7 +22,7 @@ export const translations = {
     },
     hero: {
       title: "نصنع مستقبلك الرقمي بإبداع",
-      subtext: "في براند أب، نحن لا نبني مجرد مواقع إلكترونية، بل نبتكر أنظمة رقمية متكاملة وتحفاً فنية تقنية تضع علامتكم التجارية في طليعة المنافسة العالمية. فريقنا من الخبراء يجمع بين الرؤية السينمائية المذهلة وأحدث تقنيات البرمجة والذكاء الاصطناعي لخلق تجارب مستخدم لا تُنسى، محولين طموحاتكم إلى نجاحات ملموسة واستثنائية تفوق التوقعات.",
+      subtext: "في agency 90، نحن لا نبني مجرد مواقع إلكترونية، بل نبتكر أنظمة رقمية متكاملة وتحفاً فنية تقنية تضع علامتكم التجارية في طليعة المنافسة العالمية. فريقنا من الخبراء يجمع بين الرؤية السينمائية المذهلة وأحدث تقنيات البرمجة والذكاء الاصطناعي لخلق تجارب مستخدم لا تُنسى، محولين طموحاتكم إلى نجاحات ملموسة واستثنائية تفوق التوقعات.",
       cta: "ابدأ رحلة النجاح الآن",
       projects: "استكشف أعمالنا الإبداعية",
       stats: [
@@ -35,7 +35,7 @@ export const translations = {
     about: {
       tag: "الرؤية والرسالة",
       title: "نحن جسركم نحو النجاح الرقمي",
-      description: "نحن في BrandUp نؤمن بأن كل علامة تجارية لها قصة فريدة تستحق أن تُروى بأعلى معايير الإبداع والاحترافية. مهمتنا تبدأ من فهم جوهر عملكم وتحويله إلى واقع ملموس يحقق نتائج استثنائية.",
+      description: "نحن في agency 90 نؤمن بأن كل علامة تجارية لها قصة فريدة تستحق أن تُروى بأعلى معايير الإبداع والاحترافية. مهمتنا تبدأ من فهم جوهر عملكم وتحويله إلى واقع ملموس يحقق نتائج استثنائية.",
       banner: {
         title: "من نحن",
         subtitle: "نصنع المستحيل ونحوله إلى واقع رقمي مبهر"
@@ -81,7 +81,7 @@ export const translations = {
           {
             name: "عمر زايد",
             role: "المدير التنفيذي لـ Zayed Tech",
-            text: "التعامل مع براند أب كان نقلة نوعية في عملنا. احترافية عالية ونتائج مبهرة وخدمة عملاء استثنائية فاقت كل التوقعات.",
+            text: "التعامل مع agency 90 كان نقلة نوعية في عملنا. احترافية عالية ونتائج مبهرة وخدمة عملاء استثنائية فاقت كل التوقعات.",
             rating: 5
           },
           {
@@ -157,7 +157,7 @@ export const translations = {
         { title: "الخدمات", text: "نلتزم بتقديم الخدمات المتفق عليها بأعلى معايير الجودة والاحترافية وفي المواعيد المحددة." },
         { title: "الملكية الفكرية", text: "تظل جميع التصاميم والمحتوى المنتج ملكاً للعميل بعد إتمام الدفع بالكامل، ما لم يتم الاتفاق على خلاف ذلك." },
         { title: "الدفع", text: "تخضع شروط الدفع للاتفاقية الموقعة لكل مشروع بشكل منفصل." },
-        { title: "المسؤولية", text: "BrandUp غير مسؤولة عن أي خسائر غير مباشرة ناتجة عن استخدام الخدمات خارج النطاق المتفق عليه." }
+        { title: "المسؤولية", text: "agency 90 غير مسؤولة عن أي خسائر غير مباشرة ناتجة عن استخدام الخدمات خارج النطاق المتفق عليه." }
       ]
     },
     contact: {
@@ -185,7 +185,7 @@ export const translations = {
       privacy: "نحن نحترم خصوصيتك ولن نشارك بياناتك مع أي طرف ثالث",
     },
     cta: {
-      tag: "مؤسسة براند أب",
+      tag: "agency 90",
       title_start: "تميز علامتكم يبدأ من",
       title_highlight: "إبداعنا",
       title_end: "",
@@ -199,7 +199,7 @@ export const translations = {
       title_line2: "متكررة",
       description: "كل ما تحتاج لمعرفته عن خدماتنا وكيف نساعدك في تحقيق رؤيتك",
       items: [
-        { q: "ما هي الخدمات الرئيسية التي تقدمها براند أب؟", a: "نقدم حلولاً متكاملة تشمل التسويق الرقمي الاستراتيجي، الإنتاج السينمائي، تصميم الهوية النخبوية، وتطوير الأنظمة الرقمية المتقدمة." },
+        { q: "ما هي الخدمات الرئيسية التي تقدمها agency 90؟", a: "نقدم حلولاً متكاملة تشمل التسويق الرقمي الاستراتيجي، الإنتاج السينمائي، تصميم الهوية النخبوية، وتطوير الأنظمة الرقمية المتقدمة." },
         { q: "كيف تضمنون جودة النتائج؟", a: "نعتمد على منهجية دقيقة تجمع بين تحليل البيانات والروح الإبداعية. نتابع كل تفاصيل المشروع بدقة." },
         { q: "هل تعملون مع عملاء دوليين؟", a: "بكل تأكيد، نحن نخدم قاعدة عملاء عالمية ونفهم تماماً متطلبات الأسواق الدولية." },
         { q: "ما الذي يميزكم عن باقي الوكالات؟", a: "نحن نمزج الفن بالذكاء التقني، مع التركيز على خلق تجربة بصرية وسينمائية فريدة وتأثير لا يُنسى." },
@@ -231,7 +231,7 @@ export const translations = {
     },
     hero: {
       title: "Crafting Your Digital Future",
-      subtext: "At Brand Up, we don't just build websites; we craft comprehensive digital ecosystems and technical masterpieces that propel your brand to the forefront of global competition.",
+      subtext: "At agency 90, we don't just build websites; we craft comprehensive digital ecosystems and technical masterpieces that propel your brand to the forefront of global competition.",
       cta: "Start Your Success Journey",
       projects: "Explore Our Creative Works",
       stats: [
@@ -244,7 +244,7 @@ export const translations = {
     about: {
         tag: "Vision & Mission",
         title: "Your Bridge to Digital Success",
-        description: "At BrandUp, we believe every brand has a unique story that deserves to be told with the highest standards of creativity and professionalism.",
+        description: "At agency 90, we believe every brand has a unique story that deserves to be told with the highest standards of creativity and professionalism.",
         banner: {
           title: "About Us",
           subtitle: "Crafting the extraordinary into digital reality"
@@ -287,7 +287,7 @@ export const translations = {
           subtitle: "Voices of Success",
           description: "We are proud of our partnerships with elite organizations that trust our creativity. Their success drives our continuous innovation.",
           items: [
-            { name: "Omar Zayed", role: "CEO of Zayed Tech", text: "Working with BrandUp was a turning point for our business. High professionalism, impressive results, and exceptional customer service.", rating: 5 },
+            { name: "Omar Zayed", role: "CEO of Zayed Tech", text: "Working with agency 90 was a turning point for our business. High professionalism, impressive results, and exceptional customer service.", rating: 5 },
             { name: "Laila Mansour", role: "Creative Hub Director", text: "The best creative agency I've ever dealt with. Their designs are beyond expectations and deeply touch the essence of the brand.", rating: 5 },
             { name: "John Miller", role: "Founder of Miller Co", text: "Exceptional service and world-class vision. They completely transformed our brand and helped us reach global markets.", rating: 5 },
             { name: "Yassine Bakri", role: "Bakri Logistics Director", text: "Very professional team, full commitment to deadlines, and creativity in execution that goes beyond description.", rating: 5 }
@@ -331,7 +331,7 @@ export const translations = {
         { title: "Services", text: "We are committed to providing agreed services with the highest standards of quality and professionalism." },
         { title: "Intellectual Property", text: "All designs and produced content remain the property of the client after full payment." },
         { title: "Payment", text: "Payment terms are subject to the signed agreement for each project." },
-        { title: "Liability", text: "BrandUp is not responsible for any indirect losses resulting from using the services outside the agreed scope." }
+        { title: "Liability", text: "agency 90 is not responsible for any indirect losses resulting from using the services outside the agreed scope." }
       ]
     },
     contact: {
@@ -359,7 +359,7 @@ export const translations = {
       privacy: "We respect your privacy and will not share your data with any third party",
     },
     cta: {
-      tag: "BrandUp Agency",
+      tag: "agency 90",
       title_start: "Your Brand's Excellence Starts with Our",
       title_highlight: "Creativity",
       title_end: "",
@@ -373,10 +373,10 @@ export const translations = {
       title_line2: "Asked Questions",
       description: "Everything you need to know about our services and how we can help bring your vision to life.",
       items: [
-        { q: "What services does BrandUp provide?", a: "We offer integrated solutions including strategic digital marketing, cinematic production, elite visual identity, and advanced digital systems." },
+        { q: "What services does agency 90 provide?", a: "We offer integrated solutions including strategic digital marketing, cinematic production, elite visual identity, and advanced digital systems." },
         { q: "How do you ensure quality?", a: "We employ a precise methodology blending data analysis with creative spirit. Every project detail is carefully monitored." },
         { q: "Do you work with international clients?", a: "Absolutely. We serve a global clientele and deeply understand international market requirements." },
-        { q: "What makes BrandUp different?", a: "We merge artistic vision with technical intelligence, focusing on creating unique visual and cinematic experiences." },
+        { q: "What makes agency 90 different?", a: "We merge artistic vision with technical intelligence, focusing on creating unique visual and cinematic experiences." },
         { q: "How is project cost determined?", a: "Each project is unique, so we provide customized quotes based on your requirements and budget." },
         { q: "Do you offer post-delivery support?", a: "Yes, we provide ongoing technical support for 6 months after delivery, with the option to extend." },
       ]
@@ -400,7 +400,7 @@ export const translations = {
     common: { showMore: "Mehr anzeigen", showLess: "Weniger anzeigen", taxNumber: "Steuernummer" },
     hero: {
       title: "Gestalten Sie Ihre digitale Zukunft",
-      subtext: "Bei BrandUp bauen wir nicht nur Webseiten – wir schaffen umfassende digitale Ökosysteme, die Ihre Marke an die Spitze des globalen Wettbewerbs bringen.",
+      subtext: "Bei agency 90 bauen wir nicht nur Webseiten – wir schaffen umfassende digitale Ökosysteme, die Ihre Marke an die Spitze des globalen Wettbewerbs bringen.",
       cta: "Jetzt starten",
       projects: "Unsere Arbeiten entdecken",
       stats: [
@@ -439,7 +439,7 @@ export const translations = {
         subtitle: "Stimmen des Erfolgs",
         description: "Wir sind stolz auf unsere Partnerschaften mit führenden Organisationen, die unserer Kreativität vertrauen.",
         items: [
-          { name: "Omar Zayed", role: "CEO von Zayed Tech", text: "Die Zusammenarbeit mit BrandUp war ein Wendepunkt für unser Unternehmen. Hohe Professionalität und beeindruckende Ergebnisse.", rating: 5 },
+          { name: "Omar Zayed", role: "CEO von Zayed Tech", text: "Die Zusammenarbeit mit agency 90 war ein Wendepunkt für unser Unternehmen. Hohe Professionalität und beeindruckende Ergebnisse.", rating: 5 },
           { name: "Laila Mansour", role: "Creative Hub Direktorin", text: "Die beste Kreativagentur, mit der ich je zusammengearbeitet habe. Ihre Designs übertreffen alle Erwartungen.", rating: 5 },
           { name: "John Miller", role: "Gründer von Miller Co", text: "Außergewöhnlicher Service und weltklasse Vision. Sie haben unsere Marke komplett transformiert.", rating: 5 },
           { name: "Yassine Bakri", role: "Bakri Logistics Direktor", text: "Sehr professionelles Team, absolute Termintreue und Kreativität bei der Umsetzung.", rating: 5 }
@@ -483,7 +483,7 @@ export const translations = {
         { title: "Dienstleistungen", text: "Wir verpflichten uns zur Erbringung vereinbarter Dienstleistungen." },
         { title: "Geistiges Eigentum", text: "Alle Designs bleiben nach vollständiger Bezahlung Eigentum des Kunden." },
         { title: "Zahlung", text: "Zahlungsbedingungen unterliegen der unterzeichneten Vereinbarung." },
-        { title: "Haftung", text: "BrandUp haftet nicht für indirekte Verluste." }
+        { title: "Haftung", text: "agency 90 haftet nicht für indirekte Verluste." }
       ]
     },
     contact: {
@@ -511,7 +511,7 @@ export const translations = {
       privacy: "Wir respektieren Ihre Privatsphäre und geben Ihre Daten nicht weiter",
     },
     cta: {
-      tag: "BrandUp Agentur",
+      tag: "agency 90",
       title_start: "Die Exzellenz Ihrer Marke beginnt mit unserer",
       title_highlight: "Kreativität",
       title_end: "",
@@ -525,10 +525,10 @@ export const translations = {
       title_line2: "gestellte Fragen",
       description: "Alles, was Sie über unsere Dienstleistungen wissen müssen.",
       items: [
-        { q: "Welche Dienstleistungen bietet BrandUp an?", a: "Wir bieten integrierte Lösungen an, darunter strategisches digitales Marketing, Filmproduktion, Elite-Markenidentität und digitale Systeme." },
+        { q: "Welche Dienstleistungen bietet agency 90 an?", a: "Wir bieten integrierte Lösungen an, darunter strategisches digitales Marketing, Filmproduktion, Elite-Markenidentität und digitale Systeme." },
         { q: "Wie stellen Sie Qualität sicher?", a: "Wir nutzen eine präzise Methodik, die Datenanalyse mit kreativem Geist verbindet. Jedes Projektdetail wird sorgfältig überwacht." },
         { q: "Arbeiten Sie mit internationalen Kunden?", a: "Absolut. Wir betreuen globale Kunden und verstehen internationale Marktanforderungen." },
-        { q: "Was unterscheidet BrandUp von anderen Agenturen?", a: "Wir verbinden künstlerische Vision mit technischer Intelligenz und schaffen einzigartige visuelle Erlebnisse." },
+        { q: "Was unterscheidet agency 90 von anderen Agenturen?", a: "Wir verbinden künstlerische Vision mit technischer Intelligenz und schaffen einzigartige visuelle Erlebnisse." },
         { q: "Wie werden die Projektkosten bestimmt?", a: "Jedes Projekt ist einzigartig, daher erstellen wir individuelle Angebote basierend auf Ihren Anforderungen." },
         { q: "Bieten Sie Support nach der Lieferung an?", a: "Ja, wir bieten 6 Monate technischen Support nach der Lieferung an." },
       ]
@@ -552,7 +552,7 @@ export const translations = {
     common: { showMore: "Meer weergeven", showLess: "Minder weergeven", taxNumber: "Btw-nummer" },
     hero: {
       title: "Creëer uw digitale toekomst",
-      subtext: "Bij BrandUp bouwen we niet alleen websites – we creëren uitgebreide digitale ecosystemen die uw merk naar de top van de wereldwijde concurrentie brengen.",
+      subtext: "Bij agency 90 bouwen we niet alleen websites – we creëren uitgebreide digitale ecosystemen die uw merk naar de top van de wereldwijde concurrentie brengen.",
       cta: "Begin nu",
       projects: "Bekijk ons werk",
       stats: [
@@ -591,7 +591,7 @@ export const translations = {
         subtitle: "Stemmen van succes",
         description: "We zijn trots op onze partnerschappen met elite-organisaties die ons vertrouwen.",
         items: [
-          { name: "Omar Zayed", role: "CEO van Zayed Tech", text: "Werken met BrandUp was een keerpunt voor ons bedrijf. Hoge professionaliteit en indrukwekkende resultaten.", rating: 5 },
+          { name: "Omar Zayed", role: "CEO van Zayed Tech", text: "Werken met agency 90 was een keerpunt voor ons bedrijf. Hoge professionaliteit en indrukwekkende resultaten.", rating: 5 },
           { name: "Laila Mansour", role: "Creative Hub Directeur", text: "Het beste creatieve bureau waarmee ik ooit heb samengewerkt. Hun ontwerpen overtreffen alle verwachtingen.", rating: 5 },
           { name: "John Miller", role: "Oprichter van Miller Co", text: "Uitzonderlijke service en wereldklasse visie. Ze hebben ons merk volledig getransformeerd.", rating: 5 },
           { name: "Yassine Bakri", role: "Bakri Logistics Directeur", text: "Zeer professioneel team, volledige toewijding aan deadlines en creativiteit in uitvoering.", rating: 5 }
@@ -635,7 +635,7 @@ export const translations = {
         { title: "Diensten", text: "We zijn verplicht tot het leveren van overeengekomen diensten." },
         { title: "Intellectueel Eigendom", text: "Alle ontwerpen blijven eigendom van de klant na volledige betaling." },
         { title: "Betaling", text: "Betalingsvoorwaarden zijn onderworpen aan de getekende overeenkomst." },
-        { title: "Aansprakelijkheid", text: "BrandUp is niet aansprakelijk voor indirecte verliezen." }
+        { title: "Aansprakelijkheid", text: "agency 90 is niet aansprakelijk voor indirecte verliezen." }
       ]
     },
     contact: {
@@ -663,7 +663,7 @@ export const translations = {
       privacy: "Wij respecteren uw privacy en zullen uw gegevens niet met derden delen",
     },
     cta: {
-      tag: "BrandUp Agency",
+      tag: "agency 90",
       title_start: "De uitmuntendheid van uw merk begint met onze",
       title_highlight: "Creativiteit",
       title_end: "",
@@ -677,10 +677,10 @@ export const translations = {
       title_line2: "Vragen",
       description: "Alles wat u moet weten over onze diensten en hoe we u kunnen helpen.",
       items: [
-        { q: "Welke diensten biedt BrandUp aan?", a: "We bieden geïntegreerde oplossingen inclusief strategische digitale marketing, filmproductie, elite merkidentiteit en digitale systemen." },
+        { q: "Welke diensten biedt agency 90 aan?", a: "We bieden geïntegreerde oplossingen inclusief strategische digitale marketing, filmproductie, elite merkidentiteit en digitale systemen." },
         { q: "Hoe waarborgt u de kwaliteit?", a: "We hanteren een nauwkeurige methodologie die data-analyse combineert met creatieve geest." },
         { q: "Werkt u met internationale klanten?", a: "Absoluut. We bedienen een wereldwijde klantenkring en begrijpen internationale marktvereisten diepgaand." },
-        { q: "Wat onderscheidt BrandUp van anderen?", a: "We combineren artistieke visie met technische intelligentie, gericht op unieke visuele ervaringen." },
+        { q: "Wat onderscheidt agency 90 van anderen?", a: "We combineren artistieke visie met technische intelligentie, gericht op unieke visuele ervaringen." },
         { q: "Hoe worden projectkosten bepaald?", a: "Elk project is uniek, dus we bieden maatwerkaanbiedingen op basis van uw vereisten en budget." },
         { q: "Biedt u ondersteuning na oplevering?", a: "Ja, we bieden 6 maanden technische ondersteuning na oplevering, met de mogelijkheid tot verlenging." },
       ]

@@ -21,7 +21,7 @@
   },
   "hero": {
     "title": "Crafting Your Digital Future",
-    "subtext": "At Brand Up, we don't just build websites; we craft comprehensive digital ecosystems and technical masterpieces that propel your brand to the forefront of global competition.",
+    "subtext": "At agency 90, we don't just build websites; we craft comprehensive digital ecosystems and technical masterpieces that propel your brand to the forefront of global competition.",
     "cta": "Start Your Success Journey",
     "projects": "Explore Our Creative Works",
     "stats": [
@@ -34,7 +34,7 @@
   "about": {
     "tag": "Vision & Mission",
     "title": "Your Bridge to Digital Success",
-    "description": "At BrandUp, we believe every brand has a unique story that deserves to be told with the highest standards of creativity and professionalism.",
+    "description": "At agency 90, we believe every brand has a unique story that deserves to be told with the highest standards of creativity and professionalism.",
     "banner": {
       "title": "About Us",
       "subtitle": "Crafting the extraordinary into digital reality"
@@ -68,7 +68,7 @@
       "subtitle": "Voices of Success",
       "description": "We are proud of our partnerships with elite organizations that trust our creativity. Their success drives our continuous innovation.",
       "items": [
-        { "name": "Omar Zayed", "role": "CEO of Zayed Tech", "text": "Working with BrandUp was a turning point for our business. High professionalism, impressive results, and exceptional customer service.", "rating": 5 },
+        { "name": "Omar Zayed", "role": "CEO of Zayed Tech", "text": "Working with agency 90 was a turning point for our business. High professionalism, impressive results, and exceptional customer service.", "rating": 5 },
         { "name": "Laila Mansour", "role": "Creative Hub Director", "text": "The best creative agency I've ever dealt with. Their designs are beyond expectations and deeply touch the essence of the brand.", "rating": 5 },
         { "name": "John Miller", "role": "Founder of Miller Co", "text": "Exceptional service and world-class vision. They completely transformed our brand and helped us reach global markets.", "rating": 5 },
         { "name": "Yassine Bakri", "role": "Bakri Logistics Director", "text": "Very professional team, full commitment to deadlines, and creativity in execution that goes beyond description.", "rating": 5 }
@@ -112,7 +112,7 @@
       { "title": "Services", "text": "We are committed to providing agreed services with the highest standards of quality and professionalism." },
       { "title": "Intellectual Property", "text": "All designs and produced content remain the property of the client after full payment." },
       { "title": "Payment", "text": "Payment terms are subject to the signed agreement for each project." },
-      { "title": "Liability", "text": "BrandUp is not responsible for any indirect losses resulting from using the services outside the agreed scope." }
+      { "title": "Liability", "text": "agency 90 is not responsible for any indirect losses resulting from using the services outside the agreed scope." }
     ]
   },
   "contact": {
@@ -140,7 +140,7 @@
     "privacy": "We respect your privacy and will not share your data with any third party"
   },
   "cta": {
-    "tag": "BrandUp Agency",
+    "tag": "agency 90",
     "title_start": "Your Brand's Excellence Starts with Our",
     "title_highlight": "Creativity",
     "title_end": "",
@@ -151,10 +151,10 @@
     "badge": "FAQ",
     "description": "Everything you need to know about our services and how we can help bring your vision to life.",
     "items": [
-      { "q": "What services does BrandUp provide?", "a": "We offer integrated solutions including strategic digital marketing, cinematic production, elite visual identity, and advanced digital systems." },
+      { "q": "What services does agency 90 provide?", "a": "We offer integrated solutions including strategic digital marketing, cinematic production, elite visual identity, and advanced digital systems." },
       { "q": "How do you ensure quality?", "a": "We employ a precise methodology blending data analysis with creative spirit. Every project detail is carefully monitored." },
       { "q": "Do you work with international clients?", "a": "Absolutely. We serve a global clientele and deeply understand international market requirements." },
-      { "q": "What makes BrandUp different?", "a": "We merge artistic vision with technical intelligence, focusing on creating unique visual and cinematic experiences." },
+      { "q": "What makes agency 90 different?", "a": "We merge artistic vision with technical intelligence, focusing on creating unique visual and cinematic experiences." },
       { "q": "How is project cost determined?", "a": "Each project is unique, so we provide customized quotes based on your requirements and budget." },
       { "q": "Do you offer post-delivery support?", "a": "Yes, we provide ongoing technical support for 6 months after delivery, with the option to extend." }
     ]

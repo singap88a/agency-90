@@ -8,11 +8,11 @@ export default {
     extend: {
       colors: {
         brand: {
-          dark: "#0f172a",      // Slate 900 for text
-          primary: "#fbbf24",   // Amber 400 for primary (Yellow)
-          secondary: "#ffffff", // Pure white for background
-          accent: "#f5b002",    // Golden Amber accent
-          glow: "#fef08a",      // Yellow 200 for glows
+          dark: "var(--brand-dark)",
+          primary: "var(--brand-primary)",
+          secondary: "#ffffff",
+          accent: "var(--brand-accent)",
+          glow: "var(--brand-glow)",
         }
       },
       fontFamily: {

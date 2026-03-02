@@ -20,7 +20,7 @@ const Contact = ({ isPage = false }) => {
   
   const contactInfo = [
     { icon: Phone, label: t('contact.phone', 'رقم الهاتف'), value: t('contact.phoneValue', "+31 6 42786606"), link: `tel:${t('contact.phoneValue', "+31 6 42786606").replace(/\s/g, '')}` },
-    { icon: Instagram, label: t('contact.instagram', 'انستغرام'), value: "@brandup.agency", link: "https://instagram.com/brandup.agency" },
+    { icon: Instagram, label: t('contact.instagram', 'انستغرام'), value: "@agency90", link: "https://instagram.com/agency90" },
     { icon: Mail, label: t('contact.emailLabel', 'البريد الإلكتروني'), value: t('contact.emailValue', "Saeedsinan180@gmail.com"), link: `mailto:${t('contact.emailValue', "Saeedsinan180@gmail.com")}` },
     { icon: Briefcase, label: t('contact.taxNumber', 'الرقم الضريبي'), value: t('contact.taxValue', "12786594"), link: "#" }
   ];
@@ -56,17 +56,17 @@ const Contact = ({ isPage = false }) => {
       `🏆 *تقرير عميل جديد | LEAD REPORT* \n` +
       `◈═════════════════════◈\n\n` +
       `📅 *التاريخ:* ${timestamp}\n` +
-      `📍 *المصدر:* BrandUp Elite Platform\n\n` +
+      `📍 *المصدر:* agency 90 Elite Platform\n\n` +
       `👤 *بـيـانـات الـعـمـيـل:*\n` +
       `┃ ◈ *الاسم:* ${formData.name}\n` +
       `┃ ◈ *البريد:* ${formData.email}\n\n` +
       `🎯 *الخدمة المحددة:*\n` +
       `┃ ◈ ${selectedService}\n\n` +
-      `� *نص الرسالة:*\n` +
+      ` *نص الرسالة:*\n` +
       `┃ ${formData.message}\n\n` +
       `━━━━━━━━━━━━━━━━━━━━━━\n` +
-      `🔗 *تـم الإرسـال عـبـر:* https://brandup.agency\n` +
-      `✨ *BrandUp | Quality Above Expectations*`;
+      `🔗 *تـم الإرسـال عـبـر:* https://agency90.nl\n` +
+      `✨ *agency 90 | Quality Above Expectations*`;
     
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;

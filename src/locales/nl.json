@@ -20,7 +20,7 @@
   },
   "hero": {
     "title": "Creëer uw digitale toekomst",
-    "subtext": "Bij BrandUp bouwen we niet alleen websites – we creëren uitgebreide digitale ecosystemen die uw merk naar de top van de wereldwijde concurrentie brengen.",
+    "subtext": "Bij agency 90 bouwen we niet alleen websites – we creëren uitgebreide digitale ecosystemen die uw merk naar de top van de wereldwijde concurrentie brengen.",
     "cta": "Begin nu",
     "projects": "Bekijk ons werk",
     "stats": [
@@ -59,7 +59,7 @@
       "subtitle": "Stemmen van succes",
       "description": "We zijn trots op onze partnerschappen met elite-organisaties die ons vertrouwen.",
       "items": [
-        { "name": "Omar Zayed", "role": "CEO van Zayed Tech", "text": "Werken met BrandUp was een keerpunt voor ons bedrijf. Hoge professionaliteit en indrukwekkende resultaten.", "rating": 5 },
+        { "name": "Omar Zayed", "role": "CEO van Zayed Tech", "text": "Werken met agency 90 was een keerpunt voor ons bedrijf. Hoge professionaliteit en indrukwekkende resultaten.", "rating": 5 },
         { "name": "Laila Mansour", "role": "Creative Hub Directeur", "text": "Het beste creatieve bureau waarmee ik ooit heb samengewerkt. Hun ontwerpen overtreffen alle verwachtingen.", "rating": 5 },
         { "name": "John Miller", "role": "Oprichter van Miller Co", "text": "Uitzonderlijke service en wereldklasse visie. Ze hebben ons merk volledig getransformeerd.", "rating": 5 },
         { "name": "Yassine Bakri", "role": "Bakri Logistics Directeur", "text": "Zeer professioneel team, volledige toewijding aan deadlines en creativiteit in uitvoering.", "rating": 5 }
@@ -103,7 +103,7 @@
       { "title": "Diensten", "text": "We zijn verplicht tot het leveren van overeengekomen diensten." },
       { "title": "Intellectueel Eigendom", "text": "Alle ontwerpen blijven eigendom van de klant na volledige betaling." },
       { "title": "Betaling", "text": "Betalingsvoorwaarden zijn onderworpen aan de getekende overeenkomst." },
-      { "title": "Aansprakelijkheid", "text": "BrandUp is niet aansprakelijk voor indirecte verliezen." }
+      { "title": "Aansprakelijkheid", "text": "agency 90 is niet aansprakelijk voor indirecte verliezen." }
     ]
   },
   "contact": {
@@ -131,7 +131,7 @@
     "privacy": "Wij respecteren uw privacy en zullen uw gegevens niet met derden delen"
   },
   "cta": {
-    "tag": "BrandUp Agency",
+    "tag": "agency 90",
     "title_start": "De uitmuntendheid van uw merk begint met onze",
     "title_highlight": "Creativiteit",
     "title_end": "",
@@ -142,10 +142,10 @@
     "badge": "FAQ",
     "description": "Alles wat u moet weten over onze diensten en hoe we u kunnen helpen.",
     "items": [
-      { "q": "Welke diensten biedt BrandUp aan?", "a": "We bieden geïntegreerde oplossingen inclusief strategische digitale marketing, filmproductie, elite merkidentiteit en digitale systemen." },
+      { "q": "Welke diensten biedt agency 90 aan?", "a": "We bieden geïntegreerde oplossingen inclusief strategische digitale marketing, filmproductie, elite merkidentiteit en digitale systemen." },
       { "q": "Hoe waarborgt u de kwaliteit?", "a": "We hanteren een nauwkeurige methodologie die data-analyse combineert met creatieve geest." },
       { "q": "Werkt u met internationale klanten?", "a": "Absoluut. We bedienen een wereldwijde klantenkring en begrijpen internationale marktvereisten diepgaand." },
-      { "q": "Wat onderscheidt BrandUp van anderen?", "a": "We combineren artistieke visie met technische intelligentie, gericht op unieke visuele ervaringen." },
+      { "q": "Wat onderscheidt agency 90 van anderen?", "a": "We combineren artistieke visie met technische intelligentie, gericht op unieke visuele ervaringen." },
       { "q": "Hoe worden projectkosten bepaald?", "a": "Elk project is uniek, dus we bieden maatwerkaanbiedingen op basis van uw vereisten en budget." },
       { "q": "Biedt u ondersteuning na oplevering?", "a": "Ja, we bieden 6 maanden technische ondersteuning na oplevering, met de mogelijkheid tot verlenging." }
     ]

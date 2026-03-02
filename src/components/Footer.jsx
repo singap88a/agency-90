@@ -21,10 +21,10 @@ const Footer = () => {
           <div className="flex flex-col items-center md:items-start gap-4">
             <div className="flex items-center gap-3 group">
               <Link to="/" className="relative overflow-hidden rounded-xl">
-                <img src="/logo.jpeg" alt="BrandUp" className="h-10 w-10 md:h-12 md:w-12 rounded-xl shadow-md group-hover:scale-110 transition-transform duration-700" />
+                <img src="/logo.png" alt="agency 90" className="h-10 w-10 md:h-12 md:w-12 rounded-xl shadow-md group-hover:scale-110 transition-transform duration-700" />
               </Link>
               <span className="text-xl md:text-2xl font-heading font-black tracking-tighter text-brand-dark">
-                Brand<span className="text-brand-accent ml-1">Up</span>
+                agency<span className="text-brand-accent ml-1">90</span>
               </span>
             </div>
             <p className="text-slate-500 text-sm leading-relaxed max-w-[280px] text-center md:text-start">
@@ -35,7 +35,7 @@ const Footer = () => {
           {/* 2. Credits (Center) */}
           <div className="flex flex-col items-center justify-center text-center">
             <p className="text-slate-400 text-[10px] md:text-xs font-semibold tracking-widest mb-3 opacity-60">
-              © {new Date().getFullYear()} BrandUp Agency
+              © {new Date().getFullYear()} agency 90
             </p>
             <div className={`flex items-center gap-2 text-sm md:text-base font-bold text-slate-700 ${isRtl ? 'flex-row' : 'flex-row'}`}>
                <span className="opacity-40 font-medium whitespace-nowrap">

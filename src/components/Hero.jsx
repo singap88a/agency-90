@@ -84,7 +84,7 @@ const Hero = () => {
             className="inline-flex items-center gap-3 px-5 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-xl text-brand-accent text-xs font-bold tracking-widest shadow-2xl ring-1 ring-white/10"
           >
             <Sparkles className="w-4 h-4" />
-            <span>BrandUp — {isRtl ? 'وكالة إبداعية' : 'Creative Agency'}</span>
+            <span>agency 90 — {isRtl ? 'وكالة إبداعية' : 'Creative Agency'}</span>
           </motion.div>
  
           {/* Title */}
@@ -103,7 +103,7 @@ const Hero = () => {
               return (
                 <span key={i} className={cn(
                   "inline-block",
-                  isHighlight ? "text-brand-accent italic drop-shadow-[0_10px_30px_rgba(245,176,2,0.4)]" : ""
+                  isHighlight ? "text-brand-accent italic drop-shadow-[0_10px_30px_rgba(var(--brand-accent-rgb),0.4)]" : ""
                 )}>
                   {word}{' '}
                 </span>
@@ -134,7 +134,7 @@ const Hero = () => {
               isRtl ? "items-start" : "items-start"
             )}
           >
-            <button className="relative group w-full sm:w-64 h-14 rounded-2xl bg-brand-accent text-white font-bold text-base overflow-hidden transition-all duration-500 hover:shadow-[0_20px_40px_rgba(245,176,2,0.35)] hover:scale-[1.02] flex items-center justify-center gap-3">
+            <button className="relative group w-full sm:w-64 h-14 rounded-2xl bg-brand-accent text-white font-bold text-base overflow-hidden transition-all duration-500 hover:shadow-[0_20px_40px_rgba(var(--brand-accent-rgb),0.35)] hover:scale-[1.02] flex items-center justify-center gap-3">
               <span className="relative z-10 flex items-center gap-3">
                 {t('hero.cta')}
                 <motion.div

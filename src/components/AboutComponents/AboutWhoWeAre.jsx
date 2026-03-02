@@ -75,7 +75,7 @@ const AboutWhoWeAre = () => {
                                         B
                                     </div>
                                     <div className="flex flex-col">
-                                        <span className="text-sm font-bold text-brand-dark">BrandUp Agency</span>
+                                        <span className="text-sm font-bold text-brand-dark">agency 90</span>
                                         <span className="text-[10px] font-bold tracking-wider italic text-brand-dark/40">Since 2014</span>
                                     </div>
                                 </div>

@@ -88,7 +88,7 @@ const ProjectsPage = () => {
                 className="flex flex-col gap-6 group cursor-pointer"
                 onClick={() => handleProjectClick(project)}
               >
-                <div className={`relative aspect-[4/5] rounded-[2.5rem] overflow-hidden border-2 ${project.type === 'video' ? 'border-brand-accent shadow-[0_0_20px_rgba(245,176,2,0.1)]' : 'border-brand-primary/20 hover:border-brand-primary'} shadow-2xl transition-all duration-500 group-hover:shadow-brand-accent/20`}>
+                <div className={`relative aspect-[4/5] rounded-[2.5rem] overflow-hidden border-2 ${project.type === 'video' ? 'border-brand-accent shadow-[0_0_20px_rgba(var(--brand-accent-rgb),0.1)]' : 'border-brand-primary/20 hover:border-brand-primary'} shadow-2xl transition-all duration-500 group-hover:shadow-brand-accent/20`}>
                   <img 
                     src={project.type === 'video' ? project.thumbnail : project.images[0]} 
                     alt={i18n.language === 'ar' ? project.title_ar : project.title_en} 
