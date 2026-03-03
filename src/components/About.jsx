@@ -17,7 +17,7 @@ const About = () => {
         </svg>
         <div className="absolute right-[-10%] top-[-10%] w-[60%] h-[60%] bg-[radial-gradient(circle,rgba(0,0,0,0.05)_0%,transparent_70%)] blur-[120px]" />
         {/* Subtle Line Graphics */}
-        <div className="absolute left-[10%] bottom-[15%] w-64 h-64 border border-brand-accent/20 rounded-full animate-pulse" />
+        <div className="absolute left-[10%] bottom-[15%] w-64 h-64 border border-brand-secondary/20 rounded-full animate-pulse" />
         <div className="absolute left-[12%] bottom-[17%] w-48 h-48 border border-brand-dark/10 rounded-full" />
       </div>
 
@@ -34,7 +34,7 @@ const About = () => {
             className={cn("relative flex flex-col justify-center", isRtl ? "lg:order-2" : "lg:order-1")}
           >
             {/* Background Shape under Image - More Visible */}
-            <div className="absolute -inset-6 bg-brand-accent/10 rounded-[4rem] -rotate-3 z-0" />
+            <div className="absolute -inset-6 bg-brand-secondary/10 rounded-[4rem] -rotate-3 z-0" />
             
             <div className="relative z-10 w-full h-full rounded-[3.5rem] overflow-hidden shadow-[0_30px_90px_rgba(0,0,0,0.15)] border border-black/[0.05]">
               <img 
@@ -49,9 +49,9 @@ const About = () => {
             <motion.div
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -top-6 -right-6 z-20 flex items-center gap-4 px-8 py-5 bg-white backdrop-blur-3xl border-2 border-brand-accent/20 rounded-2xl shadow-2xl"
+              className="absolute -top-6 -right-6 z-20 flex items-center gap-4 px-8 py-5 bg-white backdrop-blur-3xl border-2 border-brand-secondary/20 rounded-2xl shadow-2xl"
             >
-              <div className="w-10 h-10 rounded-xl bg-brand-accent text-white flex items-center justify-center shadow-lg">
+              <div className="w-10 h-10 rounded-xl bg-brand-primary text-white flex items-center justify-center shadow-lg">
                 <Zap className="w-5 h-5" />
               </div>
               <div className="flex flex-col">
@@ -63,7 +63,7 @@ const About = () => {
             <motion.div
               animate={{ y: [0, 10, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-              className="absolute -bottom-6 -left-6 z-20 flex items-center gap-4 px-8 py-5 bg-white backdrop-blur-3xl border-2 border-brand-accent/20 rounded-2xl shadow-2xl"
+              className="absolute -bottom-6 -left-6 z-20 flex items-center gap-4 px-8 py-5 bg-white backdrop-blur-3xl border-2 border-brand-secondary/20 rounded-2xl shadow-2xl"
             >
               <div className="w-10 h-10 rounded-xl bg-brand-dark text-white flex items-center justify-center shadow-lg">
                 <ShieldCheck className="w-5 h-5" />
@@ -75,7 +75,7 @@ const About = () => {
             </motion.div>
 
             {/* Graphics under the image - High Visibility */}
-            <div className="absolute -bottom-16 -right-16 w-64 h-64 bg-brand-accent/10 rounded-full blur-[100px]" />
+            <div className="absolute -bottom-16 -right-16 w-64 h-64 bg-brand-secondary/10 rounded-full blur-[100px]" />
           </motion.div>
 
           {/* Section 2: Content - Aligned Height */}
@@ -84,17 +84,17 @@ const About = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="flex flex-col mb-16"
+              className="flex flex-col mb-6"
             >
-              <span className="text-brand-accent font-bold tracking-widest text-sm mb-6">
+              <span className="text-brand-primary font-bold tracking-widest text-sm mb-6">
                 {t('about.tag')}
               </span>
               {/* Extra Spaced, Two-Line High-Impact Title */}
-              <h2 className="text-4xl lg:text-6xl font-bold tracking-tighter mb-8 text-brand-dark leading-[1.3] whitespace-pre-line">
+              <h2 className="text-4xl lg:text-6xl font-bold tracking-tighter mb-8 text-brand-secondary leading-[1.3] whitespace-pre-line">
                 {i18n.language === 'ar' ? (
-                  <>نبني مستقبلك بأعلى معايير<br /><span className="bg-gradient-to-r from-brand-accent to-brand-primary bg-clip-text text-transparent">الإبداع والاحترافية</span></>
+                  <>نبني مستقبلك بأعلى معايير<br /><span className="bg-brand-primary to-brand-secondary bg-clip-text text-transparent">الإبداع والاحترافية</span></>
                 ) : (
-                  <>Building Your Future with Elite<br /><span className="bg-gradient-to-r from-brand-accent to-brand-primary bg-clip-text text-transparent">Creative Logic</span></>
+                  <>Building Your Future with Elite<br /><span className="bg-brand-primary to-brand-secondary bg-clip-text text-transparent">Creative Logic</span></>
                 )}
               </h2>
             </motion.div>
@@ -104,9 +104,9 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="space-y-12"
+              className="space-y-6"
             >
-              <p className="text-lg md:text-xl text-brand-dark/50 leading-relaxed font-medium">
+              <p className="text-lg lg:text-xl text-gray-500 max-w-3xl font-medium leading-relaxed">
                 {t('about.description')}
               </p>
               
@@ -114,24 +114,24 @@ const About = () => {
               <div className="grid grid-cols-3 gap-6 pt-12 border-t border-black/[0.08]">
                 <div className="flex flex-col gap-3 group">
                   <div className="flex items-center gap-3">
-                    <div className="w-1.5 h-6 bg-brand-accent rounded-full transition-transform group-hover:scale-y-125" />
-                    <span className="text-4xl font-bold text-brand-accent tracking-tighter">98%</span>
+                    <div className="w-1.5 h-6 bg-brand-primary rounded-full transition-transform group-hover:scale-y-125" />
+                    <span className="text-4xl font-bold text-brand-primary tracking-tighter">98%</span>
                   </div>
-                  <span className="text-[10px] tracking-widest font-bold text-brand-dark/30 group-hover:text-brand-accent transition-colors">Success</span>
+                  <span className="text-[10px] tracking-widest font-bold text-brand-dark/30 group-hover:text-brand-primary transition-colors">Success</span>
                 </div>
                 <div className="flex flex-col gap-3 group">
                   <div className="flex items-center gap-3">
-                    <div className="w-1.5 h-6 bg-brand-accent rounded-full transition-transform group-hover:scale-y-125" />
-                    <span className="text-4xl font-bold text-brand-accent tracking-tighter">150+</span>
+                    <div className="w-1.5 h-6 bg-brand-primary rounded-full transition-transform group-hover:scale-y-125" />
+                    <span className="text-4xl font-bold text-brand-primary tracking-tighter">150+</span>
                   </div>
-                  <span className="text-[10px] tracking-widest font-bold text-brand-dark/30 group-hover:text-brand-accent transition-colors">Partners</span>
+                  <span className="text-[10px] tracking-widest font-bold text-brand-dark/30 group-hover:text-brand-primary transition-colors">Partners</span>
                 </div>
                 <div className="flex flex-col gap-3 group">
                   <div className="flex items-center gap-3">
-                    <div className="w-1.5 h-6 bg-brand-accent rounded-full transition-transform group-hover:scale-y-125" />
-                    <span className="text-4xl font-bold text-brand-accent tracking-tighter">10Y</span>
+                    <div className="w-1.5 h-6 bg-brand-primary rounded-full transition-transform group-hover:scale-y-125" />
+                    <span className="text-4xl font-bold text-brand-primary tracking-tighter">10Y</span>
                   </div>
-                  <span className="text-[10px] tracking-widest font-bold text-brand-dark/30 group-hover:text-brand-accent transition-colors">Experience</span>
+                  <span className="text-[10px] tracking-widest font-bold text-brand-dark/30 group-hover:text-brand-primary transition-colors">Experience</span>
                 </div>
               </div>
             </motion.div>

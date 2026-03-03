@@ -82,11 +82,13 @@
     "design": "Creative Design",
     "marketing": "Marketing Growth",
     "management": "Social Management",
+    "development": "Web & App Development",
     "photography": "Media Production",
     "videos": "Videos",
     "items_design": ["Brand Identity", "Graphic Design", "Exhibitions Design"],
     "items_marketing": ["Content Strategy", "Growth Campaigns", "Digital Marketing"],
     "items_management": ["Account Management", "Data Analytics", "Performance Metrics"],
+    "items_development": ["UI/UX Design", "Smart Applications", "E-Commerce Solutions"],
     "items_photography": ["Photography", "Cinematography", "Post-Production"]
   },
   "pricing": {

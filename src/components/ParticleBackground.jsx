@@ -9,7 +9,7 @@ const ParticleBackground = () => {
   const y2 = useTransform(scrollY, [0, 2000], [0, -300]);
 
   return (
-    <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden bg-white">
+    <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden bg-brand-surface">
       {/* Dynamic RGB Fluid Blobs */}
       <motion.div 
         animate={{
@@ -27,7 +27,7 @@ const ParticleBackground = () => {
           scale: [1, 1.2, 1],
         }}
         transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-        className="absolute top-[10%] -right-[10%] w-[70%] h-[70%] bg-[radial-gradient(circle,rgba(217,119,6,0.06)_0%,transparent_70%)] blur-[140px]" 
+        className="absolute top-[10%] -right-[10%] w-[70%] h-[70%] bg-[radial-gradient(circle,rgba(var(--brand-primary-rgb),0.06)_0%,transparent_70%)] blur-[140px]" 
       />
       <motion.div 
         animate={{
@@ -35,7 +35,7 @@ const ParticleBackground = () => {
           y: [0, -50, 0],
         }}
         transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
-        className="absolute bottom-[-20%] left-[10%] w-[60%] h-[60%] bg-[radial-gradient(circle,rgba(67,56,202,0.05)_0%,transparent_70%)] blur-[160px]" 
+        className="absolute bottom-[-20%] left-[10%] w-[60%] h-[60%] bg-[radial-gradient(circle,rgba(var(--brand-secondary-rgb),0.05)_0%,transparent_70%)] blur-[160px]" 
       />
 
       {/* Subtle Noise Texture instead of patterns */}
@@ -45,7 +45,7 @@ const ParticleBackground = () => {
       {[...Array(20)].map((_, i) => (
         <motion.div
           key={i}
-          className="absolute w-[2px] h-[2px] bg-brand-accent/30 rounded-full"
+          className="absolute w-[2px] h-[2px] bg-brand-primary/30 rounded-full"
           animate={{
             y: [0, -120, 0],
             x: [0, Math.random() * 40 - 20, 0],

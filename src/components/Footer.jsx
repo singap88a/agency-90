@@ -10,7 +10,7 @@ const Footer = () => {
     <footer className="relative z-20 py-16 px-6 lg:px-24 border-t border-slate-100 overflow-hidden">
       {/* Background Decor */}
       <div className="absolute inset-0 pointer-events-none opacity-40">
-        <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-brand-accent/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
+        <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-brand-secondary/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
         <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-brand-primary/5 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2" />
       </div>
 
@@ -21,11 +21,9 @@ const Footer = () => {
           <div className="flex flex-col items-center md:items-start gap-4">
             <div className="flex items-center gap-3 group">
               <Link to="/" className="relative overflow-hidden rounded-xl">
-                <img src="/logo.png" alt="agency 90" className="h-10 w-10 md:h-12 md:w-12 rounded-xl shadow-md group-hover:scale-110 transition-transform duration-700" />
+                <img src="/logo.png" alt="agency 90" className="h-10 w-20 md:h-12 md:w-20 rounded-xl shadow-md group-hover:scale-110 transition-transform duration-700" />
               </Link>
-              <span className="text-xl md:text-2xl font-heading font-black tracking-tighter text-brand-dark">
-                agency<span className="text-brand-accent ml-1">90</span>
-              </span>
+       
             </div>
             <p className="text-slate-500 text-sm leading-relaxed max-w-[280px] text-center md:text-start">
               {t('nav.description')}
@@ -45,7 +43,7 @@ const Footer = () => {
                  href="https://ahmedsingap.com/" 
                  target="_blank" 
                  rel="noopener noreferrer" 
-                 className="text-brand-accent hover:border-b-2 hover:border-brand-accent transition-all duration-300 pb-0.5 whitespace-nowrap"
+                 className="text-brand-primary hover:border-b-2 hover:border-brand-primary transition-all duration-300 pb-0.5 whitespace-nowrap"
                >
                   {t('nav.developer_name')}
                </a>
@@ -55,8 +53,8 @@ const Footer = () => {
           {/* 3. Legal & Socials (Left in RTL) */}
           <div className="flex flex-col items-center md:items-end gap-6">
             <div className={`flex gap-8 text-xs md:text-sm font-bold text-slate-500 ${isRtl ? 'md:flex-row-reverse' : ''}`}>
-              <Link to="/privacy" className="hover:text-brand-accent transition-all hover:scale-105 transform">{t('nav.privacy')}</Link>
-              <Link to="/terms" className="hover:text-brand-accent transition-all hover:scale-105 transform">{t('nav.terms')}</Link>
+              <Link to="/privacy" className="hover:text-brand-primary transition-all hover:scale-105 transform">{t('nav.privacy')}</Link>
+              <Link to="/terms" className="hover:text-brand-primary transition-all hover:scale-105 transform">{t('nav.terms')}</Link>
             </div>
             
             <div className="flex gap-3">
@@ -69,7 +67,7 @@ const Footer = () => {
                   key={idx}
                   href="#" 
                   aria-label={social.label}
-                  className="w-10 h-10 flex items-center justify-center rounded-lg bg-brand-accent/5 border border-brand-accent/30 text-brand-accent hover:bg-brand-accent hover:text-white transition-all duration-500 transform group"
+                  className="w-10 h-10 flex items-center justify-center rounded-lg bg-brand-primary/5 border border-brand-primary/30 text-brand-primary hover:bg-brand-primary hover:text-white transition-all duration-500 transform group"
                 >
                   <i className={`${social.icon} text-base group-hover:scale-110 transition-transform`}></i>
                 </a>

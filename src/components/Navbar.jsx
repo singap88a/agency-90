@@ -68,8 +68,8 @@ const Navbar = () => {
           animate={{ opacity: 1, x: 0 }}
           className="flex items-center gap-4 z-10"
         >
-          <Link to="/" className="flex items-center gap-4">
-            <img src="/logo.png" alt="agency 90" className="h-10 w-auto object-contain" />
+          <Link to="/" className=" ">
+            <img src="/logo.png" alt="agency 90" className=" h-10 w-20  " />
           </Link>
         </motion.div>
 
@@ -90,7 +90,7 @@ const Navbar = () => {
                     isHomePage && !isScrolled ? "text-white" : "text-brand-dark/70 hover:text-brand-dark hover:bg-white hover:shadow-sm"
                   )}
                 >
-                  <link.icon className="w-3.5 h-3.5 group-hover:text-brand-accent transition-colors" />
+                  <link.icon className="w-3.5 h-3.5 group-hover:text-brand-primary transition-colors" />
                   {t(`nav.${link.key}`)}
                 </Link>
               ) : (
@@ -101,7 +101,7 @@ const Navbar = () => {
                     isHomePage && !isScrolled ? "text-white" : "text-brand-dark/70 hover:text-brand-dark hover:bg-white hover:shadow-sm"
                   )}
                 >
-                  <link.icon className="w-3.5 h-3.5 group-hover:text-brand-accent transition-colors" />
+                  <link.icon className="w-3.5 h-3.5 group-hover:text-brand-primary transition-colors" />
                   {t(`nav.${link.key}`)}
                 </a>
               )}
@@ -122,7 +122,7 @@ const Navbar = () => {
                   : "bg-black/5 border-black/5 text-brand-dark hover:bg-black/10"
               )}
             >
-              <Globe className={cn("w-4 h-4 transition-transform group-hover:rotate-12", isHomePage && !isScrolled ? "text-white" : "text-brand-accent")} />
+              <Globe className={cn("w-4 h-4 transition-transform group-hover:rotate-12", isHomePage && !isScrolled ? "text-white" : "text-brand-primary")} />
               <span>{currentLang.label}</span>
               <ChevronDown className={cn("w-3.5 h-3.5 opacity-50 transition-transform duration-300", isLangOpen && "rotate-180")} />
             </button>
@@ -141,11 +141,11 @@ const Navbar = () => {
                       className={cn(
                         "w-full px-4 py-2.5 rounded-xl text-right text-xs font-semibold transition-all flex items-center justify-between group",
                         i18n.language === l.code 
-                          ? "bg-brand-accent/10 text-brand-dark" 
+                          ? "bg-brand-primary/10 text-brand-dark" 
                           : "text-brand-dark/60 hover:bg-black/5 hover:text-brand-dark"
                       )}
                     >
-                      <span className={cn("w-1.5 h-1.5 rounded-full bg-brand-accent opacity-0 transition-opacity", i18n.language === l.code && "opacity-100")} />
+                      <span className={cn("w-1.5 h-1.5 rounded-full bg-brand-primary opacity-0 transition-opacity", i18n.language === l.code && "opacity-100")} />
                       {l.label}
                     </button>
                   ))}
@@ -196,9 +196,9 @@ const Navbar = () => {
                     key={link.key} 
                     to={link.href} 
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="text-2xl font-heading font-bold flex items-center gap-4 text-brand-dark hover:text-brand-accent transition-colors"
+                    className="text-2xl font-heading font-bold flex items-center gap-4 text-brand-dark hover:text-brand-primary transition-colors"
                   >
-                    <link.icon className="w-7 h-7 text-brand-accent" />
+                    <link.icon className="w-7 h-7 text-brand-primary" />
                     {t(`nav.${link.key}`)}
                   </Link>
                 ) : (
@@ -206,9 +206,9 @@ const Navbar = () => {
                     key={link.key} 
                     href={isHomePage ? link.href : `/${link.href}`} 
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="text-2xl font-heading font-bold flex items-center gap-4 text-brand-dark hover:text-brand-accent transition-colors"
+                    className="text-2xl font-heading font-bold flex items-center gap-4 text-brand-dark hover:text-brand-primary transition-colors"
                   >
-                    <link.icon className="w-7 h-7 text-brand-accent" />
+                    <link.icon className="w-7 h-7 text-brand-primary" />
                     {t(`nav.${link.key}`)}
                   </a>
                 )

@@ -29,7 +29,7 @@ const CTA = () => {
             <div className="absolute inset-0 opacity-[0.04] bg-[linear-gradient(rgba(0,0,0,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.3)_1px,transparent_1px)] bg-[size:70px_70px]" />
 
             {/* Soft glow يمين */}
-            <div className="absolute -top-32 right-0 w-[400px] h-[400px] bg-brand-accent/10 rounded-full blur-[120px]" />
+            <div className="absolute -top-32 right-0 w-[400px] h-[400px] bg-brand-secondary/10 rounded-full blur-[120px]" />
 
             {/* Soft glow شمال */}
             <div className="absolute -bottom-32 left-0 w-[350px] h-[350px] bg-brand-primary/10 rounded-full blur-[120px]" />
@@ -42,14 +42,14 @@ const CTA = () => {
             {/* 📝 النص - يبدأ من أقصى اليمين */}
             <div className={`flex-1 w-full ${isRtl ? 'text-right' : 'text-left'}`}>
 
-              <h2 className="text-3xl md:text-5xl font-black text-brand-dark leading-tight mb-4">
+              <h2 className="text-3xl md:text-5xl font-black text-brand-secondary leading-tight mb-4">
                 {t('cta.title_start')}{' '}
-                <span className="text-brand-accent">
+                <span className="text-brand-primary">
                   {t('cta.title_highlight')}
                 </span>
               </h2>
 
-              <p className="text-slate-600 text-lg leading-relaxed max-w-2xl">
+              <p className="text-lg lg:text-xl text-gray-500 max-w-3xl font-medium leading-relaxed">
                 {t('cta.subtitle')}
               </p>
             </div>
@@ -63,7 +63,7 @@ const CTA = () => {
               >
                 <Link
                   to="/contact"
-                  className="bg-brand-accent text-white px-12 py-5 rounded-2xl text-lg font-bold flex items-center gap-4 shadow-xl hover:shadow-brand-accent/40 transition-all"
+                  className="bg-brand-primary text-white px-12 py-5 rounded-2xl text-lg font-bold flex items-center gap-4 shadow-xl hover:shadow-[0_20px_40px_rgba(var(--brand-primary-rgb),0.25)] transition-all"
                 >
                   <span className="text-white">
                     {t('cta.button')}

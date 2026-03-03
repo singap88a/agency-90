@@ -42,7 +42,7 @@ const VideoModal = ({ isOpen, onClose, videoUrl }) => {
           {/* Close Button - Outside the overflow-hidden container */}
           <button
             onClick={onClose}
-            className="absolute -top-14 -right-2 md:top-4 md:-right-16 z-[110] w-12 h-12 rounded-2xl bg-brand-accent border border-white/20 flex items-center justify-center text-white hover:bg-brand-dark hover:scale-110 transition-all shadow-xl shadow-brand-accent/20"
+            className="absolute -top-14 -right-2 md:top-4 md:-right-16 z-[110] w-12 h-12 rounded-2xl bg-brand-primary border border-white/20 flex items-center justify-center text-white hover:bg-brand-dark hover:scale-110 transition-all shadow-[0_15px_40px_rgba(var(--brand-primary-rgb),0.2)]"
           >
             <X className="w-6 h-6" />
           </button>

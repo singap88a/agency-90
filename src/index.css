@@ -1,10 +1,11 @@
 :root {
-  --brand-primary: #7652A4;
-  --brand-accent: #F09238;
+  --brand-primary: #F09238;
+  --brand-secondary: #7652A4;
+  --brand-surface: #ffffff;
   --brand-dark: #0f172a;
   --brand-glow: #bda7d3;
-  --brand-primary-rgb: 118, 82, 164;
-  --brand-accent-rgb: 240, 146, 56;
+  --brand-primary-rgb: 240, 146, 56;
+  --brand-secondary-rgb: 118, 82, 164;
 }
 
 @tailwind base;

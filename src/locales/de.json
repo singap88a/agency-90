@@ -73,11 +73,13 @@
     "design": "Kreativdesign",
     "marketing": "Marketing-Wachstum",
     "management": "Social Management",
+    "development": "Web- & App-Entwicklung",
     "photography": "Medienproduktion",
     "videos": "Videos",
     "items_design": ["Markenidentität", "Grafikdesign", "Messedesign"],
     "items_marketing": ["Content-Strategie", "Wachstumskampagnen", "Digitales Marketing"],
     "items_management": ["Kontoverwaltung", "Datenanalyse", "Leistungsmetriken"],
+    "items_development": ["UI/UX-Design", "Smart-Anwendungen", "E-Commerce-Lösungen"],
     "items_photography": ["Fotografie", "Cinematografie", "Postproduktion"]
   },
   "pricing": {

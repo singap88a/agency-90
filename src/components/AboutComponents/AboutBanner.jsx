@@ -23,7 +23,7 @@ const AboutBanner = () => {
                     transition={{ duration: 0.8 }}
                     className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-md rounded-full border border-white/20 mb-8"
                 >
-                    <Sparkles className="w-4 h-4 text-brand-accent" />
+                    <Sparkles className="w-4 h-4 text-brand-primary" />
                     <span className="text-white text-[10px] font-black uppercase tracking-[0.3em]">{t('cta.tag')}</span>
                 </motion.div>
                 <motion.h1 

@@ -68,13 +68,13 @@ const Pricing = () => {
   };
 
   return (
-    <section id="pricing" className="relative py-24 md:py-32 bg-white overflow-hidden">
+    <section id="pricing" className="relative py-24 md:py-32 bg-brand-surface overflow-hidden">
       {/* Silk-like background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-gray-50/50 via-white to-white pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-gray-50/50 via-brand-surface to-brand-surface pointer-events-none" />
       
       {/* Decorative subtle aura */}
-      <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-brand-accent/5 rounded-full blur-[120px] pointer-events-none opacity-60" />
-      <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-brand-accent/5 rounded-full blur-[100px] pointer-events-none opacity-40" />
+      <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-brand-secondary/5 rounded-full blur-[120px] pointer-events-none opacity-60" />
+      <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-brand-primary/5 rounded-full blur-[100px] pointer-events-none opacity-40" />
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         {/* Elite Header */}
@@ -83,10 +83,10 @@ const Pricing = () => {
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white border border-brand-accent/20 shadow-sm mb-10"
+            className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white border border-brand-primary/20 shadow-sm mb-10"
           >
-            <Sparkles className="w-4 h-4 text-brand-accent animate-pulse" />
-            <span className="text-sm font-bold tracking-widest text-brand-accent">
+            <Sparkles className="w-4 h-4 text-brand-primary animate-pulse" />
+            <span className="text-sm font-bold tracking-widest text-brand-primary">
               {isRtl ? 'استثمار ذكي نخبوي' : 'Elite Smart Investment'}
             </span>
           </motion.div>
@@ -100,7 +100,7 @@ const Pricing = () => {
           >
             {isRtl ? 'نحو' : 'Towards'}{' '}
             <span className="relative inline-block">
-              <span className="bg-gradient-to-r from-brand-accent to-brand-accent/60 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-brand-primary to-brand-secondary/60 bg-clip-text text-transparent">
                 {isRtl ? 'تميز استثنائي' : 'Exceptional Excellence'}
               </span>
      
@@ -130,7 +130,7 @@ const Pricing = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="relative group flex flex-col h-full"
           >
-            <div className="absolute inset-x-0 inset-y-0 bg-brand-accent/[0.02] rounded-[2.5rem] -m-1 pointer-events-none transition-all duration-500 group-hover:bg-brand-accent/[0.04]" />
+            <div className="absolute inset-x-0 inset-y-0 bg-brand-primary/[0.02] rounded-[2.5rem] -m-1 pointer-events-none transition-all duration-500 group-hover:bg-brand-primary/[0.04]" />
             
             <div className="relative h-full bg-white rounded-[2.5rem] border border-gray-100 p-10 md:p-14 shadow-2xl shadow-gray-200/50 flex flex-col justify-between overflow-hidden">
               <div className="relative z-10">
@@ -162,7 +162,7 @@ const Pricing = () => {
                       transition={{ delay: 0.4 + (index * 0.1) }}
                       className="flex items-center gap-4 group/item"
                     >
-                      <div className="w-10 h-10 rounded-full bg-brand-accent/10 flex items-center justify-center text-brand-accent group-hover/item:bg-brand-accent group-hover/item:text-white transition-all duration-300">
+                      <div className="w-10 h-10 rounded-full bg-brand-primary/10 flex items-center justify-center text-brand-primary group-hover/item:bg-brand-primary group-hover/item:text-white transition-all duration-300">
                         <CheckCircle2 className="w-5 h-5" />
                       </div>
                       <span className="text-gray-700 font-bold text-lg">{feature}</span>
@@ -202,13 +202,13 @@ const Pricing = () => {
                 whileHover={{ y: -8 }}
                 className="group relative h-full"
               >
-                <div className="relative h-full bg-white border border-gray-100 rounded-[2rem] p-8 hover:shadow-xl transition-all duration-500 hover:border-brand-accent/20 flex flex-col justify-between">
+                <div className="relative h-full bg-white border border-gray-100 rounded-[2rem] p-8 hover:shadow-xl transition-all duration-500 hover:border-brand-primary/20 flex flex-col justify-between">
                   <div>
                     <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${m.color} flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500 shadow-sm`}>
                       <m.icon className={`w-8 h-8 ${m.iconColor}`} />
                     </div>
 
-                    <h4 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-brand-accent transition-colors">
+                    <h4 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-brand-primary transition-colors">
                       {t(`pricing.${m.key}.title`)}
                     </h4>
 
@@ -219,14 +219,14 @@ const Pricing = () => {
                     <div className="space-y-3 mb-8">
                       {m.features.map((f, i) => (
                         <div key={i} className="flex items-center gap-3 text-xs text-gray-400 font-bold tracking-wide">
-                          <span className="w-1.5 h-1.5 rounded-full bg-brand-accent/40" />
+                          <span className="w-1.5 h-1.5 rounded-full bg-brand-primary/40" />
                           <span>{f}</span>
                         </div>
                       ))}
                     </div>
                   </div>
 
-                  <button className="text-sm font-bold text-gray-900 hover:text-brand-accent transition-colors flex items-center gap-2 group/link tracking-widest mt-auto">
+                  <button className="text-sm font-bold text-gray-900 hover:text-brand-primary transition-colors flex items-center gap-2 group/link tracking-widest mt-auto">
                     <span>{t('pricing.learn_more')}</span>
                     <ArrowIcon className={`w-4 h-4 ${isRtl ? 'group-hover/link:-translate-x-1' : 'group-hover/link:translate-x-1'} transition-transform`} />
                   </button>

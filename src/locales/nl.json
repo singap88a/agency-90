@@ -73,11 +73,13 @@
     "design": "Creatief Design",
     "marketing": "Marketing Groei",
     "management": "Social Management",
+    "development": "Web- & App-Ontwikkeling",
     "photography": "Mediaproductie",
     "videos": "Video's",
     "items_design": ["Merkidentiteit", "Grafisch Ontwerp", "Tentoonstellingsontwerp"],
     "items_marketing": ["Contentstrategie", "Groeicampagnes", "Digitale Marketing"],
     "items_management": ["Accountbeheer", "Data-analyse", "Prestatiemetrics"],
+    "items_development": ["UI/UX Design", "Smart Applicaties", "E-Commerce Oplossingen"],
     "items_photography": ["Fotografie", "Cinematografie", "Postproductie"]
   },
   "pricing": {

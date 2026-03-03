@@ -9,15 +9,15 @@ export default {
       colors: {
         brand: {
           dark: "var(--brand-dark)",
+          surface: "var(--brand-surface)",
           primary: "var(--brand-primary)",
-          secondary: "#ffffff",
-          accent: "var(--brand-accent)",
+          secondary: "var(--brand-secondary)",
           glow: "var(--brand-glow)",
         }
       },
       fontFamily: {
-        heading: ["Noto Naskh Arabic", "Alexandria", "Outfit", "sans-serif"],
-        body: ["Noto Naskh Arabic", "Plus Jakarta Sans", "sans-serif"],
+        heading: ["IBM Plex Sans Arabic", "Alexandria", "Outfit", "sans-serif"],
+        body: ["IBM Plex Sans Arabic", "Alexandria", "Plus Jakarta Sans", "sans-serif"],
         latin: ["Outfit", "Plus Jakarta Sans", "sans-serif"],
       },
       animation: {

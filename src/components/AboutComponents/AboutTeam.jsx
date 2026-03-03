@@ -35,7 +35,7 @@ const AboutTeam = () => {
     ];
 
     return (
-        <section className="py-16 md:py-24 bg-brand-secondary relative overflow-hidden">
+        <section className="py-16 md:py-24 bg-brand-surface relative overflow-hidden">
             <div className="container mx-auto px-6 lg:px-24">
                 {/* Elite Side-Aligned Header */}
                 <div className={`mb-16 md:mb-20 max-w-4xl ${isRtl ? 'text-right' : 'text-left'}`}>
@@ -56,15 +56,15 @@ const AboutTeam = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="text-4xl md:text-6xl font-bold text-gray-900 mb-8 tracking-tighter leading-tight"
+                        className="text-4xl md:text-6xl font-bold text-brand-secondary mb-8 tracking-tighter leading-tight"
                     >
                         {isRtl ? (
                             <>
-                                {t('about.team.subtitle').split(' ').slice(0, 1).join(' ')} <span className="bg-gradient-to-r from-brand-primary to-brand-primary/60 bg-clip-text text-transparent">{t('about.team.subtitle').split(' ').slice(1).join(' ')}</span>
+                                {t('about.team.subtitle').split(' ').slice(0, 1).join(' ')} <span className="bg-brand-primary to-brand-primary/60 bg-clip-text text-transparent">{t('about.team.subtitle').split(' ').slice(1).join(' ')}</span>
                             </>
                         ) : (
                             <>
-                                {t('about.team.subtitle').split(' ').slice(0, 1).join(' ')} <span className="bg-gradient-to-r from-brand-primary to-brand-primary/60 bg-clip-text text-transparent">{t('about.team.subtitle').split(' ').slice(1).join(' ')}</span>
+                                {t('about.team.subtitle').split(' ').slice(0, 1).join(' ')} <span className="bg-brand-primary to-brand-primary/60 bg-clip-text text-transparent">{t('about.team.subtitle').split(' ').slice(1).join(' ')}</span>
                             </>
                         )}
                     </motion.h2>
@@ -103,7 +103,7 @@ const AboutTeam = () => {
                                     {/* Initial Content: Name and Role */}
                                     <div className="transition-all duration-700 transform group-hover:-translate-y-72">
                                         <h3 className="text-white text-2xl lg:text-3xl font-bold mb-2 tracking-tighter">{member.name}</h3>
-                                        <p className="text-brand-accent font-bold text-[10px] tracking-widest">{member.role}</p>
+                                        <p className="text-brand-secondary font-bold text-[10px] tracking-widest">{member.role}</p>
                                     </div>
 
                                     {/* Hover Detailed Content: Description and Socials */}
@@ -114,13 +114,13 @@ const AboutTeam = () => {
                                             </p>
                                         </div>
                                         <div className="flex items-center justify-center gap-6">
-                                            <a href="#" className="w-12 h-12 bg-white/10 backdrop-blur-3xl rounded-2xl flex items-center justify-center text-white hover:bg-brand-accent hover:text-brand-dark hover:scale-110 hover:-rotate-12 transition-all">
+                                            <a href="#" className="w-12 h-12 bg-white/10 backdrop-blur-3xl rounded-2xl flex items-center justify-center text-white hover:bg-brand-primary hover:text-brand-dark hover:scale-110 hover:-rotate-12 transition-all">
                                                 <Linkedin className="w-5 h-5" />
                                             </a>
-                                            <a href="#" className="w-12 h-12 bg-white/10 backdrop-blur-3xl rounded-2xl flex items-center justify-center text-white hover:bg-brand-accent hover:text-brand-dark hover:scale-110 hover:-rotate-12 transition-all">
+                                            <a href="#" className="w-12 h-12 bg-white/10 backdrop-blur-3xl rounded-2xl flex items-center justify-center text-white hover:bg-brand-primary hover:text-brand-dark hover:scale-110 hover:-rotate-12 transition-all">
                                                 <Twitter className="w-5 h-5" />
                                             </a>
-                                            <a href="#" className="w-12 h-12 bg-white/10 backdrop-blur-3xl rounded-2xl flex items-center justify-center text-white hover:bg-brand-accent hover:text-brand-dark hover:scale-110 hover:-rotate-12 transition-all">
+                                            <a href="#" className="w-12 h-12 bg-white/10 backdrop-blur-3xl rounded-2xl flex items-center justify-center text-white hover:bg-brand-primary hover:text-brand-dark hover:scale-110 hover:-rotate-12 transition-all">
                                                 <Github className="w-5 h-5" />
                                             </a>
                                         </div>

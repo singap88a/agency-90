@@ -73,15 +73,15 @@ const AboutTestimonials = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.7, delay: 0.2 }}
-                        className="text-4xl md:text-6xl font-bold text-gray-900 mb-8 tracking-tighter"
+                        className="text-4xl md:text-6xl font-bold text-brand-secondary mb-8 tracking-tighter"
                     >
                         {isRtl ? (
                             <>
-                                ماذا <span className="bg-gradient-to-r from-brand-primary to-brand-primary/60 bg-clip-text text-transparent">قالوا عنا؟</span>
+                                ماذا <span className="bg-brand-primary to-brand-primary/60 bg-clip-text text-transparent">قالوا عنا؟</span>
                             </>
                         ) : (
                             <>
-                                What <span className="bg-gradient-to-r from-brand-primary to-brand-primary/60 bg-clip-text text-transparent">Clients Say</span>
+                                What <span className="bg-brand-primary to-brand-primary/60 bg-clip-text text-transparent">Clients Say</span>
                             </>
                         )}
                     </motion.h2>
@@ -128,7 +128,7 @@ const AboutTestimonials = () => {
                                             </span>
                                         </div>
                                         <div className="flex flex-col">
-                                            <h4 className="text-xl font-bold text-gray-900 tracking-tighter mb-1">
+                                            <h4 className="text-xl font-bold text-brand-secondary tracking-tighter mb-1">
                                                 {item.name}
                                             </h4>
                                             <p className="text-brand-primary font-bold tracking-wider text-[10px]">
@@ -146,15 +146,15 @@ const AboutTestimonials = () => {
 
                                     {/* Bottom Section: Description */}
                                     <div className="flex-grow relative z-10">
-                                        <p className="text-gray-600 text-lg leading-relaxed font-medium tracking-tight italic">
+                                        <p className="text-brand-secondary text-lg leading-relaxed font-medium tracking-tight italic">
                                             "{item.text}"
                                         </p>
                                     </div>
 
                                     {/* Decorative subtle pulse mark */}
                                     <div className="mt-8 flex items-center gap-4 relative z-10">
-                                        <div className="w-12 h-[1.5px] bg-brand-primary/30 group-hover:w-20 group-hover:bg-brand-primary/60 transition-all duration-700" />
-                                        <div className="w-2 h-2 rounded-full bg-brand-primary/40 group-hover:bg-brand-primary animate-pulse" />
+                                        <div className="w-12 h-[1.5px] bg-brand-primary group-hover:w-20 group-hover:bg-brand-primary/60 transition-all duration-700" />
+                                        <div className="w-2 h-2 rounded-full bg-brand-primary group-hover:bg-brand-primary animate-pulse" />
                                     </div>
                                 </div>
                             </SwiperSlide>

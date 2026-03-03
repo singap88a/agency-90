@@ -16,9 +16,9 @@ const Hero = () => {
     <section
       ref={containerRef}
       dir={isRtl ? "rtl" : "ltr"}
-      className="relative min-h-screen flex items-center overflow-hidden bg-white"
+      className="relative min-h-screen flex items-center overflow-hidden bg-brand-surface"
     >
-      {/* Background Image */}
+      {/* Background Image - Full Natural Display */}
       <motion.div
         style={{ y: yHero }}
         className="absolute inset-0 z-0"
@@ -26,7 +26,7 @@ const Hero = () => {
         <img
           src={i18n.language === 'ar' ? '/hero_ar.png' : '/hero_en.png'}
           alt="Professional Background"
-          className="w-full h-full object-cover opacity-90"
+          className="w-full h-full object-cover" 
         />
       </motion.div>
 
@@ -81,7 +81,7 @@ const Hero = () => {
             initial={{ opacity: 0, x: isRtl ? 30 : -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
-            className="inline-flex items-center gap-3 px-5 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-xl text-brand-accent text-xs font-bold tracking-widest shadow-2xl ring-1 ring-white/10"
+            className="inline-flex items-center gap-3 px-5 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-xl text-brand-primary text-xs font-bold tracking-widest shadow-2xl ring-1 ring-white/10"
           >
             <Sparkles className="w-4 h-4" />
             <span>agency 90 — {isRtl ? 'وكالة إبداعية' : 'Creative Agency'}</span>
@@ -103,7 +103,7 @@ const Hero = () => {
               return (
                 <span key={i} className={cn(
                   "inline-block",
-                  isHighlight ? "text-brand-accent italic drop-shadow-[0_10px_30px_rgba(var(--brand-accent-rgb),0.4)]" : ""
+                  isHighlight ? "text-brand-primary italic drop-shadow-[0_10px_30px_rgba(var(--brand-primary-rgb),0.4)]" : ""
                 )}>
                   {word}{' '}
                 </span>
@@ -134,7 +134,7 @@ const Hero = () => {
               isRtl ? "items-start" : "items-start"
             )}
           >
-            <button className="relative group w-full sm:w-64 h-14 rounded-2xl bg-brand-accent text-white font-bold text-base overflow-hidden transition-all duration-500 hover:shadow-[0_20px_40px_rgba(var(--brand-accent-rgb),0.35)] hover:scale-[1.02] flex items-center justify-center gap-3">
+            <button className="relative group w-full sm:w-64 h-14 rounded-2xl bg-brand-primary text-white font-bold text-base overflow-hidden transition-all duration-500 hover:shadow-[0_20px_40px_rgba(var(--brand-primary-rgb),0.35)] hover:scale-[1.02] flex items-center justify-center gap-3">
               <span className="relative z-10 flex items-center gap-3">
                 {t('hero.cta')}
                 <motion.div
@@ -148,23 +148,13 @@ const Hero = () => {
             </button>
  
             <button className="group relative w-full sm:w-64 h-14 flex items-center justify-center gap-3 rounded-2xl bg-white/8 backdrop-blur-3xl border border-white/15 text-white font-semibold text-base hover:bg-white/15 hover:border-white/25 transition-all duration-300">
-              <div className="w-9 h-9 rounded-lg bg-brand-accent/20 flex items-center justify-center text-brand-accent shadow-sm group-hover:scale-110 group-hover:rotate-[10deg] transition-all duration-500">
+              <div className="w-9 h-9 rounded-lg bg-brand-primary/20 flex items-center justify-center text-brand-primary shadow-sm group-hover:scale-110 group-hover:rotate-[10deg] transition-all duration-500">
                 <Play className="w-4 h-4 fill-current" />
               </div>
               <span>{t('hero.projects')}</span>
             </button>
           </motion.div>
         </div>
-      </div>
-      {/* Professional Symmetrical Sine-Wave Divider */}
-      <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-20 pointer-events-none translate-y-[1px]">
-        <svg 
-          viewBox="0 0 1200 120" 
-          preserveAspectRatio="none" 
-          className="relative block w-full h-[60px] md:h-[120px] fill-white"
-        >
-          <path d="M0,0 C150,90 400,90 600,60 C800,30 1050,30 1200,120 V120 H0 Z"></path>
-        </svg>
       </div>
     </section>
   );

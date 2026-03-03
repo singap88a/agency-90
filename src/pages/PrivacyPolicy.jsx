@@ -12,7 +12,7 @@ const PrivacyPolicy = () => {
         animate={{ opacity: 1, y: 0 }}
         className="glass-card p-12 lg:p-20"
       >
-        <h1 className="text-5xl lg:text-7xl font-black mb-12 tracking-tighter text-brand-accent">{t('nav.privacy')}</h1>
+        <h1 className="text-5xl lg:text-7xl font-black mb-12 tracking-tighter text-brand-primary">{t('nav.privacy')}</h1>
         <div className="space-y-12 text-xl lg:text-2xl text-brand-dark/60 leading-relaxed font-medium">
           {t('legal.privacyContent', { returnObjects: true }).map((section, idx) => (
             <div key={idx} className="space-y-4">

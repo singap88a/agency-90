@@ -43,12 +43,12 @@ function App() {
 
   return (
     <Router>
-      <div className="min-h-screen bg-white text-brand-dark selection:bg-brand-primary/20 selection:text-brand-primary font-body relative overflow-hidden">
+      <div className="min-h-screen bg-brand-surface text-brand-dark selection:bg-brand-primary/20 selection:text-brand-primary font-body relative overflow-hidden">
         {/* Global Blended Background */}
         <div className="absolute inset-0 z-0 pointer-events-none">
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-white via-brand-primary/[0.03] to-white" />
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-brand-surface via-brand-primary/[0.03] to-brand-surface" />
           <div className="absolute top-[20%] right-[-10%] w-[50%] h-[50%] bg-brand-primary/[0.05] rounded-full blur-[120px]" />
-          <div className="absolute bottom-[20%] left-[-10%] w-[50%] h-[50%] bg-brand-accent/[0.05] rounded-full blur-[120px]" />
+          <div className="absolute bottom-[20%] left-[-10%] w-[50%] h-[50%] bg-brand-secondary/[0.05] rounded-full blur-[120px]" />
         </div>
         
         <ParticleBackground />

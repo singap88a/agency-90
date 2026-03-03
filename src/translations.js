@@ -112,11 +112,13 @@ export const translations = {
       design: "التصاميم الإبداعية",
       marketing: "خدمات التسويق",
       management: "إدارة الصفحات",
+      development: "تصميم المواقع والتطبيقات",
       photography: "الميديا والإنتاج",
       videos: "الفيديوهات",
       items_design: ["الـهوية الـتجارية", "الـتصميم الـجرافيكي", "تـصميم الـفعاليات"],
       items_marketing: ["إنتاج المـحتوى", "الحملات الإعلانية", "النمو الرقمي"],
       items_management: ["إدارة التـواصل", "تحليل الـبيانات", "تطوير الأداء"],
+      items_development: ["تصميم واجهات احترافية", "برمجة التطبيقات", "متاجر إلكترونية"],
       items_photography: ["تصوير فوتوغرافي", "إنـتاج الـفيديو", "صناعة الأصالة"]
     },
     pricing: {
@@ -301,11 +303,13 @@ export const translations = {
       design: "Creative Design",
       marketing: "Marketing Growth",
       management: "Social Management",
+      development: "Web & App Development",
       photography: "Media Production",
       videos: "Videos",
       items_design: ["Brand Identity", "Graphic Design", "Exhibitions Design"],
       items_marketing: ["Content Strategy", "Growth Campaigns", "Digital Marketing"],
       items_management: ["Account Management", "Data Analytics", "Performance Metrics"],
+      items_development: ["UI/UX Design", "Smart Applications", "E-Commerce Solutions"],
       items_photography: ["Photography", "Cinematography", "Post-Production"]
     },
     pricing: {
@@ -453,11 +457,13 @@ export const translations = {
       design: "Kreativdesign",
       marketing: "Marketing-Wachstum",
       management: "Social Management",
+      development: "Web- & App-Entwicklung",
       photography: "Medienproduktion",
       videos: "Videos",
       items_design: ["Markenidentität", "Grafikdesign", "Messedesign"],
       items_marketing: ["Content-Strategie", "Wachstumskampagnen", "Digitales Marketing"],
       items_management: ["Kontoverwaltung", "Datenanalyse", "Leistungsmetriken"],
+      items_development: ["UI/UX-Design", "Smart-Anwendungen", "E-Commerce-Lösungen"],
       items_photography: ["Fotografie", "Cinematografie", "Postproduktion"]
     },
     pricing: {
@@ -605,11 +611,13 @@ export const translations = {
       design: "Creatief Design",
       marketing: "Marketing Groei",
       management: "Social Management",
+      development: "Web- & App-Ontwikkeling",
       photography: "Mediaproductie",
       videos: "Video's",
       items_design: ["Merkidentiteit", "Grafisch Ontwerp", "Tentoonstellingsontwerp"],
       items_marketing: ["Contentstrategie", "Groeicampagnes", "Digitale Marketing"],
       items_management: ["Accountbeheer", "Data-analyse", "Prestatiemetrics"],
+      items_development: ["UI/UX Design", "Smart Applicaties", "E-Commerce Oplossingen"],
       items_photography: ["Fotografie", "Cinematografie", "Postproductie"]
     },
     pricing: {

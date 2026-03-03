@@ -66,7 +66,7 @@ const AboutVision = () => {
                         transition={{ delay: 0.1 }}
                         className="text-4xl md:text-6xl font-bold text-gray-900 mb-8 tracking-tighter"
                     >
-                        <span className="bg-gradient-to-r from-brand-primary to-brand-primary/60 bg-clip-text text-transparent">
+                        <span className="bg-brand-primary to-brand-primary/60 bg-clip-text text-transparent">
                             {t('about.vision_section.title')}
                         </span>
                     </motion.h2>
@@ -93,7 +93,7 @@ const AboutVision = () => {
                             transition={{ delay: index * 0.1 }}
                             className="group relative h-full"
                         >
-                            <div className="relative h-full bg-white/70 backdrop-blur-md border border-gray-100 rounded-[2.5rem] p-8 hover:shadow-2xl transition-all duration-500 hover:border-brand-primary/20 flex flex-col overflow-hidden">
+                            <div className="relative h-full bg-white/70 backdrop-blur-md border border-brand-primary rounded-[2.5rem] p-8 hover:shadow-2xl transition-all duration-500 hover:border-brand-primary/20 flex flex-col overflow-hidden">
                                 {/* Watermark Number */}
                                 <span className={`absolute top-4 ${isRtl ? 'left-6' : 'right-6'} text-8xl font-bold text-black/[0.03] group-hover:text-black/[0.05] transition-colors duration-500 pointer-events-none italic`}>
                                     {item.number}
@@ -117,7 +117,7 @@ const AboutVision = () => {
 
                                 {/* Decorative bottom indicator */}
                                 <div className="mt-auto flex items-center gap-3">
-                                    <div className="w-10 h-1 rounded-full bg-brand-primary/20 transition-all duration-500 group-hover:w-20 group-hover:bg-brand-primary/40" />
+                                    <div className="w-10 h-1 rounded-full bg-brand-primary transition-all duration-500 group-hover:w-20 group-hover:bg-brand-primary/40" />
                                     <Sparkles className="w-4 h-4 text-brand-primary/30 group-hover:text-brand-primary transition-colors duration-500" />
                                 </div>
                             </div>

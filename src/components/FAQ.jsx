@@ -62,7 +62,7 @@ const FAQ = () => {
             {/* Question — heavier weight, bigger */}
             <span className={cn(
               "text-lg font-extrabold tracking-tight transition-colors duration-300",
-              isOpen ? "text-brand-primary" : "text-gray-900"
+              isOpen ? "text-brand-primary" : " text-brand-secondary"
             )}>
               {faq.q}
             </span>
@@ -71,7 +71,7 @@ const FAQ = () => {
               transition={{ duration: 0.3, type: "spring", stiffness: 200 }}
               className={cn(
                 "flex-shrink-0 w-9 h-9 rounded-xl flex items-center justify-center transition-all duration-300",
-                isOpen ? "bg-brand-primary text-white shadow-lg" : "bg-gray-100 text-gray-400 group-hover:bg-gray-200"
+                isOpen ? "bg-brand-primary text-white shadow-lg" : "bg-gray-100 text-gray-400 group-hover:bg-gray-200 border-2 border2"
               )}
             >
               <ChevronDown className="w-4 h-4" />
@@ -99,12 +99,12 @@ const FAQ = () => {
   };
 
   return (
-    <section className="relative py-16 md:py-24 overflow-hidden">
+    <section className="relative py-10  overflow-hidden">
 
       <div className="container mx-auto px-6 lg:px-24 relative">
 
         {/* ── Header ── */}
-        <div className="text-center max-w-4xl mx-auto mb-16 md:mb-20">
+        <div className="text-center max-w-4xl mx-auto mb-10  ">
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, y: 15 }}
@@ -124,19 +124,19 @@ const FAQ = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-4xl md:text-6xl font-bold text-gray-900 mb-8 tracking-tighter"
+            className="text-4xl md:text-6xl font-bold text-brand-secondary mb-8 tracking-tighter"
           >
             {isRtl ? (
               <>
                 الأسئلة{' '}
-                <span className="bg-gradient-to-r from-brand-primary to-brand-primary/60 bg-clip-text text-transparent">
+                <span className="bg-brand-primary to-brand-primary/60 bg-clip-text text-transparent">
                   الشائعة
                 </span>
               </>
             ) : (
               <>
                 Frequently{' '}
-                <span className="bg-gradient-to-r from-brand-primary to-brand-primary/60 bg-clip-text text-transparent">
+                <span className="bg-brand-primary to-brand-primary/60 bg-clip-text text-transparent">
                   Asked Questions
                 </span>
               </>

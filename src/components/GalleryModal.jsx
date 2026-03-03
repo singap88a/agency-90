@@ -31,7 +31,7 @@ const GalleryModal = ({ isOpen, onClose, images, initialSlide = 0 }) => {
             {/* Close Button - Positioned Outside Card Content */}
             <button
               onClick={onClose}
-              className="absolute top-5 -right-4 md:-right-12 z-[100] w-12 h-12 rounded-2xl bg-brand-accent border border-white/20 flex items-center justify-center text-white hover:bg-brand-dark hover:scale-110 transition-all shadow-xl shadow-brand-accent/20"
+              className="absolute top-5 -right-4 md:-right-12 z-[100] w-12 h-12 rounded-2xl bg-brand-primary border border-white/20 flex items-center justify-center text-white hover:bg-brand-dark hover:scale-110 transition-all shadow-[0_15px_40px_rgba(var(--brand-primary-rgb),0.2)]"
             >
               <X className="w-6 h-6" />
             </button>
@@ -44,7 +44,7 @@ const GalleryModal = ({ isOpen, onClose, images, initialSlide = 0 }) => {
               pagination={{ 
                 type: 'fraction',
                 renderFraction: (currentClass, totalClass) => {
-                  return `<span class="px-6 py-2 rounded-full bg-brand-accent text-white font-black text-xs tracking-[0.2em] shadow-lg inline-flex items-center gap-2">
+                  return `<span class="px-6 py-2 rounded-full bg-brand-primary text-white font-black text-xs tracking-[0.2em] shadow-lg inline-flex items-center gap-2">
                     <span class="${currentClass}"></span> / <span class="${totalClass}"></span>
                   </span>`;
                 },
@@ -70,10 +70,10 @@ const GalleryModal = ({ isOpen, onClose, images, initialSlide = 0 }) => {
             {/* Custom Navigation */}
             {images.length > 1 && (
               <>
-                <button className="gallery-prev absolute left-0 top-1/2 -translate-y-1/2 -translate-x-full md:-translate-x-12 z-[100] w-14 h-14 rounded-2xl bg-black/5 border border-black/10 flex items-center justify-center text-brand-dark hover:bg-brand-accent hover:text-white transition-all group hidden md:flex backdrop-blur-md">
+                <button className="gallery-prev absolute left-0 top-1/2 -translate-y-1/2 -translate-x-full md:-translate-x-12 z-[100] w-14 h-14 rounded-2xl bg-black/5 border border-black/10 flex items-center justify-center text-brand-dark hover:bg-brand-primary hover:text-white transition-all group hidden md:flex backdrop-blur-md">
                   <ChevronLeft className="w-8 h-8 group-hover:-translate-x-1 transition-transform" />
                 </button>
-                <button className="gallery-next absolute right-0 top-1/2 -translate-y-1/2 translate-x-full md:translate-x-12 z-[100] w-14 h-14 rounded-2xl bg-black/5 border border-black/10 flex items-center justify-center text-brand-dark hover:bg-brand-accent hover:text-white transition-all group hidden md:flex backdrop-blur-md">
+                <button className="gallery-next absolute right-0 top-1/2 -translate-y-1/2 translate-x-full md:translate-x-12 z-[100] w-14 h-14 rounded-2xl bg-black/5 border border-black/10 flex items-center justify-center text-brand-dark hover:bg-brand-primary hover:text-white transition-all group hidden md:flex backdrop-blur-md">
                   <ChevronRight className="w-8 h-8 group-hover:translate-x-1 transition-transform" />
                 </button>
               </>
