@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowLeft, ArrowRight, Play, Sparkles } from 'lucide-react';
@@ -134,7 +135,7 @@ const Hero = () => {
               isRtl ? "items-start" : "items-start"
             )}
           >
-            <button className="relative group w-full sm:w-64 h-14 rounded-2xl bg-brand-primary text-white font-bold text-base overflow-hidden transition-all duration-500 hover:shadow-[0_20px_40px_rgba(var(--brand-primary-rgb),0.35)] hover:scale-[1.02] flex items-center justify-center gap-3">
+            <Link to="/contact" className="relative group w-full sm:w-64 h-14 rounded-2xl bg-brand-primary text-white font-bold text-base overflow-hidden transition-all duration-500 hover:shadow-[0_20px_40px_rgba(var(--brand-primary-rgb),0.35)] hover:scale-[1.02] flex items-center justify-center gap-3">
               <span className="relative z-10 flex items-center gap-3">
                 {t('hero.cta')}
                 <motion.div
@@ -145,14 +146,14 @@ const Hero = () => {
                 </motion.div>
               </span>
               <div className="absolute inset-0 bg-gradient-to-tr from-white to-transparent opacity-0 group-hover:opacity-20 transition-opacity duration-500" />
-            </button>
+            </Link>
  
-            <button className="group relative w-full sm:w-64 h-14 flex items-center justify-center gap-3 rounded-2xl bg-white/8 backdrop-blur-3xl border border-white/15 text-white font-semibold text-base hover:bg-white/15 hover:border-white/25 transition-all duration-300">
+            <Link to="/projects" className="group relative w-full sm:w-64 h-14 flex items-center justify-center gap-3 rounded-2xl bg-white/8 backdrop-blur-3xl border border-white/15 text-white font-semibold text-base hover:bg-white/15 hover:border-white/25 transition-all duration-300">
               <div className="w-9 h-9 rounded-lg bg-brand-primary/20 flex items-center justify-center text-brand-primary shadow-sm group-hover:scale-110 group-hover:rotate-[10deg] transition-all duration-500">
                 <Play className="w-4 h-4 fill-current" />
               </div>
               <span>{t('hero.projects')}</span>
-            </button>
+            </Link>
           </motion.div>
         </div>
       </div>
