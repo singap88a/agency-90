@@ -71,7 +71,7 @@ const Stats = () => {
                     <span className="text-4xl lg:text-5xl font-black text-brand-primary tracking-tighter mb-1 transition-transform duration-500 group-hover:scale-105">
                       {stat.value}
                     </span>
-                    <span className="text-[10px] md:text-xs font-black uppercase tracking-[0.2em] text-brand-dark/40 group-hover:text-brand-dark transition-colors duration-300">
+                    <span className="text-[10px] md:text-xs font-black uppercase tracking-[0.2em] text-brand-secondary whitespace-nowrap group-hover:text-brand-dark transition-colors duration-300">
                       {stat.label}
                     </span>
                   </div>
