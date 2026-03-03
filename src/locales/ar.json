@@ -7,12 +7,13 @@
     "pricing": "الأسعار",
     "investment": "الاستثمار",
     "contact": "تواصل معنا",
-    "stay_connected": "كن على اتصال",
+    "stay_connected": "خليك معانا",
     "privacy": "سياسة الخصوصية",
     "terms": "الشروط والأحكام",
     "description": "وكالة إبداعية متخصصة في الحلول الرقمية، نجمع بين الفن والتقنية لنصنع مستقبلاً استثنائياً لعلامتك التجارية.",
     "developed_by": "تم التطوير بواسطة",
-    "developer_name": "أحمد سنجاب"
+    "developer_name": "أحمد سنجاب",
+    "select_language": "اختر اللغة"
   },
   "common": {
     "showMore": "عرض المزيد",
@@ -142,6 +143,8 @@
   "contact": {
     "title": "اتصل بنا",
     "subtitle": "تواصل معنا",
+    "formTitle": "تواصل معنا",
+    "infoTitle": "تواصل معنا",
     "getInTouch": "تواصل معنا",
     "description": "نحن هنا للإجابة على استفساراتك ومساعدتك في تحقيق رؤيتك",
     "address": "Waterkers 55, 1689PJ, Zwaag Hoorn",

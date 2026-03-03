@@ -12,7 +12,8 @@
     "terms": "Terms of Service",
     "description": "A creative agency specialized in digital solutions, blending art and technology to craft an exceptional future.",
     "developed_by": "Developed by",
-    "developer_name": "Ahmed Singap"
+    "developer_name": "Ahmed Singap",
+    "select_language": "Select Language"
   },
   "common": {
     "showMore": "Show More",
@@ -133,6 +134,8 @@
   "contact": {
     "title": "Get in Touch",
     "subtitle": "Contact Us",
+    "formTitle": "Contact Us",
+    "infoTitle": "Contact Us",
     "getInTouch": "Get in Touch",
     "description": "We are here to answer your inquiries and help you achieve your vision.",
     "address": "Waterkers 55, 1689PJ, Zwaag Hoorn",

@@ -165,6 +165,8 @@ export const translations = {
     contact: {
       title: "اتصل بنا",
       subtitle: "تواصل معنا",
+      formTitle: "تواصل معنا",
+      infoTitle: "تواصل معنا",
       getInTouch: "تواصل معنا",
       description: "نحن هنا للإجابة على استفساراتك ومساعدتك في تحقيق رؤيتك",
       address: "Waterkers 55, 1689PJ, Zwaag Hoorn",
@@ -341,6 +343,8 @@ export const translations = {
     contact: {
       title: "Get in Touch",
       subtitle: "Contact Us",
+      formTitle: "Contact Us",
+      infoTitle: "Contact Us",
       getInTouch: "Get in Touch",
       description: "We are here to answer your inquiries and help you achieve your vision.",
       address: "Waterkers 55, 1689PJ, Zwaag Hoorn",
@@ -495,6 +499,8 @@ export const translations = {
     contact: {
       title: "Kontakt",
       subtitle: "Kontaktieren Sie uns",
+      formTitle: "Kontakt",
+      infoTitle: "Kontakt",
       getInTouch: "Kontaktieren Sie uns",
       description: "Wir sind hier, um Ihre Fragen zu beantworten und Ihnen bei der Verwirklichung Ihrer Vision zu helfen.",
       address: "Waterkers 55, 1689PJ, Zwaag Hoorn",
@@ -649,6 +655,8 @@ export const translations = {
     contact: {
       title: "Contact",
       subtitle: "Neem contact op",
+      formTitle: "Contact",
+      infoTitle: "Contact",
       getInTouch: "Neem contact op",
       description: "We zijn er om uw vragen te beantwoorden en u te helpen uw visie te realiseren.",
       address: "Waterkers 55, 1689PJ, Zwaag Hoorn",

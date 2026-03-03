@@ -1,12 +1,7 @@
 import React from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const ParticleBackground = () => {
-  const { scrollY } = useScroll();
-  
-  // Subtle parallax for the main blobs
-  const y1 = useTransform(scrollY, [0, 2000], [0, 400]);
-  const y2 = useTransform(scrollY, [0, 2000], [0, -300]);
 
   return (
     <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden bg-brand-surface">

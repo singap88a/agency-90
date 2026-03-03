@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { ArrowLeft, ArrowRight, Play, Sparkles } from 'lucide-react';
 import { cn } from '../lib/utils';
 
@@ -10,8 +10,6 @@ const Hero = () => {
   const containerRef = useRef(null);
   const isRtl = i18n.dir() === 'rtl';
 
-  const { scrollY } = useScroll();
-  const yHero = useTransform(scrollY, [0, 500], [0, 150]);
 
   return (
     <section
@@ -21,11 +19,10 @@ const Hero = () => {
     >
       {/* Background Image - Full Natural Display */}
       <motion.div
-        style={{ y: yHero }}
         className="absolute inset-0 z-0"
       >
         <img
-          src={i18n.language === 'ar' ? '/hero_ar.png' : '/hero_en.png'}
+          src={i18n.language === 'ar' ? '/hero-ar.png' : '/hero-en.png'}
           alt="Professional Background"
           className="w-full h-full object-cover" 
         />
@@ -94,7 +91,7 @@ const Hero = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
             className={cn(
-              "text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.1] tracking-tight text-white",
+              "text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.3] text-white",
               isRtl ? "text-right" : "text-left"
             )}
           >
@@ -103,7 +100,7 @@ const Hero = () => {
               const isHighlight = highlights.includes(i % 5);
               return (
                 <span key={i} className={cn(
-                  "inline-block",
+                  "inline-block mx-[0.05em]",
                   isHighlight ? "text-brand-primary italic drop-shadow-[0_10px_30px_rgba(var(--brand-primary-rgb),0.4)]" : ""
                 )}>
                   {word}{' '}
@@ -118,7 +115,7 @@ const Hero = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.4 }}
             className={cn(
-              "text-base md:text-lg text-white/55 max-w-xl leading-relaxed font-light",
+              "text-base md:text-lg text-white/90 max-w-xl leading-relaxed font-semibold drop-shadow-sm",
               isRtl ? "text-right" : "text-left"
             )}
           >
@@ -135,8 +132,8 @@ const Hero = () => {
               isRtl ? "items-start" : "items-start"
             )}
           >
-            <Link to="/contact" className="relative group w-full sm:w-64 h-14 rounded-2xl bg-brand-primary text-white font-bold text-base overflow-hidden transition-all duration-500 hover:shadow-[0_20px_40px_rgba(var(--brand-primary-rgb),0.35)] hover:scale-[1.02] flex items-center justify-center gap-3">
-              <span className="relative z-10 flex items-center gap-3">
+            <Link to="/contact" className="relative group px-10 h-14 rounded-2xl bg-brand-primary text-white font-bold text-base overflow-hidden transition-all duration-500 hover:shadow-[0_20px_40px_rgba(var(--brand-primary-rgb),0.35)] hover:scale-[1.02] flex items-center justify-center gap-3">
+              <span className="relative z-10 flex items-center gap-3 whitespace-nowrap">
                 {t('hero.cta')}
                 <motion.div
                   animate={{ x: isRtl ? [0, -5, 0] : [0, 5, 0] }}
@@ -148,11 +145,13 @@ const Hero = () => {
               <div className="absolute inset-0 bg-gradient-to-tr from-white to-transparent opacity-0 group-hover:opacity-20 transition-opacity duration-500" />
             </Link>
  
-            <Link to="/projects" className="group relative w-full sm:w-64 h-14 flex items-center justify-center gap-3 rounded-2xl bg-white/8 backdrop-blur-3xl border border-white/15 text-white font-semibold text-base hover:bg-white/15 hover:border-white/25 transition-all duration-300">
-              <div className="w-9 h-9 rounded-lg bg-brand-primary/20 flex items-center justify-center text-brand-primary shadow-sm group-hover:scale-110 group-hover:rotate-[10deg] transition-all duration-500">
-                <Play className="w-4 h-4 fill-current" />
-              </div>
-              <span>{t('hero.projects')}</span>
+            <Link to="/projects" className="group relative px-10 h-14 flex items-center justify-center gap-3 rounded-2xl bg-white/8 backdrop-blur-3xl border border-white/15 text-white font-semibold text-base hover:bg-white/15 hover:border-white/25 transition-all duration-300">
+              <span className="flex items-center gap-3 whitespace-nowrap">
+                <div className="w-9 h-9 rounded-lg bg-brand-primary/20 flex items-center justify-center text-brand-primary shadow-sm group-hover:scale-110 group-hover:rotate-[10deg] transition-all duration-500">
+                  <Play className="w-4 h-4 fill-current" />
+                </div>
+                {t('hero.projects')}
+              </span>
             </Link>
           </motion.div>
         </div>

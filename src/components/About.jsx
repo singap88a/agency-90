@@ -12,7 +12,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="relative py-10 lg:py-14 overflow-hidden"
+      className="relative py-10   overflow-hidden"
     >
       {/* Background */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.03] overflow-hidden">
@@ -27,15 +27,14 @@ const About = () => {
       <div className="container mx-auto px-6 lg:px-24">
         <div className="grid lg:grid-cols-[0.85fr_1.15fr] gap-12 lg:gap-16 items-center">
 
-          {/* Lottie Side - نفس ارتفاع الكلام */}
+          {/* Lottie Side */}
           <motion.div
             initial={{ opacity: 0, x: isRtl ? -40 : 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className={cn(
-              "relative flex items-center justify-center",
-              isRtl ? "lg:order-2" : "lg:order-1"
+              "relative flex items-center justify-center lg:order-2"
             )}
           >
             <div className="absolute inset-0 bg-brand-primary/5 rounded-[40px] transform rotate-3 scale-105" />
@@ -54,7 +53,7 @@ const About = () => {
             <motion.div
               animate={{ y: [0, -12, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -top-6 -right-6 lg:top-4 lg:right-4 z-20 flex items-center gap-3 px-6 py-4 bg-white border border-brand-primary/10 rounded-2xl shadow-2xl shadow-brand-primary/10"
+              className="absolute top-4 right-2 lg:-top-6 lg:-right-6 z-20 flex items-center gap-3 px-6 py-4 bg-white border border-brand-primary/10 rounded-2xl shadow-2xl shadow-brand-primary/10"
             >
               <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-primary to-orange-400 text-white flex items-center justify-center shadow-lg shadow-brand-primary/20">
                 <Zap className="w-5 h-5 fill-current" />
@@ -70,7 +69,7 @@ const About = () => {
             <motion.div
               animate={{ y: [0, 12, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -bottom-6 -left-6 lg:bottom-4 lg:left-4 z-20 flex items-center gap-3 px-6 py-4 bg-white border border-brand-secondary/10 rounded-2xl shadow-2xl shadow-brand-secondary/10"
+              className="absolute bottom-4 left-2 lg:-bottom-6 lg:-left-6 z-20 flex items-center gap-3 px-6 py-4 bg-white border border-brand-secondary/10 rounded-2xl shadow-2xl shadow-brand-secondary/10"
             >
               <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-secondary to-indigo-400 text-white flex items-center justify-center shadow-lg shadow-brand-secondary/20">
                 <ShieldCheck className="w-5 h-5" />
@@ -87,8 +86,7 @@ const About = () => {
           {/* Content Side */}
           <div
             className={cn(
-              "flex flex-col justify-center",
-              isRtl ? "lg:order-1" : "lg:order-2"
+              "flex flex-col justify-center lg:order-1"
             )}
           >
             {/* Badge */}
@@ -110,7 +108,7 @@ const About = () => {
             )}>
               {i18n.language === 'ar' ? (
                 <>
-                  <span className="block whitespace-nowrap">نبني مستقبلك بأعلى معايير</span>
+                  <span className="block lg:whitespace-nowrap">نبني مستقبلك بأعلى معايير</span>
                   <span className="text-brand-primary italic block">
                     الإبداع والاحترافية
                   </span>
@@ -139,7 +137,7 @@ const About = () => {
             </div>
 
             {/* Stats - رجعنا التصميم الأصلي */}
-            <div className="grid grid-cols-3 gap-10 pt-6">
+            <div className="grid grid-cols-3 gap-6 lg:gap-10 pt-6">
               
               <div className="flex flex-col gap-4 group">
                 <div className="w-12 h-12 rounded-2xl bg-brand-primary text-white flex items-center justify-center transition-all duration-300 group-hover:-translate-y-2 shadow-lg shadow-brand-primary/20">

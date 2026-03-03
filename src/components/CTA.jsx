@@ -63,7 +63,7 @@ const CTA = () => {
               >
                 <Link
                   to="/contact"
-                  className="bg-brand-primary text-white px-12 py-5 rounded-2xl text-lg font-bold flex items-center gap-4 shadow-xl hover:shadow-[0_20px_40px_rgba(var(--brand-primary-rgb),0.25)] transition-all"
+                  className="bg-brand-primary text-white px-10 lg:px-12 py-5 rounded-2xl text-lg font-bold flex items-center gap-4 shadow-xl hover:shadow-[0_20px_40px_rgba(var(--brand-primary-rgb),0.25)] transition-all"
                 >
                   <span className="text-white">
                     {t('cta.button')}
