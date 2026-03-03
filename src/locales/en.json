@@ -34,7 +34,7 @@
   "about": {
     "tag": "Vision & Mission",
     "title": "Your Bridge to Digital Success",
-    "description": "At agency 90, we believe every brand has a unique story that deserves to be told with the highest standards of creativity and professionalism.",
+    "description": "At agency 90, we believe every brand is a unique entity with unlimited potential. Our mission is to transform our clients' visions into a stunning reality through digital experiences that leave an unforgettable impact, committed to the highest global standards of quality and professionalism in every detail.",
     "banner": {
       "title": "About Us",
       "subtitle": "Crafting the extraordinary into digital reality"
@@ -58,9 +58,22 @@
       "description": "A group of elite creators and experts combining artistic vision with technical precision to turn your ideas into reality.",
       "roles": {
         "ceo": "Founder & CEO",
-        "creative": "Creative Director",
-        "tech": "CTO",
-        "marketing": "Marketing Manager"
+        "social": "Digital Marketing Specialist",
+        "designer": "Senior Graphic Designer"
+      },
+      "members": {
+        "mostafa": {
+          "name": "Mostafa Al-Samarrai",
+          "desc": "Social media promoter on Meta, Google Ads, and Snapchat for companies in Europe and the Middle East."
+        },
+        "saeed": {
+          "name": "Saeed Sinan",
+          "desc": "Company Director and Content Writer with over 5 years of experience in marketing and sales strategies."
+        },
+        "yusef": {
+          "name": "Yusef Ayman",
+          "desc": "Visual identity and logo designer for major companies in the Middle East and Europe, with 5 years of experience."
+        }
       }
     },
     "testimonials": {
@@ -123,11 +136,10 @@
     "getInTouch": "Get in Touch",
     "description": "We are here to answer your inquiries and help you achieve your vision.",
     "address": "Waterkers 55, 1689PJ, Zwaag Hoorn",
-    "phone": "Phone Number",
-    "phoneValue": "+31 6 42786606",
+    "phoneValue": "+962 7 8804 0051",
     "email": "Email Address",
     "emailLabel": "Email Address",
-    "emailValue": "Saeedsinan180@gmail.com",
+    "emailValue": "the90agecy@gmail.com",
     "taxNumber": "Tax Number",
     "taxValue": "12786594",
     "hours": "Saturday to Friday 9:00 AM - 5:00 PM",

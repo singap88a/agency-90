@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { Github, Linkedin, Twitter, Sparkles } from 'lucide-react';
+import { Github, Linkedin, Twitter, Sparkles, Instagram, Mail } from 'lucide-react';
 
 const AboutTeam = () => {
     const { t, i18n } = useTranslation();
@@ -9,28 +9,28 @@ const AboutTeam = () => {
 
     const team = [
         {
-            name: "Ahmed Singap",
+            name: t('about.team.members.saeed.name'),
             role: t('about.team.roles.ceo'),
-            desc: "الرؤية والقيادة وراء كل قصة نجاح، متخصص في بناء الأنظمة الإبداعية وتطوير استراتيجيات النمو المبتكرة.",
-            image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80",
+            desc: t('about.team.members.saeed.desc'),
+            image: "/teem_img/saeed.jpeg",
+            instagram: "https://www.instagram.com/saeed.sinan2002?igsh=MTJyMDRvdzV2eW10dg%3D%3D&utm_source=qr",
+            email: "Saeedsinan180@gmail.com"
         },
         {
-            name: "Sarah Johnson",
-            role: t('about.team.roles.creative'),
-            desc: "مبدعة في صناعة المحتوى المرئي والسينمائي، تجعل من كل علامة تجارية لوحة فنية نابضة بالحياة.",
-            image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=600&q=80",
+            name: t('about.team.members.mostafa.name'),
+            role: t('about.team.roles.social'),
+            desc: t('about.team.members.mostafa.desc'),
+            image: "/teem_img/mostafa.jpeg",
+            instagram: "https://www.instagram.com/mostafa.sinan_?igsh=NnM0NndnOW12MDBp",
+            email: "Mostafa.alsamarrae@gmail.com"
         },
         {
-            name: "Michael Chen",
-            role: t('about.team.roles.tech'),
-            desc: "المهندس البارع في تطوير الحلول التقنية والذكاء الاصطناعي، يضمن الدقة والكفاءة في كل سطر برمجيا.",
-            image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80",
-        },
-        {
-            name: "Elena Rodriguez",
-            role: t('about.team.roles.marketing'),
-            desc: "خبيرة في تحليل البيانات واستهداف الجمهور، تحقق أعلى عائد استثمار لعملائنا من خلال حملات ذكية.",
-            image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80",
+            name: t('about.team.members.yusef.name'),
+            role: t('about.team.roles.designer'),
+            desc: t('about.team.members.yusef.desc'),
+            image: "/teem_img/Yusef.jpeg",
+            instagram: "https://www.instagram.com/srt8.sport?igsh=ZHl2cXpiNng1bWhh",
+            email: "yosefyyy64@gmail.com"
         }
     ];
 
@@ -80,7 +80,7 @@ const AboutTeam = () => {
                     </motion.p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 text-center">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 text-center items-center justify-center">
                     {team.map((member, index) => (
                         <motion.div
                             key={index}
@@ -103,7 +103,7 @@ const AboutTeam = () => {
                                     {/* Initial Content: Name and Role */}
                                     <div className="transition-all duration-700 transform group-hover:-translate-y-72">
                                         <h3 className="text-white text-2xl lg:text-3xl font-bold mb-2 tracking-tighter">{member.name}</h3>
-                                        <p className="text-brand-secondary font-bold text-[10px] tracking-widest">{member.role}</p>
+                                        <p className="text-brand-primary font-bold text-[10px] tracking-widest">{member.role}</p>
                                     </div>
 
                                     {/* Hover Detailed Content: Description and Socials */}
@@ -114,14 +114,11 @@ const AboutTeam = () => {
                                             </p>
                                         </div>
                                         <div className="flex items-center justify-center gap-6">
-                                            <a href="#" className="w-12 h-12 bg-white/10 backdrop-blur-3xl rounded-2xl flex items-center justify-center text-white hover:bg-brand-primary hover:text-brand-dark hover:scale-110 hover:-rotate-12 transition-all">
-                                                <Linkedin className="w-5 h-5" />
+                                            <a href={member.instagram} target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white/10 backdrop-blur-3xl rounded-2xl flex items-center justify-center text-white hover:bg-brand-primary hover:text-brand-dark hover:scale-110 hover:-rotate-12 transition-all">
+                                                <Instagram className="w-5 h-5" />
                                             </a>
-                                            <a href="#" className="w-12 h-12 bg-white/10 backdrop-blur-3xl rounded-2xl flex items-center justify-center text-white hover:bg-brand-primary hover:text-brand-dark hover:scale-110 hover:-rotate-12 transition-all">
-                                                <Twitter className="w-5 h-5" />
-                                            </a>
-                                            <a href="#" className="w-12 h-12 bg-white/10 backdrop-blur-3xl rounded-2xl flex items-center justify-center text-white hover:bg-brand-primary hover:text-brand-dark hover:scale-110 hover:-rotate-12 transition-all">
-                                                <Github className="w-5 h-5" />
+                                            <a href={`mailto:${member.email}`} className="w-12 h-12 bg-white/10 backdrop-blur-3xl rounded-2xl flex items-center justify-center text-white hover:bg-brand-primary hover:text-brand-dark hover:scale-110 hover:-rotate-12 transition-all">
+                                                <Mail className="w-5 h-5" />
                                             </a>
                                         </div>
                                     </div>

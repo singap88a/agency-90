@@ -155,7 +155,7 @@ const Portfolio = () => {
               <SwiperSlide key={project.id}>
                 <div
                   onClick={() => handleProjectClick(project)}
-                  className="relative aspect-[3/4] rounded-[2rem] overflow-hidden cursor-pointer group shadow-md hover:shadow-2xl hover:shadow-brand-primary/20 transition-all duration-700 border border-brand-primary/10 hover:border-brand-primary/50"
+                  className="relative aspect-[3/4] rounded-[2rem] overflow-hidden cursor-pointer group shadow-md hover:shadow-2xl hover:shadow-brand-primary/30 transition-all duration-500 border-2 border-transparent hover:border-brand-primary"
                 >
                   {/* Image */}
                   <img
@@ -166,10 +166,10 @@ const Portfolio = () => {
                   />
 
                   {/* Professional Bottom Gradient Filter */}
-                  <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-t from-black/95 via-black/40 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute bottom-0 left-0 right-0 z-10 pointer-events-none h-3/4 bg-gradient-to-t from-[#7652A4]/90 via-[#7652A4]/50 to-transparent" />
 
                   {/* Top Right/Left Floating Action Badge */}
-                  <div className={`absolute top-4 ${isRtl ? 'left-4' : 'right-4'} z-20 flex items-center justify-center w-10 h-10 bg-white/10 backdrop-blur-md border border-white/20 text-white rounded-full shadow-lg group-hover:bg-brand-primary group-hover:border-brand-primary transition-all duration-500 group-hover:scale-110`}>
+                  <div className={`absolute top-4 ${isRtl ? 'left-4' : 'right-4'} z-20 flex items-center justify-center w-10 h-10 bg-white/10 backdrop-blur-md border border-white/20 text-brand-primary rounded-full shadow-lg group-hover:bg-brand-primary group-hover:text-white group-hover:border-brand-primary transition-all duration-500 group-hover:scale-110`}>
                     {project.type === 'video' ? (
                       <Play className="w-4 h-4 fill-current ml-0.5" />
                     ) : (
@@ -178,10 +178,10 @@ const Portfolio = () => {
                   </div>
 
                   {/* Bottom Content Overlay - Title & Description */}
-                  <div className="absolute bottom-0 left-0 right-0 z-20 p-6 flex flex-col justify-end transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 will-change-transform">
+                  <div className="absolute bottom-0 left-0 right-0 z-20 p-6 flex flex-col justify-end transition-transform duration-500 will-change-transform">
                     {/* Category Label */}
                     <motion.div 
-                      className="flex items-center gap-2 mb-3 opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                      className="flex items-center gap-2 mb-3 transition-opacity duration-300"
                     >
                       <span className="w-1.5 h-1.5 rounded-full bg-brand-primary animate-pulse" />
                       <span className="text-[11px] font-bold tracking-[0.2em] text-brand-primary uppercase">
@@ -190,19 +190,17 @@ const Portfolio = () => {
                     </motion.div>
 
                     {/* Title */}
-                    <h3 className="text-white text-2xl font-bold tracking-tight leading-tight mb-2 drop-shadow-lg">
+                    <h3 className="text-white group-hover:text-brand-primary text-2xl font-bold tracking-tight leading-tight mb-2 drop-shadow-lg transition-colors duration-300">
                       {i18n.language === 'ar' ? project.title_ar : project.title_en}
                     </h3>
                     
                     {/* Subtle line separator */}
-                    <div className="w-8 h-[2px] bg-brand-primary/50 mb-3 group-hover:w-16 group-hover:bg-brand-primary transition-all duration-500" />
+                    <div className="w-16 h-[2px] bg-brand-primary mb-3 transition-all duration-500" />
 
-                    {/* Description Details (Revealed on Hover) */}
+                    {/* Description Details */}
                     <div className="overflow-hidden">
-                      <p className="text-gray-300 text-sm font-medium leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0 line-clamp-2">
-                        {isRtl 
-                          ? 'استكشف تفاصيل هذا المشروع الإبداعي وتأثيراته البصرية الرائعة التي تعكس رؤية النخبة.'
-                          : 'Explore the details of this creative project showcasing elite visual impact.'}
+                      <p className="text-gray-300 text-sm font-medium leading-relaxed transition-all duration-500 line-clamp-2">
+                        {isRtl ? project.desc_ar : project.desc_en}
                       </p>
                     </div>
                   </div>

@@ -26,7 +26,18 @@ const ProjectsPage = () => {
     { id: 'videos', icon: Play, label: isRtl ? 'فيديوهات تسويقية' : 'Marketing Videos' }
   ];
 
+  const INITIAL_COUNT = 6;
+  const LOAD_MORE = 6;
+  const [visibleCount, setVisibleCount] = useState(INITIAL_COUNT);
+
   const filteredProjects = filter === 'all' ? projectsData : projectsData.filter(p => p.category === filter);
+  const visibleProjects = filteredProjects.slice(0, visibleCount);
+  const hasMore = visibleCount < filteredProjects.length;
+
+  const handleFilterChange = (id) => {
+    setFilter(id);
+    setVisibleCount(INITIAL_COUNT);
+  };
 
   const handleProjectClick = (project) => {
     if (project.type === 'video') {
@@ -61,7 +72,7 @@ const ProjectsPage = () => {
             {categories.map((cat) => (
               <button
                 key={cat.id}
-                onClick={() => setFilter(cat.id)}
+              onClick={() => handleFilterChange(cat.id)}
                 className={`px-6 md:px-8 py-3 md:py-4 rounded-2xl transition-all text-[10px] md:text-xs font-bold tracking-widest flex items-center gap-3
                   ${filter === cat.id ? 'bg-brand-primary text-white shadow-[0_10px_30px_rgba(var(--brand-primary-rgb),0.2)] scale-105' : 'text-brand-dark/40 hover:text-brand-dark hover:bg-black/5'}`}
               >
@@ -77,7 +88,9 @@ const ProjectsPage = () => {
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-10"
         >
           <AnimatePresence mode="popLayout">
-            {filteredProjects.map((project, idx) => (
+          {filteredProjects.length === 0 ? (
+            <div className="col-span-3 text-center text-gray-400 py-20 text-lg">No projects found.</div>
+          ) : visibleProjects.map((project, idx) => (
               <motion.div
                 key={project.id}
                 layout
@@ -88,7 +101,7 @@ const ProjectsPage = () => {
                 className="flex flex-col gap-6 group cursor-pointer"
                 onClick={() => handleProjectClick(project)}
               >
-                <div className={`relative aspect-[4/5] rounded-[2.5rem] overflow-hidden cursor-pointer group shadow-lg hover:shadow-2xl hover:shadow-brand-primary/20 transition-all duration-700 border-2 ${project.type === 'video' ? 'border-brand-primary/50' : 'border-brand-primary/10 hover:border-brand-primary/50'}`}>
+                <div className={`relative aspect-[4/5] rounded-[2.5rem] overflow-hidden cursor-pointer group shadow-lg hover:shadow-2xl hover:shadow-brand-primary/30 transition-all duration-500 border-2 ${project.type === 'video' ? 'border-brand-primary' : 'border-transparent hover:border-brand-primary'}`}>
                   {/* Image */}
                   <img 
                     src={project.type === 'video' ? project.thumbnail : project.images[0]} 
@@ -98,10 +111,10 @@ const ProjectsPage = () => {
                   />
                   
                   {/* Professional Bottom Gradient Filter */}
-                  <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-t from-black/95 via-black/40 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute bottom-0 left-0 right-0 z-10 pointer-events-none h-3/4 bg-gradient-to-t from-[#7652A4]/90 via-[#7652A4]/50 to-transparent" />
 
                   {/* Top Right/Left Floating Action Badge */}
-                  <div className={`absolute top-6 ${isRtl ? 'left-6' : 'right-6'} z-20 flex items-center justify-center w-12 h-12 bg-white/10 backdrop-blur-md border border-white/20 text-white rounded-2xl shadow-lg group-hover:bg-brand-primary group-hover:border-brand-primary transition-all duration-500 group-hover:scale-110`}>
+                  <div className={`absolute top-6 ${isRtl ? 'left-6' : 'right-6'} z-20 flex items-center justify-center w-12 h-12 bg-white/10 backdrop-blur-md border border-white/20 text-brand-primary rounded-2xl shadow-lg group-hover:bg-brand-primary group-hover:text-white group-hover:border-brand-primary transition-all duration-500 group-hover:scale-110`}>
                     {project.type === 'video' ? (
                       <Play className="w-5 h-5 fill-current ml-0.5" />
                     ) : (
@@ -110,10 +123,10 @@ const ProjectsPage = () => {
                   </div>
 
                   {/* Bottom Content Overlay - Title & Description */}
-                  <div className="absolute bottom-0 left-0 right-0 z-20 p-8 flex flex-col justify-end transform translate-y-6 group-hover:translate-y-0 transition-transform duration-500 will-change-transform">
+                  <div className="absolute bottom-0 left-0 right-0 z-20 p-8 flex flex-col justify-end transition-transform duration-500 will-change-transform">
                     {/* Category Label */}
                     <motion.div 
-                      className="flex items-center gap-2 mb-3 opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                      className="flex items-center gap-2 mb-3 transition-opacity duration-300"
                     >
                       <span className="w-1.5 h-1.5 rounded-full bg-brand-primary animate-pulse" />
                       <span className="text-xs font-bold tracking-[0.2em] text-brand-primary uppercase">
@@ -122,19 +135,17 @@ const ProjectsPage = () => {
                     </motion.div>
 
                     {/* Title */}
-                    <h3 className="text-white text-2xl lg:text-3xl font-bold tracking-tight leading-tight mb-3 drop-shadow-lg">
+                    <h3 className="text-white group-hover:text-brand-primary text-2xl lg:text-3xl font-bold tracking-tight leading-tight mb-3 drop-shadow-lg transition-colors duration-300">
                       {i18n.language === 'ar' ? project.title_ar : project.title_en}
                     </h3>
                     
                     {/* Subtle line separator */}
-                    <div className="w-10 h-[2px] bg-brand-primary/50 mb-4 group-hover:w-20 group-hover:bg-brand-primary transition-all duration-500" />
+                    <div className="w-20 h-[2px] bg-brand-primary mb-4 transition-all duration-500" />
 
-                    {/* Description Details (Revealed on Hover) */}
+                    {/* Description Details */}
                     <div className="overflow-hidden">
-                      <p className="text-gray-300 text-sm md:text-base font-medium leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0 line-clamp-2">
-                        {isRtl 
-                          ? 'استكشف تفاصيل هذا المشروع الإبداعي وتأثيراته البصرية الرائعة التي تعكس رؤية النخبة.'
-                          : 'Explore the details of this creative project showcasing elite visual impact.'}
+                      <p className="text-gray-300 text-sm md:text-base font-medium leading-relaxed transition-all duration-500 line-clamp-2">
+                        {isRtl ? project.desc_ar : project.desc_en}
                       </p>
                     </div>
                   </div>
@@ -143,6 +154,36 @@ const ProjectsPage = () => {
             ))}
           </AnimatePresence>
         </motion.div>
+
+        {/* Show More / Show Less Buttons */}
+        <div className="relative z-30 flex justify-center gap-6 mt-20 mb-10">
+          {hasMore && (
+            <motion.button
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => setVisibleCount(prev => prev + LOAD_MORE)}
+              className="px-12 py-5 rounded-2xl bg-[#F09238] text-white font-extrabold text-sm uppercase tracking-widest shadow-[0_15px_30px_rgba(240,146,56,0.3)] hover:shadow-[0_20px_40px_rgba(240,146,56,0.5)] transition-all duration-300 pointer-events-auto"
+            >
+              {isRtl ? 'عرض المزيد من الأعمال' : 'Show More Projects'}
+            </motion.button>
+          )}
+          {visibleCount > INITIAL_COUNT && (
+            <motion.button
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => setVisibleCount(INITIAL_COUNT)}
+              className="px-12 py-5 rounded-2xl border-2 border-[#F09238] text-[#F09238] font-extrabold text-sm uppercase tracking-widest hover:bg-[#F09238] hover:text-white transition-all duration-300"
+            >
+              {isRtl ? 'عرض أقل' : 'Show Less'}
+            </motion.button>
+          )}
+        </div>
+
+
       </div>
 
       <VideoModal

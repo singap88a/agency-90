@@ -11,9 +11,9 @@ const ContactPage = () => {
   }, []);
 
   return (
-    <div className="min-h-screen pt-20" style={{ backgroundColor: '#FDFDFD' }} >
+    <div className="min-h-screen pt-20 bg-brand-surface" >
       {/* Banner - خلفية نفس لون الصفحة */}
-      <section className="relative h-[50vh] md:h-[60vh] flex items-center justify-center overflow-hidden" style={{ backgroundColor: '#FDFDFD' }}>
+      <section className="relative h-[50vh] md:h-[60vh] flex items-center justify-center overflow-hidden bg-brand-surface">
         <div className="absolute inset-0 flex items-center justify-center">
           <img 
             src="/contact_us.jpg"
@@ -24,7 +24,7 @@ const ContactPage = () => {
       </section>
 
       {/* Contact Content */}
-      <div className="relative z-30" style={{ backgroundColor: '#FDFDFD' }}>
+      <div className="relative z-30 bg-brand-surface">
         <Contact isPage={true} />
       </div>
     </div>

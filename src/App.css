@@ -15,7 +15,7 @@ body {
     radial-gradient(at 0% 100%, rgba(var(--brand-secondary-rgb), 0.05) 0px, transparent 50%);
   color: var(--brand-dark);
   overflow-x: hidden;
-  font-family: 'IBM Plex Sans Arabic', 'Alexandria', 'Outfit', sans-serif;
+  font-family: 'Cairo', 'IBM Plex Sans Arabic', 'Alexandria', 'Outfit', sans-serif;
 }
 
 /* Custom Scrollbar */

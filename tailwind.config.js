@@ -16,8 +16,8 @@ export default {
         }
       },
       fontFamily: {
-        heading: ["IBM Plex Sans Arabic", "Alexandria", "Outfit", "sans-serif"],
-        body: ["IBM Plex Sans Arabic", "Alexandria", "Plus Jakarta Sans", "sans-serif"],
+        heading: ["Cairo", "IBM Plex Sans Arabic", "Alexandria", "Outfit", "sans-serif"],
+        body: ["Cairo", "IBM Plex Sans Arabic", "Alexandria", "Plus Jakarta Sans", "sans-serif"],
         latin: ["Outfit", "Plus Jakarta Sans", "sans-serif"],
       },
       animation: {

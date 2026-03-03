@@ -12,5 +12,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  [lang="ar"] {
+    font-family: 'Cairo', sans-serif;
+  }
+}
 
-
+@layer utilities {
+  .icy-glass {
+    @apply bg-white/20 backdrop-blur-xl border border-white/30 shadow-[0_8px_32px_0_rgba(255,255,255,0.1)];
+  }
+}
