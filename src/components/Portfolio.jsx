@@ -82,56 +82,50 @@ const Portfolio = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="flex items-center justify-between gap-8 mb-16"
+          className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-10 md:mb-16"
         >
                    {/* ── Text block (end side) ── */}
           <div className={cn("flex flex-col gap-3", isRtl ? "text-start items-start" : "text-left items-start")}>
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-brand-primary/20 shadow-sm">
               <Sparkles className="w-3.5 h-3.5 text-brand-primary animate-pulse" />
-              <span className="text-xs font-bold tracking-widest text-brand-primary">
+              <span className="text-xs font-bold tracking-widest text-brand-primary uppercase">
                 {isRtl ? 'الأعمال المتميزة' : 'Selected Projects'}
               </span>
             </div>
 
             {/* Title */}
-            <h2 className="text-3xl font-bold tracking-tighter text-brand-secondary md:text-5xl">
+            <h2 className="text-3xl font-bold tracking-tighter text-brand-secondary md:text-5xl leading-tight">
               {isRtl ? (
                 <>
                   أعمالنا{' '}
-                  <span className="text-brand-primary to-brand-primary/60 bg-clip-text">
-                    الإبداعية
-                  </span>
+                  <span className="text-brand-primary">الإبداعية</span>
                 </>
               ) : (
                 <>
-                  Our{' '}
-                  <span className="text-brand-primary to-brand-primary/60 bg-clip-text">
-                    Creative Work
-                  </span>
+                  Our <span className="text-brand-primary">Creative Work</span>
                 </>
               )}
             </h2>
 
             {/* Subtitle */}
-            <p className="max-w-sm text-sm font-medium leading-relaxed text-gray-500 md:text-base">
+            <p className="max-w-md text-sm md:text-base font-medium leading-relaxed text-gray-500">
               {isRtl
                 ? 'نبتكر حلولاً بصرية تعكس قوة علامتك التجارية في كل تفصيل'
                 : "Crafting elite visual solutions that reflect your brand's power in every detail"}
             </p>
           </div>
+          
           {/* ── Button (start side) ── */}
           <div className="shrink-0">
             <Link
               to="/projects"
-              className="group inline-flex items-center gap-3 px-7 py-3.5 bg-brand-primary text-white rounded-2xl hover:bg-brand-primary/90 transition-all duration-300 font-bold text-sm shadow-lg shadow-brand-primary/20"
+              className="group inline-flex items-center gap-3 px-8 py-4 bg-brand-primary text-white rounded-2xl hover:bg-brand-primary/90 transition-all duration-300 font-bold text-sm shadow-xl shadow-brand-primary/20 hover:-translate-y-1"
             >
               <span>{isRtl ? 'كل المشاريع' : 'All Projects'}</span>
               <ArrowUpRight className="w-4 h-4 transition-transform group-hover:rotate-12" />
             </Link>
           </div>
-
- 
         </motion.div>
 
         {/* ── Swiper: pure image cards with highly professional bottom overlay ── */}

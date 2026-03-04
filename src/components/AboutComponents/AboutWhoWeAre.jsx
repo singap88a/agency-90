@@ -8,7 +8,7 @@ const AboutWhoWeAre = () => {
     const isRtl = i18n.dir() === 'rtl';
 
     return (
-        <section className="py-32 bg-brand-surface overflow-hidden relative">
+        <section className="py-16 md:py-32 bg-brand-surface overflow-hidden relative">
             <div className="container mx-auto px-6 lg:px-24">
                 <div className="grid lg:grid-cols-2 gap-24 items-center">
                     {/* Text content - Now Order-1 in RTL (Left) and Order-2 in LTR (Right) to SWAP */}

@@ -6,14 +6,13 @@ import { Sparkles } from 'lucide-react';
 const AboutBanner = () => {
     const { t } = useTranslation();
     return (
-        <section className="relative h-[65vh] flex items-center justify-center overflow-hidden">
+        <section className="relative h-[25vh] md:h-[65vh] flex items-center justify-center overflow-hidden">
             <div className="absolute inset-0 z-0">
                 <img 
                     src="https://static.vecteezy.com/system/resources/previews/023/649/106/non_2x/about-us-button-web-banner-templates-illustration-free-vector.jpg" 
-                    alt="Office Banner" 
-                    className="w-full h-full object-cover"
+                    alt="About Us Banner" 
+                    className="w-full h-full object-cover object-center"
                 />
-          
             </div>
             
             {/* <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">

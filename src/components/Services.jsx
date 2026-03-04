@@ -69,23 +69,27 @@ const Services = () => {
             {services.map((service, idx) => (
               <SwiperSlide key={service.key} className="!h-auto pb-4">
                 <motion.div
-                  initial={{ opacity: 0, y: 40 }}
+                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.1, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-                  className="group h-full flex flex-col relative bg-white/90 backdrop-blur-3xl rounded-[2.5rem] p-6 lg:p-8 border border-brand-primary/30 shadow-[0_20px_40px_-10px_rgba(var(--brand-primary-rgb),0.15)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_25px_50px_-12px_rgba(var(--brand-primary-rgb),0.25)] overflow-hidden"
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ 
+                    duration: 0.5, 
+                    ease: [0.22, 1, 0.36, 1],
+                    delay: idx * 0.05 // Stagger based on index for smoother entrance
+                  }}
+                  className="group h-full flex flex-col relative bg-white/95 lg:bg-white/90 backdrop-blur-md lg:backdrop-blur-3xl rounded-[2rem] lg:rounded-[2.5rem] p-6 lg:p-8 border border-brand-primary/20 lg:border-brand-primary/30 shadow-lg lg:shadow-[0_20px_40px_-10px_rgba(var(--brand-primary-rgb),0.15)] transition-all duration-500 hover:-translate-y-2 hover:shadow-xl lg:hover:shadow-[0_25px_50px_-12px_rgba(var(--brand-primary-rgb),0.25)] overflow-hidden transform-gpu"
                 >
                   {/* Premium Background Mesh Effect */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/[0.04] via-transparent to-brand-primary/[0.06] transition-opacity duration-500" />
-                  <div className={`absolute -top-20 ${i18n.language === 'ar' ? '-left-20' : '-right-20'} w-48 h-48 bg-brand-primary/20 blur-[60px] rounded-full transition-all duration-700`} />
+                  <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/[0.02] lg:from-brand-primary/[0.04] via-transparent to-brand-primary/[0.03] lg:to-brand-primary/[0.06] transition-opacity duration-500" />
+                  <div className={`absolute -top-20 ${i18n.language === 'ar' ? '-left-20' : '-right-20'} w-48 h-48 bg-brand-primary/10 lg:bg-brand-primary/20 blur-[40px] lg:blur-[60px] rounded-full transition-all duration-700 pointer-events-none`} />
                   
-                  <div className="relative z-10 flex flex-col flex-grow">
+                  <div className="relative z-10 flex flex-col flex-grow will-change-transform">
                     {/* Icon Container - Refined Glassmorphism */}
                     <div className="mb-8 lg:mb-10 relative flex">
-                      <div className="w-14 h-14 lg:w-16 lg:h-16 rounded-2xl bg-brand-primary shadow-[0_20px_40px_rgba(var(--brand-primary-rgb),0.3)] flex items-center justify-center text-white transition-all duration-500 relative z-10">
+                      <div className="w-14 h-14 lg:w-16 lg:h-16 rounded-2xl bg-brand-primary shadow-lg lg:shadow-[0_20px_40px_rgba(var(--brand-primary-rgb),0.3)] flex items-center justify-center text-white transition-all duration-500 relative z-10">
                         <service.icon className="w-7 h-7 lg:w-8 lg:h-8" />
                       </div>
-                      <div className="absolute -inset-4 bg-brand-primary/20 blur-2xl rounded-full opacity-60 transition-opacity duration-500" />
+                      <div className="absolute -inset-4 bg-brand-primary/10 lg:bg-brand-primary/20 blur-xl lg:blur-2xl rounded-full opacity-60 transition-opacity duration-500" />
                     </div>
 
                     <h3 className="text-xl lg:text-2xl font-bold mb-8 lg:mb-10 tracking-tighter leading-tight text-brand-primary transition-colors duration-500">
@@ -107,7 +111,7 @@ const Services = () => {
 
                   {/* Professional Background Number - Direction Aware */}
                   <span 
-                    className={`absolute top-6 lg:top-8 ${i18n.language === 'ar' ? 'left-6 lg:left-8' : 'right-6 lg:right-8'} text-[50px] lg:text-[60px] font-black pointer-events-none select-none z-0 transition-all duration-700 transform scale-110 leading-none`}
+                    className={`absolute top-6 lg:top-8 ${i18n.language === 'ar' ? 'left-6 lg:left-8' : 'right-6 lg:right-8'} text-[50px] lg:text-[60px] font-black pointer-events-none select-none z-0 transition-all duration-700 transform scale-110 leading-none opacity-20 lg:opacity-100`}
                     style={{
                       WebkitTextStroke: '2px rgba(var(--brand-primary-rgb), 0.15)',
                       color: 'transparent'
