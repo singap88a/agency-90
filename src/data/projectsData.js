@@ -223,5 +223,29 @@ export const projectsData = [
     desc_en: 'Reels explicitly designed for rapid spread and prominent visibility in algorithms.',
     thumbnail: '/img_vedio/6.png',
     videoUrl: 'https://youtube.com/shorts/r92Nmv7XmgU?si=baePVVkrDXJHgGtj'
+  },
+
+  // 🌐 Websites
+  {
+    id: 101,
+    category: 'websites',
+    type: 'website',
+    title_ar: 'تایم سيكريت للساعات الفاخرة',
+    title_en: 'Time Secret Luxury Watches',
+    desc_ar: 'منصة إلكترونية متخصصة في بيع وشراء وتجارة الساعات الفاخرة، تقدم تجربة مستخدم راقية تعكس فخامة العلامة التجارية.',
+    desc_en: 'An exclusive e-commerce platform for buying, selling, and trading luxury watches, offering a premium user experience.',
+    images: ['/website_img/timesecret.png'], 
+    url: 'https://www.timesecret.ae/'
+  },
+  {
+    id: 102,
+    category: 'websites',
+    type: 'website',
+    title_ar: 'مجموعة أكاد فارما الطبية',
+    title_en: 'AKAD Pharma Group',
+    desc_ar: 'موقع إلكتروني رسمي لمجموعة طبية رائدة، يهدف إلى تعزيز الرعاية الصحية وتقديم خدمات علاجية بمعايير عالمية.',
+    desc_en: 'The official website of a leading medical group dedicated to promoting healthcare and providing world-class treatments.',
+    images: ['/website_img/akad-pharma.png'],
+    url: 'https://akad-pharma.com/'
   }
 ];

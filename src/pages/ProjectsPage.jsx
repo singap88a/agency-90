@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, LayoutGrid, Share2, Play, Image as ImageIcon, Box, ChevronRight, ChevronLeft } from 'lucide-react';
+import { Search, LayoutGrid, Share2, Play, Image as ImageIcon, Box, ChevronRight, ChevronLeft, Globe } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
@@ -21,13 +21,14 @@ const ProjectsPage = () => {
 
   const categories = [
     { id: 'all', icon: LayoutGrid, label: isRtl ? 'الكل' : 'All' },
+    { id: 'websites', icon: Globe, label: isRtl ? 'مواقع إلكترونية' : 'Websites' },
     { id: 'design', icon: Box, label: isRtl ? 'تصاميم إبداعية' : 'Creative Design' },
     { id: 'marketing', icon: Share2, label: isRtl ? 'سوشيال ميديا' : 'Social Media' },
     { id: 'videos', icon: Play, label: isRtl ? 'فيديوهات تسويقية' : 'Marketing Videos' }
   ];
 
-  const INITIAL_COUNT = 6;
-  const LOAD_MORE = 6;
+  const INITIAL_COUNT = 9;
+  const LOAD_MORE = 9;
   const [visibleCount, setVisibleCount] = useState(INITIAL_COUNT);
 
   const filteredProjects = filter === 'all' ? projectsData : projectsData.filter(p => p.category === filter);
@@ -42,6 +43,8 @@ const ProjectsPage = () => {
   const handleProjectClick = (project) => {
     if (project.type === 'video') {
       setSelectedVideo(project.videoUrl);
+    } else if (project.type === 'website') {
+      window.open(project.url, '_blank');
     } else {
       setSelectedGallery(project.images);
     }
@@ -67,16 +70,18 @@ const ProjectsPage = () => {
             {t('nav.portfolio')}
           </motion.h1>
           
-          {/* Enhanced Filter Visibility */}
-          <div className="flex flex-wrap justify-center gap-4 bg-white/70 backdrop-blur-xl p-3 rounded-[2rem] border border-black/5 max-w-3xl mx-auto shadow-xl sticky top-24 z-50">
+          {/* Professional Pill Dashboard Filter */}
+          <div className="flex flex-nowrap overflow-x-auto hide-scrollbar justify-start md:justify-center gap-1.5 md:gap-2 bg-white/95 backdrop-blur-2xl p-1.5 rounded-full border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] w-fit max-w-[95%] md:max-w-5xl mx-auto sticky top-28 z-50">
             {categories.map((cat) => (
               <button
                 key={cat.id}
-              onClick={() => handleFilterChange(cat.id)}
-                className={`px-6 md:px-8 py-3 md:py-4 rounded-2xl transition-all text-[10px] md:text-xs font-bold tracking-widest flex items-center gap-3
-                  ${filter === cat.id ? 'bg-brand-primary text-white shadow-[0_10px_30px_rgba(var(--brand-primary-rgb),0.2)] scale-105' : 'text-brand-dark/40 hover:text-brand-dark hover:bg-black/5'}`}
+                onClick={() => handleFilterChange(cat.id)}
+                className={`px-5 md:px-6 py-2.5 rounded-full transition-all duration-300 text-[11px] md:text-[12px] font-bold tracking-wide flex items-center gap-2 whitespace-nowrap select-none flex-shrink-0
+                  ${filter === cat.id 
+                    ? 'bg-brand-primary text-white shadow-md shadow-brand-primary/20' 
+                    : 'text-slate-500 hover:text-brand-dark hover:bg-slate-50'}`}
               >
-                <cat.icon className="w-4 h-4" />
+                <cat.icon className={`w-4 h-4 transition-colors ${filter === cat.id ? 'text-white' : 'text-slate-400'}`} />
                 {cat.label}
               </button>
             ))}
@@ -117,6 +122,8 @@ const ProjectsPage = () => {
                   <div className={`absolute top-6 ${isRtl ? 'left-6' : 'right-6'} z-20 flex items-center justify-center w-12 h-12 bg-white/10 backdrop-blur-md border border-white/20 text-brand-primary rounded-2xl shadow-lg group-hover:bg-brand-primary group-hover:text-white group-hover:border-brand-primary transition-all duration-500 group-hover:scale-110`}>
                     {project.type === 'video' ? (
                       <Play className="w-5 h-5 fill-current ml-0.5" />
+                    ) : project.type === 'website' ? (
+                      <Globe className="w-5 h-5" />
                     ) : (
                       <ImageIcon className="w-5 h-5" />
                     )}

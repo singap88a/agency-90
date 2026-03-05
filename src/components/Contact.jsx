@@ -49,6 +49,7 @@ const Contact = ({ isPage = false }) => {
   ];
 
   const services = [
+    { value: 'websites', label: t('services.websites', 'مواقع إلكترونية') },
     { value: 'branding', label: t('services.branding', 'تصميم الهوية التجارية') },
     { value: 'content', label: t('services.content', 'المحتوى الاستراتيجي') },
     { value: 'ads', label: t('services.ads', 'الإعلانات الممولة') },

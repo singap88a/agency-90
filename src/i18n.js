@@ -19,12 +19,13 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    fallbackLng: 'ar',
+    lng: 'nl',
+    fallbackLng: 'nl',
     interpolation: {
       escapeValue: false,
     },
     detection: {
-      order: ['queryString', 'cookie', 'localStorage', 'navigator', 'path', 'subdomain'],
+      order: ['localStorage', 'cookie', 'queryString', 'navigator', 'path', 'subdomain'],
       caches: ['localStorage', 'cookie'],
     }
   });
