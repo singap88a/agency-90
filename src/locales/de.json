@@ -5,13 +5,15 @@
     "about": "Über uns",
     "portfolio": "Portfolio",
     "pricing": "Preise",
+    "investment": "Investitionen",
     "contact": "Kontakt",
     "stay_connected": "In Kontakt bleiben",
     "privacy": "Datenschutzerklärung",
     "terms": "Nutzungsbedingungen",
     "description": "Kreativagentur für digitale Lösungen – Kunst trifft Technologie.",
     "developed_by": "Entwickelt von",
-    "developer_name": "Ahmed Singap"
+    "developer_name": "Ahmed Singap",
+    "select_language": "Sprache wählen"
   },
   "common": {
     "showMore": "Mehr anzeigen",

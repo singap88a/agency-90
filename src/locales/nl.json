@@ -5,13 +5,15 @@
     "about": "Over ons",
     "portfolio": "Portfolio",
     "pricing": "Prijzen",
+    "investment": "Investering",
     "contact": "Contact",
     "stay_connected": "Blijf verbonden",
     "privacy": "Privacybeleid",
     "terms": "Algemene Voorwaarden",
     "description": "Creatief bureau gespecialiseerd in digitale oplossingen – kunst ontmoet technologie.",
     "developed_by": "Ontwikkeld door",
-    "developer_name": "Ahmed Singap"
+    "developer_name": "Ahmed Singap",
+    "select_language": "Taal selecteren"
   },
   "common": {
     "showMore": "Meer weergeven",
