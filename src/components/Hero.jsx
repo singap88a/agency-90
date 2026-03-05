@@ -18,12 +18,14 @@ const Hero = () => {
     >
       {/* Background Image - Full Natural Display */}
       <div
-        className="absolute inset-0 z-0"
+        className="absolute inset-0 z-0 bg-brand-dark"
       >
         <img
           src={i18n.language === 'ar' ? '/hero-ar.png' : '/hero-en.png'}
           alt="Professional Background"
           className="w-full h-full object-cover" 
+          fetchpriority="high"
+          loading="eager"
         />
       </div>
 
