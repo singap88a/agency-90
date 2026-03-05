@@ -52,7 +52,25 @@
       "title": "Creatief Team",
       "subtitle": "Expertise die levert",
       "description": "Een groep elite creatieven en experts die artistieke visie combineren met technische precisie.",
-      "roles": { "ceo": "Oprichter & CEO", "creative": "Creatief Directeur", "tech": "CTO", "marketing": "Marketing Manager" }
+      "roles": {
+        "ceo": "Oprichter & CEO",
+        "social": "Specialist in digitale marketing",
+        "designer": "Senior Grafisch Ontwerper"
+      },
+      "members": {
+        "mostafa": {
+          "name": "Mostafa Al-Samarrai",
+          "desc": "Social media promoter op Meta, Google Ads en Snapchat voor bedrijven in Europa en het Midden-Oosten."
+        },
+        "saeed": {
+          "name": "Saeed Sinan",
+          "desc": "Bedrijfsdirecteur en Contentschrijver met meer dan 5 jaar ervaring in marketing- en verkoopstrategieën."
+        },
+        "yusef": {
+          "name": "Yusef Ayman",
+          "desc": "Ontwerper van visuele identiteit en logo's voor grote bedrijven in het Midden-Oosten en Europa, met 5 jaar ervaring."
+        }
+      }
     },
     "testimonials": {
       "title": "Klantgetuigenissen",

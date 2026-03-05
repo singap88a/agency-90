@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Zoom } from 'swiper/modules';
@@ -13,19 +12,13 @@ const GalleryModal = ({ isOpen, onClose, images, initialSlide = 0 }) => {
   if (!images || images.length === 0) return null;
 
   return ReactDOM.createPortal(
-    <AnimatePresence>
+    <>
       {isOpen && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
+        <div
           className="fixed inset-0 z-[80] flex items-center justify-center bg-white/95 backdrop-blur-3xl px-4 md:px-10 py-24"
         >
           {/* Main Slider */}
-          <motion.div
-            initial={{ scale: 0.9, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 0.9, opacity: 0 }}
+          <div
             className="w-full h-full max-w-7xl max-h-[90vh] relative flex flex-col items-center justify-center"
           >
             {/* Close Button - Positioned Outside Card Content */}
@@ -78,10 +71,10 @@ const GalleryModal = ({ isOpen, onClose, images, initialSlide = 0 }) => {
                 </button>
               </>
             )}
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       )}
-    </AnimatePresence>,
+    </>,
     document.body
   );
 };

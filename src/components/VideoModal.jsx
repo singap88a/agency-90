@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 
 const VideoModal = ({ isOpen, onClose, videoUrl }) => {
@@ -24,18 +23,11 @@ const VideoModal = ({ isOpen, onClose, videoUrl }) => {
   const embedUrl = getEmbedUrl(videoUrl);
 
   return (
-    <AnimatePresence>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        className="fixed inset-0 z-[80] flex items-center justify-center pt-20 bg-white/95 backdrop-blur-3xl"
-        onClick={onClose}
-      >
-        <motion.div
-          initial={{ scale: 0.9, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          exit={{ scale: 0.9, opacity: 0 }}
+    <div
+      className="fixed inset-0 z-[80] flex items-center justify-center pt-20 bg-white/95 backdrop-blur-3xl"
+      onClick={onClose}
+    >
+        <div
           className="relative w-full max-w-5xl"
           onClick={(e) => e.stopPropagation()}
         >
@@ -61,9 +53,8 @@ const VideoModal = ({ isOpen, onClose, videoUrl }) => {
               </div>
             )}
           </div>
-        </motion.div>
-      </motion.div>
-    </AnimatePresence>
+        </div>
+    </div>
   );
 };
 

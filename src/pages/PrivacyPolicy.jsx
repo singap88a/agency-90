@@ -1,15 +1,12 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion';
 
 const PrivacyPolicy = () => {
   const { t } = useTranslation();
 
   return (
     <div className="pt-40 pb-20 px-6 max-w-5xl mx-auto min-h-screen">
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
+      <div
         className="glass-card p-12 lg:p-20"
       >
         <h1 className="text-5xl lg:text-7xl font-black mb-12 tracking-tighter text-brand-primary">{t('nav.privacy')}</h1>
@@ -21,7 +18,7 @@ const PrivacyPolicy = () => {
             </div>
           ))}
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 };

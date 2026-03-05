@@ -1,7 +1,6 @@
 // Contact.jsx
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion';
 import { Phone, Instagram, Mail, Send, User, AtSign, Briefcase, MessageSquareText, ChevronDown, MapPin, Clock, MessagesSquare, PenLine, Sparkles, Globe, ArrowUpRight } from 'lucide-react';
 import { cn } from '../lib/utils';
 
@@ -111,21 +110,14 @@ const Contact = ({ isPage = false }) => {
           
           {/* 🏷️ Header Section */}
           <div className="text-center mb-12 md:mb-20 space-y-4 md:space-y-6">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+            <div
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-primary/5 text-brand-primary border border-brand-primary/10"
             >
               <MessagesSquare className="w-4 h-4" />
               <span className="text-[10px] md:text-xs font-black uppercase tracking-widest">{t('contact.formTitle', 'تواصل معنا')}</span>
-            </motion.div>
+            </div>
             
-            <motion.h2 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
+            <h2 
               className="text-3xl md:text-5xl font-black text-brand-secondary tracking-tight leading-tight"
             >
               {i18n.language === 'ar' ? (
@@ -133,25 +125,18 @@ const Contact = ({ isPage = false }) => {
               ) : (
                 <>We're Always Happy to <span className="text-brand-primary">Hear From You</span></>
               )}
-            </motion.h2>
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
+            </h2>
+            <p 
               className="text-gray-400 text-sm md:text-base font-medium max-w-2xl mx-auto px-4"
             >
               {t('contact.description', 'سواء كان لديك استفسار أو ترغب في بدء مشروع جديد، فريقنا جاهز لمساعدتك في أي وقت.')}
-            </motion.p>
+            </p>
           </div>
 
           <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-8 md:gap-16 items-start">
             
             {/* 💬 قسم تواصل معنا - خلفية بيضاء وطرق التواصل تحت بعض */}
-            <motion.div
-              initial={{ opacity: 0, x: isRtl ? 40 : -40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+            <div
               className="relative max-w-md mx-auto lg:max-w-none w-full"
             >
               {/* البطاقة البيضاء */}
@@ -174,7 +159,7 @@ const Contact = ({ isPage = false }) => {
                   {/* طرق التواصل */}
                   <div className="space-y-3 flex-1">
                     {contactMethods.map((item) => (
-                      <motion.a
+                      <a
                         key={item.id}
                         href={item.link}
                         target={item.id === 'social' || item.id === 'address' ? "_blank" : undefined}
@@ -197,7 +182,7 @@ const Contact = ({ isPage = false }) => {
                           </div>
                           <ArrowUpRight className="w-4 md:w-5 h-4 md:h-5 text-slate-300 group-hover:text-brand-primary transition-colors" />
                         </div>
-                      </motion.a>
+                      </a>
                     ))}
                   </div>
 
@@ -223,13 +208,10 @@ const Contact = ({ isPage = false }) => {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
             {/* 📝 Form Section */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
+            <div
               className="bg-white p-6 md:p-10 rounded-[2rem] md:rounded-[2.5rem] border border-slate-100 shadow-xl relative overflow-hidden h-full max-w-md mx-auto lg:max-w-none w-full"
             >
               <div className="absolute top-0 right-0 w-32 h-32 bg-brand-primary/5 rounded-full blur-[60px] -translate-y-1/2 translate-x-1/2" />
@@ -366,14 +348,11 @@ const Contact = ({ isPage = false }) => {
                   )} />
                 </button>
               </form>
-            </motion.div>
+            </div>
           </div>
 
           {/* 🗺️ Full Width Map */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+          <div
             className="mt-16 md:mt-24 rounded-[2rem] md:rounded-[2.5rem] overflow-hidden border border-slate-100 shadow-xl shadow-slate-200/50 relative group"
           >
             <div className="absolute inset-0 bg-brand-primary/5 pointer-events-none group-hover:opacity-0 transition-opacity duration-700" />
@@ -388,7 +367,7 @@ const Contact = ({ isPage = false }) => {
               title="Agency 90 Location"
               className="hover:opacity-90 transition-opacity duration-700"
             />
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

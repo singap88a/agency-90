@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { Eye, Target, Heart, Sparkles } from 'lucide-react';
 import { cn } from '../../lib/utils';
@@ -47,50 +46,35 @@ const AboutVision = () => {
             <div className="container mx-auto px-6 lg:px-24 relative z-10">
                 {/* Elite Header */}
                 <div className="max-w-4xl mx-auto text-center mb-24">
-                    <motion.div
-                        initial={{ opacity: 0, y: 15 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
+                    <div
                         className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white border border-brand-primary/20 shadow-sm mb-10"
                     >
                         <Sparkles className="w-4 h-4 text-brand-primary animate-pulse" />
                         <span className="text-sm font-bold tracking-widest text-brand-primary">
                             {t('about.vision_section.subtitle')}
                         </span>
-                    </motion.div>
+                    </div>
 
-                    <motion.h2
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.1 }}
+                    <h2
                         className="text-4xl md:text-6xl font-bold text-gray-900 mb-8 tracking-tighter"
                     >
                         <span className="bg-brand-primary to-brand-primary/60 bg-clip-text text-transparent">
                             {t('about.vision_section.title')}
                         </span>
-                    </motion.h2>
+                    </h2>
 
-                    <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.2 }}
+                    <p
                         className="text-lg md:text-xl text-gray-500 leading-relaxed max-w-4xl mx-auto font-medium"
                     >
                         {t('about.description')}
-                    </motion.p>
+                    </p>
                 </div>
 
                 {/* Grid of Vision Cards */}
                 <div className="grid lg:grid-cols-3 gap-8">
                     {visionItems.map((item, index) => (
-                        <motion.div
+                        <div
                             key={index}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: index * 0.1 }}
                             className="group relative h-full"
                         >
                             <div className="relative h-full bg-white/70 backdrop-blur-md border border-brand-primary rounded-[2.5rem] p-8 hover:shadow-2xl transition-all duration-500 hover:border-brand-primary/20 flex flex-col overflow-hidden">
@@ -121,7 +105,7 @@ const AboutVision = () => {
                                     <Sparkles className="w-4 h-4 text-brand-primary/30 group-hover:text-brand-primary transition-colors duration-500" />
                                 </div>
                             </div>
-                        </motion.div>
+                        </div>
                     ))}
                 </div>
             </div>

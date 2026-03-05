@@ -52,7 +52,25 @@
       "title": "Kreativ-Team",
       "subtitle": "Expertise, die liefert",
       "description": "Eine Gruppe von Elite-Kreativen und Experten, die künstlerische Vision mit technischer Präzision verbinden.",
-      "roles": { "ceo": "Gründer & CEO", "creative": "Kreativdirektor", "tech": "CTO", "marketing": "Marketingleiter" }
+      "roles": {
+        "ceo": "Gründer & CEO",
+        "social": "Experte für digitales Marketing",
+        "designer": "leitender Grafikdesigner"
+      },
+      "members": {
+        "mostafa": {
+          "name": "Mostafa Al-Samarrai",
+          "desc": "Social-Media-Promoter auf Meta, Google Ads und Snapchat für Unternehmen in Europa und im Nahen Osten."
+        },
+        "saeed": {
+          "name": "Saeed Sinan",
+          "desc": "Geschäftsführer und Content-Autor mit über 5 Jahren Erfahrung in Marketing- und Vertriebsstrategien."
+        },
+        "yusef": {
+          "name": "Yusef Ayman",
+          "desc": "Designer für visuelle Identität und Logos für große Unternehmen im Nahen Osten und in Europa, mit 5 Jahren Erfahrung."
+        }
+      }
     },
     "testimonials": {
       "title": "Kundenstimmen",

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion';
 import { Play, ImageIcon, ArrowUpRight, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -78,10 +77,7 @@ const Portfolio = () => {
           RTL: start = right, end = left.
           LTR: start = left, end = right.
         */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+        <div
           className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-10 md:mb-16"
         >
                    {/* ── Text block (end side) ── */}
@@ -126,7 +122,7 @@ const Portfolio = () => {
               <ArrowUpRight className="w-4 h-4 transition-transform group-hover:rotate-12" />
             </Link>
           </div>
-        </motion.div>
+        </div>
 
         {/* ── Swiper: pure image cards with highly professional bottom overlay ── */}
         <div className="w-full">
@@ -174,14 +170,14 @@ const Portfolio = () => {
                   {/* Bottom Content Overlay - Title & Description */}
                   <div className="absolute bottom-0 left-0 right-0 z-20 p-6 flex flex-col justify-end transition-transform duration-500 will-change-transform">
                     {/* Category Label */}
-                    <motion.div 
+                    <div 
                       className="flex items-center gap-2 mb-3 transition-opacity duration-300"
                     >
                       <span className="w-1.5 h-1.5 rounded-full bg-brand-primary animate-pulse" />
                       <span className="text-[11px] font-bold tracking-[0.2em] text-brand-primary uppercase">
                         {t(`services.${project.category}`)}
                       </span>
-                    </motion.div>
+                    </div>
 
                     {/* Title */}
                     <h3 className="text-white group-hover:text-brand-primary text-2xl font-bold tracking-tight leading-tight mb-2 drop-shadow-lg transition-colors duration-300">

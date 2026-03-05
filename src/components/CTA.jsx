@@ -1,6 +1,4 @@
-import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -15,10 +13,7 @@ const CTA = () => {
     >
       <div className="max-w-6xl mx-auto">
 
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+        <div
           className="relative rounded-[2.5rem] overflow-hidden border border-slate-200 px-10 lg:px-16 py-12 bg-gradient-to-br from-white via-slate-50 to-white shadow-lg"
         >
 
@@ -57,10 +52,7 @@ const CTA = () => {
             {/* 🚀 الزرار على الشمال خالص */}
             <div className="shrink-0">
 
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
+              <div>
                 <Link
                   to="/contact"
                   className="bg-brand-primary text-white px-10 lg:px-12 py-5 rounded-2xl text-lg font-bold flex items-center gap-4 shadow-xl hover:shadow-[0_20px_40px_rgba(var(--brand-primary-rgb),0.25)] transition-all"
@@ -75,13 +67,13 @@ const CTA = () => {
                     <ArrowRight className="w-5 h-5 text-white" />
                   )}
                 </Link>
-              </motion.div>
+              </div>
 
             </div>
 
           </div>
 
-        </motion.div>
+        </div>
       </div>
     </section>
   );

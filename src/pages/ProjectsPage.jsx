@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { motion, AnimatePresence } from 'framer-motion';
 import { Search, LayoutGrid, Share2, Play, Image as ImageIcon, Box, ChevronRight, ChevronLeft, Globe } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
@@ -55,20 +54,16 @@ const ProjectsPage = () => {
       {/* Container spacing fixed to match Navbar/Footer */}
       <div className="max-w-7xl mx-auto px-6  ">
         <div className="text-center mb-20 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+          <div
             className="text-brand-primary font-bold tracking-widest text-xs mb-6"
           >
             Showcase
-          </motion.div>
-          <motion.h1 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+          </div>
+          <h1 
             className="text-6xl md:text-8xl font-bold mb-12 tracking-tighter text-brand-primary"
           >
             {t('nav.portfolio')}
-          </motion.h1>
+          </h1>
           
           {/* Professional Pill Dashboard Filter */}
           <div className="flex flex-nowrap overflow-x-auto hide-scrollbar justify-start md:justify-center gap-1.5 md:gap-2 bg-white/95 backdrop-blur-2xl p-1.5 rounded-full border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] w-fit max-w-[95%] md:max-w-5xl mx-auto sticky top-28 z-50">
@@ -88,21 +83,14 @@ const ProjectsPage = () => {
           </div>
         </div>
 
-        <motion.div 
-          layout
+        <div 
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-10"
         >
-          <AnimatePresence mode="popLayout">
           {filteredProjects.length === 0 ? (
             <div className="col-span-3 text-center text-gray-400 py-20 text-lg">No projects found.</div>
           ) : visibleProjects.map((project, idx) => (
-              <motion.div
+              <div
                 key={project.id}
-                layout
-                initial={{ opacity: 0, scale: 0.9, y: 20 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
-                exit={{ opacity: 0, scale: 0.9, y: 20 }}
-                transition={{ duration: 0.8, delay: idx * 0.05 }}
                 className="flex flex-col gap-6 group cursor-pointer"
                 onClick={() => handleProjectClick(project)}
               >
@@ -132,14 +120,14 @@ const ProjectsPage = () => {
                   {/* Bottom Content Overlay - Title & Description */}
                   <div className="absolute bottom-0 left-0 right-0 z-20 p-8 flex flex-col justify-end transition-transform duration-500 will-change-transform">
                     {/* Category Label */}
-                    <motion.div 
+                    <div 
                       className="flex items-center gap-2 mb-3 transition-opacity duration-300"
                     >
                       <span className="w-1.5 h-1.5 rounded-full bg-brand-primary animate-pulse" />
                       <span className="text-xs font-bold tracking-[0.2em] text-brand-primary uppercase">
                         {t(`services.${project.category}`)}
                       </span>
-                    </motion.div>
+                    </div>
 
                     {/* Title */}
                     <h3 className="text-white group-hover:text-brand-primary text-2xl lg:text-3xl font-bold tracking-tight leading-tight mb-3 drop-shadow-lg transition-colors duration-300">
@@ -157,36 +145,27 @@ const ProjectsPage = () => {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
-          </AnimatePresence>
-        </motion.div>
+        </div>
 
         {/* Show More / Show Less Buttons */}
         <div className="relative z-30 flex justify-center gap-6 mt-20 mb-10">
           {hasMore && (
-            <motion.button
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+            <button
               onClick={() => setVisibleCount(prev => prev + LOAD_MORE)}
               className="px-12 py-5 rounded-2xl bg-[#F09238] text-white font-extrabold text-sm uppercase tracking-widest shadow-[0_15px_30px_rgba(240,146,56,0.3)] hover:shadow-[0_20px_40px_rgba(240,146,56,0.5)] transition-all duration-300 pointer-events-auto"
             >
               {isRtl ? 'عرض المزيد من الأعمال' : 'Show More Projects'}
-            </motion.button>
+            </button>
           )}
           {visibleCount > INITIAL_COUNT && (
-            <motion.button
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+            <button
               onClick={() => setVisibleCount(INITIAL_COUNT)}
               className="px-12 py-5 rounded-2xl border-2 border-[#F09238] text-[#F09238] font-extrabold text-sm uppercase tracking-widest hover:bg-[#F09238] hover:text-white transition-all duration-300"
             >
               {isRtl ? 'عرض أقل' : 'Show Less'}
-            </motion.button>
+            </button>
           )}
         </div>
 

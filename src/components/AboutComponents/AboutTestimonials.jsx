@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { Quote, Star, Sparkles } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -56,23 +55,16 @@ const AboutTestimonials = () => {
             <div className="container mx-auto px-6 lg:px-24 relative">
                 {/* Elite Header */}
                 <div className="text-center max-w-4xl mx-auto mb-12 md:mb-20">
-                    <motion.div
-                        initial={{ opacity: 0, y: 15 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
+                    <div
                         className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white border border-brand-primary/20 shadow-sm mb-6 md:mb-10"
                     >
                         <Sparkles className="w-4 h-4 text-brand-primary animate-pulse" />
                         <span className="text-sm font-bold tracking-widest text-brand-primary text-xs md:text-sm">
                             {t('about.testimonials.subtitle')}
                         </span>
-                    </motion.div>
+                    </div>
 
-                    <motion.h2
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.7, delay: 0.2 }}
+                    <h2
                         className="text-3xl md:text-6xl font-bold text-brand-secondary mb-6 md:mb-8 tracking-tighter"
                     >
                         {isRtl ? (
@@ -84,17 +76,13 @@ const AboutTestimonials = () => {
                                 What <span className="bg-brand-primary to-brand-primary/60 bg-clip-text text-transparent">Clients Say</span>
                             </>
                         )}
-                    </motion.h2>
+                    </h2>
 
-                    <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.7, delay: 0.4 }}
+                    <p
                         className="text-base md:text-xl text-gray-500 max-w-2xl mx-auto leading-relaxed font-medium"
                     >
                         {t('about.testimonials.description')}
-                    </motion.p>
+                    </p>
                 </div>
 
                 <div className="w-full">

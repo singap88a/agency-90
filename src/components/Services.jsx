@@ -1,6 +1,5 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion';
 import { Figma, Megaphone, BarChart3, Video, Laptop } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
@@ -22,10 +21,7 @@ const Services = () => {
       <div className="max-w-[90rem] mx-auto px-4 lg:px-6">
         {/* Elite Header */}
         <div className="max-w-4xl mb-12">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+          <div
             className="flex flex-col gap-6"
           >
             <div className="flex items-center gap-6">
@@ -46,7 +42,7 @@ const Services = () => {
             <p className="text-lg lg:text-xl text-gray-500 max-w-3xl font-medium leading-relaxed">
               {t('services.subtitle')}
             </p>
-          </motion.div>
+          </div>
         </div>
 
         {/* Elite Service Cards using Swiper */}
@@ -68,15 +64,7 @@ const Services = () => {
           >
             {services.map((service, idx) => (
               <SwiperSlide key={service.key} className="!h-auto pb-4">
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-50px" }}
-                  transition={{ 
-                    duration: 0.5, 
-                    ease: [0.22, 1, 0.36, 1],
-                    delay: idx * 0.05 // Stagger based on index for smoother entrance
-                  }}
+                <div
                   className="group h-full flex flex-col relative bg-white/95 lg:bg-white/90 backdrop-blur-md lg:backdrop-blur-3xl rounded-[2rem] lg:rounded-[2.5rem] p-6 lg:p-8 border border-brand-primary/20 lg:border-brand-primary/30 shadow-lg lg:shadow-[0_20px_40px_-10px_rgba(var(--brand-primary-rgb),0.15)] transition-all duration-500 hover:-translate-y-2 hover:shadow-xl lg:hover:shadow-[0_25px_50px_-12px_rgba(var(--brand-primary-rgb),0.25)] overflow-hidden transform-gpu"
                 >
                   {/* Premium Background Mesh Effect */}
@@ -119,7 +107,7 @@ const Services = () => {
                   >
                     0{idx + 1}
                   </span>
-                </motion.div>
+                </div>
               </SwiperSlide>
             ))}
           </Swiper>

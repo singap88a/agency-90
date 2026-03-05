@@ -33,6 +33,9 @@ const Home = () => (
   </main>
 );
 
+import ScrollToTop from './components/ScrollToTop';
+import ScrollToTopButton from './components/ScrollToTopButton';
+
 function App() {
   const { t, i18n } = useTranslation();
 
@@ -43,6 +46,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen bg-brand-surface text-brand-dark selection:bg-brand-primary/20 selection:text-brand-primary font-body relative overflow-hidden">
         {/* Global Blended Background */}
         <div className="absolute inset-0 z-0 pointer-events-none">
@@ -64,6 +68,7 @@ function App() {
         </Routes>
 
         <Footer />
+        <ScrollToTopButton />
       </div>
     </Router>
   );

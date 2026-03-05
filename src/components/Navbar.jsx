@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
-import { motion, AnimatePresence } from 'framer-motion';
 import { Globe, Menu, X, Home, Briefcase, Info, DollarSign, MessageCircle, ChevronDown, LayoutGrid } from 'lucide-react';
 import { cn } from '../lib/utils';
 import { Link, useLocation } from 'react-router-dom';
@@ -66,24 +65,19 @@ const Navbar = () => {
       )}>
         <div className="max-w-7xl mx-auto flex items-center justify-between relative">
           {/* Logo */}
-          <motion.div 
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
+          <div 
             className="flex items-center gap-4 z-10"
           >
             <Link to="/" className=" ">
               <img src="/logo.png" alt="agency 90" className=" h-10 w-20  " />
             </Link>
-          </motion.div>
+          </div>
 
           {/* Desktop Nav - Centered Glass Dock */}
           <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center gap-1 bg-black/5 backdrop-blur-md border border-black/5 rounded-full p-1.5 shadow-sm mx-auto">
             {navLinks.map((link, index) => (
-              <motion.div
+              <div
                 key={link.key}
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
               >
                 {link.href.startsWith('/') ? (
                   <Link
@@ -108,7 +102,7 @@ const Navbar = () => {
                     {t(`nav.${link.key}`)}
                   </a>
                 )}
-              </motion.div>
+              </div>
             ))}
           </div>
 
@@ -129,14 +123,10 @@ const Navbar = () => {
                 <span>{currentLang.label}</span>
                 <ChevronDown className={cn("w-3.5 h-3.5 opacity-50 transition-transform duration-300", isLangOpen && "rotate-180")} />
               </button>
-              <AnimatePresence>
-                {isLangOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                    className="absolute top-full mt-2 right-0 w-44 bg-white/95 backdrop-blur-2xl rounded-2xl border border-black/5 shadow-2xl overflow-hidden p-1.5"
-                  >
+              {isLangOpen && (
+                <div
+                  className="absolute top-full mt-2 right-0 w-44 bg-white/95 backdrop-blur-2xl rounded-2xl border border-black/5 shadow-2xl overflow-hidden p-1.5"
+                >
                     {languages.map((l) => (
                       <button
                         key={l.code}
@@ -152,9 +142,8 @@ const Navbar = () => {
                         {l.label}
                       </button>
                     ))}
-                  </motion.div>
-                )}
-              </AnimatePresence>
+                </div>
+              )}
             </div>
 
             <Link 
@@ -185,29 +174,21 @@ const Navbar = () => {
       </nav>
 
       {/* Mobile Menu Sidebar & Backdrop - Moved outside for full-screen fixed positioning */}
-      <AnimatePresence>
-        {isMobileMenuOpen && (
-          <>
-            {/* Backdrop */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="fixed inset-0 z-[1000] bg-black/60 backdrop-blur-sm lg:hidden"
-            />
+      {isMobileMenuOpen && (
+        <>
+          {/* Backdrop */}
+          <div
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="fixed inset-0 z-[1000] bg-black/60 backdrop-blur-sm lg:hidden"
+          />
 
-            {/* Sidebar */}
-            <motion.div
-              initial={{ x: i18n.dir() === 'rtl' ? '-100%' : '100%' }}
-              animate={{ x: 0 }}
-              exit={{ x: i18n.dir() === 'rtl' ? '-100%' : '100%' }}
-              transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className={cn(
-                "fixed top-0 bottom-0 z-[1001] w-[300px] h-screen bg-white shadow-2xl lg:hidden flex flex-col pt-8",
-                i18n.dir() === 'rtl' ? "left-0" : "right-0"
-              )}
-            >
+          {/* Sidebar */}
+          <div
+            className={cn(
+              "fixed top-0 bottom-0 z-[1001] w-[300px] h-screen bg-white shadow-2xl lg:hidden flex flex-col pt-8",
+              i18n.dir() === 'rtl' ? "left-0" : "right-0"
+            )}
+          >
               {/* Sidebar Header */}
               <div className="flex items-center justify-between px-6 py-4 border-b border-black/5">
                           <button 
@@ -270,14 +251,10 @@ const Navbar = () => {
                       <ChevronDown className={cn("w-5 h-5 opacity-50 transition-transform duration-300", isMobileLangOpen && "rotate-180")} />
                     </button>
                     
-                    <AnimatePresence>
-                      {isMobileLangOpen && (
-                        <motion.div
-                          initial={{ opacity: 0, height: 0 }}
-                          animate={{ opacity: 1, height: 'auto' }}
-                          exit={{ opacity: 0, height: 0 }}
-                          className="mt-2 bg-black/5 rounded-2xl overflow-hidden"
-                        >
+                    {isMobileLangOpen && (
+                      <div
+                        className="mt-2 bg-black/5 rounded-2xl overflow-hidden"
+                      >
                           {languages.map((l) => (
                             <button
                               key={l.code}
@@ -291,11 +268,10 @@ const Navbar = () => {
                               {i18n.language === l.code && <div className="w-2 h-2 rounded-full bg-brand-primary" />}
                             </button>
                           ))}
-                        </motion.div>
+                        </div>
                       )}
-                    </AnimatePresence>
+                    </div>
                   </div>
-                </div>
 
                 <Link 
                   to="/contact"
@@ -306,10 +282,9 @@ const Navbar = () => {
                   {t('cta.button')}
                 </Link>
               </div>
-            </motion.div>
+            </div>
           </>
         )}
-      </AnimatePresence>
     </>
   );
 };

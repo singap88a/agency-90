@@ -1,7 +1,6 @@
 import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion';
 import { ArrowLeft, ArrowRight, Play, Sparkles } from 'lucide-react';
 import { cn } from '../lib/utils';
 
@@ -18,7 +17,7 @@ const Hero = () => {
       className="relative min-h-screen flex items-center overflow-hidden bg-brand-surface"
     >
       {/* Background Image - Full Natural Display */}
-      <motion.div
+      <div
         className="absolute inset-0 z-0"
       >
         <img
@@ -26,37 +25,9 @@ const Hero = () => {
           alt="Professional Background"
           className="w-full h-full object-cover" 
         />
-      </motion.div>
-
-      {/* Floating Decorative Elements */}
-      <div className="absolute inset-0 z-[1] pointer-events-none">
-        {[...Array(6)].map((_, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ 
-              opacity: [0.1, 0.3, 0.1],
-              scale: [1, 1.2, 1],
-              y: [0, -20, 0],
-              x: [0, 10, 0]
-            }}
-            transition={{ 
-              duration: 8 + i * 2,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: i * 1.5
-            }}
-            className="absolute rounded-3xl bg-white/5 backdrop-blur-3xl border border-white/10"
-            style={{
-              width: `${100 + i * 50}px`,
-              height: `${100 + i * 50}px`,
-              left: `${15 + i * 15}%`,
-              top: `${20 + (i % 3) * 25}%`,
-              rotate: `${15 + i * 15}deg`
-            }}
-          />
-        ))}
       </div>
+
+
 
       {/* Sophisticated Dark Overlay */}
       <div className={cn(
@@ -75,21 +46,15 @@ const Hero = () => {
           )}
         >
           {/* Tag */}
-          <motion.div
-            initial={{ opacity: 0, x: isRtl ? 30 : -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1 }}
+          <div
             className="inline-flex items-center gap-3 px-5 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-xl text-brand-primary text-xs font-bold tracking-widest shadow-2xl ring-1 ring-white/10"
           >
             <Sparkles className="w-4 h-4" />
             <span>agency 90 — {isRtl ? 'وكالة إبداعية' : 'Creative Agency'}</span>
-          </motion.div>
+          </div>
  
           {/* Title */}
-          <motion.h1
-            initial={{ opacity: 0, x: isRtl ? 50 : -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, delay: 0.2 }}
+          <h1
             className={cn(
               "text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.3] text-white",
               isRtl ? "text-right" : "text-left"
@@ -107,26 +72,20 @@ const Hero = () => {
                 </span>
               )
             })}
-          </motion.h1>
+          </h1>
  
           {/* Subtext */}
-          <motion.p
-            initial={{ opacity: 0, x: isRtl ? 30 : -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, delay: 0.4 }}
+          <p
             className={cn(
               "text-base md:text-lg text-white/90 max-w-xl leading-relaxed font-semibold drop-shadow-sm",
               isRtl ? "text-right" : "text-left"
             )}
           >
             {t('hero.subtext')}
-          </motion.p>
+          </p>
  
           {/* Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+          <div
             className={cn(
               "flex flex-col sm:flex-row gap-4 mt-4",
               isRtl ? "items-start" : "items-start"
@@ -135,12 +94,9 @@ const Hero = () => {
             <Link to="/contact" className="relative group px-10 h-14 rounded-2xl bg-brand-primary text-white font-bold text-base overflow-hidden transition-all duration-500 hover:shadow-[0_20px_40px_rgba(var(--brand-primary-rgb),0.35)] hover:scale-[1.02] flex items-center justify-center gap-3">
               <span className="relative z-10 flex items-center gap-3 whitespace-nowrap">
                 {t('hero.cta')}
-                <motion.div
-                  animate={{ x: isRtl ? [0, -5, 0] : [0, 5, 0] }}
-                  transition={{ duration: 1.5, repeat: Infinity }}
-                >
+                <div>
                   {isRtl ? <ArrowLeft className="w-5 h-5" /> : <ArrowRight className="w-5 h-5" />}
-                </motion.div>
+                </div>
               </span>
               <div className="absolute inset-0 bg-gradient-to-tr from-white to-transparent opacity-0 group-hover:opacity-20 transition-opacity duration-500" />
             </Link>
@@ -153,7 +109,7 @@ const Hero = () => {
                 {t('hero.projects')}
               </span>
             </Link>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

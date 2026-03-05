@@ -1,6 +1,4 @@
-import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion';
 import { 
   Rocket, 
   Target, 
@@ -50,22 +48,7 @@ const Pricing = () => {
     }
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.1 }
-    }
-  };
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut" }
-    }
-  };
 
   return (
     <section id="pricing" className="relative py-24 md:py-32 bg-brand-surface overflow-hidden">
@@ -79,23 +62,16 @@ const Pricing = () => {
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         {/* Elite Header */}
         <div className="max-w-4xl mx-auto text-center mb-24">
-          <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+          <div
             className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white border border-brand-primary/20 shadow-sm mb-10"
           >
             <Sparkles className="w-4 h-4 text-brand-primary animate-pulse" />
             <span className="text-sm font-bold tracking-widest text-brand-primary">
               {isRtl ? 'استثمار ذكي نخبوي' : 'Elite Smart Investment'}
             </span>
-          </motion.div>
+          </div>
 
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
+          <h2
             className="text-5xl md:text-7xl font-bold text-gray-900 mb-8 tracking-tight"
           >
             {isRtl ? 'نحو' : 'Towards'}{' '}
@@ -105,29 +81,21 @@ const Pricing = () => {
               </span>
      
             </span>
-          </motion.h2>
+          </h2>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
+          <p
             className="text-lg md:text-xl text-gray-500 leading-relaxed max-w-3xl mx-auto font-medium"
           >
             {isRtl 
               ? 'نحن لا نقدم مجرد خدمات، بل نصمم تجارب نجاح استراتيجية تليق بطموح علامتكم التجارية وتضمن لكم صدارة دائمة.'
               : 'We don\'t just offer services; we design strategic success experiences that match your brand\'s ambition and ensure lasting dominance.'}
-          </motion.p>
+          </p>
         </div>
 
         {/* Global Grid System */}
         <div className="grid lg:grid-cols-2 gap-10 items-stretch max-w-7xl mx-auto">
           {/* Elite Invitation Card */}
-          <motion.div
-            initial={{ opacity: 0, x: isRtl ? 40 : -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+          <div
             className="relative group flex flex-col h-full"
           >
             <div className="absolute inset-x-0 inset-y-0 bg-brand-primary/[0.02] rounded-[2.5rem] -m-1 pointer-events-none transition-all duration-500 group-hover:bg-brand-primary/[0.04]" />
@@ -154,52 +122,41 @@ const Pricing = () => {
                     isRtl ? 'دعم تنفيذي فائق الجودة' : 'Ultra-Premium Exec Support',
                     isRtl ? 'ابتكار تكنولوجي مستمر' : 'Continuous Tech Innovation'
                   ].map((feature, index) => (
-                    <motion.div
+                    <div
                       key={index}
-                      initial={{ opacity: 0, x: -10 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: 0.4 + (index * 0.1) }}
                       className="flex items-center gap-4 group/item"
                     >
                       <div className="w-10 h-10 rounded-full bg-brand-primary/10 flex items-center justify-center text-brand-primary group-hover/item:bg-brand-primary group-hover/item:text-white transition-all duration-300">
                         <CheckCircle2 className="w-5 h-5" />
                       </div>
                       <span className="text-gray-700 font-bold text-lg">{feature}</span>
-                    </motion.div>
+                    </div>
                   ))}
                 </div>
               </div>
 
-              <motion.button 
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
+              <button 
                 className="relative z-10 w-full bg-gray-900 text-white py-6 px-10 rounded-2xl font-bold text-xl hover:bg-black transition-all duration-500 flex items-center justify-center gap-3 group/btn shadow-xl shadow-gray-900/20"
               >
                 <span>{t('pricing.request_consultation')}</span>
                 <ArrowIcon className={`w-6 h-6 ${isRtl ? 'group-hover/btn:-translate-x-1' : 'group-hover/btn:translate-x-1'} transition-transform`} />
-              </motion.button>
+              </button>
 
               {/* Decorative faint background text */}
               <div className="absolute -bottom-10 -right-10 text-[120px] font-bold text-gray-50/50 select-none pointer-events-none leading-none -rotate-12">
                 EXPERT
               </div>
             </div>
-          </motion.div>
+          </div>
+
 
           {/* Boutique Service Blocks */}
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
+          <div
             className="grid sm:grid-cols-2 gap-6 h-full"
           >
             {modules.map((m, index) => (
-              <motion.div
+              <div
                 key={index}
-                variants={itemVariants}
-                whileHover={{ y: -8 }}
                 className="group relative h-full"
               >
                 <div className="relative h-full bg-white border border-gray-100 rounded-[2rem] p-8 hover:shadow-xl transition-all duration-500 hover:border-brand-primary/20 flex flex-col justify-between">
@@ -231,9 +188,9 @@ const Pricing = () => {
                     <ArrowIcon className={`w-4 h-4 ${isRtl ? 'group-hover/link:-translate-x-1' : 'group-hover/link:translate-x-1'} transition-transform`} />
                   </button>
                 </div>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
         </div>
 
  

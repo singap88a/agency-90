@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, Sparkles } from 'lucide-react';
 import { cn } from '../lib/utils';
 
@@ -35,12 +34,7 @@ const FAQ = () => {
     const isOpen = openIndex === actualIndex;
 
     return (
-      <motion.div
-        layout
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-50px" }}
-        transition={{ duration: 0.5, delay: index * 0.08 }}
+      <div
         className="group"
       >
         <div className={cn(
@@ -66,35 +60,27 @@ const FAQ = () => {
             )}>
               {faq.q}
             </span>
-            <motion.div
-              animate={{ rotate: isOpen ? 180 : 0 }}
-              transition={{ duration: 0.3, type: "spring", stiffness: 200 }}
+            <div
               className={cn(
                 "flex-shrink-0 w-9 h-9 rounded-xl flex items-center justify-center transition-all duration-300",
-                isOpen ? "bg-brand-primary text-white shadow-lg" : "bg-gray-100 text-gray-400 group-hover:bg-gray-200 border-2 border2"
+                isOpen ? "bg-brand-primary text-white shadow-lg rotate-180" : "bg-gray-100 text-gray-400 group-hover:bg-gray-200 border-2 border2"
               )}
             >
               <ChevronDown className="w-4 h-4" />
-            </motion.div>
+            </div>
           </button>
 
-          <AnimatePresence>
-            {isOpen && (
-              <motion.div
-                initial={{ height: 0, opacity: 0 }}
-                animate={{ height: "auto", opacity: 1 }}
-                exit={{ height: 0, opacity: 0 }}
-                transition={{ duration: 0.3, ease: "easeInOut" }}
-                className="overflow-hidden"
-              >
-                <div className={cn("px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-100 pt-4 text-sm font-medium", isRtl ? "text-right" : "text-left")}>
-                  {faq.a}
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
+          {isOpen && (
+            <div
+              className="overflow-hidden"
+            >
+              <div className={cn("px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-100 pt-4 text-sm font-medium", isRtl ? "text-right" : "text-left")}>
+                {faq.a}
+              </div>
+            </div>
+          )}
         </div>
-      </motion.div>
+      </div>
     );
   };
 
@@ -106,24 +92,17 @@ const FAQ = () => {
         {/* ── Header ── */}
         <div className="text-center max-w-4xl mx-auto mb-10  ">
           {/* Badge */}
-          <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+          <div
             className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white border border-brand-primary/20 shadow-sm mb-10"
           >
             <Sparkles className="w-4 h-4 text-brand-primary animate-pulse" />
             <span className="text-sm font-bold tracking-widest text-brand-primary">
               {t('faq.badge', isRtl ? 'الأسئلة الشائعة' : 'FAQ')}
             </span>
-          </motion.div>
+          </div>
 
           {/* Title — ONE LINE */}
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.2 }}
+          <h2
             className="text-4xl md:text-6xl font-bold text-brand-secondary mb-8 tracking-tighter"
           >
             {isRtl ? (
@@ -141,20 +120,16 @@ const FAQ = () => {
                 </span>
               </>
             )}
-          </motion.h2>
+          </h2>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.4 }}
+          <p
             className="text-lg md:text-xl text-gray-500 max-w-2xl mx-auto leading-relaxed font-medium"
           >
             {t('faq.description', isRtl
               ? 'كل ما تحتاج لمعرفته عن خدماتنا وكيف نساعدك في تحقيق رؤيتك'
               : 'Everything you need to know about our services and how we help bring your vision to life.'
             )}
-          </motion.p>
+          </p>
         </div>
 
         {/* Two-column FAQ Grid */}
