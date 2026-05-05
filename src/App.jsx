@@ -35,6 +35,7 @@ const Home = () => (
 
 import ScrollToTop from './components/ScrollToTop';
 import ScrollToTopButton from './components/ScrollToTopButton';
+import WhatsAppButton from './components/WhatsAppButton';
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -69,6 +70,7 @@ function App() {
 
         <Footer />
         <ScrollToTopButton />
+        <WhatsAppButton />
       </div>
     </Router>
   );
