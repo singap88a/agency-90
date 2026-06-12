@@ -28,8 +28,8 @@ const Contact = ({ isPage = false }) => {
       id: 'email',
       icon: Mail, 
       label: t('contact.emailLabel', 'البريد الإلكتروني'), 
-      value: t('contact.emailValue', 'hello@agency90.nl'), 
-      link: `mailto:${t('contact.emailValue', 'hello@agency90.nl')}`,
+      value: t('contact.emailValue', 'the90agecy@gmail.com'), 
+      link: `mailto:${t('contact.emailValue', 'the90agecy@gmail.com')}`,
     },
     { 
       id: 'social',
@@ -267,7 +267,7 @@ const Contact = ({ isPage = false }) => {
                         "w-full bg-slate-50/50 rounded-xl py-3.5 md:py-4 focus:outline-none focus:ring-2 focus:ring-brand-primary/20 border border-slate-100 focus:border-brand-primary/50 focus:bg-white transition-all font-bold text-brand-secondary text-sm md:text-base",
                         isRtl ? "pr-12 pl-5 text-right" : "pl-12 pr-5 text-left"
                       )}
-                      placeholder="hello@90.agency"
+                      placeholder="the90agecy@gmail.com"
                       required
                     />
                   </div>
